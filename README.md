@@ -4,7 +4,9 @@ Six full-length, self-contained PTE Academic practice exams aligned to the **202
 
 ## Use
 
-Open any file in `exams/` directly in a browser (Chrome/Edge recommended — Web Speech API + microphone required):
+**Online (GitHub Pages):** https://n-molham.github.io/pte-mock-exams/ — landing page links to all 10 exams; each opens full-screen in the browser.
+
+Or open any file in `exams/` directly (Chrome/Edge recommended — Web Speech API + microphone required):
 
 ```
 exams/pte-mock-exam-1.html  …  exams/pte-mock-exam-10.html
