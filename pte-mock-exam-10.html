@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PTE Academic Mock Exam 10 (2026 Format)</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:'Segoe UI',Arial,Helvetica,sans-serif;background:#e8ecf1;color:#1c2733;font-size:16px;line-height:1.55}
+#app{min-height:100%;display:flex;flex-direction:column}
+button{font-family:inherit;cursor:pointer}
+.hidden{display:none!important}
+
+/* ---------- header ---------- */
+.topbar{background:#123c6d;color:#fff;padding:10px 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.topbar .logo{font-weight:700;font-size:18px;letter-spacing:.5px}
+.topbar .logo span{color:#7fd1f7}
+.topbar .mode{font-size:12px;padding:2px 10px;border-radius:10px;background:#0a2a4e;border:1px solid #3d6d9e}
+.topbar .mode.guide{background:#3d2a00;border-color:#c79a2e}
+.topbar .spacer{flex:1}
+.topbar .timerbox{font-variant-numeric:tabular-nums;background:#0a2a4e;border:1px solid #3d6d9e;border-radius:6px;padding:3px 12px;font-size:15px}
+.topbar .timerbox.warn{border-color:#e05555;color:#ffb3b3}
+.progress{height:5px;background:#0a2a4e}
+.progress>div{height:100%;background:#41b6e6;width:0;transition:width .3s}
+
+/* ---------- layout ---------- */
+.main{flex:1;max-width:1020px;width:100%;margin:0 auto;padding:26px 22px 90px}
+.card{background:#fff;border-radius:8px;box-shadow:0 1px 4px rgba(16,42,67,.15);padding:26px 30px;margin-bottom:18px}
+.partlabel{font-size:13px;color:#5b6b7b;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+h1{font-size:26px;color:#123c6d;margin-bottom:10px}
+h2{font-size:21px;color:#123c6d;margin-bottom:8px}
+h3{font-size:16px;color:#123c6d;margin:14px 0 6px}
+.qtype-head{border-bottom:1px solid #dde4ea;padding-bottom:12px;margin-bottom:16px}
+.qtype-head .qtitle{font-size:19px;font-weight:600;color:#123c6d}
+.qtype-head .qpos{font-size:13px;color:#5b6b7b;float:right}
+.instructions{color:#3d4f60;margin:6px 0 14px;font-size:15px}
+.promptbox{background:#f2f6fa;border:1px solid #d5e0ea;border-radius:6px;padding:16px 20px;margin:12px 0;font-size:17px}
+.figbox{background:#fff;border:1px solid #d5e0ea;border-radius:6px;padding:14px;margin:12px 0;text-align:center}
+.figbox svg{max-width:100%;height:auto}
+.mono{font-family:Consolas,monospace;font-size:14px}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-block;border:none;border-radius:5px;padding:10px 26px;font-size:15px;font-weight:600;background:#123c6d;color:#fff}
+.btn:hover{background:#0d3058}
+.btn:disabled{background:#9fb2c3;cursor:not-allowed}
+.btn.sec{background:#fff;color:#123c6d;border:1px solid #123c6d}
+.btn.sec:hover{background:#eef3f8}
+.btn.warn{background:#b3261e}
+.btn.small{padding:5px 14px;font-size:13px}
+.navrow{display:flex;justify-content:space-between;gap:12px;margin-top:22px}
+.modewrap{display:flex;gap:20px;flex-wrap:wrap;margin:18px 0}
+.modecard{flex:1;min-width:260px;border:2px solid #d5e0ea;border-radius:8px;padding:20px 22px;cursor:pointer;background:#fff}
+.modecard:hover{border-color:#41b6e6}
+.modecard h3{margin-top:0}
+.modecard ul{margin:8px 0 0 18px;font-size:14px;color:#3d4f60}
+
+/* ---------- status / recording ---------- */
+.statusbar{display:flex;align-items:center;gap:14px;margin:14px 0;flex-wrap:wrap}
+.statusline{font-weight:600;color:#123c6d}
+.recdot{display:inline-block;width:12px;height:12px;border-radius:50%;background:#c4cdd6}
+.recdot.on{background:#e02424;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.3}}
+.audbar{flex:1;min-width:180px;height:8px;background:#dde4ea;border-radius:4px;overflow:hidden}
+.audbar>div{height:100%;background:#41b6e6;width:0}
+.audbar.rec>div{background:#e02424}
+.timechip{font-variant-numeric:tabular-nums;font-weight:600;color:#123c6d;background:#eef3f8;border-radius:5px;padding:4px 12px}
+
+/* ---------- guide tips ---------- */
+.tipsbox{background:#fff8e6;border:1px solid #e8cf8a;border-left:5px solid #e0a800;border-radius:6px;padding:14px 18px;margin:14px 0;font-size:14px}
+.tipsbox h4{color:#7a5800;margin-bottom:6px;font-size:14px;text-transform:uppercase;letter-spacing:.5px}
+.tipsbox ul{margin-left:18px}
+.tipsbox li{margin:3px 0}
+.samplebox{background:#eafaf0;border:1px solid #9edbb4;border-radius:6px;padding:14px 18px;margin:12px 0;font-size:14.5px}
+.samplebox h4{color:#166534;margin-bottom:6px;font-size:14px}
+
+/* ---------- inputs ---------- */
+textarea{width:100%;border:1px solid #b9c6d2;border-radius:6px;padding:12px;font-family:inherit;font-size:16px;line-height:1.6;resize:vertical}
+textarea:focus{outline:2px solid #41b6e6}
+input[type=text]{border:1px solid #b9c6d2;border-radius:5px;padding:8px 10px;font-size:15px;font-family:inherit}
+input[type=text]:focus{outline:2px solid #41b6e6}
+.wordcount{font-size:13px;color:#5b6b7b;margin-top:6px}
+.wordcount.bad{color:#b3261e;font-weight:600}
+select{border:1px solid #8fa4b8;border-radius:4px;padding:3px 6px;font-size:15px;background:#eef3f8;margin:0 2px}
+.optrow{display:block;padding:9px 12px;border:1px solid #d5e0ea;border-radius:6px;margin:7px 0;cursor:pointer}
+.optrow:hover{background:#f2f6fa}
+.optrow.sel{border-color:#123c6d;background:#eaf3fb}
+.optrow input{margin-right:9px}
+
+/* ---------- reading layout ---------- */
+.readwrap{display:flex;gap:18px}
+.readnav{width:170px;flex-shrink:0}
+.readnav button{display:block;width:100%;text-align:left;margin-bottom:5px;padding:7px 10px;border:1px solid #d5e0ea;background:#fff;border-radius:5px;font-size:13px}
+.readnav button.cur{border-color:#123c6d;background:#eaf3fb;font-weight:600}
+.readnav button.done::after{content:" ✓";color:#1a7f37}
+.readmain{flex:1;min-width:0}
+@media(max-width:760px){.readwrap{flex-direction:column}.readnav{width:100%;display:flex;flex-wrap:wrap}.readnav button{width:auto}}
+
+/* ---------- drag blanks ---------- */
+.fibbank{border:1px dashed #8fa4b8;border-radius:6px;padding:10px;margin:12px 0;min-height:48px}
+.chip{display:inline-block;background:#123c6d;color:#fff;border-radius:4px;padding:5px 13px;margin:4px;cursor:pointer;font-size:14px;user-select:none}
+.chip.used{opacity:.3;pointer-events:none}
+.blank{display:inline-block;min-width:110px;border-bottom:2px solid #123c6d;padding:2px 8px;margin:0 3px;text-align:center;cursor:pointer;color:#123c6d;font-weight:600;background:#eef3f8;border-radius:4px 4px 0 0}
+.blank:empty::before{content:"\\200b"}
+
+/* ---------- reorder ---------- */
+.reitem{border:1px solid #d5e0ea;border-radius:6px;background:#fff;padding:11px 14px;margin:6px 0;display:flex;align-items:center;gap:10px}
+.reitem .mv{display:flex;flex-direction:column;gap:2px}
+.reitem .mv button{border:1px solid #b9c6d2;background:#f2f6fa;border-radius:4px;font-size:11px;padding:1px 8px;line-height:1.4}
+.reitem .txt{flex:1}
+
+/* ---------- HIW ---------- */
+.hiw-word{cursor:pointer;padding:1px 2px;border-radius:3px}
+.hiw-word:hover{background:#ffe9a8}
+.hiw-word.sel{background:#f9c74f;color:#5b4300;font-weight:600}
+
+/* ---------- review ---------- */
+.scorebig{font-size:34px;font-weight:700;color:#123c6d}
+.revitem{border:1px solid #dde4ea;border-radius:6px;padding:14px 18px;margin:10px 0;background:#fff}
+.revitem h4{color:#123c6d;font-size:15px;margin-bottom:6px}
+.revitem .ok{color:#1a7f37;font-weight:600}
+.revitem .no{color:#b3261e;font-weight:600}
+.revitem .ua{background:#f2f6fa;border-radius:4px;padding:8px 12px;margin:6px 0;font-size:14.5px}
+.badge{display:inline-block;font-size:12px;border-radius:9px;padding:1px 10px;margin-left:8px}
+.badge.ok{background:#d9f2e3;color:#1a7f37}
+.badge.no{background:#fadbd8;color:#b3261e}
+.badge.na{background:#e8ecf1;color:#5b6b7b}
+audio{display:block;margin:8px 0;max-width:100%}
+.kv{font-size:14px;color:#3d4f60;margin:4px 0}
+
+.footer-note{max-width:1020px;margin:0 auto;padding:12px 22px 30px;font-size:12.5px;color:#77879a}
+
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const EXAM = {"meta":{"id":10,"title":"PTE Academic Mock Exam 10 (2026 Format)"},"readAloud":[{"text":"Three-dimensional printing has moved from industrial laboratories into everyday use. Engineers now print replacement parts for machines, doctors print models of organs for surgical planning, and architects create detailed building models within hours. The technology works by building an object layer by layer from a digital design, which reduces material waste considerably. As printers become cheaper and materials improve, many households are expected to own one within the next decade."},{"text":"Sea turtles can migrate thousands of kilometres across open ocean and still return to the beach where they hatched. Researchers believe the animals detect the Earth's magnetic field and use it like an internal compass, storing a kind of magnetic map of their home coastline. Understanding this ability matters, because coastal development and artificial lighting can disorient hatchlings and disrupt entire populations."},{"text":"Paper money first appeared in China during the Tang and Song dynasties, when merchants grew tired of carrying heavy strings of copper coins. Early banknotes were backed by deposits of precious metal, and governments gradually assumed the right to issue them. When Marco Polo described the system to European readers, many refused to believe that paper could hold real value, yet his account eventually influenced modern banking."},{"text":"Dogs were the first animals ever domesticated, and the partnership began long before farming. Genetic evidence suggests that wolves started gathering around human camps to scavenge leftovers, and the tamest individuals gradually evolved into companions. Over thousands of years, selective breeding produced enormous variety, from tiny lapdogs to herding and hunting breeds, each shaped for a particular role in human society."},{"text":"Early maps were often works of art as much as tools of navigation, decorated with sea monsters and imaginary lands. The great turning point came with Mercator's projection of 1569, which distorted the size of continents but preserved compass bearings as straight lines. Sailors could therefore plot a course with a ruler, and navigational maps have been shaped by that practical compromise ever since."},{"text":"Deserts are defined not by heat but by dryness: any region receiving less than about 250 millimetres of rain a year qualifies. Many great deserts, including the Sahara, formed because mountain ranges force moist air to rise and shed its water long before it reaches the far side. This phenomenon, known as the rain shadow effect, explains why some of the driest places on Earth lie beside snow-capped peaks."},{"text":"The first public film screenings in 1895 reportedly caused audiences to leap from their seats as a train appeared to rush towards them. Within two decades, silent cinema had become a global industry, and directors were already experimenting with close-ups, editing, and lighting to shape emotion. Sound arrived in the late 1920s, transforming the art form almost overnight and ending the careers of many silent stars."}],"repeatSentence":[{"text":"The guest lecture on marine biology has been moved to Thursday afternoon."},{"text":"Please return all borrowed lab coats to the storeroom after class."},{"text":"The scholarship application deadline has been extended until the end of May."},{"text":"Campus shuttle buses will run every fifteen minutes during orientation week."},{"text":"The careers fair will take place in the sports hall next Wednesday."},{"text":"All first-year students must complete the academic integrity tutorial before enrollment."},{"text":"The campus bookstore offers discounts on second-hand textbooks during the first week."},{"text":"Photocopying and printing services are available on the ground floor of the students' union."},{"text":"Tutorials for the statistics course begin in the second week of term."},{"text":"Graduation photographs can be collected from the reception desk from Monday."}],"describeImage":[{"title":"World population, 1800–2050 (billions)","sample":"The line graph shows world population growth from 1800 to 2050. In 1800 the population stood at about one billion and grew very slowly through the nineteenth century, reaching roughly 1.6 billion by 1900 and 2.5 billion in 1950. Growth then accelerated sharply, passing six billion around 2000 and nearly eight billion by 2020. The projected figure for 2050 is approximately 9.7 billion. Overall, the population multiplied several times over the period, with the fastest growth after 1950.","svg":"<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='34' y='265' font-size='11'>0<\/text><text x='34' y='217' font-size='11'>2<\/text><text x='34' y='169' font-size='11'>4<\/text><text x='34' y='121' font-size='11'>6<\/text><text x='34' y='73' font-size='11'>8<\/text><text x='28' y='25' font-size='11'>10<\/text><polyline points='80,236 160,229 240,222 320,200 400,114 432,73 480,27' fill='none' stroke='#2f6db3' stroke-width='3'/><circle cx='80' cy='236' r='4' fill='#2f6db3'/><circle cx='320' cy='200' r='4' fill='#2f6db3'/><circle cx='480' cy='27' r='4' fill='#2f6db3'/><text x='68' y='278' font-size='11'>1800<\/text><text x='228' y='278' font-size='11'>1900<\/text><text x='390' y='278' font-size='11'>2000<\/text><text x='458' y='278' font-size='11'>2050<\/text><\/svg>"},{"title":"Average lifespan of household appliances (years)","sample":"The bar chart compares the typical lifespan of four household appliances, measured in years. Washing machines last the longest, at around thirteen years, followed by refrigerators at ten years. Dishwashers have an average lifespan of about eight and a half years, while microwaves are replaced most frequently, lasting only seven years. Overall, the larger the appliance and the higher its cost, the longer it tends to remain in service.","svg":"<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0<\/text><text x='24' y='190' font-size='11'>5<\/text><text x='24' y='115' font-size='11'>10<\/text><text x='20' y='40' font-size='11'>15<\/text><rect x='90' y='96' width='70' height='164' fill='#2f6db3'/><rect x='190' y='134' width='70' height='126' fill='#2f6db3'/><rect x='290' y='153' width='70' height='107' fill='#2f6db3'/><rect x='390' y='172' width='70' height='88' fill='#2f6db3'/><text x='100' y='278' font-size='12'>Washing<\/text><text x='208' y='278' font-size='12'>Fridge<\/text><text x='304' y='278' font-size='12'>Dishwasher<\/text><text x='404' y='278' font-size='12'>Microwave<\/text><text x='104' y='90' font-size='11'>13 yrs<\/text><text x='206' y='128' font-size='11'>10 yrs<\/text><text x='302' y='147' font-size='11'>8.5 yrs<\/text><text x='404' y='166' font-size='11'>7 yrs<\/text><\/svg>"},{"title":"Daily screen time by activity (%)","sample":"The pie chart shows how people divide their daily screen time across different activities. Video streaming takes the largest share at 35 percent, followed by social media at 25 percent and gaming at 20 percent. Web browsing accounts for 15 percent, while other activities such as reading make up the remaining 5 percent. Overall, entertainment — streaming, social media, and gaming — dominates screen time, at four fifths of the total.","svg":"<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><circle cx='180' cy='150' r='110' fill='#999'/><path d='M180,150 L180,40 A110,110 0 0 1 269,215 Z' fill='#2f6db3'/><path d='M180,150 L269,215 A110,110 0 0 1 115,239 Z' fill='#e8a13d'/><path d='M180,150 L115,239 A110,110 0 0 1 75,116 Z' fill='#4f9d69'/><path d='M180,150 L75,116 A110,110 0 0 1 146,45 Z' fill='#d1495b'/><text x='330' y='80' font-size='12' fill='#2f6db3'>■ Video streaming 35%<\/text><text x='330' y='110' font-size='12' fill='#e8a13d'>■ Social media 25%<\/text><text x='330' y='140' font-size='12' fill='#4f9d69'>■ Gaming 20%<\/text><text x='330' y='170' font-size='12' fill='#d1495b'>■ Browsing 15%<\/text><text x='330' y='200' font-size='12' fill='#999'>■ Other 5%<\/text><\/svg>"}],"retellLecture":[{"title":"How GPS works","sample":"The lecture explained how GPS works. The speaker said that over twenty satellites orbit about twenty thousand kilometres above the Earth, each carrying a precise atomic clock and continuously broadcasting its position and the exact time. A ground receiver measures the travel time of each signal to calculate its distance, and signals from at least four satellites fix a position in three dimensions. The speaker also noted that without relativistic clock corrections, errors of kilometres would build up every day.","text":"Satellite navigation has become so ordinary that few people consider how it works. At any moment, more than two dozen satellites orbit roughly twenty thousand kilometres above the Earth, each carrying a precise atomic clock. Each satellite continuously broadcasts its position and the exact time the signal was sent. A receiver on the ground measures how long the signal took to arrive, and from that calculates its distance to the satellite. Signals from at least four satellites allow the receiver to fix its position in three dimensions. Remarkably, the system depends on relativity: without corrections for the way satellite clocks run at different speeds, errors of kilometres would accumulate daily."},{"title":"The invention of air conditioning","sample":"The lecture traced the invention of air conditioning. In 1902 Willis Carrier solved a printing problem caused by humid air by blowing air over chilled coils, creating the first modern air conditioner. For decades the technology served factories, theatres, and department stores, with cheap home units arriving in the 1950s. The speaker noted its effects: rapid growth of hot regions, sealed-window building design, and heavy electricity demand during heatwaves.","text":"In 1902, a young engineer named Willis Carrier was asked to solve a printing problem: humid air made paper expand and ink misalign. His solution — blowing air over chilled coils to remove moisture — became the first modern air conditioner. For decades the technology served factories, theatres, and department stores rather than homes, and movie palaces even advertised cooled air to attract summer customers. Cheap units for houses arrived in the 1950s and quickly reshaped daily life. Air conditioning enabled the rapid growth of hot, previously uncomfortable regions, changed building design towards sealed windows, and today accounts for a significant share of electricity demand during heatwaves."}],"respondToSituation":[{"prompt":"Your mobile phone was stolen from your bag on a crowded bus about an hour ago. You have just found the local police station. Go to the counter and report the theft. What would you say?","audio":"Your mobile phone was stolen from your bag on a crowded bus about an hour ago. You have just found the local police station. Go to the counter and report the theft. What would you say?","sample":"Good afternoon, officer. I'd like to report a theft. My mobile phone was stolen about an hour ago on the number 14 bus — someone must have taken it from my bag while the bus was crowded. It's a black smartphone, and I have the IMEI number and my receipt here, along with the bus route and the time. I've already blocked the SIM card remotely. Could you please register a report and give me the reference number? I need it for my insurance claim and to secure my accounts. Thank you for your help."},{"prompt":"Your close friend has just asked to borrow five hundred dollars to cover some unexpected bills, but you are saving every spare dollar for a security deposit on a flat. Meet your friend at a café and explain why you cannot help. What would you say?","audio":"Your close friend has just asked to borrow five hundred dollars to cover some unexpected bills, but you are saving every spare dollar for a security deposit on a flat. Meet your friend at a café and explain why you cannot help. What would you say?","sample":"Thanks for being honest with me about the situation — I know it isn't easy to ask. I really wish I could help, but the truth is I'm saving every spare cent at the moment for the deposit on my flat, and my account is basically committed until the contract is signed. It's nothing to do with trusting you, I promise. What I can do is sit down with you tonight and go through the bills together, or help you find out whether the utility company offers a payment plan. Would that be a useful start?"}],"summarizeGroupDiscussion":[{"topic":"Some doctors recommend that secondary schools start later in the morning to suit teenagers' sleep patterns. Discuss.","sample":"The students debated whether secondary schools should start later to match teenagers' sleep patterns. Speaker A supported the change, citing research on teenage body clocks and improved attendance in schools that delayed lessons. Speaker B objected that transport, timetables, and after-school commitments make a later start impractical. Speaker C proposed a one-term trial for a single year group with proper evaluation. They agreed to support a carefully planned trial rather than an immediate school-wide change.","turns":[{"speaker":"A","text":"I think the science is clear. Teenagers' body clocks genuinely run later than adults', so making them start lessons at eight means most of the class is half asleep. Schools that moved to a nine o'clock start report better attendance and better grades."},{"speaker":"B","text":"The biology might be right, but the timetable isn't. Buses, teachers' schedules, and after-school clubs are all built around the current times. A later start would push everything back, and students doing sport or part-time jobs would get home much later."},{"speaker":"C","text":"Couldn't we test it first? One term, one year group, start at nine and compare attendance, results, and how tired students say they feel. Real data beats arguments."},{"speaker":"A","text":"That sounds sensible, but a trial needs parents on board too, especially the ones who drop children off before work."},{"speaker":"B","text":"If it's one year group with proper bus adjustments and clear evaluation, I could support it. I just don't want it imposed overnight on everyone."},{"speaker":"C","text":"Agreed. And even a small change, like moving the first lesson to a lighter subject, might help while the trial runs."}]},{"topic":"A city council is debating whether to close the city zoo and move the animals to open wildlife sanctuaries. Discuss.","sample":"The students discussed whether the city zoo should close and its animals be relocated to sanctuaries. Speaker A argued that enclosures cannot meet modern welfare standards, while Speaker B defended the zoo's conservation funding and breeding programmes. Speaker C highlighted the educational value of seeing animals first-hand. They concluded that the decision should depend on welfare and conservation standards, with relocation judged case by case.","turns":[{"speaker":"A","text":"I believe the zoo has had its day. Modern animal welfare standards show that even well-designed enclosures are tiny compared with natural ranges, and sanctuaries give animals far better lives."},{"speaker":"B","text":"I partly agree, but zoos do real work. This one funds field conservation projects and runs breeding programmes for endangered species — species that might already be extinct without them."},{"speaker":"C","text":"There's also education. Most people will never see an elephant in the wild; a good zoo visit is what makes children care about conservation in the first place."},{"speaker":"A","text":"Fair points, but documentaries and sanctuaries with webcams can teach the same lessons without keeping animals in enclosures. And sanctuaries still allow some public access."},{"speaker":"B","text":"Then the real question is the standard, not the existence. If the zoo meets modern welfare and conservation standards, keep it and invest in improvements; if it can't, relocate the animals."},{"speaker":"C","text":"I'd add a practical point: relocation itself is risky and expensive for older animals. Any move should be judged case by case, species by species."}]}],"answerShortQuestion":[{"question":"What is the largest ocean on Earth?","answer":"The Pacific Ocean"},{"question":"Which metal is liquid at room temperature?","answer":"Mercury"},{"question":"What do we call the instrument used to measure air pressure?","answer":"A barometer"},{"question":"What is the main place where aircraft take off and land?","answer":"An airport"},{"question":"What do we call a diagram that shows family relationships across generations?","answer":"A family tree"}],"summarizeWrittenText":[{"passage":"For centuries, lighthouses were the difference between safe arrival and disaster for ships approaching dangerous coastlines. Early towers burned wood or coal, and their keepers endured long periods of isolation to maintain the light through the night. The nineteenth century brought revolutionary changes: lenses that concentrated light into powerful beams, and eventually electric lamps that could be seen from more than thirty kilometres away. Yet technology did not make keepers redundant immediately, since lamps still required constant cleaning and winding. Automation finally arrived in the twentieth century, and today many lighthouses operate unattended, monitored remotely. Ironically, decommissioned lighthouses now attract tourists, historians, and photographers who celebrate the romantic era of the men who kept the lights burning.","sample":"Lighthouses protected ships from dangerous coastlines for centuries, progressing from wood fires to powerful electric beams; although automation eventually removed the need for resident keepers, decommissioned lighthouses now attract visitors who commemorate the isolated keepers of the pre-automated era."},{"passage":"Psychologists increasingly describe habits as automatic responses to familiar situations rather than conscious decisions. When a behaviour is repeated in the same context — coffee after waking, a walk after lunch — control gradually shifts from deliberate thought to automatic cues, which explains why habits feel effortless but also resist change. Research suggests that successful habit formation depends less on motivation than on context: attaching a new behaviour to an existing routine, and making the desired action obvious and convenient, dramatically improves results. Conversely, breaking a habit rarely succeeds through willpower alone; altering the environment, so that the old cue no longer triggers the response, proves far more effective. This view reframes self-improvement as a matter of designing surroundings rather than summoning determination.","sample":"Habits are automatic responses to contextual cues rather than decisions; research shows that forming them depends on attaching new behaviours to existing routines and convenient environments, while breaking them works better through changing surroundings than willpower."}],"essay":[{"prompt":"Some secondary schools require all students to wear a uniform, while others allow students to dress freely. Discuss both approaches and give your own opinion. Write 200–300 words.","sample":"Possible structure: (1) Introduction — paraphrase the debate, state your position. (2) Arguments for uniforms: reduce pressure and bullying over clothing, cost less for families over time, create a sense of belonging and an equal appearance. (3) Arguments for free dress: self-expression and comfort, cheap second-hand options weaken the cost argument, enforcing rules wastes staff time. (4) Conclusion — your view, e.g. uniforms with affordable sourcing and student input on design. Useful phrases: 'It is often claimed that…', 'A common counter-argument is…', 'On balance, I would argue…', 'In conclusion, …'"}],"reading":{"fibDropdown":[{"text":"The ancient Romans built aqueducts to {{1}} fresh water from distant springs into their cities. Flowing downhill through gently sloping channels, the water supplied public fountains, baths, and private homes. Roman engineers {{2}} routes across valleys and hills with remarkable precision, and many aqueducts remained in {{3}} for centuries. The structures, supported by rows of arches, are still regarded as masterpieces of {{4}}.","blanks":[{"options":["carry","purchase","drain","block"],"correct":0},{"options":["planned","surveyed","invented","guarded"],"correct":1},{"options":["use","order","place","service"],"correct":3},{"options":["architecture","agriculture","archaeology","argument"],"correct":0}]},{"text":"The water cycle describes the continuous {{1}} of water between the atmosphere, the land, and the oceans. Solar energy causes evaporation from seas and lakes, and the resulting vapour rises and cools to form clouds. When droplets grow heavy enough, precipitation falls as rain or snow. Some of this water {{2}} into the ground, replenishing groundwater, while the rest flows back towards the sea through rivers. Because the cycle purifies and redistributes water naturally, it {{3}} every ecosystem on the planet, yet human activity can {{4}} its delicate balance.","blanks":[{"options":["movement","movements","move","moved"],"correct":0},{"options":["sinks","soaks","slides","sets"],"correct":1},{"options":["sustains","suspects","suppresses","suspends"],"correct":0},{"options":["disturb","distribute","distract","distinguish"],"correct":0}]},{"text":"Jazz emerged in the early twentieth century in New Orleans, a port city where African, Caribbean, and European musical traditions {{1}}. Unlike most forms of Western music, jazz places great value on {{2}}, with musicians inventing melodies on the spot rather than reading them from a page. As performers travelled north, the style {{3}} rapidly, giving rise to distinct schools in Chicago and New York. Today, jazz is studied in universities worldwide, and its influence can be {{4}} in virtually every genre of modern popular music.","blanks":[{"options":["combined","concealed","competed","compressed"],"correct":0},{"options":["improvisation","illustration","installation","irrigation"],"correct":0},{"options":["spread","split","stalled","stiffened"],"correct":0},{"options":["heard","hurried","humbled","hurt"],"correct":0}]},{"text":"The modern bicycle evolved through decades of trial and error. Early models of the 1860s, known as 'boneshakers', had iron tyres and no suspension, making rides over cobbled streets extremely {{1}}. The situation worsened with the penny-farthing, whose enormous front wheel allowed speed but caused dangerous falls. The breakthrough came in 1885, when the {{2}} safety bicycle introduced two wheels of equal size and a chain drive; pneumatic tyres three years later completed the design. Affordable, clean, and efficient, the bicycle quickly {{3}} personal transport, and by the 1890s it had {{4}} a new freedom of movement to millions of riders, especially women.","blanks":[{"options":["uncomfortable","unfortunate","ungrateful","unnatural"],"correct":0},{"options":["so-called","shortened","shattered","sheltered"],"correct":0},{"options":["transformed","transferred","translated","transported"],"correct":0},{"options":["provided","praised","polled","postponed"],"correct":0}]},{"text":"In 1519, Ferdinand Magellan set out from Spain with five ships and a crew of about 270 men, determined to reach the spice islands by sailing west. After crossing the Pacific — a passage far longer than his crew had {{1}} — Magellan was killed in the Philippines, and only one ship, commanded by Juan Sebastián Elcano, {{2}} home three years later. Although the expedition was a commercial {{3}}, losing four of its five vessels, it achieved a historic first: the first {{4}} circumnavigation of the globe.","blanks":[{"options":["expected","exported","explored","exchanged"],"correct":0},{"options":["returned","repaired","remained","removed"],"correct":0},{"options":["failure","festival","fabric","fashion"],"correct":0},{"options":["complete","common","curious","casual"],"correct":0}]}],"mcMultiple":[{"passage":"Music therapy is now used in hospitals and care homes to support patients alongside conventional treatment. Studies report that listening to familiar songs can lower anxiety before surgery, reduce the perception of chronic pain, and improve mood in people recovering from strokes. For patients with dementia, music can unlock memories that ordinary conversation cannot reach, sometimes prompting speech after long silences. Therapists caution, however, that music is not a cure: outcomes vary widely between individuals, and poorly chosen programmes may agitate some patients rather than calm them.","question":"Which of the following claims does the passage make?","options":["Music therapy may reduce anxiety before operations","Music therapy replaces conventional medical treatment","Familiar songs can trigger memories in dementia patients","It works equally well for every patient","Music can influence how strongly patients feel pain"],"answers":[0,2,4]},{"passage":"Medieval castles were far more than military fortresses; they were administrative centres, homes, and symbols of power. Their design evolved as weapons changed: tall, thin curtain walls gave way to lower, thicker walls better able to resist cannon fire, and round towers replaced square ones because they deflected projectiles more effectively. Inside the walls, a castle might contain a great hall for feasting, workshops, stables, a chapel, and even a garden. Nevertheless, daily life could be cold, smoky, and dark, since windows were kept small for defensive reasons.","question":"Which statements about medieval castles are true according to the passage?","options":["Castle design changed in response to new weapons","Round towers replaced square towers for defensive reasons","Castle windows were made large to let in more light","Castles served only military purposes","A castle could house workshops, a chapel, and stables"],"answers":[0,1,4]}],"reorder":[{"sentences":["A bill must pass through several stages before it becomes law.","First, it is debated and voted on in the lower house of parliament.","If approved there, the bill moves to the upper house, where it may be amended.","Finally, the head of state gives formal approval, and the bill becomes an act."]},{"sentences":["Butterflies undergo a complete transformation during their lives, a process called metamorphosis.","A female first lays eggs on a plant that will feed the emerging caterpillars.","The caterpillar then eats and grows rapidly before forming a protective casing known as a chrysalis.","Inside the chrysalis, its body is reorganised, and an adult butterfly eventually emerges."]}],"fibDrag":[{"text":"Tea drinking began in China, where legend claims that leaves drifted into a pot of boiling water nearly five thousand years ago. From there, tea {{1}} along trade routes to Japan, the Middle East, and eventually Europe, where it became an expensive luxury. In Britain, the drink grew so {{2}} that by the eighteenth century it was a staple of daily life across all social classes.","answers":["travelled","popular"],"bank":["travelled","popular","sour","decline","narrowly","tender"]},{"text":"During hibernation, an animal's body temperature drops sharply and its heartbeat {{1}} to just a few beats per minute, allowing it to survive the winter without eating. Before entering this state, many species spend the autumn feeding intensively to {{2}} fat reserves that will supply energy until spring.","answers":["slows","build"],"bank":["slows","build","runs","spend","gentle","narrow"]},{"text":"For centuries, natural harbours determined where towns grew, because sheltered deep water allowed large ships to load and unload {{1}}. Over time, engineering extended these advantages: breakwaters, docks, and cranes turned simple landing places into the great ports that {{2}} global trade today.","answers":["cargo","dominate"],"bank":["cargo","dominate","forecast","collapse","seldom","retail"]},{"text":"Plants cannot move, so they have evolved clever ways of {{1}} their seeds. Some produce winged or fluffy seeds that drift on the wind, while others enclose them in sweet fruit that animals eat and carry away. This variety of strategies {{2}} young plants a chance to grow far from the shade of the parent.","answers":["spreading","gives"],"bank":["spreading","gives","stealing","blocks","empty","thick"]}],"mcSingle":[{"passage":"Sonar was born from one of maritime history's greatest tragedies. After the Titanic sank in 1912, the physicist Paul Langevin was asked to find a way of detecting icebergs in darkness and fog. Working with piezoelectric crystals, he produced a device that sent sound pulses underwater and listened for echoes — the first practical echo-ranging system. The technology matured during the First World War, when it became vital for hunting submarines, and it later transformed navigation, fishing, and the mapping of the ocean floor.","question":"What is the main purpose of the passage?","options":["To explain how submarines attack ships","To describe the origin and importance of sonar","To argue that the Titanic disaster was avoidable","To compare different methods of detecting icebergs"],"answer":1},{"passage":"The Panama Canal connects the Atlantic and Pacific oceans across a narrow strip of land, saving ships a journey of thousands of kilometres around Cape Horn. Building it cost more than a decade of effort, the lives of thousands of workers, and one of history's largest engineering budgets. The project's greatest enemy was not rock but disease: malaria and yellow fever killed workers until a sanitation campaign drained the mosquitoes' breeding grounds. The canal opened in 1914 and remains one of the busiest shipping routes in the world.","question":"According to the passage, what was the greatest obstacle during construction?","options":["Shortage of money","Rock formations","Tropical diseases","Conflicts with shipping companies"],"answer":2}]},"listening":{"summarizeSpokenText":[{"title":"The psychology of first impressions","sample":"The speaker explained that we form impressions of strangers within a fraction of a second, based heavily on facial cues such as trustworthiness and competence. These first impressions act as an anchor, so later information is filtered through them and a bad first impression takes far more evidence to change than a good one. However, the speaker stressed that impressions can be revised, especially when people have strong motives to cooperate, and that time together provides more reliable information.","audio":"When we meet someone for the first time, we form an impression within a fraction of a second — long before any meaningful exchange of information. Research shows that these snap judgements rely heavily on the face: cues such as trustworthiness and competence are read from facial structure and expression almost instantly. First impressions then act as an anchor; later information is filtered through them, so changing a bad first impression takes far more evidence than confirming a good one. Yet they are not destiny. Impressions can be revised, particularly when we have strong motives to cooperate, and time together gives more reliable information about a person's actual behaviour."},{"title":"The Hanseatic League","sample":"The lecture described the Hanseatic League, an alliance of merchant towns led by Lübeck that dominated northern European trade from the twelfth to the seventeenth century. Members traded salt, herring, grain, timber, and cloth through a network stretching from London to Novgorod, maintaining trading posts abroad, their own ships, and even the ability to wage war. The league declined as nation-states grew stronger and trade shifted towards the Atlantic, but for three centuries it made northern commerce organised and secure.","audio":"Between the twelfth and seventeenth centuries, the Hanseatic League dominated trade across northern Europe. It was not a state but a loose alliance of merchant towns, led by Lübeck, that cooperated to protect shipping and secure trading privileges. Members traded salt, herring, grain, timber, and cloth through a network stretching from London to Novgorod, and they established trading posts, known as kontors, in foreign cities. The league maintained its own ships and even waged war when necessary. Its decline came as nation-states grew stronger and trade routes shifted towards the Atlantic, yet for three centuries it made northern commerce remarkably organised and secure."}],"mcMultiple":[{"audio":"Attention everyone — the annual student photography competition closes this Friday at midnight. Entries must be original photographs taken by students during the current academic year, and each student may submit up to three images. This year's theme is Light and Shadow, and entries should be emailed in high resolution to the arts office address on the student portal. The winning photographs will be displayed in the main hall during graduation week, and prizes include gift vouchers and a place on the summer photography workshop.","question":"Which statements match the announcement?","options":["Students may enter up to three photographs","Entry is only open to arts students","The competition closes on Friday at midnight","There is a specific theme for this year","Winners will be announced at the summer workshop"],"answers":[0,2,3]}],"fillBlanks":[{"display":"Good morning. A quick reminder about Saturday's science fair in the main hall. Please arrive by eight to set up your {{1}}, wear your safety glasses during demonstrations, and keep the walkways {{2}} for visitors. Judges will announce the {{3}} at four o'clock.","answers":["exhibits","clear","winners"],"audio":"Good morning. A quick reminder about Saturday's science fair in the main hall. Please arrive by eight to set up your exhibits, wear your safety glasses during demonstrations, and keep the walkways clear for visitors. Judges will announce the winners at four o'clock."},{"display":"Today's biology lecture examines camouflage, the way animals {{1}} into their surroundings to avoid detection. Some species change colour with the seasons, while others use shapes and patterns that {{2}} their outline. Effective camouflage can mean the difference between {{3}} and becoming a predator's meal.","answers":["blend","disrupt","survival"],"audio":"Today's biology lecture examines camouflage, the way animals blend into their surroundings to avoid detection. Some species change colour with the seasons, while others use shapes and patterns that disrupt their outline. Effective camouflage can mean the difference between survival and becoming a predator's meal."},{"display":"In this lecture we follow the development of the telegraph. By sending electrical {{1}} along wires, operators could deliver messages across vast {{2}} in minutes rather than weeks. The invention {{3}} the way news, commerce, and governments exchanged information.","answers":["signals","distances","transformed"],"audio":"In this lecture we follow the development of the telegraph. By sending electrical signals along wires, operators could deliver messages across vast distances in minutes rather than weeks. The invention transformed the way news, commerce, and governments exchanged information."}],"highlightCorrectSummary":[{"audio":"Every autumn, the leaves of temperate forests turn from green to brilliant shades of yellow, orange, and red. The colours are not newly made in autumn; yellow and orange pigments are present in the leaf all along, hidden beneath the green pigment that captures sunlight for the tree. As days shorten, trees reabsorb valuable nutrients and the green pigment breaks down, revealing the colours beneath. Red is different: it is produced in autumn from sugars trapped in the leaf, and its intensity depends on bright days and cool nights.","options":["Leaves turn red because they produce the green pigment faster in autumn.","Autumn colours appear when the green pigment breaks down and reveals pigments already present, while reds are newly produced from sugars.","Trees produce yellow pigments only after the first frost each year.","Leaf colour change is caused mainly by a lack of water in the soil."],"answer":1}],"mcSingle":[{"audio":"Hello, is this the campus services desk? I've just realised my student card is missing — I think I left it in the computer lab yesterday evening. I need it to enter the library and print my coursework. Could I order a replacement, and can you freeze the old one?","question":"Why is the student calling?","options":["To complain about the computer laboratory","To report a lost student card and request a replacement","To ask for help printing coursework","To renew a book he borrowed"],"answer":1}],"selectMissingWord":[{"audio":"Some of history's greatest inventions were born from failure or accident, which is why innovators are encouraged to treat every unexpected result as a potential","options":["opportunity","punishment","recipe","tradition"],"answer":0,"fullText":"Some of history's greatest inventions were born from failure or accident, which is why innovators are encouraged to treat every unexpected result as a potential opportunity."}],"highlightIncorrectWords":[{"words":[{"w":"The"},{"w":"geography"},{"w":"trip"},{"w":"departs"},{"w":"at"},{"w":"eight","wrong":true,"said":"nine"},{"w":"so"},{"w":"please"},{"w":"bring"},{"w":"waterproof"},{"w":"jackets"},{"w":"and"},{"w":"a"},{"w":"packed"},{"w":"lunch"},{"w":"because"},{"w":"we"},{"w":"will"},{"w":"spend"},{"w":"the"},{"w":"afternoon"},{"w":"collecting"},{"w":"rock"},{"w":"samples"},{"w":"near"},{"w":"the"},{"w":"coast","wrong":true,"said":"valley"}]},{"words":[{"w":"Male"},{"w":"frogs"},{"w":"call"},{"w":"loudly","wrong":true,"said":"softly"},{"w":"during"},{"w":"the"},{"w":"breeding"},{"w":"season"},{"w":"to"},{"w":"attract"},{"w":"females"},{"w":"and"},{"w":"females"},{"w":"lay"},{"w":"thousands","wrong":true,"said":"hundreds"},{"w":"of"},{"w":"eggs"},{"w":"in"},{"w":"still"},{"w":"water"},{"w":"where"},{"w":"the"},{"w":"young"},{"w":"hatch"},{"w":"as"},{"w":"tadpoles"}]}],"writeFromDictation":[{"text":"The museum guide explained how the ancient ruins were discovered."},{"text":"Our final presentation must include at least three academic sources."},{"text":"Heavy rain delayed the start of yesterday's outdoor graduation ceremony."}]}};
+</script>
+<script>
+/* PTE Academic Mock Exam Engine (2026 format) — self-contained, no dependencies.
+   Audio via Web Speech API (speechSynthesis). Mic via MediaRecorder. */
+(function () {
+"use strict";
+
+var app = document.getElementById("app");
+var C = EXAM;
+
+/* ================= static text: instructions + guide tips ================= */
+var TYPE_META = {
+  readAloud: { title: "Read Aloud", part: 1,
+    ins: "Look at the text below. In 35 seconds, you must read this text aloud as naturally and as clearly as possible. You have 40 seconds to read aloud.",
+    tips: ["Use the 35s prep to read silently twice; mark hard words.", "Stress content words (nouns, verbs), glide over function words.", "Fall in intonation at full stops, rise at commas.", "Never go back to correct a mistake — keep flowing.", "Steady natural pace beats fast reading."] },
+  repeatSentence: { title: "Repeat Sentence", part: 1,
+    ins: "You will hear a sentence. Please repeat the sentence exactly as you hear it. You will hear the sentence only once.",
+    tips: ["Close your eyes and listen for meaning chunks, not single words.", "Copy the speaker's intonation and rhythm.", "If memory breaks, deliver the chunk you know fluently — partial fluent beats hesitant full.", "No note-taking time; start speaking as soon as the mic opens."] },
+  describeImage: { title: "Describe Image", part: 1,
+    ins: "Look at the graph below. In 25 seconds, please speak into the microphone and describe in detail what the graph is showing. You will have 40 seconds to give your response.",
+    tips: ["Template: introduction (what it shows) → 2–3 key features (highest, lowest, trend, comparison) → conclusion.", "Never stop talking before 35s; silence costs fluency marks.", "Say approximate figures ('around 40 percent') — exact numbers not required.", "For maps/processes: describe positions/steps left-to-right."] },
+  retellLecture: { title: "Re-tell Lecture", part: 1,
+    ins: "You will hear a lecture. After listening to the lecture, in 10 seconds, please speak into the microphone and retell what you have just heard in your own words. You will have 40 seconds to give your response.",
+    tips: ["Note 8–10 keywords: names, numbers, main nouns/verbs — not full sentences.", "Frame: 'The lecture discussed… The speaker explained that… In conclusion…'", "Fluency and content keywords matter more than grammar perfection.", "Keep speaking for the full 40 seconds."] },
+  respondToSituation: { title: "Respond to a Situation", part: 1,
+    ins: "You will hear and read a description of an everyday situation. You then have 20 seconds to think about your response and 40 seconds to speak. Answer as if you were really in the situation.",
+    tips: ["Identify WHO you are talking to and WHAT outcome you want.", "Structure: polite opening → explain situation/problem → make your request or proposal → thank them.", "Match register: formal for staff/officials, casual for friends.", "Be specific — invent plausible details (dates, names, reasons)."] },
+  summarizeGroupDiscussion: { title: "Summarize Group Discussion", part: 1,
+    ins: "You will hear a discussion between several speakers. After listening, speak into the microphone and summarize what you have heard. You will have 60 seconds to give your response.",
+    tips: ["Note each speaker's MAIN point + any agreement/disagreement between them.", "Frame: 'The speakers discussed… The first speaker argued… while the second believed… They agreed that…'", "Cover ALL speakers, not just one.", "Use reporting verbs: suggested, objected, agreed, proposed."] },
+  answerShortQuestion: { title: "Answer Short Question", part: 1,
+    ins: "You will hear a question. Please give a simple and short answer. Often just one or a few words is enough. You will hear the question only once.",
+    tips: ["Answer with one or a few words — never a full sentence.", "Listen for the wh-word (who/where/what) to predict answer type.", "Tests general knowledge + vocabulary; don't overthink."] },
+  summarizeWrittenText: { title: "Summarize Written Text", part: 1,
+    ins: "Read the passage below and summarize it using ONE sentence. Type your response in the box at the bottom of the screen. You have 10 minutes. Your response will be judged on how well it presents the key points and on grammar, vocabulary and spelling. Your summary must be between 5 and 75 words.",
+    tips: ["ONE sentence only — full stops inside the answer are fatal.", "Find the main claim, then attach 1–2 key supports with connectors (while, because, which, although).", "Aim 35–55 words.", "Save 1 minute to check subject-verb agreement and spelling."] },
+  essay: { title: "Write Essay", part: 1,
+    ins: "You will have 20 minutes to plan, write and revise an essay about the topic below. Your response will be judged on how well you develop a position, organize your ideas, present supporting details, and control the elements of standard written English. You should write 200–300 words.",
+    tips: ["2–3 min plan: position + 2 arguments + examples.", "Structure: introduction (paraphrase + thesis) → body 1 → body 2 → conclusion.", "Start each body paragraph with a clear topic sentence; add an example.", "Save 2 minutes to proofread articles, plurals, verb endings."] },
+  fibDropdown: { title: "Reading & Writing: Fill in the Blanks", part: 2,
+    ins: "Below is a text with blanks. Click on each blank, and a drop-down list will appear. Select the appropriate answer choice for each blank.",
+    tips: ["Read the whole sentence first for meaning, then use grammar (word form, collocation) to confirm.", "Verb tense/agreement and fixed collocations solve most blanks.", "These supply BOTH reading and writing marks — prioritise them."] },
+  mcMultiple: { title: "Multiple Choice, Multiple Answers", part: 2,
+    ins: "Read the text and answer the question by selecting all the correct responses. More than one response is correct. If you select a wrong option, one point is deducted, so do not guess.",
+    tips: ["Skim the passage's main idea before reading options.", "Each correct option is usually a paraphrase of a passage detail.", "Avoid options that exaggerate ('always', 'never') beyond the text.", "Negative marking: skip an option if unsure."] },
+  reorder: { title: "Re-order Paragraphs", part: 2,
+    ins: "The text boxes in the left panel have been placed in a random order. Restore the original order by moving the text boxes.",
+    tips: ["Find the opening sentence first: it has no pronouns, no 'this/these', no connectors like 'however'.", "Chain pronouns to nouns ('he' → the man; 'this method' → a method named earlier).", "Look for time sequence and lexical repetition links.", "Scoring counts adjacent pairs — even a partially correct chain earns points."] },
+  fibDrag: { title: "Reading: Fill in the Blanks", part: 2,
+    ins: "Below is a text with blanks. Drag words from the box below to fill the blanks.",
+    tips: ["Sort the word bank by part of speech before dragging.", "Collocation is king: 'make a decision', 'heavy rain', 'conduct research'.", "Fill easiest blanks first; options shrink.", "Re-read completed text — it must flow grammatically."] },
+  mcSingle: { title: "Multiple Choice, Single Answer", part: 2,
+    ins: "Read the text and answer the multiple choice question by selecting the correct response. Only one response is correct.",
+    tips: ["Read the question BEFORE the passage.", "Eliminate options contradicted or not mentioned in the text.", "Correct answer paraphrases; distractors copy words but twist meaning."] },
+  sst: { title: "Summarize Spoken Text", part: 3,
+    ins: "You will hear a short lecture. Write a summary for a fellow student who was not present. You should write 50–70 words. You have 10 minutes to finish this task.",
+    tips: ["Note keywords, not sentences, while listening.", "Template: 'The speaker discussed X. He/She explained that… and highlighted… Finally, …'", "Stay within 50–70 words.", "Check spelling — it is scored."] },
+  mcmL: { title: "Multiple Choice, Multiple Answers (Listening)", part: 3,
+    ins: "Listen to the recording and answer the question by selecting all the correct responses. If you select a wrong option, one point is deducted.",
+    tips: ["Read the options quickly while the audio begins.", "Listen for paraphrases, not identical wording.", "Negative marking — never guess."] },
+  fillBlanksL: { title: "Fill in the Blanks (Listening)", part: 3,
+    ins: "You will hear a recording. Type the missing words in each blank as you hear them.",
+    tips: ["Type while listening — do not wait until the end.", "Watch the transcript ahead of your typing position.", "After the audio, check plural -s and past-tense -ed endings.", "Spelling counts; both US/UK accepted."] },
+  hcs: { title: "Highlight Correct Summary", part: 3,
+    ins: "Below are four possible summaries of the recording. Click on the paragraph that best captures what you have heard.",
+    tips: ["Eliminate options containing information contradicted by the audio.", "Eliminate options adding details never mentioned.", "The correct option covers the WHOLE talk, not one detail."] },
+  mcsL: { title: "Multiple Choice, Single Answer (Listening)", part: 3,
+    ins: "Listen to the recording and answer the multiple choice question.",
+    tips: ["Read the question stem first; listen with purpose.", "Distractors often repeat exact words from the audio with wrong meaning."] },
+  smw: { title: "Select Missing Word", part: 3,
+    ins: "You will hear a recording about a topic. At the end of the recording the last word or group of words is replaced by a beep. Select the correct option to complete the recording.",
+    tips: ["Predict the word from context before the beep.", "Intonation direction (rising/falling) hints at positive/negative endings.", "Check grammar fit: singular/plural, verb form."] },
+  hiw: { title: "Highlight Incorrect Words", part: 3,
+    ins: "The transcription of a recording appears on screen. While listening to the recording, identify the words in the transcription that differ from what is said.",
+    tips: ["Follow the text with your cursor exactly at audio pace.", "Click the moment a word mismatches — replacements are usually similar-sounding words.", "Every wrong click loses a point; only click genuine mismatches."] },
+  wfd: { title: "Write from Dictation", part: 3,
+    ins: "You will hear a sentence. Type the sentence in the box below exactly as you hear it. Write as much of the sentence as you can. You will hear the sentence only once.",
+    tips: ["Type continuously while listening; fix afterwards.", "Check the classic traps: a/an/the, plural -s, -ed endings, prepositions.", "You can add extra words without penalty — write all variants you are unsure of.", "This task is the highest-value listening item: guard every word."] }
+};
+
+/* ================= state ================= */
+var state = {
+  mode: null,            // 'real' | 'guide'
+  step: 0,
+  answers: {},           // key -> user answer
+  recordings: {},        // key -> blob URL
+  audioPlayed: {},       // key -> true
+  timers: [],            // active interval/timeout ids
+  speaking: false,       // TTS in flight
+  readingLeft: 30 * 60,  // reading part clock (real mode)
+  readingTick: null,
+  mediaStream: null,
+  recorder: null,
+  recChunks: []
+};
+
+/* ================= flow construction ================= */
+var flow = [];
+function addItems(type, list, part) {
+  (list || []).forEach(function (d, i) {
+    flow.push({ kind: "item", part: part, type: type, data: d, idx: i, total: list.length });
+  });
+}
+function buildFlow() {
+  flow.length = 0;
+  addItems("readAloud", C.readAloud, 1);
+  addItems("repeatSentence", C.repeatSentence, 1);
+  addItems("describeImage", C.describeImage, 1);
+  addItems("retellLecture", C.retellLecture, 1);
+  addItems("respondToSituation", C.respondToSituation, 1);
+  addItems("summarizeGroupDiscussion", C.summarizeGroupDiscussion, 1);
+  addItems("answerShortQuestion", C.answerShortQuestion, 1);
+  addItems("summarizeWrittenText", C.summarizeWrittenText, 1);
+  addItems("essay", C.essay, 1);
+  flow.push({ kind: "reading", part: 2 });
+  addItems("sst", C.listening.summarizeSpokenText, 3);
+  addItems("mcmL", C.listening.mcMultiple, 3);
+  addItems("fillBlanksL", C.listening.fillBlanks, 3);
+  addItems("hcs", C.listening.highlightCorrectSummary, 3);
+  addItems("mcsL", C.listening.mcSingle, 3);
+  addItems("smw", C.listening.selectMissingWord, 3);
+  addItems("hiw", C.listening.highlightIncorrectWords, 3);
+  addItems("wfd", C.listening.writeFromDictation, 3);
+}
+function readingItems() {
+  var r = C.reading, out = [];
+  r.fibDropdown.forEach(function (d, i) { out.push({ type: "fibDropdown", data: d, idx: i, total: r.fibDropdown.length }); });
+  r.mcMultiple.forEach(function (d, i) { out.push({ type: "mcMultiple", data: d, idx: i, total: r.mcMultiple.length }); });
+  r.reorder.forEach(function (d, i) { out.push({ type: "reorder", data: d, idx: i, total: r.reorder.length }); });
+  r.fibDrag.forEach(function (d, i) { out.push({ type: "fibDrag", data: d, idx: i, total: r.fibDrag.length }); });
+  r.mcSingle.forEach(function (d, i) { out.push({ type: "mcSingle", data: d, idx: i, total: r.mcSingle.length }); });
+  return out;
+}
+
+/* ================= helpers ================= */
+function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+function key() { return "s" + state.step; }
+function rkey(t, i) { return "r_" + t + "_" + i; }
+function clearTimers() {
+  state.timers.forEach(function (id) { clearTimeout(id); clearInterval(id); });
+  state.timers = [];
+  stopTTS();
+}
+function later(fn, ms) { var id = setTimeout(fn, ms); state.timers.push(id); return id; }
+function every(fn, ms) { var id = setInterval(fn, ms); state.timers.push(id); return id; }
+function fmt(s) { s = Math.max(0, Math.round(s)); return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); }
+function beep() {
+  try {
+    var ctx = beep._ctx || (beep._ctx = new (window.AudioContext || window.webkitAudioContext)());
+    var o = ctx.createOscillator(), g = ctx.createGain();
+    o.connect(g); g.connect(ctx.destination);
+    o.frequency.value = 720; g.gain.value = 0.18;
+    o.start(); o.stop(ctx.currentTime + 0.3);
+  } catch (e) {}
+}
+function wordCount(t) { t = (t || "").trim(); return t ? t.split(/\s+/).length : 0; }
+
+/* ================= TTS ================= */
+function stopTTS() { try { window.speechSynthesis && speechSynthesis.cancel(); } catch (e) {} state.speaking = false; }
+function speak(text, opts) {
+  opts = opts || {};
+  return new Promise(function (res) {
+    if (!("speechSynthesis" in window)) { res(false); return; }
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = opts.rate || 0.95; u.pitch = opts.pitch || 1; u.lang = opts.lang || "en-AU";
+    u.onend = function () { res(true); };
+    u.onerror = function () { res(false); };
+    state.speaking = true;
+    speechSynthesis.speak(u);
+  });
+}
+function speakTurns(turns) {
+  var pitches = { A: 1.0, B: 1.35, C: 0.75, D: 1.15 };
+  var i = 0, cancelled = false;
+  state.ttsCancel = function () { cancelled = true; };
+  return new Promise(function (res) {
+    (function next() {
+      if (cancelled || i >= turns.length) { res(!cancelled); return; }
+      speak(turns[i].text, { pitch: pitches[turns[i].speaker] || 1, rate: 0.95 }).then(next);
+      i++;
+    })();
+  });
+}
+
+/* ================= audio play controller (enforces single play in real mode) ================= */
+function playAudio(k, playFn, onDone) {
+  if (state.mode === "real" && state.audioPlayed[k]) { if (onDone) onDone(false); return false; }
+  state.audioPlayed[k] = true;
+  playFn().then(function (ok) { state.speaking = false; if (onDone) onDone(ok); });
+  return true;
+}
+
+/* ================= mic ================= */
+function ensureMic() {
+  if (state.mediaStream) return Promise.resolve(true);
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return Promise.resolve(false);
+  return navigator.mediaDevices.getUserMedia({ audio: true }).then(function (s) {
+    state.mediaStream = s; return true;
+  }).catch(function () { return false; });
+}
+function startRecording(k) {
+  if (!state.mediaStream) return false;
+  state.recChunks = [];
+  try { state.recorder = new MediaRecorder(state.mediaStream); } catch (e) { return false; }
+  state.recorder.ondataavailable = function (e) { if (e.data.size) state.recChunks.push(e.data); };
+  state.recorder.onstop = function () {
+    var b = new Blob(state.recChunks, { type: state.recorder.mimeType || "audio/webm" });
+    state.recordings[k] = URL.createObjectURL(b);
+  };
+  state.recorder.start();
+  return true;
+}
+function stopRecording() {
+  if (state.recorder && state.recorder.state !== "inactive") { try { state.recorder.stop(); } catch (e) {} }
+}
+
+/* ================= chrome (header / progress) ================= */
+function chrome(partLabel, timerHtml) {
+  var total = flow.length, cur = Math.min(state.step + 1, total);
+  var pct = state.step === -1 ? 0 : Math.round((state.step) / (total - 1) * 100);
+  return '<div class="topbar">' +
+    '<div class="logo">PTE<span>·Academic</span> Mock</div>' +
+    '<div class="mode ' + (state.mode === "guide" ? "guide" : "") + '">' + (state.mode === "guide" ? "GUIDE MODE" : "REAL MODE") + "</div>" +
+    '<div class="spacer"></div>' +
+    (partLabel ? '<div style="font-size:13px;opacity:.85">' + partLabel + "</div>" : "") +
+    (timerHtml || "") +
+    "</div>" +
+    '<div class="progress"><div style="width:' + pct + '%"></div></div>';
+}
+function render(html) { app.innerHTML = html; window.scrollTo(0, 0); }
+function tipsHtml(type) {
+  if (state.mode !== "guide") return "";
+  var t = TYPE_META[type].tips;
+  return '<div class="tipsbox"><h4>Tips &amp; tricks</h4><ul>' + t.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>";
+}
+function sampleHtml(label, text) {
+  return '<div class="samplebox"><h4>' + esc(label || "Sample answer") + '</h4><div>' + esc(text) + "</div></div>";
+}
+function guideExtra(type, data) {
+  if (state.mode !== "guide" || !data.sample) return "";
+  return '<div id="sampleWrap"><button class="btn sec small" onclick="PTE.showSample()">Show sample answer</button></div>';
+}
+
+/* ================= home ================= */
+function renderHome() {
+  state.step = -1;
+  render(chrome(null, "") +
+    '<div class="main"><div class="card">' +
+    "<h1>" + esc(C.meta.title) + "</h1>" +
+    '<div class="instructions">Full-length PTE Academic mock exam · 2026 test format (22 task types, ~2 hours). ' +
+    "This simulation follows the official test-day workflow: three parts (Speaking &amp; Writing, Reading, Listening), " +
+    "per-item timers, one-play audio, microphone recording, and auto-advance.</div>" +
+    '<div class="modewrap">' +
+    '<div class="modecard" onclick="PTE.pickMode(\'real\')"><h3>▶ Real Mode</h3>' +
+    "<ul><li>Exact exam workflow &amp; strict timers</li><li>Audio plays ONCE only</li><li>Auto-advance, no tips, no pause</li><li>Mic recording like test day</li><li>Score report at the end</li></ul></div>" +
+    '<div class="modecard" onclick="PTE.pickMode(\'guide\')"><h3>✎ Guide Mode</h3>' +
+    "<ul><li>Tips &amp; tricks panel on every task</li><li>Replay audio freely, no forced timing</li><li>Sample answers / answer keys inline</li><li>Practice at your own pace</li><li>Same items &amp; scoring review</li></ul></div>" +
+    "</div>" +
+    '<div class="kv"><b>Requirements:</b> a browser with Web Speech API (audio prompts) and microphone access (speaking tasks). Chrome/Edge recommended.</div>' +
+    '<div class="kv"><b>Content:</b> original practice items aligned to the 2026 PTE Academic format — including the newer <i>Respond to a Situation</i> and <i>Summarize Group Discussion</i> speaking tasks.</div>' +
+    "</div></div>" +
+    '<div class="footer-note">Unofficial practice material. Not affiliated with Pearson PLC. Scores are indicative only.</div>');
+}
+
+/* ================= mic check ================= */
+function renderMicCheck() {
+  render(chrome(null, "") +
+    '<div class="main"><div class="card">' +
+    "<h2>Microphone check</h2>" +
+    '<div class="instructions">The real PTE Academic records your spoken responses. Allow microphone access, then speak a few words and check the indicator. You may skip this; speaking tasks will still run, but recordings will not be captured.</div>' +
+    '<div class="statusbar"><span class="recdot" id="micdot"></span><span id="micstatus" class="statusline">Not tested yet</span></div>' +
+    '<div class="statusbar"><button class="btn sec" id="micbtn">Enable microphone</button>' +
+    '<button class="btn" id="micnext">Continue</button></div>' +
+    "</div></div>");
+  document.getElementById("micbtn").onclick = function () {
+    ensureMic().then(function (ok) {
+      var d = document.getElementById("micdot"), s = document.getElementById("micstatus");
+      if (ok) {
+        d.classList.add("on"); s.textContent = "Microphone ready — say something!";
+        try {
+          var ctx = new (window.AudioContext || window.webkitAudioContext)();
+          var src = ctx.createMediaStreamSource(state.mediaStream);
+          var an = ctx.createAnalyser(); src.connect(an);
+          var buf = new Uint8Array(an.frequencyBinCount);
+          every(function () {
+            an.getByteTimeDomainData(buf);
+            var m = 0; for (var i = 0; i < buf.length; i++) m = Math.max(m, Math.abs(buf[i] - 128));
+            d.style.transform = "scale(" + (1 + Math.min(1.5, m / 40)) + ")";
+          }, 120);
+        } catch (e) {}
+      } else { s.textContent = "Microphone unavailable — continuing without recording."; }
+    });
+  };
+  document.getElementById("micnext").onclick = function () { clearTimers(); renderSectionIntro(1); };
+}
+
+/* ================= section intros ================= */
+var SECTION_INFO = {
+  1: { t: "Part 1: Speaking & Writing", d: "This part tests your speaking and writing skills. Speaking tasks record your voice; you will hear a short tone before each recording starts. Writing tasks are typed. Timers run per item.", time: "approx. 60–70 min" },
+  2: { t: "Part 2: Reading", d: "This part tests your reading skills. A single clock governs the whole part — manage your time across all items. You may move between questions with the navigation panel.", time: "approx. 30 min" },
+  3: { t: "Part 3: Listening", d: "This part tests your listening skills. Each recording plays automatically and only ONCE. Answer as you listen; the test advances automatically after each item.", time: "approx. 30 min" }
+};
+function renderSectionIntro(part) {
+  clearTimers(); stopRecording();
+  var s = SECTION_INFO[part];
+  var tId = "secTimer";
+  render(chrome(s.t, state.mode === "real" ? '<div class="timerbox" id="' + tId + '"></div>' : "") +
+    '<div class="main"><div class="card">' +
+    '<div class="partlabel">' + s.time + "</div><h1>" + s.t + "</h1>" +
+    '<div class="instructions">' + s.d + "</div>" +
+    (state.mode === "guide" ? '<div class="tipsbox"><h4>Guide mode</h4><ul><li>No forced timers here — take your time on every task.</li><li>Use the yellow tips panel on each task.</li><li>Replay audio and reveal sample answers whenever you like.</li></ul></div>' : '<div class="instructions" id="secCount">The test will begin automatically in <b>10</b> seconds…</div>') +
+    '<div class="navrow"><span></span><button class="btn" id="secgo">' + (state.mode === "real" ? "Start now" : "Begin") + "</button></div>" +
+    "</div></div>");
+  var go = function () { clearTimers(); advanceFromIntro(part); };
+  document.getElementById("secgo").onclick = go;
+  if (state.mode === "real") {
+    var n = 10;
+    later(function () {}, 0);
+    var iv = every(function () {
+      n--;
+      var el = document.getElementById("secCount");
+      if (el) el.innerHTML = "The test will begin automatically in <b>" + n + "</b> seconds…";
+      if (n <= 0) go();
+    }, 1000);
+  }
+}
+function advanceFromIntro(part) {
+  if (part === 2) { startReadingPart(); return; }
+  var pos = flow.findIndex(function (f, i) { return f.kind === "item" && f.part === part; });
+  state.step = pos; renderStep();
+}
+
+/* ================= step renderer ================= */
+function renderStep() {
+  clearTimers(); stopRecording();
+  var f = flow[state.step];
+  if (!f) { renderReview(); return; }
+  if (f.kind === "reading") { startReadingPart(); return; }
+  var meta = TYPE_META[f.type];
+  var partLabel = SECTION_INFO[f.part].t + " · " + meta.title + " " + (f.idx + 1) + " of " + f.total;
+  if (SPEAK_RENDER[f.type]) SPEAK_RENDER[f.type](f, partLabel);
+  else if (WRITE_RENDER[f.type]) WRITE_RENDER[f.type](f, partLabel);
+  else LISTEN_RENDER[f.type](f, partLabel);
+}
+function next() { state.step++; renderStep(); }
+function itemHead(f, partLabel, timerId) {
+  return chrome(partLabel, timerId ? '<div class="timerbox" id="' + timerId + '">--:--</div>' : "") +
+    '<div class="main"><div class="card"><div class="qtype-head">' +
+    '<span class="qpos">' + (f.idx + 1) + " / " + f.total + "</span>" +
+    '<span class="qtitle">' + TYPE_META[f.type].title + "</span></div>" +
+    '<div class="instructions">' + TYPE_META[f.type].ins + "</div>" + tipsHtml(f.type);
+}
+
+/* ================= speaking items (generic state machine) ================= */
+/* cfg: {showText, showImage, prepSec, recSec, audioFirst, audioTextFn, showPrompt} */
+var SPEAK_CFG = {
+  readAloud: { prep: 35, rec: 40, audio: false, show: "text" },
+  repeatSentence: { prep: 0, rec: 15, audio: true, show: "none", delay: 3 },
+  describeImage: { prep: 25, rec: 40, audio: false, show: "image" },
+  retellLecture: { prep: 10, rec: 40, audio: true, show: "title" },
+  respondToSituation: { prep: 20, rec: 40, audio: true, show: "prompt" },
+  summarizeGroupDiscussion: { prep: 0, rec: 60, audio: true, show: "topic" },
+  answerShortQuestion: { prep: 0, rec: 10, audio: true, show: "none", delay: 1 }
+};
+var SPEAK_RENDER = {};
+["readAloud", "repeatSentence", "describeImage", "retellLecture", "respondToSituation", "summarizeGroupDiscussion", "answerShortQuestion"]
+  .forEach(function (type) { SPEAK_RENDER[type] = function (f, partLabel) { renderSpeaking(f, partLabel, SPEAK_CFG[type]); }; });
+
+function speakingContentHtml(f, cfg) {
+  var d = f.data, h = "";
+  if (cfg.show === "text") h += '<div class="promptbox">' + esc(d.text) + "</div>";
+  if (cfg.show === "image") h += '<div class="figbox"><h3>' + esc(d.title || "") + "</h3>" + (d.svg || "") + "</div>";
+  if (cfg.show === "title") h += '<div class="promptbox"><b>Topic:</b> ' + esc(d.title || "Lecture") + "</div>";
+  if (cfg.show === "prompt") h += '<div class="promptbox">' + esc(d.prompt) + "</div>";
+  if (cfg.show === "topic") h += '<div class="promptbox"><b>Discussion topic:</b> ' + esc(d.topic) + "</div>";
+  return h;
+}
+function speakingAudioFn(f, cfg) {
+  var d = f.data;
+  if (!cfg.audio) return null;
+  if (f.type === "summarizeGroupDiscussion") return function () { return speakTurns(d.turns); };
+  if (f.type === "respondToSituation") return function () { return speak(d.audio || d.prompt); };
+  if (f.type === "retellLecture") return function () { return speak(d.text, { rate: 0.92 }); };
+  if (f.type === "repeatSentence" || f.type === "answerShortQuestion") return function () { return speak(d.text || d.question); };
+  return null;
+}
+function renderSpeaking(f, partLabel, cfg) {
+  var k = key(), d = f.data;
+  var timerId = state.mode === "real" ? "spTimer" : null;
+  var html = itemHead(f, partLabel, timerId) +
+    speakingContentHtml(f, cfg) +
+    '<div class="statusbar">' +
+    '<span class="recdot" id="dot"></span>' +
+    '<span class="statusline" id="stline">Waiting…</span>' +
+    '<div class="audbar" id="bar"><div></div></div>' +
+    '<span class="timechip" id="clock"></span>' +
+    "</div>";
+  if (state.mode === "guide") {
+    html += '<div class="statusbar">' +
+      (cfg.audio ? '<button class="btn sec small" id="gplay">▶ Play audio</button>' : "") +
+      '<button class="btn sec small" id="grec">● Start recording</button>' +
+      '<button class="btn sec small" id="gstop" disabled>■ Stop</button>' +
+      "</div>" + guideExtra(f.type, d) +
+      '<div id="guideNote"></div>';
+  }
+  html += '<div class="navrow"><span>' + (state.mode === "guide" ? '<button class="btn sec" id="prevbtn">← Back</button>' : "") + "</span>" +
+    '<button class="btn" id="nextbtn"' + (state.mode === "real" ? " disabled" : "") + ">Next →</button></div></div></div>";
+  render(html);
+
+  var stline = document.getElementById("stline"), clock = document.getElementById("clock"),
+      dot = document.getElementById("dot"), bar = document.getElementById("bar"),
+      nextBtn = document.getElementById("nextbtn");
+  var prevBtn = document.getElementById("prevbtn");
+  if (prevBtn) prevBtn.onclick = function () { state.step--; renderStep(); };
+  nextBtn.onclick = function () { stopRecording(); stopTTS(); next(); };
+
+  function setBar(p, rec) { bar.className = "audbar" + (rec ? " rec" : ""); bar.firstElementChild.style.width = Math.min(100, p) + "%"; }
+  function runTimer(sec, label, rec, done) {
+    var total = sec;
+    clock.textContent = fmt(sec);
+    every(function () {
+      sec -= 0.25; clock.textContent = fmt(sec); setBar((1 - sec / total) * 100, rec);
+      if (sec <= 0) { clearTimers(); done(); }
+    }, 250);
+  }
+  function startRecPhase() {
+    beep();
+    stline.textContent = "Recording — speak now";
+    dot.classList.add("on");
+    ensureMic().then(function (ok) { if (ok) startRecording(k); });
+    runTimer(cfg.rec, "rec", true, function () {
+      stopRecording(); dot.classList.remove("on");
+      stline.textContent = "Recording finished";
+      nextBtn.disabled = false;
+      if (state.mode === "real") later(next, 800);
+    });
+  }
+  function startPrepPhase() {
+    if (cfg.prep > 0) {
+      stline.textContent = "Preparing…";
+      runTimer(cfg.prep, "prep", false, startRecPhase);
+    } else startRecPhase();
+  }
+  function startAudioPhase() {
+    var fn = speakingAudioFn(f, cfg);
+    if (!fn) { startPrepPhase(); return; }
+    stline.textContent = "Playing audio…";
+    playAudio(k, fn, function () {
+      if (state.mode === "real") later(startPrepPhase, (cfg.delay || 2) * 1000);
+      else { stline.textContent = "Audio finished — press ● Start recording"; }
+    });
+  }
+
+  if (state.mode === "real") {
+    nextBtn.disabled = true;
+    if (cfg.audio) later(startAudioPhase, 1200);
+    else later(startPrepPhase, 1200);
+    var t = document.getElementById(timerId);
+    if (t) { var secs = cfg.prep + cfg.rec + (cfg.audio ? 200 : 0); }
+  } else {
+    nextBtn.disabled = false;
+    stline.textContent = "Guide mode — work at your own pace";
+    var gp = document.getElementById("gplay"), gr = document.getElementById("grec"), gs = document.getElementById("gstop");
+    if (gp) gp.onclick = function () { stopTTS(); playAudio(k + "_g", speakingAudioFn(f, cfg), function () { stline.textContent = "Audio finished"; }); stline.textContent = "Playing audio…"; };
+    gr.onclick = function () {
+      ensureMic().then(function (ok) {
+        if (!ok) { stline.textContent = "No microphone — recording skipped"; return; }
+        beep(); startRecording(k); dot.classList.add("on");
+        stline.textContent = "Recording — press ■ Stop when done";
+        gr.disabled = true; gs.disabled = false;
+      });
+    };
+    gs.onclick = function () { stopRecording(); dot.classList.remove("on"); stline.textContent = "Recording saved (see review at end)"; gr.disabled = false; gs.disabled = true; };
+  }
+  window._pteSample = d.sample || d.text || d.question || null;
+}
+
+/* ================= writing items ================= */
+var WRITE_RENDER = {};
+["summarizeWrittenText", "essay"].forEach(function (t) {
+  WRITE_RENDER[t] = function (f, partLabel) {
+    var k = key(), d = f.data;
+    var isSWT = t === "summarizeWrittenText";
+    var secs = isSWT ? 600 : 1200;
+    var min = isSWT ? 5 : 200, max = isSWT ? 75 : 300;
+    var html = itemHead(f, partLabel, state.mode === "real" ? "wTimer" : null) +
+      (isSWT ? '<div class="promptbox">' + esc(d.passage) + "</div>" : '<div class="promptbox"><b>' + esc(d.prompt) + "</b></div>") +
+      '<textarea id="wtext" rows="' + (isSWT ? 5 : 14) + '" placeholder="Type your response here…"></textarea>' +
+      '<div class="wordcount" id="wc">Word Count: 0 (target ' + min + "–" + max + ")</div>" +
+      guideExtra(t, d) +
+      '<div class="navrow"><span>' + (state.mode === "guide" ? '<button class="btn sec" id="prevbtn">← Back</button>' : "") + "</span>" +
+      '<button class="btn" id="nextbtn">Next →</button></div></div></div>';
+    render(html);
+    window._pteSample = d.sample || null;
+    var ta = document.getElementById("wtext"), wc = document.getElementById("wc");
+    var saved = state.answers[k]; if (saved) ta.value = saved;
+    function upd() {
+      var n = wordCount(ta.value);
+      wc.textContent = "Word Count: " + n + " (target " + min + "–" + max + ")";
+      wc.className = "wordcount" + ((n > 0 && (n < min || n > max)) ? " bad" : "");
+      state.answers[k] = ta.value;
+    }
+    ta.oninput = upd; upd();
+    var prevBtn = document.getElementById("prevbtn");
+    if (prevBtn) prevBtn.onclick = function () { state.answers[k] = ta.value; state.step--; renderStep(); };
+    document.getElementById("nextbtn").onclick = function () { state.answers[k] = ta.value; next(); };
+    if (state.mode === "real") {
+      var el = document.getElementById("wTimer"), left = secs;
+      el.textContent = fmt(left);
+      every(function () {
+        left--; el.textContent = fmt(left);
+        if (left <= 60) el.classList.add("warn");
+        if (left <= 0) { state.answers[k] = ta.value; clearTimers(); next(); }
+      }, 1000);
+    }
+  };
+});
+
+/* ================= reading part ================= */
+function startReadingPart() {
+  clearTimers(); stopRecording();
+  var items = readingItems();
+  var cur = 0;
+  var timerHtml = state.mode === "real" ? '<div class="timerbox" id="rdTimer">' + fmt(state.readingLeft) + "</div>" : "";
+  function draw() {
+    var it = items[cur], meta = TYPE_META[it.type], rk = rkey(it.type, it.idx);
+    var nav = items.map(function (x, i) {
+      var done = state.answers[rkey(x.type, x.idx)] != null;
+      return '<button class="' + (i === cur ? "cur " : "") + (done ? "done" : "") + '" data-i="' + i + '">' + meta2short(x.type) + " " + (x.idx + 1) + "</button>";
+    }).join("");
+    var h = chrome("Part 2: Reading · " + meta.title + " " + (it.idx + 1) + " of " + it.total, timerHtml) +
+      '<div class="main"><div class="readwrap"><div class="readnav">' + nav + "</div>" +
+      '<div class="readmain"><div class="card">' +
+      '<div class="qtype-head"><span class="qpos">' + (cur + 1) + " / " + items.length + '</span><span class="qtitle">' + meta.title + "</span></div>" +
+      '<div class="instructions">' + meta.ins + "</div>" + tipsHtml(it.type) +
+      '<div id="rbody"></div>' +
+      '<div class="navrow"><button class="btn sec" id="rprev"' + (cur === 0 ? " disabled" : "") + ">← Previous</button>" +
+      (cur < items.length - 1
+        ? '<button class="btn" id="rnext">Next →</button>'
+        : '<button class="btn warn" id="rfinish">' + (state.mode === "real" ? "End Reading Part" : "Finish Reading → Listening") + "</button>") +
+      "</div></div></div></div></div>";
+    render(h);
+    document.querySelectorAll(".readnav button").forEach(function (b) {
+      b.onclick = function () { saveCur(); cur = +b.dataset.i; draw(); };
+    });
+    drawReadingBody(it, rk);
+    var pv = document.getElementById("rprev"); if (pv) pv.onclick = function () { saveCur(); cur--; draw(); };
+    var nx = document.getElementById("rnext"); if (nx) nx.onclick = function () { saveCur(); cur++; draw(); };
+    var fn = document.getElementById("rfinish"); if (fn) fn.onclick = function () { saveCur(); finishReading(); };
+  }
+  function saveCur() {
+    var it = items[cur], rk = rkey(it.type, it.idx);
+    var v = collectReadingAnswer(it);
+    if (v != null) state.answers[rk] = v;
+  }
+  function finishReading() {
+    if (state.readingTick) { clearInterval(state.readingTick); state.readingTick = null; }
+    renderSectionIntro(3);
+  }
+  draw();
+  if (state.mode === "real") {
+    if (state.readingTick) clearInterval(state.readingTick);
+    state.readingTick = setInterval(function () {
+      state.readingLeft--;
+      var el = document.getElementById("rdTimer");
+      if (el) { el.textContent = fmt(state.readingLeft); if (state.readingLeft <= 120) el.classList.add("warn"); }
+      if (state.readingLeft <= 0) {
+        clearInterval(state.readingTick); state.readingTick = null;
+        try { saveCur(); } catch (e) {}
+        finishReading();
+      }
+    }, 1000);
+  }
+}
+function meta2short(t) {
+  return { fibDropdown: "FIB-RW", mcMultiple: "MC-M", reorder: "RO", fibDrag: "FIB-R", mcSingle: "MC-S" }[t] || t;
+}
+function blanksHtml(text, n) {
+  var out = esc(text);
+  for (var i = 1; i <= n; i++) out = out.replace(new RegExp("\\{\\{" + i + "\\}\\}", "g"), "⟦B" + i + "⟧");
+  return out;
+}
+function drawReadingBody(it, rk) {
+  var body = document.getElementById("rbody"), d = it.data, saved = state.answers[rk];
+  if (it.type === "fibDropdown") {
+    var n = d.blanks.length, html = '<div class="promptbox">' + blanksHtml(d.text, n) + "</div>";
+    body.innerHTML = html;
+    for (var i = 0; i < n; i++) {
+      var sel = '<select data-b="' + i + '"><option value="">— select —</option>' +
+        d.blanks[i].options.map(function (o, j) { return '<option value="' + j + '">' + esc(o) + "</option>"; }).join("") + "</select>";
+      body.innerHTML = body.innerHTML.replace("⟦B" + (i + 1) + "⟧", sel);
+    }
+    body.querySelectorAll("select").forEach(function (s) {
+      if (saved && saved[s.dataset.b] != null) s.value = saved[s.dataset.b];
+      s.onchange = function () {
+        var cur2 = state.answers[rk] || [];
+        cur2[s.dataset.b] = s.value === "" ? null : +s.value;
+        state.answers[rk] = cur2;
+      };
+    });
+  } else if (it.type === "mcMultiple" || it.type === "mcSingle") {
+    var multi = it.type === "mcMultiple";
+    var h = '<div class="promptbox">' + esc(d.passage) + "</div><h3>" + esc(d.question) + "</h3>";
+    h += d.options.map(function (o, j) {
+      return '<label class="optrow"><input type="' + (multi ? "checkbox" : "radio") + '" name="rq" value="' + j + '"> ' + esc(o) + "</label>";
+    }).join("");
+    body.innerHTML = h;
+    body.querySelectorAll("input").forEach(function (inp) {
+      if (saved != null && (multi ? saved.indexOf(+inp.value) >= 0 : saved === +inp.value)) inp.checked = true;
+      inp.onchange = function () {
+        if (multi) {
+          var vals = [];
+          body.querySelectorAll("input:checked").forEach(function (x) { vals.push(+x.value); });
+          state.answers[rk] = vals;
+        } else state.answers[rk] = +inp.value;
+      };
+    });
+  } else if (it.type === "reorder") {
+    var order = saved || shuffleIdx(d.sentences.length);
+    state.answers[rk] = order;
+    var render2 = function () {
+      body.innerHTML = "<h3>Arrange in the original order:</h3>" + order.map(function (si, pos) {
+        return '<div class="reitem"><div class="mv"><button data-p="' + pos + '" data-mv="-1">▲</button><button data-p="' + pos + '" data-mv="1">▼</button></div><div class="txt">' + esc(d.sentences[si]) + "</div></div>";
+      }).join("");
+      body.querySelectorAll("button").forEach(function (b) {
+        b.onclick = function () {
+          var p = +b.dataset.p, mv = +b.dataset.mv, q = p + mv;
+          if (q < 0 || q >= order.length) return;
+          var t = order[p]; order[p] = order[q]; order[q] = t;
+          state.answers[rk] = order; render2();
+        };
+      });
+    };
+    render2();
+  } else if (it.type === "fibDrag") {
+    var ans = saved ? saved.slice() : d.answers.map(function () { return null; });
+    state.answers[rk] = ans;
+    var nB = d.answers.length;
+    var render3 = function () {
+      var html = '<div class="promptbox">' + blanksHtml(d.text, nB) + "</div>";
+      html += '<div class="fibbank">' + d.bank.map(function (w) {
+        return '<span class="chip' + (ans.indexOf(w) >= 0 ? " used" : "") + '" data-w="' + esc(w) + '">' + esc(w) + "</span>";
+      }).join("") + "</div>";
+      body.innerHTML = html;
+      for (var i = 0; i < nB; i++) {
+        var b = '<span class="blank" data-b="' + i + '">' + (ans[i] ? esc(ans[i]) : "") + "</span>";
+        body.innerHTML = body.innerHTML.replace("⟦B" + (i + 1) + "⟧", b);
+      }
+      var selB = null;
+      body.querySelectorAll(".chip").forEach(function (c) {
+        c.onclick = function () {
+          if (selB == null) { var free = ans.indexOf(null); if (free < 0) return; selB = free; }
+          ans[selB] = c.dataset.w; selB = null; state.answers[rk] = ans; render3();
+        };
+      });
+      body.querySelectorAll(".blank").forEach(function (bEl) {
+        bEl.onclick = function () {
+          var bi = +bEl.dataset.b;
+          if (ans[bi]) { ans[bi] = null; state.answers[rk] = ans; render3(); }
+          else selB = bi;
+        };
+      });
+    };
+    render3();
+  }
+  if (state.mode === "guide") {
+    var gdiv = document.createElement("div");
+    gdiv.innerHTML = '<button class="btn sec small" style="margin-top:10px" id="gkey">Show answer key</button><div id="gkeyout"></div>';
+    body.appendChild(gdiv);
+    document.getElementById("gkey").onclick = function () {
+      document.getElementById("gkeyout").innerHTML = sampleHtml("Answer key", readingKeyText(it));
+    };
+  }
+}
+function collectReadingAnswer(it) { return state.answers[rkey(it.type, it.idx)] != null ? state.answers[rkey(it.type, it.idx)] : null; }
+function readingKeyText(it) {
+  var d = it.data;
+  if (it.type === "fibDropdown") return d.blanks.map(function (b, i) { return "Blank " + (i + 1) + ": " + b.options[b.correct]; }).join(" · ");
+  if (it.type === "fibDrag") return d.answers.map(function (a, i) { return "Blank " + (i + 1) + ": " + a; }).join(" · ");
+  if (it.type === "mcMultiple") return "Correct: " + d.answers.map(function (a) { return d.options[a]; }).join(" + ");
+  if (it.type === "mcSingle") return "Correct: " + d.options[d.answer];
+  if (it.type === "reorder") return "Correct order: " + d.sentences.map(function (s, i) { return "(" + (i + 1) + ") " + s; }).join(" ");
+  return "";
+}
+function shuffleIdx(n) {
+  var a = []; for (var i = 0; i < n; i++) a.push(i);
+  do {
+    for (var j = n - 1; j > 0; j--) { var r = Math.floor(Math.random() * (j + 1)); var t = a[j]; a[j] = a[r]; a[r] = t; }
+  } while (a.every(function (v, i) { return v === i; }) && n > 1);
+  return a;
+}
+
+/* ================= listening items ================= */
+var LISTEN_RENDER = {};
+function listenShell(f, partLabel, audioTextFn, bodyBuilder, opts) {
+  opts = opts || {};
+  var k = key(), timerId = state.mode === "real" ? "lTimer" : null;
+  var html = itemHead(f, partLabel, timerId) +
+    '<div class="statusbar"><span class="recdot" id="dot"></span>' +
+    '<span class="statusline" id="stline">Audio will play shortly…</span>' +
+    '<div class="audbar" id="bar"><div></div></div></div>' +
+    (state.mode === "guide" ? '<div class="statusbar"><button class="btn sec small" id="gplay">▶ Play audio</button></div>' : "") +
+    '<div id="lbody"></div>' +
+    (state.mode === "guide" ? '<div><button class="btn sec small" id="gkey" style="margin-top:10px">Show answer key</button><div id="gkeyout"></div></div>' : "") +
+    '<div class="navrow"><span>' + (state.mode === "guide" ? '<button class="btn sec" id="prevbtn">← Back</button>' : "") + "</span>" +
+    '<button class="btn" id="nextbtn"' + (state.mode === "real" && !opts.manualNext ? " disabled" : "") + ">Next →</button></div></div></div>";
+  render(html);
+  var body = document.getElementById("lbody");
+  bodyBuilder(body, k);
+  var prevBtn = document.getElementById("prevbtn"); if (prevBtn) prevBtn.onclick = function () { state.step--; renderStep(); };
+  var nextBtn = document.getElementById("nextbtn");
+  nextBtn.onclick = function () { stopTTS(); next(); };
+  var gk = document.getElementById("gkey");
+  if (gk) gk.onclick = function () {
+    document.getElementById("gkeyout").innerHTML = sampleHtml(opts.keyLabel || "Answer key / transcript", opts.keyText || f.data.audio || f.data.text || "");
+  };
+  var gp = document.getElementById("gplay");
+  if (gp) gp.onclick = function () { stopTTS(); playOnce(f, k, audioTextFn, opts, true); };
+  if (state.mode === "real") later(function () { playOnce(f, k, audioTextFn, opts, false); }, 1200);
+  else document.getElementById("stline").textContent = "Press ▶ Play audio when ready";
+  function enableNext() { if (nextBtn && opts.manualNext) nextBtn.disabled = false; }
+  return { enableNext: enableNext, nextBtn: nextBtn };
+}
+function playOnce(f, k, audioTextFn, opts, isGuide) {
+  var stline = document.getElementById("stline"), bar = document.getElementById("bar"), dot = document.getElementById("dot");
+  stline.textContent = "Playing audio…"; dot.classList.add("on");
+  var est = Math.min(150, Math.max(8, wordCount(opts.audioLen || "") * 0.42)) * 1000;
+  var t0 = Date.now(), stopped = false;
+  every(function () {
+    var p = (Date.now() - t0) / est * 100;
+    bar.firstElementChild.style.width = Math.min(99, p) + "%";
+    if (p >= 99 || !state.speaking) {
+      if (!state.speaking) { bar.firstElementChild.style.width = "100%"; }
+    }
+  }, 300);
+  playAudio(isGuide ? k + "_g" + Date.now() : k, audioTextFn, function () {
+    clearTimers(); dot.classList.remove("on");
+    bar.firstElementChild.style.width = "100%";
+    stline.textContent = "Audio finished";
+    if (state.mode === "real" && opts.autoAfter !== false) {
+      var nb = document.getElementById("nextbtn");
+      if (nb) { nb.disabled = false; if (opts.autoNext) later(next, opts.autoNext * 1000); }
+    }
+    if (opts.afterAudio) opts.afterAudio();
+  });
+}
+/* specific listening renderers */
+LISTEN_RENDER.sst = function (f, partLabel) {
+  var d = f.data, k = key();
+  var secs = 600;
+  var shell = listenShell(f, partLabel, function () { return speak(d.audio, { rate: 0.92 }); }, function (body) {
+    body.innerHTML = '<div class="promptbox"><b>Topic:</b> ' + esc(d.title) + "</div>" +
+      '<textarea rows="7" id="sstText" placeholder="Write your summary here (50–70 words)…"></textarea>' +
+      '<div class="wordcount" id="wc">Word Count: 0 (target 50–70)</div>';
+    var ta = body.querySelector("#sstText");
+    if (state.answers[k]) ta.value = state.answers[k];
+    ta.oninput = function () {
+      var n = wordCount(ta.value);
+      var wc = body.querySelector("#wc");
+      wc.textContent = "Word Count: " + n + " (target 50–70)";
+      wc.className = "wordcount" + ((n > 0 && (n < 50 || n > 70)) ? " bad" : "");
+      state.answers[k] = ta.value;
+    };
+  }, { keyText: d.sample, keyLabel: "Sample summary", autoNext: false, audioLen: d.audio });
+  if (state.mode === "real") {
+    var el = document.getElementById("lTimer"), left = secs;
+    el.textContent = fmt(left);
+    every(function () {
+      left--; el.textContent = fmt(left);
+      if (left <= 60) el.classList.add("warn");
+      if (left <= 0) { clearTimers(); next(); }
+    }, 1000);
+  }
+};
+function mcListenRender(f, partLabel, multi) {
+  var d = f.data, k = key();
+  listenShell(f, partLabel, function () { return speak(d.audio); }, function (body) {
+    var h = "<h3>" + esc(d.question) + "</h3>" + d.options.map(function (o, j) {
+      return '<label class="optrow"><input type="' + (multi ? "checkbox" : "radio") + '" name="lq" value="' + j + '"> ' + esc(o) + "</label>";
+    }).join("");
+    body.innerHTML = h;
+    body.querySelectorAll("input").forEach(function (inp) {
+      inp.onchange = function () {
+        if (multi) {
+          var v = [];
+          body.querySelectorAll("input:checked").forEach(function (x) { v.push(+x.value); });
+          state.answers[k] = v;
+        } else state.answers[k] = +inp.value;
+      };
+    });
+  }, { keyText: multi ? "Correct: " + d.answers.map(function (a) { return d.options[a]; }).join(" + ") : "Correct: " + d.options[d.answer], autoNext: state.mode === "real" ? 4 : false, audioLen: d.audio });
+}
+LISTEN_RENDER.mcmL = function (f, pl) { mcListenRender(f, pl, true); };
+LISTEN_RENDER.mcsL = function (f, pl) { mcListenRender(f, pl, false); };
+LISTEN_RENDER.hcs = function (f, pl) { mcListenRender({ type: "hcs", data: { audio: f.data.audio, question: "Click on the paragraph that best relates to the recording you have heard.", options: f.data.options, answer: f.data.answer }, idx: f.idx, total: f.total }, pl, false); };
+LISTEN_RENDER.smw = function (f, partLabel) {
+  var d = f.data;
+  listenShell(f, partLabel, function () { return speak(d.audio).then(function (ok) { beep(); return ok; }); }, function (body) {
+    body.innerHTML = "<h3>Select the missing word:</h3>" + d.options.map(function (o, j) {
+      return '<label class="optrow"><input type="radio" name="smw" value="' + j + '"> ' + esc(o) + "</label>";
+    }).join("");
+    body.querySelectorAll("input").forEach(function (inp) {
+      inp.onchange = function () { state.answers[key()] = +inp.value; };
+    });
+  }, { keyText: "Correct: " + d.options[d.answer] + " — full text: " + (d.fullText || d.audio), autoNext: state.mode === "real" ? 4 : false, audioLen: d.audio });
+};
+LISTEN_RENDER.fillBlanksL = function (f, partLabel) {
+  var d = f.data, k = key();
+  listenShell(f, partLabel, function () { return speak(d.audio); }, function (body) {
+    var n = d.answers.length, html = '<div class="promptbox">' + blanksHtml(d.display, n) + "</div>";
+    body.innerHTML = html;
+    for (var i = 0; i < n; i++) {
+      var inp = '<input type="text" data-b="' + i + '" style="width:150px" value=""> ';
+      body.innerHTML = body.innerHTML.replace("⟦B" + (i + 1) + "⟧", inp);
+    }
+    var saved = state.answers[k];
+    body.querySelectorAll("input").forEach(function (x) {
+      if (saved && saved[x.dataset.b]) x.value = saved[x.dataset.b];
+      x.oninput = function () {
+        var v = state.answers[k] || [];
+        v[x.dataset.b] = x.value;
+        state.answers[k] = v;
+      };
+    });
+  }, { keyText: "Answers: " + d.answers.join(" · ") + " — transcript: " + d.audio, autoNext: state.mode === "real" ? 8 : false, audioLen: d.audio });
+};
+LISTEN_RENDER.hiw = function (f, partLabel) {
+  var d = f.data, k = key();
+  var audioText = d.words.map(function (w) { return w.said || w.w; }).join(" ");
+  listenShell(f, partLabel, function () { return speak(audioText, { rate: 0.98 }); }, function (body) {
+    body.innerHTML = '<div class="promptbox">' + d.words.map(function (w, i) {
+      return '<span class="hiw-word" data-i="' + i + '">' + esc(w.w) + "</span>";
+    }).join(" ") + "</div>";
+    var sel = state.answers[k] || [];
+    state.answers[k] = sel;
+    body.querySelectorAll(".hiw-word").forEach(function (s) {
+      if (sel.indexOf(+s.dataset.i) >= 0) s.classList.add("sel");
+      s.onclick = function () {
+        var i = +s.dataset.i, p = sel.indexOf(i);
+        if (p >= 0) { sel.splice(p, 1); s.classList.remove("sel"); }
+        else { sel.push(i); s.classList.add("sel"); }
+      };
+    });
+  }, { keyText: "Incorrect words: " + d.words.filter(function (w) { return w.wrong; }).map(function (w) { return '"' + w.w + '" (said: "' + w.said + '")'; }).join(" · "), autoNext: state.mode === "real" ? 6 : false, audioLen: audioText });
+};
+LISTEN_RENDER.wfd = function (f, partLabel) {
+  var d = f.data, k = key();
+  listenShell(f, partLabel, function () { return speak(d.text, { rate: 0.95 }); }, function (body) {
+    body.innerHTML = '<textarea rows="3" id="wfdText" placeholder="Type the sentence exactly as you hear it…"></textarea>';
+    var ta = body.querySelector("#wfdText");
+    if (state.answers[k]) ta.value = state.answers[k];
+    ta.oninput = function () { state.answers[k] = ta.value; };
+  }, { keyText: d.text, autoNext: state.mode === "real" ? 10 : false, audioLen: d.text });
+};
+
+/* ================= scoring ================= */
+function norm(s) { return (s || "").toLowerCase().trim().replace(/[.,;:!?'"()-]/g, ""); }
+function scoreItem(type, d, ans) {
+  /* returns {got, max, detail} or null for non-objective */
+  if (type === "fibDropdown") {
+    var got = 0; d.blanks.forEach(function (b, i) { if (ans && ans[i] != null && +ans[i] === b.correct) got++; });
+    return { got: got, max: d.blanks.length };
+  }
+  if (type === "fibDrag") {
+    var g2 = 0; d.answers.forEach(function (a, i) { if (ans && norm(ans[i]) === norm(a)) g2++; });
+    return { got: g2, max: d.answers.length };
+  }
+  if (type === "mcMultiple" || type === "mcmL") {
+    if (!ans || !ans.length) return { got: 0, max: d.answers.length };
+    var sc = 0; ans.forEach(function (a) { sc += d.answers.indexOf(a) >= 0 ? 1 : -1; });
+    return { got: Math.max(0, sc), max: d.answers.length };
+  }
+  if (type === "mcSingle" || type === "mcsL" || type === "hcs" || type === "smw")
+    return { got: ans != null && +ans === d.answer ? 1 : 0, max: 1 };
+  if (type === "reorder") {
+    if (!ans) return { got: 0, max: d.sentences.length - 1 };
+    var pos = {}; ans.forEach(function (si, p) { pos[si] = p; });
+    var ok = 0; for (var i = 0; i < d.sentences.length - 1; i++) if (pos[i] < pos[i + 1]) ok++;
+    return { got: ok, max: d.sentences.length - 1 };
+  }
+  if (type === "fillBlanksL") {
+    var g3 = 0; d.answers.forEach(function (a, i) { if (ans && norm(ans[i]) === norm(a)) g3++; });
+    return { got: g3, max: d.answers.length };
+  }
+  if (type === "hiw") {
+    var wrongIdx = []; d.words.forEach(function (w, i) { if (w.wrong) wrongIdx.push(i); });
+    if (!ans || !ans.length) return { got: 0, max: wrongIdx.length };
+    var s2 = 0; ans.forEach(function (i) { s2 += wrongIdx.indexOf(i) >= 0 ? 1 : -1; });
+    return { got: Math.max(0, s2), max: wrongIdx.length };
+  }
+  if (type === "wfd") {
+    var ref = norm(d.text).split(/\s+/), usr = norm(ans).split(/\s+/), g4 = 0;
+    for (var j = 0; j < ref.length; j++) if (usr[j] === ref[j]) g4++;
+    return { got: g4, max: ref.length };
+  }
+  return null;
+}
+function answerSummary(type, d, ans) {
+  if (ans == null) return "<i>No answer</i>";
+  if (type === "fibDropdown") return d.blanks.map(function (b, i) { return "Blank " + (i + 1) + ": " + (ans[i] != null && ans[i] !== "" ? esc(b.options[ans[i]]) : "—"); }).join(" · ");
+  if (type === "fibDrag" || type === "fillBlanksL") return d.answers.map(function (a, i) { return "Blank " + (i + 1) + ": " + (ans[i] ? esc(ans[i]) : "—"); }).join(" · ");
+  if (type === "mcMultiple" || type === "mcmL") return ans.length ? ans.map(function (a) { return esc(d.options[a]); }).join(" + ") : "<i>No selection</i>";
+  if (type === "mcSingle" || type === "mcsL" || type === "hcs" || type === "smw") return esc(d.options[ans]);
+  if (type === "reorder") return ans.map(function (si) { return "(" + (si + 1) + ")"; }).join(" → ");
+  if (type === "hiw") return ans.length ? ans.map(function (i) { return '"' + esc(d.words[i].w) + '"'; }).join(" ") : "<i>No words highlighted</i>";
+  if (type === "wfd" || type === "summarizeWrittenText" || type === "essay" || type === "sst") return esc(ans).slice(0, 600);
+  return esc(JSON.stringify(ans));
+}
+function correctSummary(type, d) {
+  if (type === "fibDropdown" || type === "fibDrag" || type === "mcMultiple" || type === "mcSingle" || type === "reorder") return readingKeyText({ type: type, data: d });
+  if (type === "mcmL") return "Correct: " + d.answers.map(function (a) { return esc(d.options[a]); }).join(" + ");
+  if (type === "mcsL" || type === "hcs" || type === "smw") return "Correct: " + esc(d.options[d.answer]);
+  if (type === "fillBlanksL") return "Answers: " + d.answers.map(esc).join(" · ");
+  if (type === "hiw") return "Incorrect words: " + d.words.filter(function (w) { return w.wrong; }).map(function (w) { return '"' + esc(w.w) + '" → said "' + esc(w.said) + '"'; }).join(" · ");
+  if (type === "wfd") return esc(d.text);
+  return "";
+}
+
+/* ================= review / score report ================= */
+function renderReview() {
+  clearTimers(); stopRecording();
+  if (state.readingTick) { clearInterval(state.readingTick); state.readingTick = null; }
+  var totGot = 0, totMax = 0, rows = "";
+  flow.forEach(function (f, i) {
+    if (f.kind !== "item") return;
+    var k = "s" + i, ans = state.answers[k], meta = TYPE_META[f.type];
+    var sc = scoreItem(f.type, f.data, ans);
+    if (sc) { totGot += sc.got; totMax += sc.max; }
+    var badge = sc ? (sc.got >= sc.max ? '<span class="badge ok">' + sc.got + "/" + sc.max + "</span>" : '<span class="badge no">' + sc.got + "/" + sc.max + "</span>") : '<span class="badge na">self-review</span>';
+    var body = "";
+    if (SPEAK_CFG[f.type]) {
+      body += state.recordings[k]
+        ? '<audio controls src="' + state.recordings[k] + '"></audio>'
+        : '<div class="kv"><i>No recording captured (mic not enabled).</i></div>';
+      var samp = f.data.sample || f.data.text || f.data.question || null;
+      if (samp) body += sampleHtml(f.type === "answerShortQuestion" ? "Expected answer" : "Reference / sample", samp);
+    } else {
+      body += '<div class="ua"><b>Your answer:</b> ' + answerSummary(f.type, f.data, ans) + "</div>";
+      var cs = correctSummary(f.type, f.data);
+      if (cs) body += '<div class="ua" style="background:#eafaf0"><b>Correct:</b> ' + cs + "</div>";
+      if (f.data.sample) body += sampleHtml("Sample response", f.data.sample);
+      if (f.type === "summarizeWrittenText" || f.type === "essay" || f.type === "sst") {
+        var n = wordCount(ans), lim = f.type === "summarizeWrittenText" ? [5, 75] : f.type === "sst" ? [50, 70] : [200, 300];
+        body += '<div class="kv">Word count: <b class="' + (n >= lim[0] && n <= lim[1] ? "ok" : "no") + '">' + n + "</b> (required " + lim[0] + "–" + lim[1] + ")</div>";
+      }
+    }
+    rows += '<div class="revitem"><h4>' + meta.title + " " + (f.idx + 1) + badge + "</h4>" + body + "</div>";
+  });
+  var pct = totMax ? Math.round(totGot / totMax * 100) : 0;
+  render(chrome("Score report", "") +
+    '<div class="main"><div class="card" style="text-align:center">' +
+    "<h1>Score Report</h1>" +
+    '<div class="scorebig">' + pct + "%</div>" +
+    '<div class="kv">Auto-scored objective items: ' + totGot + " / " + totMax + " points</div>" +
+    '<div class="kv">Speaking &amp; open writing tasks are self-reviewed against the sample responses below. This is an indicative practice score, not a Pearson score.</div>' +
+    '<div class="navrow"><button class="btn sec" onclick="PTE.restart()">← Restart exam</button><button class="btn sec" onclick="PTE.toggleMode()">Switch to ' + (state.mode === "real" ? "Guide" : "Real") + " mode</button></div>" +
+    "</div>" + rows + "</div>");
+}
+
+/* ================= public API ================= */
+window.PTE = {
+  pickMode: function (m) {
+    state.mode = m;
+    ensureMic();
+    renderMicCheck();
+  },
+  showSample: function () {
+    var w = document.getElementById("sampleWrap");
+    if (w && window._pteSample) w.innerHTML = sampleHtml("Sample answer", window._pteSample);
+  },
+  restart: function () {
+    clearTimers();
+    state.step = -1; state.answers = {}; state.recordings = {}; state.audioPlayed = {}; state.readingLeft = 30 * 60;
+    renderHome();
+  },
+  toggleMode: function () {
+    state.mode = state.mode === "real" ? "guide" : "real";
+    clearTimers();
+    state.audioPlayed = {}; state.readingLeft = 30 * 60; state.step = -1;
+    renderSectionIntro(1);
+  }
+};
+
+/* ================= boot ================= */
+buildFlow();
+renderHome();
+})();
+
+</script>
+</body>
+</html>
