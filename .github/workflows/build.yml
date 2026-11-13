@@ -1,0 +1,56 @@
+name: Build exams
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "content/**"
+      - "build.js"
+      - ".github/workflows/build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate content JSON
+        run: |
+          for f in content/*.json; do
+            node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" || exit 1
+            echo "valid: $f"
+          done
+
+      - name: Check engine syntax
+        run: node --check src/engine.js && node --check build.js
+
+      - name: Build self-contained exam HTML files
+        run: node build.js
+
+      - name: Upload exams as downloadable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pte-mock-exams
+          path: exams/*.html
+          retention-days: 90
+
+      - name: Commit built exams back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add exams/*.html
+          if git diff --cached --quiet; then
+            echo "No changes to built exams"
+          else
+            git commit -m "chore: rebuild exam HTML files [skip ci]"
+            git push
+          fi

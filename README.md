@@ -46,3 +46,11 @@ Rebuild after editing content or engine:
 ```sh
 node build.js
 ```
+
+## Downloading built exams
+
+Every push that touches `src/`, `content/` or `build.js` triggers the **Build exams** GitHub Actions workflow: it validates the JSON, rebuilds the HTML files, commits them back to `exams/`, and publishes them as a downloadable artifact.
+
+- **Artifact:** Actions → latest *Build exams* run → Artifacts → `pte-mock-exams` (zip with all 6 HTML files)
+- **Direct:** the `exams/` folder in the repo always holds the latest build — open a file and use GitHub's *Download raw file* button
+- Manual rebuild: Actions → *Build exams* → *Run workflow*
