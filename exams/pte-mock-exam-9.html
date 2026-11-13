@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PTE Academic Mock Exam 9 (2026 Format)</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:'Segoe UI',Arial,Helvetica,sans-serif;background:#e8ecf1;color:#1c2733;font-size:16px;line-height:1.55}
+#app{min-height:100%;display:flex;flex-direction:column}
+button{font-family:inherit;cursor:pointer}
+.hidden{display:none!important}
+
+/* ---------- header ---------- */
+.topbar{background:#123c6d;color:#fff;padding:10px 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.topbar .logo{font-weight:700;font-size:18px;letter-spacing:.5px}
+.topbar .logo span{color:#7fd1f7}
+.topbar .mode{font-size:12px;padding:2px 10px;border-radius:10px;background:#0a2a4e;border:1px solid #3d6d9e}
+.topbar .mode.guide{background:#3d2a00;border-color:#c79a2e}
+.topbar .spacer{flex:1}
+.topbar .timerbox{font-variant-numeric:tabular-nums;background:#0a2a4e;border:1px solid #3d6d9e;border-radius:6px;padding:3px 12px;font-size:15px}
+.topbar .timerbox.warn{border-color:#e05555;color:#ffb3b3}
+.progress{height:5px;background:#0a2a4e}
+.progress>div{height:100%;background:#41b6e6;width:0;transition:width .3s}
+
+/* ---------- layout ---------- */
+.main{flex:1;max-width:1020px;width:100%;margin:0 auto;padding:26px 22px 90px}
+.card{background:#fff;border-radius:8px;box-shadow:0 1px 4px rgba(16,42,67,.15);padding:26px 30px;margin-bottom:18px}
+.partlabel{font-size:13px;color:#5b6b7b;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+h1{font-size:26px;color:#123c6d;margin-bottom:10px}
+h2{font-size:21px;color:#123c6d;margin-bottom:8px}
+h3{font-size:16px;color:#123c6d;margin:14px 0 6px}
+.qtype-head{border-bottom:1px solid #dde4ea;padding-bottom:12px;margin-bottom:16px}
+.qtype-head .qtitle{font-size:19px;font-weight:600;color:#123c6d}
+.qtype-head .qpos{font-size:13px;color:#5b6b7b;float:right}
+.instructions{color:#3d4f60;margin:6px 0 14px;font-size:15px}
+.promptbox{background:#f2f6fa;border:1px solid #d5e0ea;border-radius:6px;padding:16px 20px;margin:12px 0;font-size:17px}
+.figbox{background:#fff;border:1px solid #d5e0ea;border-radius:6px;padding:14px;margin:12px 0;text-align:center}
+.figbox svg{max-width:100%;height:auto}
+.mono{font-family:Consolas,monospace;font-size:14px}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-block;border:none;border-radius:5px;padding:10px 26px;font-size:15px;font-weight:600;background:#123c6d;color:#fff}
+.btn:hover{background:#0d3058}
+.btn:disabled{background:#9fb2c3;cursor:not-allowed}
+.btn.sec{background:#fff;color:#123c6d;border:1px solid #123c6d}
+.btn.sec:hover{background:#eef3f8}
+.btn.warn{background:#b3261e}
+.btn.small{padding:5px 14px;font-size:13px}
+.navrow{display:flex;justify-content:space-between;gap:12px;margin-top:22px}
+.modewrap{display:flex;gap:20px;flex-wrap:wrap;margin:18px 0}
+.modecard{flex:1;min-width:260px;border:2px solid #d5e0ea;border-radius:8px;padding:20px 22px;cursor:pointer;background:#fff}
+.modecard:hover{border-color:#41b6e6}
+.modecard h3{margin-top:0}
+.modecard ul{margin:8px 0 0 18px;font-size:14px;color:#3d4f60}
+
+/* ---------- status / recording ---------- */
+.statusbar{display:flex;align-items:center;gap:14px;margin:14px 0;flex-wrap:wrap}
+.statusline{font-weight:600;color:#123c6d}
+.recdot{display:inline-block;width:12px;height:12px;border-radius:50%;background:#c4cdd6}
+.recdot.on{background:#e02424;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.3}}
+.audbar{flex:1;min-width:180px;height:8px;background:#dde4ea;border-radius:4px;overflow:hidden}
+.audbar>div{height:100%;background:#41b6e6;width:0}
+.audbar.rec>div{background:#e02424}
+.timechip{font-variant-numeric:tabular-nums;font-weight:600;color:#123c6d;background:#eef3f8;border-radius:5px;padding:4px 12px}
+
+/* ---------- guide tips ---------- */
+.tipsbox{background:#fff8e6;border:1px solid #e8cf8a;border-left:5px solid #e0a800;border-radius:6px;padding:14px 18px;margin:14px 0;font-size:14px}
+.tipsbox h4{color:#7a5800;margin-bottom:6px;font-size:14px;text-transform:uppercase;letter-spacing:.5px}
+.tipsbox ul{margin-left:18px}
+.tipsbox li{margin:3px 0}
+.samplebox{background:#eafaf0;border:1px solid #9edbb4;border-radius:6px;padding:14px 18px;margin:12px 0;font-size:14.5px}
+.samplebox h4{color:#166534;margin-bottom:6px;font-size:14px}
+
+/* ---------- inputs ---------- */
+textarea{width:100%;border:1px solid #b9c6d2;border-radius:6px;padding:12px;font-family:inherit;font-size:16px;line-height:1.6;resize:vertical}
+textarea:focus{outline:2px solid #41b6e6}
+input[type=text]{border:1px solid #b9c6d2;border-radius:5px;padding:8px 10px;font-size:15px;font-family:inherit}
+input[type=text]:focus{outline:2px solid #41b6e6}
+.wordcount{font-size:13px;color:#5b6b7b;margin-top:6px}
+.wordcount.bad{color:#b3261e;font-weight:600}
+select{border:1px solid #8fa4b8;border-radius:4px;padding:3px 6px;font-size:15px;background:#eef3f8;margin:0 2px}
+.optrow{display:block;padding:9px 12px;border:1px solid #d5e0ea;border-radius:6px;margin:7px 0;cursor:pointer}
+.optrow:hover{background:#f2f6fa}
+.optrow.sel{border-color:#123c6d;background:#eaf3fb}
+.optrow input{margin-right:9px}
+
+/* ---------- reading layout ---------- */
+.readwrap{display:flex;gap:18px}
+.readnav{width:170px;flex-shrink:0}
+.readnav button{display:block;width:100%;text-align:left;margin-bottom:5px;padding:7px 10px;border:1px solid #d5e0ea;background:#fff;border-radius:5px;font-size:13px}
+.readnav button.cur{border-color:#123c6d;background:#eaf3fb;font-weight:600}
+.readnav button.done::after{content:" ✓";color:#1a7f37}
+.readmain{flex:1;min-width:0}
+@media(max-width:760px){.readwrap{flex-direction:column}.readnav{width:100%;display:flex;flex-wrap:wrap}.readnav button{width:auto}}
+
+/* ---------- drag blanks ---------- */
+.fibbank{border:1px dashed #8fa4b8;border-radius:6px;padding:10px;margin:12px 0;min-height:48px}
+.chip{display:inline-block;background:#123c6d;color:#fff;border-radius:4px;padding:5px 13px;margin:4px;cursor:pointer;font-size:14px;user-select:none}
+.chip.used{opacity:.3;pointer-events:none}
+.blank{display:inline-block;min-width:110px;border-bottom:2px solid #123c6d;padding:2px 8px;margin:0 3px;text-align:center;cursor:pointer;color:#123c6d;font-weight:600;background:#eef3f8;border-radius:4px 4px 0 0}
+.blank:empty::before{content:"\\200b"}
+
+/* ---------- reorder ---------- */
+.reitem{border:1px solid #d5e0ea;border-radius:6px;background:#fff;padding:11px 14px;margin:6px 0;display:flex;align-items:center;gap:10px}
+.reitem .mv{display:flex;flex-direction:column;gap:2px}
+.reitem .mv button{border:1px solid #b9c6d2;background:#f2f6fa;border-radius:4px;font-size:11px;padding:1px 8px;line-height:1.4}
+.reitem .txt{flex:1}
+
+/* ---------- HIW ---------- */
+.hiw-word{cursor:pointer;padding:1px 2px;border-radius:3px}
+.hiw-word:hover{background:#ffe9a8}
+.hiw-word.sel{background:#f9c74f;color:#5b4300;font-weight:600}
+
+/* ---------- review ---------- */
+.scorebig{font-size:34px;font-weight:700;color:#123c6d}
+.revitem{border:1px solid #dde4ea;border-radius:6px;padding:14px 18px;margin:10px 0;background:#fff}
+.revitem h4{color:#123c6d;font-size:15px;margin-bottom:6px}
+.revitem .ok{color:#1a7f37;font-weight:600}
+.revitem .no{color:#b3261e;font-weight:600}
+.revitem .ua{background:#f2f6fa;border-radius:4px;padding:8px 12px;margin:6px 0;font-size:14.5px}
+.badge{display:inline-block;font-size:12px;border-radius:9px;padding:1px 10px;margin-left:8px}
+.badge.ok{background:#d9f2e3;color:#1a7f37}
+.badge.no{background:#fadbd8;color:#b3261e}
+.badge.na{background:#e8ecf1;color:#5b6b7b}
+audio{display:block;margin:8px 0;max-width:100%}
+.kv{font-size:14px;color:#3d4f60;margin:4px 0}
+
+.footer-note{max-width:1020px;margin:0 auto;padding:12px 22px 30px;font-size:12.5px;color:#77879a}
+
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const EXAM = {"meta":{"id":9,"title":"PTE Academic Mock Exam 9 (2026 Format)"},"readAloud":[{"text":"In 1582, Pope Gregory the Thirteenth reformed the Julian calendar, which had drifted from the solar year by ten days. The reform removed leap days in most century years, so the calendar year stayed aligned with the seasons. Adoption spread slowly, however, and Britain did not accept the Gregorian calendar until seventeen fifty-two. Russia waited until the twentieth century."},{"text":"Cartography, the science of making maps, has developed alongside human exploration for thousands of years. Early mapmakers worked from travellers' accounts and rough measurements, so their charts were often distorted. The systematic surveys of the eighteenth century brought far greater accuracy, and satellite technology has since made detailed mapping of even remote regions possible for the first time."},{"text":"Medieval cathedral builders faced enormous engineering challenges without the benefit of modern mathematics. Their soaring structures relied on pointed arches, ribbed vaults, and flying buttresses to channel the weight of the roof safely downward. Although several collapses occurred during construction, the surviving cathedrals testify to a sophisticated understanding of stone, light, and proportion. Many visitors today underestimate this achievement."},{"text":"The bicycle, developed in its modern form during the late nineteenth century, transformed personal mobility. For the first time, ordinary people could travel farther and faster under their own power. The machine also advanced engineering, popularising pneumatic tyres, ball bearings, and chain drives, technologies that later shaped the motorcar and the aeroplane. Its social impact was equally profound, particularly for women."},{"text":"Mangrove forests grow along tropical coastlines where salt and fresh water meet. Their tangled roots trap sediment, stabilise the shoreline, and shelter juvenile fish among the tides. Scientists estimate that a healthy mangrove belt absorbs the energy of most storm waves, making these forests a natural and cost-effective defence against coastal flooding. Yet large areas continue to be cleared for aquaculture and development."},{"text":"The Rosetta Stone, discovered in Egypt in 1799, carries the same decree carved in three scripts: hieroglyphic, demotic, and ancient Greek. Because scholars could already read Greek, the stone provided the key to deciphering hieroglyphs, a script that had been silent for well over a thousand years, and thereby reopened the written record of ancient Egypt."},{"text":"Global trade in second-hand clothing has grown into a multi-billion-dollar industry. Donated garments from wealthier countries are sorted, graded, and exported to markets across Africa and Asia, where they support millions of livelihoods. Critics, however, argue that the trade can undermine local textile production and masks the problem of overconsumption at its source. Regulation is increasingly under discussion."}],"repeatSentence":[{"text":"The careers fair in the sports hall has been moved to next Thursday."},{"text":"Please remember to bring your laboratory coat to the afternoon session."},{"text":"The final marks will be published on the student portal next Wednesday."},{"text":"A visiting lecturer from Norway will speak about polar navigation tomorrow evening."},{"text":"Free dictionary workshops are offered to international students every month."},{"text":"The bus to the research station leaves promptly at eight o'clock."},{"text":"Course enrolment for the spring semester opens on the first of March."},{"text":"Lunchtime concerts in the courtyard are open to staff and students alike."},{"text":"The assignment guidelines have been updated, so please download the latest version."},{"text":"Photography is not permitted inside the conservation area without written permission."}],"describeImage":[{"title":"Unemployment rate by country (%)","sample":"The bar chart compares the unemployment rate in four countries. Spain has by far the highest rate, at nearly twelve percent, followed by Canada at around six percent. Germany and Japan have much lower figures, at roughly three percent and two and a half percent respectively. Overall, Spain's unemployment rate is approximately double that of Canada and more than four times that of Japan or Germany.","svg":"<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0<\/text><text x='24' y='205' font-size='11'>3<\/text><text x='24' y='145' font-size='11'>6<\/text><text x='24' y='85' font-size='11'>9<\/text><text x='20' y='25' font-size='11'>12<\/text><rect x='90' y='24' width='70' height='236' fill='#2f6db3'/><rect x='190' y='138' width='70' height='122' fill='#2f6db3'/><rect x='290' y='192' width='70' height='68' fill='#2f6db3'/><rect x='390' y='208' width='70' height='52' fill='#2f6db3'/><text x='110' y='278' font-size='12'>Spain<\/text><text x='210' y='278' font-size='12'>Canada<\/text><text x='315' y='278' font-size='12'>Germany<\/text><text x='410' y='278' font-size='12'>Japan<\/text><\/svg>"},{"title":"Cinema attendance, 2015–2025 (millions of tickets per year)","sample":"The line graph shows annual cinema attendance between 2015 and 2025. Attendance rose slightly from about 55 million tickets in 2015 to a peak of 60 million in 2019, then collapsed to around 22 million in 2020. It recovered steadily afterwards, reaching roughly 52 million by 2025. In summary, cinema attendance fell sharply in 2020 but has been climbing back towards its former level ever since.","svg":"<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0<\/text><text x='24' y='185' font-size='11'>20<\/text><text x='24' y='105' font-size='11'>40<\/text><text x='24' y='25' font-size='11'>60<\/text><polyline points='80,72 140,61 200,54 230,185 290,123 350,95 380,81' fill='none' stroke='#d1495b' stroke-width='3'/><circle cx='80' cy='72' r='4' fill='#d1495b'/><circle cx='200' cy='54' r='4' fill='#d1495b'/><circle cx='230' cy='185' r='4' fill='#d1495b'/><circle cx='380' cy='81' r='4' fill='#d1495b'/><text x='70' y='278' font-size='11'>2015<\/text><text x='220' y='278' font-size='11'>2020<\/text><text x='365' y='278' font-size='11'>2025<\/text><\/svg>"},{"title":"Where students buy their textbooks (%)","sample":"The pie chart shows where university students obtain their textbooks. Online retailers are the largest source at 40 percent, slightly ahead of the campus bookshop at 35 percent. Second-hand purchases make up 18 percent, while digital copies account for only 7 percent. A small share, about 5 percent of students, rely on library copies shared with others. Overall, most students now buy their books online rather than on campus.","svg":"<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><circle cx='180' cy='150' r='110' fill='#2f6db3'/><path d='M180,150 L180,40 A110,110 0 0 1 285,182 Z' fill='#e8a13d'/><path d='M180,150 L285,182 A110,110 0 0 1 100,242 Z' fill='#4f9d69'/><path d='M180,150 L100,242 A110,110 0 0 1 73,132 Z' fill='#d1495b'/><path d='M180,150 L73,132 A110,110 0 0 1 180,40 Z' fill='#8a6fbf'/><text x='320' y='80' font-size='12' fill='#2f6db3'>■ Online retailers 40%<\/text><text x='320' y='110' font-size='12' fill='#e8a13d'>■ Campus bookshop 35%<\/text><text x='320' y='140' font-size='12' fill='#4f9d69'>■ Second-hand 18%<\/text><text x='320' y='170' font-size='12' fill='#d1495b'>■ Digital copies 7%<\/text><text x='320' y='200' font-size='12' fill='#8a6fbf'>■ Library 0% shared<\/text><text x='320' y='220' font-size='12' fill='#555'>(no single owner)<\/text><\/svg>"}],"retellLecture":[{"title":"What Antarctic ice cores tell us","sample":"The lecture explained how Antarctic ice cores record the Earth's past climate. Snow traps bubbles of ancient air and forms one layer each year, like tree rings, so drilling three kilometres recovers ice over eight hundred thousand years old. Analysing the layers shows past temperatures and greenhouse gas levels, and reveals that today's carbon dioxide concentration is higher than at any time in that record, making the cores both a history of climate and a warning.","text":"Antarctic ice cores are among the most valuable records of the Earth's past climate. Snow falling on the polar ice sheet traps bubbles of ancient air, and each year's snowfall forms a distinct layer, like the rings of a tree. By drilling down more than three kilometres, scientists can recover ice that fell over eight hundred thousand years ago. Analysis of these layers reveals past temperatures and the concentration of greenhouse gases, showing that carbon dioxide today is higher than at any point in that long record. The cores therefore provide both a natural history of climate change and a warning about its pace."},{"title":"The invention of the compass","sample":"The lecture traced the history of the compass, one of China's great inventions. Early lodestone ladles were first used for arranging buildings, but magnetised needles floating in water later gave sailors a reliable direction-finder even when clouds hid the sun and stars. Reaching Europe through the Islamic world, the compass, together with improved maps, made long ocean voyages possible and opened the age of global exploration.","text":"The compass, one of China's Four Great Inventions, transformed navigation at sea. Early versions were ladles of lodestone that swung to align with the Earth's magnetic field, used at first for arranging buildings according to feng shui principles. By the eleventh century, magnetised iron needles floating in water gave mariners a direction-finder that worked when clouds hid the sun and stars. The technology reached Europe through the Islamic world, and the compass, together with improved maps and charts, made long ocean voyages practical. Historians argue that without this small instrument, the age of global exploration could not have begun as it did."}],"respondToSituation":[{"prompt":"You arrived for a two-week holiday, but your checked suitcase did not appear on the baggage carousel. Your clothes, medication, and camera were all inside it. Go to the airline's lost baggage desk inside the airport. What would you say?","audio":"You arrived for a two-week holiday, but your checked suitcase did not appear on the baggage carousel. Your clothes, medication, and camera were all inside it. Go to the airline's lost baggage desk inside the airport. What would you say?","sample":"Hello, I hope you can help me. My name is Jordan, and I've just arrived on flight 214 from Lisbon, but my suitcase never appeared on the carousel. It's a navy blue hard-shell case, and my baggage receipt number is on this stub. Inside are my clothes for two weeks, my daily medication, and my camera, so it's quite urgent. Could you check where the bag was last scanned? If it's still in Lisbon, please tell me when I can expect it, and explain how I'll be reimbursed for essentials like toiletries and clothing in the meantime. My hotel contact details are on this form. Thank you very much."},{"prompt":"Your close friend asks to borrow a large sum of money to cover this month's rent, but you are saving for your own tuition and cannot afford to lend it. Meet your friend and explain. What would you say?","sample":"Thanks for being honest with me about how tight things are — I know this is stressful. I have to be honest back, though. I've been saving every month for my tuition fees, and the payment deadline is close, so I genuinely can't lend you that amount right now. It isn't because I don't trust you; it's simply money I've already promised for my studies. What I can do is help you look at other options: I could lend a small amount for food this week, go with you to ask the landlord about a short extension, or help you find extra shifts. I'm sorry I can't do more, and I hope we can figure the rest out together."}],"summarizeGroupDiscussion":[{"topic":"Should the university canteens go fully vegetarian?","sample":"The students discussed whether campus canteens should stop serving meat entirely. Speaker A argued it would cut emissions, improve sustainability credentials, and reflect student demand. Speaker B objected that choice should remain, that some athletes need more protein options, and that revenue could fall if students ate off campus. Speaker C proposed a trial in one canteen plus a survey, with nutritionists designing the menus. They agreed to support a semester-long trial rather than an immediate, university-wide change.","turns":[{"speaker":"A","text":"I think going fully vegetarian is the right call. Food is one of the university's biggest sources of emissions, several campuses abroad have already made the switch, and honestly the demand is there — the vegetarian stall always has the longest queue at lunchtime."},{"speaker":"B","text":"I'm not convinced. Taking choice away entirely will backfire: students on sports scholarships need serious protein options, and if people start buying sandwiches off campus, the canteens could actually lose money. Serving less meat, not zero meat, seems smarter to me."},{"speaker":"C","text":"Could we trial it first? For one semester, make the north canteen fully vegetarian while the others keep the current menu, and survey users before and after. That way we get real data instead of arguments."},{"speaker":"A","text":"A trial is fine by me, as long as it's advertised properly. Half the time students don't even know what's on offer in the north canteen."},{"speaker":"B","text":"Alright, I could accept a trial on those terms — but a nutritionist should design the menus so it's genuinely balanced, not just ten different versions of pasta."},{"speaker":"C","text":"Agreed. I'll draft the proposal tonight: one semester, one canteen, survey attached, and a review meeting at the end."}]},{"topic":"Should athletes who cheat through doping be banned from sport for life?","sample":"The students debated whether doping should end an athlete's career permanently. Speaker A supported a lifetime ban, arguing that cheating steals medals and funding from clean athletes and that only a permanent penalty deters professionals. Speaker B thought lifetime bans were disproportionate, pointing to accidental contamination in supplements and young athletes' mistakes, and favoured suspensions with education. Speaker C suggested distinguishing deliberate cheating from negligence, with lifetime bans for repeat or deliberate offenders. They agreed the current penalties were inconsistent and favoured a tiered system with lifetime bans reserved for intentional, serious violations.","turns":[{"speaker":"A","text":"For me it's simple: if you dope, you're finished. A doping programme isn't a mistake, it's organised theft — you take medals, prize money, and sponsorship from athletes who trained clean. Only a lifetime ban makes the risk bigger than the reward."},{"speaker":"B","text":"I understand the anger, but a lifetime ban punishes everyone the same way. Supplements get contaminated without the athlete knowing, and a nineteen-year-old who makes one bad decision shouldn't lose everything at the start of their career. Suspensions plus mandatory education would reform more people than exclusion."},{"speaker":"C","text":"Maybe the real problem is that the rules don't distinguish between deliberate cheating and carelessness. What if deliberate or repeated doping carried a lifetime ban, while first-time negligence meant a shorter suspension?"},{"speaker":"A","text":"That sounds reasonable in theory, but 'I didn't know' is exactly what every cheat says. Without strict liability, you get endless legal arguments, and the offenders' teams just get better at hiding it."},{"speaker":"B","text":"Strict liability does exist already, and I'd keep it — the tiering would come at sentencing, not at the standard of proof. Harsh sentences for deliberate cases, second chances for proven accidents."},{"speaker":"C","text":"So we broadly agree: tougher and more consistent, with lifetime bans reserved for intentional or repeat offenders. I think that's what we should present."}]}],"answerShortQuestion":[{"question":"What do you call the written list of items to be discussed at a meeting?","answer":"An agenda"},{"question":"Which colour do you get if you mix blue and yellow paint?","answer":"Green"},{"question":"What do we call a period of ten years?","answer":"A decade"},{"question":"Which organ in the human body pumps blood around the body?","answer":"The heart"},{"question":"What is the opposite of the verb 'arrive'?","answer":"Depart"}],"summarizeWrittenText":[{"passage":"When two communities trade, migrate, or conquer one another, their languages exchange words, a process linguists call borrowing. English, for example, has absorbed thousands of terms from Norman French, Latin, Norse, and dozens of other tongues, so much so that only a minority of its vocabulary descends directly from Old English. Borrowed words are rarely identical to their originals: speakers reshape unfamiliar sounds into their own sound system, and meanings often shift along the way. Some borrowed words fade again within a generation, while others become so ordinary that nobody notices their foreign birth. Because borrowing records contact between peoples, linguists treat the vocabulary of a language as a kind of archaeological archive of its history.","sample":"Borrowing happens when communities interact, and English has absorbed vocabulary from many tongues; because borrowed words are reshaped, sometimes fade, and often pass unnoticed, linguists view a language's vocabulary as an archive recording the historical contacts of its speakers."},{"passage":"Paper money first appeared in China during the Tang and Song dynasties, when merchants grew tired of carrying heavy strings of metal coins and began using receipts issued by trusted deposit shops. The government later took over the practice, printing the world's earliest banknotes, although over-issuance eventually caused severe inflation. European countries adopted paper money centuries later, initially through privately issued notes promising to pay the bearer gold on demand. Trust was the entire foundation of the system: a note was worthless if people doubted that it could be exchanged. Modern currencies no longer promise gold at all, yet the principle remains unchanged — money functions because the public believes others will accept it in payment.","sample":"Paper money originated in China as merchant receipts later taken over by the government, reached Europe through gold-backed private notes, and has always depended on public trust, a principle that persists today even though modern currencies no longer promise conversion into gold."}],"essay":[{"prompt":"Some countries start formal schooling at the age of four or five, while others delay it until children are six or seven. Which approach benefits children more? Discuss both views and give your own opinion. Write 200–300 words.","sample":"Possible structure: (1) Introduction — paraphrase the debate about the right age to begin formal schooling, state your position. (2) Arguments for starting early: young children absorb languages and routines quickly, school supports working parents, early screening can identify learning difficulties. (3) Arguments for starting later: play-based learning is crucial in early childhood, formal instruction too soon can cause stress and put children off learning, later starters often catch up quickly and show better wellbeing. (4) Conclusion — your view, e.g. a later start with high-quality, play-based preschool provision. Useful phrases: 'The appropriate age at which children should begin formal education is widely debated.', 'Proponents of an early start argue that…', 'Conversely, child development research suggests…', 'On balance, I believe…'"}],"reading":{"fibDropdown":[{"text":"Cacao was first cultivated in Central America, where ancient peoples consumed chocolate as a bitter {{1}} during religious ceremonies. European explorers carried cacao beans home in the sixteenth century, and the addition of sugar soon made the drink {{2}} popular across the continent. For centuries, chocolate remained a luxury that only the {{3}} could afford. The invention of solid chocolate in the nineteenth century finally {{4}} its price, and the confection spread to every social class.","blanks":[{"options":["beverage","vegetable","device","vehicle"],"correct":0},{"options":["rarely","increasingly","hardly","barely"],"correct":1},{"options":["wealthy","healthy","worthy","sturdy"],"correct":0},{"options":["raised","lowered","folded","widened"],"correct":1}]},{"text":"Most bats navigate in complete darkness using a system called echolocation. The animal emits high-pitched {{1}} and listens to the echoes that bounce back from nearby objects. From these returning sounds, the bat can determine the {{2}} of obstacles and even catch insects in mid-air. Human-made sonar works on a similar {{3}}, which is why engineers have long taken an {{4}} in studying bats.","blanks":[{"options":["signals","stitches","shadows","circuits"],"correct":0},{"options":["poetry","position","pension","portion"],"correct":1},{"options":["principle","holiday","festival","ceremony"],"correct":0},{"options":["absence","entrance","interest","evidence"],"correct":2}]},{"text":"The ancient Olympic Games were held at Olympia every four years in honour of the god Zeus. During the festival, wars between rival city-states were {{1}} suspended so that athletes could travel safely. Events included running, wrestling, and chariot racing, and victors received olive {{2}} rather than money. The Games were {{3}} abolished in 393 CE, and the modern version revived them more than a thousand years {{4}}.","blanks":[{"options":["peacefully","secretly","briefly","wrongly"],"correct":2},{"options":["branches","leaves","wreaths","roots"],"correct":2},{"options":["eventually","rarely","lately","hardly"],"correct":0},{"options":["later","sooner","before","ahead"],"correct":0}]},{"text":"Healthy soil is a living ecosystem containing minerals, organic matter, air, water, and billions of organisms. Intensive farming can {{1}} soil structure, leaving it compacted and unable to hold water. Farmers increasingly plant cover crops during winter to protect the {{2}} and return nutrients to the ground. These practices {{3}} erosion, improve fertility, and can even {{4}} carbon dioxide from the atmosphere into the soil.","blanks":[{"options":["damage","polish","decorate","admire"],"correct":0},{"options":["ceiling","highway","surface","interior"],"correct":2},{"options":["ignore","reduce","imitate","increase"],"correct":1},{"options":["push","lock","throw","draw"],"correct":3}]},{"text":"Sign languages are fully developed languages with their own grammar and vocabulary; they are not simply {{1}} versions of spoken words. Linguists note that children who grow up with sign language reach the same developmental {{2}} as hearing children. Sign languages also {{3}} from country to country, so British and American sign language are mutually unintelligible. {{4}}, universities increasingly recognise sign languages as legitimate subjects of academic study.","blanks":[{"options":["gestured","typed","printed","written"],"correct":0},{"options":["obstacles","milestones","packages","ingredients"],"correct":1},{"options":["suffer","differ","copy","agree"],"correct":1},{"options":["Rarely","Suddenly","Accordingly","Conversely"],"correct":2}]}],"mcMultiple":[{"passage":"The placebo effect occurs when patients feel better after taking a treatment that has no active ingredient. Studies show the effect is genuine: brain imaging reveals real changes in regions involved in pain and emotion, and patients often report meaningful relief. Expectations matter, and so does ritual — the act of seeing a professional, receiving a capsule, and following a routine all contribute. Placebos are not magic, however. They cannot shrink tumours or cure infections, and their strongest effects appear in subjective experiences such as pain, nausea, and fatigue. Researchers now debate whether placebos could complement standard care, provided patients are informed that the treatment contains nothing active.","question":"Which of the following statements are supported by the passage?","options":["Placebos can produce measurable changes in the brain","Placebos can eliminate bacterial infections","The ritual of receiving treatment contributes to the effect","Placebos work best on subjective symptoms such as pain","Placebo effects occur only in children"],"answers":[0,2,3]},{"passage":"Beneath a mountain on a Norwegian island inside the Arctic Circle lies the Svalbard Global Seed Vault, often called the doomsday vault. Its purpose is straightforward: to preserve backup copies of seeds from gene banks around the world in case the originals are lost to war, natural disaster, or simple mismanagement. The tunnel's thick rock and permafrost keep the vault cold even if power fails, and seeds are stored in sealed packets at minus eighteen degrees Celsius. The facility does not lend seeds to farmers; instead, depositing institutions remain the owners of their samples and may withdraw them when local stocks are threatened. Over a million seed varieties are now stored there.","question":"According to the passage, which statements about the Svalbard vault are correct?","options":["It stores duplicate samples of seeds held elsewhere","It stays cold naturally even if the power supply fails","It distributes seeds directly to farmers every season","Depositing institutions retain ownership of their samples","It is located close to the equator"],"answers":[0,1,3]}],"reorder":[{"sentences":["Tea is the world's second most consumed drink, after water.","The drink originated in China, where legend credits its discovery to Emperor Shennong nearly five thousand years ago.","From China, tea spread along trade routes to Japan, the Middle East, and eventually Europe.","British cultivation of tea in India in the nineteenth century turned an expensive luxury into an everyday commodity."]},{"sentences":["Measuring body temperature accurately changed the practice of medicine.","Early thermometers, developed in the seventeenth century, were unreliable and slow to give a reading.","In 1868, Carl Wunderlich showed that fever followed measurable patterns in disease, making the thermometer a genuine diagnostic tool.","Compact clinical thermometers soon appeared in every hospital ward, and temperature became a routine vital sign."]}],"fibDrag":[{"text":"Seagrass meadows grow in shallow coastal waters, where they {{1}} carbon dioxide and stabilise the seabed. The dense leaves also provide {{2}} for young fish, crabs, and other marine creatures.","answers":["absorb","shelter"],"bank":["absorb","shelter","release","desert","loudly","ancient"]},{"text":"Many birds {{1}} thousands of kilometres every year, guided partly by the Earth's {{2}} field and the position of the stars.","answers":["migrate","magnetic"],"bank":["migrate","magnetic","digest","electric","opposite","faintly"]},{"text":"Bones {{1}} the body and shield vital organs from injury. The soft marrow at their centre constantly produces new {{2}} cells.","answers":["support","blood"],"bank":["support","blood","destroy","skin","silently","heavy"]},{"text":"Poor posture {{1}} strain on the spine during long hours at a desk. Adjustable chairs and screens placed at eye {{2}} can prevent much of this discomfort.","answers":["reduces","level"],"bank":["reduces","level","increases","height","roughly","absent"]}],"mcSingle":[{"passage":"Recovered from a Roman-era shipwreck in 1901, the Antikythera mechanism consists of corroded bronze gears packed into a wooden case the size of a shoe box. Decades of X-ray imaging eventually revealed that the device predicted eclipses, tracked the positions of the sun and moon, and even followed the four-year cycle of ancient athletic games. Nothing of comparable mechanical sophistication is known from Europe for well over a thousand years afterwards, and historians still debate who built such advanced instruments and how many were lost.","question":"What is the passage primarily about?","options":["The device was a primitive navigation compass used by sailors","The mechanism reveals that complex geared devices existed far earlier than previously assumed","X-ray imaging destroyed most of the mechanism's gears","The device was built to predict the weather for farmers"],"answer":1},{"passage":"The alphabet used across much of the world today descends from a system developed by the Phoenicians around 1050 BCE. Rather than writing each syllable or idea with a separate symbol, as earlier scripts did, the Phoenicians assigned one symbol to each consonant sound. The Greeks later added vowels, and the system passed to the Romans and then spread with Latin. Because it required only about two dozen signs, the alphabet could be learned by ordinary people, not just trained scribes.","question":"According to the passage, why did the alphabet spread so widely?","options":["Because it recorded ideas with thousands of distinct symbols","Because its small number of signs made it easy for ordinary people to learn","Because the Romans forced every conquered city to abandon its own script","Because the Phoenicians taught it only to professional scribes"],"answer":1}]},"listening":{"summarizeSpokenText":[{"title":"The legacy of the Silk Road","sample":"The speaker explained that the Silk Road was a changing network of caravan routes linking China with Europe, carrying not only silk and other goods but also religions, technologies, and ideas in both directions. The network declined as sea transport became cheaper, but its lasting legacy was the exchange and mixing of cultures, languages, foods, and even diseases, making it an early engine of globalisation.","audio":"The Silk Road was never a single road but a shifting network of caravan routes linking China with Central Asia, the Middle East, and Europe. Its most famous cargo was silk, but the caravans also carried glass, paper, spices, and, less visibly, ideas. Buddhism travelled east along these routes into China and Japan, while technologies such as papermaking and gunpowder moved west. The network declined when sea transport became cheaper and more reliable. Historians stress that the Silk Road's true legacy is the mixing of cultures: languages, religions, foods, and even diseases circulated along it, making it an early engine of global exchange."},{"title":"Why we dream","sample":"The lecture reviewed several theories of dreaming: memory consolidation, safe rehearsal of threats, and emotional processing, noting that dreams contain more negative emotion than waking life. Most vivid dreams occur in rapid eye movement sleep, when the brain is highly active. Dreaming appears to be universal, and losing dream sleep disturbs mood and learning, even though no single theory fully explains it.","audio":"Despite decades of research, no one theory fully explains why we dream. One influential view holds that dreaming helps the brain consolidate memories, replaying the day's experiences and deciding what to keep. Others argue that dreams act as a rehearsal space, letting us practise responses to threats in complete safety. A third perspective emphasises emotional processing, noting that dreams contain far more negative emotion than waking life. Sleep laboratories show that most vivid dreaming occurs during rapid eye movement sleep, when the brain is almost as active as when we are awake. What is clear is that dreaming is universal, and that dream deprivation itself disturbs mood and learning."}],"mcMultiple":[{"audio":"Attention, everyone. I have a few reminders about next month's geography field course. Because places are limited, please sign up through the department website by this Friday; no email applications will be accepted. The trip itself is free, but everyone must pay a ten-dollar deposit, which will be refunded after the course. We will be outdoors for most of the day, so bring waterproof clothing and sturdy boots — trainers are not suitable for the rocky paths. Finally, students who have not submitted the signed consent form cannot board the coach.","question":"Which of the details below did the announcement include?","options":["Sign-up for the field course closes on Friday","The course is completely free with no payment of any kind","Trainers are acceptable footwear for the trip","A refundable deposit is required from every participant","Students without a signed consent form cannot join the trip"],"answers":[0,3,4]}],"fillBlanks":[{"display":"Today's lecture follows a single drop of water through the cycle. The sun warms the ocean surface, and the drop {{1}} into the air. Higher up, cooling causes it to {{2}} into tiny cloud droplets, which eventually fall as {{3}} over the land.","answers":["evaporates","condense","rain"],"audio":"Today's lecture follows a single drop of water through the cycle. The sun warms the ocean surface, and the drop evaporates into the air. Higher up, cooling causes it to condense into tiny cloud droplets, which eventually fall as rain over the land."},{"display":"In today's seminar we examine why the Western Roman Empire {{1}}. Historians no longer blame a single cause; instead they point to economic trouble, pressure along the {{2}}, and political instability. By 476 CE, the last western emperor had been {{3}}.","answers":["declined","borders","removed"],"audio":"In today's seminar we examine why the Western Roman Empire declined. Historians no longer blame a single cause; instead they point to economic trouble, pressure along the borders, and political instability. By 476 CE, the last western emperor had been removed."},{"display":"A reminder that the university planetarium will hold open evenings this week. Visitors can observe the night sky through a powerful {{1}}, and staff will explain how to recognise constellations in the {{2}} night sky. Entry is free, but places must be {{3}} in advance.","answers":["telescope","winter","reserved"],"audio":"A reminder that the university planetarium will hold open evenings this week. Visitors can observe the night sky through a powerful telescope, and staff will explain how to recognise constellations in the winter night sky. Entry is free, but places must be reserved in advance."}],"highlightCorrectSummary":[{"audio":"Fossils form only under particular conditions. When an animal dies, its soft parts usually decay or are eaten quickly, so it is normally the hard parts — bones, shells, and teeth — that survive. For fossilisation to occur, the remains must be buried rapidly by sediment, which protects them from weathering and scavengers. Over millions of years, minerals seep into the pores of the bone and replace the original material, turning it to stone. Because of all these requirements, the fossil record represents only a tiny fraction of the species that have ever lived.","options":["Fossils form whenever an animal dies on land, and most dead animals eventually become fossils.","Fossils require rapid burial by sediment and mineral replacement of hard parts, so the fossil record preserves only a small share of past species.","Soft body parts survive better than bones because they decay more slowly.","Scavengers help fossilisation by cleaning the bones before burial."],"answer":1}],"mcSingle":[{"audio":"Excuse me, Dr Patel. About my essay — several websites I found disagree about the statistics on coastal erosion, and one blog says the measurements are decades old. Should I use them, or is there somewhere better to get the figures? The assignment says sources must be credible.","question":"What does the student want to know?","options":["How to cite websites in the reference list","Whether to extend the essay deadline","Where to find reliable statistics for the essay","Whether coastal erosion should be the essay topic"],"answer":2}],"selectMissingWord":[{"audio":"Announcing a new policy, the dean said the university will fund every undergraduate research project up to two thousand dollars, provided the proposal is approved by a faculty member before the end of the","options":["autumn","semester","holiday","decade"],"answer":1,"fullText":"Announcing a new policy, the dean said the university will fund every undergraduate research project up to two thousand dollars, provided the proposal is approved by a faculty member before the end of the semester."}],"highlightIncorrectWords":[{"words":[{"w":"Glaciers"},{"w":"move"},{"w":"slowly","wrong":true,"said":"quickly"},{"w":"downhill"},{"w":"under"},{"w":"their"},{"w":"own"},{"w":"enormous"},{"w":"weight"},{"w":"and"},{"w":"their"},{"w":"icy"},{"w":"edges"},{"w":"advance","wrong":true,"said":"shrink"},{"w":"whenever"},{"w":"snowfall"},{"w":"at"},{"w":"the"},{"w":"top","wrong":true,"said":"valley"},{"w":"exceeds"},{"w":"melting"},{"w":"at"},{"w":"the"},{"w":"bottom."}]},{"words":[{"w":"The"},{"w":"human"},{"w":"tongue"},{"w":"can"},{"w":"detect"},{"w":"five","wrong":true,"said":"seven"},{"w":"basic"},{"w":"tastes"},{"w":"and"},{"w":"recent"},{"w":"research"},{"w":"suggests"},{"w":"a"},{"w":"sixth"},{"w":"taste"},{"w":"sensitive"},{"w":"to"},{"w":"fatty","wrong":true,"said":"salty"},{"w":"foods"},{"w":"may"},{"w":"also"},{"w":"exist"},{"w":"in"},{"w":"humans."}]}],"writeFromDictation":[{"text":"The lecture on marine ecosystems has been rescheduled to Friday morning."},{"text":"Applicants must demonstrate proficiency in English before admission is granted."},{"text":"Careful record keeping is essential for every scientific experiment."}]}};
+</script>
+<script>
+/* PTE Academic Mock Exam Engine (2026 format) — self-contained, no dependencies.
+   Audio via Web Speech API (speechSynthesis). Mic via MediaRecorder. */
+(function () {
+"use strict";
+
+var app = document.getElementById("app");
+var C = EXAM;
+
+/* ================= static text: instructions + guide tips ================= */
+var TYPE_META = {
+  readAloud: { title: "Read Aloud", part: 1,
+    ins: "Look at the text below. In 35 seconds, you must read this text aloud as naturally and as clearly as possible. You have 40 seconds to read aloud.",
+    tips: ["Use the 35s prep to read silently twice; mark hard words.", "Stress content words (nouns, verbs), glide over function words.", "Fall in intonation at full stops, rise at commas.", "Never go back to correct a mistake — keep flowing.", "Steady natural pace beats fast reading."] },
+  repeatSentence: { title: "Repeat Sentence", part: 1,
+    ins: "You will hear a sentence. Please repeat the sentence exactly as you hear it. You will hear the sentence only once.",
+    tips: ["Close your eyes and listen for meaning chunks, not single words.", "Copy the speaker's intonation and rhythm.", "If memory breaks, deliver the chunk you know fluently — partial fluent beats hesitant full.", "No note-taking time; start speaking as soon as the mic opens."] },
+  describeImage: { title: "Describe Image", part: 1,
+    ins: "Look at the graph below. In 25 seconds, please speak into the microphone and describe in detail what the graph is showing. You will have 40 seconds to give your response.",
+    tips: ["Template: introduction (what it shows) → 2–3 key features (highest, lowest, trend, comparison) → conclusion.", "Never stop talking before 35s; silence costs fluency marks.", "Say approximate figures ('around 40 percent') — exact numbers not required.", "For maps/processes: describe positions/steps left-to-right."] },
+  retellLecture: { title: "Re-tell Lecture", part: 1,
+    ins: "You will hear a lecture. After listening to the lecture, in 10 seconds, please speak into the microphone and retell what you have just heard in your own words. You will have 40 seconds to give your response.",
+    tips: ["Note 8–10 keywords: names, numbers, main nouns/verbs — not full sentences.", "Frame: 'The lecture discussed… The speaker explained that… In conclusion…'", "Fluency and content keywords matter more than grammar perfection.", "Keep speaking for the full 40 seconds."] },
+  respondToSituation: { title: "Respond to a Situation", part: 1,
+    ins: "You will hear and read a description of an everyday situation. You then have 20 seconds to think about your response and 40 seconds to speak. Answer as if you were really in the situation.",
+    tips: ["Identify WHO you are talking to and WHAT outcome you want.", "Structure: polite opening → explain situation/problem → make your request or proposal → thank them.", "Match register: formal for staff/officials, casual for friends.", "Be specific — invent plausible details (dates, names, reasons)."] },
+  summarizeGroupDiscussion: { title: "Summarize Group Discussion", part: 1,
+    ins: "You will hear a discussion between several speakers. After listening, speak into the microphone and summarize what you have heard. You will have 60 seconds to give your response.",
+    tips: ["Note each speaker's MAIN point + any agreement/disagreement between them.", "Frame: 'The speakers discussed… The first speaker argued… while the second believed… They agreed that…'", "Cover ALL speakers, not just one.", "Use reporting verbs: suggested, objected, agreed, proposed."] },
+  answerShortQuestion: { title: "Answer Short Question", part: 1,
+    ins: "You will hear a question. Please give a simple and short answer. Often just one or a few words is enough. You will hear the question only once.",
+    tips: ["Answer with one or a few words — never a full sentence.", "Listen for the wh-word (who/where/what) to predict answer type.", "Tests general knowledge + vocabulary; don't overthink."] },
+  summarizeWrittenText: { title: "Summarize Written Text", part: 1,
+    ins: "Read the passage below and summarize it using ONE sentence. Type your response in the box at the bottom of the screen. You have 10 minutes. Your response will be judged on how well it presents the key points and on grammar, vocabulary and spelling. Your summary must be between 5 and 75 words.",
+    tips: ["ONE sentence only — full stops inside the answer are fatal.", "Find the main claim, then attach 1–2 key supports with connectors (while, because, which, although).", "Aim 35–55 words.", "Save 1 minute to check subject-verb agreement and spelling."] },
+  essay: { title: "Write Essay", part: 1,
+    ins: "You will have 20 minutes to plan, write and revise an essay about the topic below. Your response will be judged on how well you develop a position, organize your ideas, present supporting details, and control the elements of standard written English. You should write 200–300 words.",
+    tips: ["2–3 min plan: position + 2 arguments + examples.", "Structure: introduction (paraphrase + thesis) → body 1 → body 2 → conclusion.", "Start each body paragraph with a clear topic sentence; add an example.", "Save 2 minutes to proofread articles, plurals, verb endings."] },
+  fibDropdown: { title: "Reading & Writing: Fill in the Blanks", part: 2,
+    ins: "Below is a text with blanks. Click on each blank, and a drop-down list will appear. Select the appropriate answer choice for each blank.",
+    tips: ["Read the whole sentence first for meaning, then use grammar (word form, collocation) to confirm.", "Verb tense/agreement and fixed collocations solve most blanks.", "These supply BOTH reading and writing marks — prioritise them."] },
+  mcMultiple: { title: "Multiple Choice, Multiple Answers", part: 2,
+    ins: "Read the text and answer the question by selecting all the correct responses. More than one response is correct. If you select a wrong option, one point is deducted, so do not guess.",
+    tips: ["Skim the passage's main idea before reading options.", "Each correct option is usually a paraphrase of a passage detail.", "Avoid options that exaggerate ('always', 'never') beyond the text.", "Negative marking: skip an option if unsure."] },
+  reorder: { title: "Re-order Paragraphs", part: 2,
+    ins: "The text boxes in the left panel have been placed in a random order. Restore the original order by moving the text boxes.",
+    tips: ["Find the opening sentence first: it has no pronouns, no 'this/these', no connectors like 'however'.", "Chain pronouns to nouns ('he' → the man; 'this method' → a method named earlier).", "Look for time sequence and lexical repetition links.", "Scoring counts adjacent pairs — even a partially correct chain earns points."] },
+  fibDrag: { title: "Reading: Fill in the Blanks", part: 2,
+    ins: "Below is a text with blanks. Drag words from the box below to fill the blanks.",
+    tips: ["Sort the word bank by part of speech before dragging.", "Collocation is king: 'make a decision', 'heavy rain', 'conduct research'.", "Fill easiest blanks first; options shrink.", "Re-read completed text — it must flow grammatically."] },
+  mcSingle: { title: "Multiple Choice, Single Answer", part: 2,
+    ins: "Read the text and answer the multiple choice question by selecting the correct response. Only one response is correct.",
+    tips: ["Read the question BEFORE the passage.", "Eliminate options contradicted or not mentioned in the text.", "Correct answer paraphrases; distractors copy words but twist meaning."] },
+  sst: { title: "Summarize Spoken Text", part: 3,
+    ins: "You will hear a short lecture. Write a summary for a fellow student who was not present. You should write 50–70 words. You have 10 minutes to finish this task.",
+    tips: ["Note keywords, not sentences, while listening.", "Template: 'The speaker discussed X. He/She explained that… and highlighted… Finally, …'", "Stay within 50–70 words.", "Check spelling — it is scored."] },
+  mcmL: { title: "Multiple Choice, Multiple Answers (Listening)", part: 3,
+    ins: "Listen to the recording and answer the question by selecting all the correct responses. If you select a wrong option, one point is deducted.",
+    tips: ["Read the options quickly while the audio begins.", "Listen for paraphrases, not identical wording.", "Negative marking — never guess."] },
+  fillBlanksL: { title: "Fill in the Blanks (Listening)", part: 3,
+    ins: "You will hear a recording. Type the missing words in each blank as you hear them.",
+    tips: ["Type while listening — do not wait until the end.", "Watch the transcript ahead of your typing position.", "After the audio, check plural -s and past-tense -ed endings.", "Spelling counts; both US/UK accepted."] },
+  hcs: { title: "Highlight Correct Summary", part: 3,
+    ins: "Below are four possible summaries of the recording. Click on the paragraph that best captures what you have heard.",
+    tips: ["Eliminate options containing information contradicted by the audio.", "Eliminate options adding details never mentioned.", "The correct option covers the WHOLE talk, not one detail."] },
+  mcsL: { title: "Multiple Choice, Single Answer (Listening)", part: 3,
+    ins: "Listen to the recording and answer the multiple choice question.",
+    tips: ["Read the question stem first; listen with purpose.", "Distractors often repeat exact words from the audio with wrong meaning."] },
+  smw: { title: "Select Missing Word", part: 3,
+    ins: "You will hear a recording about a topic. At the end of the recording the last word or group of words is replaced by a beep. Select the correct option to complete the recording.",
+    tips: ["Predict the word from context before the beep.", "Intonation direction (rising/falling) hints at positive/negative endings.", "Check grammar fit: singular/plural, verb form."] },
+  hiw: { title: "Highlight Incorrect Words", part: 3,
+    ins: "The transcription of a recording appears on screen. While listening to the recording, identify the words in the transcription that differ from what is said.",
+    tips: ["Follow the text with your cursor exactly at audio pace.", "Click the moment a word mismatches — replacements are usually similar-sounding words.", "Every wrong click loses a point; only click genuine mismatches."] },
+  wfd: { title: "Write from Dictation", part: 3,
+    ins: "You will hear a sentence. Type the sentence in the box below exactly as you hear it. Write as much of the sentence as you can. You will hear the sentence only once.",
+    tips: ["Type continuously while listening; fix afterwards.", "Check the classic traps: a/an/the, plural -s, -ed endings, prepositions.", "You can add extra words without penalty — write all variants you are unsure of.", "This task is the highest-value listening item: guard every word."] }
+};
+
+/* ================= state ================= */
+var state = {
+  mode: null,            // 'real' | 'guide'
+  step: 0,
+  answers: {},           // key -> user answer
+  recordings: {},        // key -> blob URL
+  audioPlayed: {},       // key -> true
+  timers: [],            // active interval/timeout ids
+  speaking: false,       // TTS in flight
+  readingLeft: 30 * 60,  // reading part clock (real mode)
+  readingTick: null,
+  mediaStream: null,
+  recorder: null,
+  recChunks: []
+};
+
+/* ================= flow construction ================= */
+var flow = [];
+function addItems(type, list, part) {
+  (list || []).forEach(function (d, i) {
+    flow.push({ kind: "item", part: part, type: type, data: d, idx: i, total: list.length });
+  });
+}
+function buildFlow() {
+  flow.length = 0;
+  addItems("readAloud", C.readAloud, 1);
+  addItems("repeatSentence", C.repeatSentence, 1);
+  addItems("describeImage", C.describeImage, 1);
+  addItems("retellLecture", C.retellLecture, 1);
+  addItems("respondToSituation", C.respondToSituation, 1);
+  addItems("summarizeGroupDiscussion", C.summarizeGroupDiscussion, 1);
+  addItems("answerShortQuestion", C.answerShortQuestion, 1);
+  addItems("summarizeWrittenText", C.summarizeWrittenText, 1);
+  addItems("essay", C.essay, 1);
+  flow.push({ kind: "reading", part: 2 });
+  addItems("sst", C.listening.summarizeSpokenText, 3);
+  addItems("mcmL", C.listening.mcMultiple, 3);
+  addItems("fillBlanksL", C.listening.fillBlanks, 3);
+  addItems("hcs", C.listening.highlightCorrectSummary, 3);
+  addItems("mcsL", C.listening.mcSingle, 3);
+  addItems("smw", C.listening.selectMissingWord, 3);
+  addItems("hiw", C.listening.highlightIncorrectWords, 3);
+  addItems("wfd", C.listening.writeFromDictation, 3);
+}
+function readingItems() {
+  var r = C.reading, out = [];
+  r.fibDropdown.forEach(function (d, i) { out.push({ type: "fibDropdown", data: d, idx: i, total: r.fibDropdown.length }); });
+  r.mcMultiple.forEach(function (d, i) { out.push({ type: "mcMultiple", data: d, idx: i, total: r.mcMultiple.length }); });
+  r.reorder.forEach(function (d, i) { out.push({ type: "reorder", data: d, idx: i, total: r.reorder.length }); });
+  r.fibDrag.forEach(function (d, i) { out.push({ type: "fibDrag", data: d, idx: i, total: r.fibDrag.length }); });
+  r.mcSingle.forEach(function (d, i) { out.push({ type: "mcSingle", data: d, idx: i, total: r.mcSingle.length }); });
+  return out;
+}
+
+/* ================= helpers ================= */
+function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+function key() { return "s" + state.step; }
+function rkey(t, i) { return "r_" + t + "_" + i; }
+function clearTimers() {
+  state.timers.forEach(function (id) { clearTimeout(id); clearInterval(id); });
+  state.timers = [];
+  stopTTS();
+}
+function later(fn, ms) { var id = setTimeout(fn, ms); state.timers.push(id); return id; }
+function every(fn, ms) { var id = setInterval(fn, ms); state.timers.push(id); return id; }
+function fmt(s) { s = Math.max(0, Math.round(s)); return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); }
+function beep() {
+  try {
+    var ctx = beep._ctx || (beep._ctx = new (window.AudioContext || window.webkitAudioContext)());
+    var o = ctx.createOscillator(), g = ctx.createGain();
+    o.connect(g); g.connect(ctx.destination);
+    o.frequency.value = 720; g.gain.value = 0.18;
+    o.start(); o.stop(ctx.currentTime + 0.3);
+  } catch (e) {}
+}
+function wordCount(t) { t = (t || "").trim(); return t ? t.split(/\s+/).length : 0; }
+
+/* ================= TTS ================= */
+function stopTTS() { try { window.speechSynthesis && speechSynthesis.cancel(); } catch (e) {} state.speaking = false; }
+function speak(text, opts) {
+  opts = opts || {};
+  return new Promise(function (res) {
+    if (!("speechSynthesis" in window)) { res(false); return; }
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = opts.rate || 0.95; u.pitch = opts.pitch || 1; u.lang = opts.lang || "en-AU";
+    u.onend = function () { res(true); };
+    u.onerror = function () { res(false); };
+    state.speaking = true;
+    speechSynthesis.speak(u);
+  });
+}
+function speakTurns(turns) {
+  var pitches = { A: 1.0, B: 1.35, C: 0.75, D: 1.15 };
+  var i = 0, cancelled = false;
+  state.ttsCancel = function () { cancelled = true; };
+  return new Promise(function (res) {
+    (function next() {
+      if (cancelled || i >= turns.length) { res(!cancelled); return; }
+      speak(turns[i].text, { pitch: pitches[turns[i].speaker] || 1, rate: 0.95 }).then(next);
+      i++;
+    })();
+  });
+}
+
+/* ================= audio play controller (enforces single play in real mode) ================= */
+function playAudio(k, playFn, onDone) {
+  if (state.mode === "real" && state.audioPlayed[k]) { if (onDone) onDone(false); return false; }
+  state.audioPlayed[k] = true;
+  playFn().then(function (ok) { state.speaking = false; if (onDone) onDone(ok); });
+  return true;
+}
+
+/* ================= mic ================= */
+function ensureMic() {
+  if (state.mediaStream) return Promise.resolve(true);
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return Promise.resolve(false);
+  return navigator.mediaDevices.getUserMedia({ audio: true }).then(function (s) {
+    state.mediaStream = s; return true;
+  }).catch(function () { return false; });
+}
+function startRecording(k) {
+  if (!state.mediaStream) return false;
+  state.recChunks = [];
+  try { state.recorder = new MediaRecorder(state.mediaStream); } catch (e) { return false; }
+  state.recorder.ondataavailable = function (e) { if (e.data.size) state.recChunks.push(e.data); };
+  state.recorder.onstop = function () {
+    var b = new Blob(state.recChunks, { type: state.recorder.mimeType || "audio/webm" });
+    state.recordings[k] = URL.createObjectURL(b);
+  };
+  state.recorder.start();
+  return true;
+}
+function stopRecording() {
+  if (state.recorder && state.recorder.state !== "inactive") { try { state.recorder.stop(); } catch (e) {} }
+}
+
+/* ================= chrome (header / progress) ================= */
+function chrome(partLabel, timerHtml) {
+  var total = flow.length, cur = Math.min(state.step + 1, total);
+  var pct = state.step === -1 ? 0 : Math.round((state.step) / (total - 1) * 100);
+  return '<div class="topbar">' +
+    '<div class="logo">PTE<span>·Academic</span> Mock</div>' +
+    '<div class="mode ' + (state.mode === "guide" ? "guide" : "") + '">' + (state.mode === "guide" ? "GUIDE MODE" : "REAL MODE") + "</div>" +
+    '<div class="spacer"></div>' +
+    (partLabel ? '<div style="font-size:13px;opacity:.85">' + partLabel + "</div>" : "") +
+    (timerHtml || "") +
+    "</div>" +
+    '<div class="progress"><div style="width:' + pct + '%"></div></div>';
+}
+function render(html) { app.innerHTML = html; window.scrollTo(0, 0); }
+function tipsHtml(type) {
+  if (state.mode !== "guide") return "";
+  var t = TYPE_META[type].tips;
+  return '<div class="tipsbox"><h4>Tips &amp; tricks</h4><ul>' + t.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>";
+}
+function sampleHtml(label, text) {
+  return '<div class="samplebox"><h4>' + esc(label || "Sample answer") + '</h4><div>' + esc(text) + "</div></div>";
+}
+function guideExtra(type, data) {
+  if (state.mode !== "guide" || !data.sample) return "";
+  return '<div id="sampleWrap"><button class="btn sec small" onclick="PTE.showSample()">Show sample answer</button></div>';
+}
+
+/* ================= home ================= */
+function renderHome() {
+  state.step = -1;
+  render(chrome(null, "") +
+    '<div class="main"><div class="card">' +
+    "<h1>" + esc(C.meta.title) + "</h1>" +
+    '<div class="instructions">Full-length PTE Academic mock exam · 2026 test format (22 task types, ~2 hours). ' +
+    "This simulation follows the official test-day workflow: three parts (Speaking &amp; Writing, Reading, Listening), " +
+    "per-item timers, one-play audio, microphone recording, and auto-advance.</div>" +
+    '<div class="modewrap">' +
+    '<div class="modecard" onclick="PTE.pickMode(\'real\')"><h3>▶ Real Mode</h3>' +
+    "<ul><li>Exact exam workflow &amp; strict timers</li><li>Audio plays ONCE only</li><li>Auto-advance, no tips, no pause</li><li>Mic recording like test day</li><li>Score report at the end</li></ul></div>" +
+    '<div class="modecard" onclick="PTE.pickMode(\'guide\')"><h3>✎ Guide Mode</h3>' +
+    "<ul><li>Tips &amp; tricks panel on every task</li><li>Replay audio freely, no forced timing</li><li>Sample answers / answer keys inline</li><li>Practice at your own pace</li><li>Same items &amp; scoring review</li></ul></div>" +
+    "</div>" +
+    '<div class="kv"><b>Requirements:</b> a browser with Web Speech API (audio prompts) and microphone access (speaking tasks). Chrome/Edge recommended.</div>' +
+    '<div class="kv"><b>Content:</b> original practice items aligned to the 2026 PTE Academic format — including the newer <i>Respond to a Situation</i> and <i>Summarize Group Discussion</i> speaking tasks.</div>' +
+    "</div></div>" +
+    '<div class="footer-note">Unofficial practice material. Not affiliated with Pearson PLC. Scores are indicative only.</div>');
+}
+
+/* ================= mic check ================= */
+function renderMicCheck() {
+  render(chrome(null, "") +
+    '<div class="main"><div class="card">' +
+    "<h2>Microphone check</h2>" +
+    '<div class="instructions">The real PTE Academic records your spoken responses. Allow microphone access, then speak a few words and check the indicator. You may skip this; speaking tasks will still run, but recordings will not be captured.</div>' +
+    '<div class="statusbar"><span class="recdot" id="micdot"></span><span id="micstatus" class="statusline">Not tested yet</span></div>' +
+    '<div class="statusbar"><button class="btn sec" id="micbtn">Enable microphone</button>' +
+    '<button class="btn" id="micnext">Continue</button></div>' +
+    "</div></div>");
+  document.getElementById("micbtn").onclick = function () {
+    ensureMic().then(function (ok) {
+      var d = document.getElementById("micdot"), s = document.getElementById("micstatus");
+      if (ok) {
+        d.classList.add("on"); s.textContent = "Microphone ready — say something!";
+        try {
+          var ctx = new (window.AudioContext || window.webkitAudioContext)();
+          var src = ctx.createMediaStreamSource(state.mediaStream);
+          var an = ctx.createAnalyser(); src.connect(an);
+          var buf = new Uint8Array(an.frequencyBinCount);
+          every(function () {
+            an.getByteTimeDomainData(buf);
+            var m = 0; for (var i = 0; i < buf.length; i++) m = Math.max(m, Math.abs(buf[i] - 128));
+            d.style.transform = "scale(" + (1 + Math.min(1.5, m / 40)) + ")";
+          }, 120);
+        } catch (e) {}
+      } else { s.textContent = "Microphone unavailable — continuing without recording."; }
+    });
+  };
+  document.getElementById("micnext").onclick = function () { clearTimers(); renderSectionIntro(1); };
+}
+
+/* ================= section intros ================= */
+var SECTION_INFO = {
+  1: { t: "Part 1: Speaking & Writing", d: "This part tests your speaking and writing skills. Speaking tasks record your voice; you will hear a short tone before each recording starts. Writing tasks are typed. Timers run per item.", time: "approx. 60–70 min" },
+  2: { t: "Part 2: Reading", d: "This part tests your reading skills. A single clock governs the whole part — manage your time across all items. You may move between questions with the navigation panel.", time: "approx. 30 min" },
+  3: { t: "Part 3: Listening", d: "This part tests your listening skills. Each recording plays automatically and only ONCE. Answer as you listen; the test advances automatically after each item.", time: "approx. 30 min" }
+};
+function renderSectionIntro(part) {
+  clearTimers(); stopRecording();
+  var s = SECTION_INFO[part];
+  var tId = "secTimer";
+  render(chrome(s.t, state.mode === "real" ? '<div class="timerbox" id="' + tId + '"></div>' : "") +
+    '<div class="main"><div class="card">' +
+    '<div class="partlabel">' + s.time + "</div><h1>" + s.t + "</h1>" +
+    '<div class="instructions">' + s.d + "</div>" +
+    (state.mode === "guide" ? '<div class="tipsbox"><h4>Guide mode</h4><ul><li>No forced timers here — take your time on every task.</li><li>Use the yellow tips panel on each task.</li><li>Replay audio and reveal sample answers whenever you like.</li></ul></div>' : '<div class="instructions" id="secCount">The test will begin automatically in <b>10</b> seconds…</div>') +
+    '<div class="navrow"><span></span><button class="btn" id="secgo">' + (state.mode === "real" ? "Start now" : "Begin") + "</button></div>" +
+    "</div></div>");
+  var go = function () { clearTimers(); advanceFromIntro(part); };
+  document.getElementById("secgo").onclick = go;
+  if (state.mode === "real") {
+    var n = 10;
+    later(function () {}, 0);
+    var iv = every(function () {
+      n--;
+      var el = document.getElementById("secCount");
+      if (el) el.innerHTML = "The test will begin automatically in <b>" + n + "</b> seconds…";
+      if (n <= 0) go();
+    }, 1000);
+  }
+}
+function advanceFromIntro(part) {
+  if (part === 2) { startReadingPart(); return; }
+  var pos = flow.findIndex(function (f, i) { return f.kind === "item" && f.part === part; });
+  state.step = pos; renderStep();
+}
+
+/* ================= step renderer ================= */
+function renderStep() {
+  clearTimers(); stopRecording();
+  var f = flow[state.step];
+  if (!f) { renderReview(); return; }
+  if (f.kind === "reading") { startReadingPart(); return; }
+  var meta = TYPE_META[f.type];
+  var partLabel = SECTION_INFO[f.part].t + " · " + meta.title + " " + (f.idx + 1) + " of " + f.total;
+  if (SPEAK_RENDER[f.type]) SPEAK_RENDER[f.type](f, partLabel);
+  else if (WRITE_RENDER[f.type]) WRITE_RENDER[f.type](f, partLabel);
+  else LISTEN_RENDER[f.type](f, partLabel);
+}
+function next() { state.step++; renderStep(); }
+function itemHead(f, partLabel, timerId) {
+  return chrome(partLabel, timerId ? '<div class="timerbox" id="' + timerId + '">--:--</div>' : "") +
+    '<div class="main"><div class="card"><div class="qtype-head">' +
+    '<span class="qpos">' + (f.idx + 1) + " / " + f.total + "</span>" +
+    '<span class="qtitle">' + TYPE_META[f.type].title + "</span></div>" +
+    '<div class="instructions">' + TYPE_META[f.type].ins + "</div>" + tipsHtml(f.type);
+}
+
+/* ================= speaking items (generic state machine) ================= */
+/* cfg: {showText, showImage, prepSec, recSec, audioFirst, audioTextFn, showPrompt} */
+var SPEAK_CFG = {
+  readAloud: { prep: 35, rec: 40, audio: false, show: "text" },
+  repeatSentence: { prep: 0, rec: 15, audio: true, show: "none", delay: 3 },
+  describeImage: { prep: 25, rec: 40, audio: false, show: "image" },
+  retellLecture: { prep: 10, rec: 40, audio: true, show: "title" },
+  respondToSituation: { prep: 20, rec: 40, audio: true, show: "prompt" },
+  summarizeGroupDiscussion: { prep: 0, rec: 60, audio: true, show: "topic" },
+  answerShortQuestion: { prep: 0, rec: 10, audio: true, show: "none", delay: 1 }
+};
+var SPEAK_RENDER = {};
+["readAloud", "repeatSentence", "describeImage", "retellLecture", "respondToSituation", "summarizeGroupDiscussion", "answerShortQuestion"]
+  .forEach(function (type) { SPEAK_RENDER[type] = function (f, partLabel) { renderSpeaking(f, partLabel, SPEAK_CFG[type]); }; });
+
+function speakingContentHtml(f, cfg) {
+  var d = f.data, h = "";
+  if (cfg.show === "text") h += '<div class="promptbox">' + esc(d.text) + "</div>";
+  if (cfg.show === "image") h += '<div class="figbox"><h3>' + esc(d.title || "") + "</h3>" + (d.svg || "") + "</div>";
+  if (cfg.show === "title") h += '<div class="promptbox"><b>Topic:</b> ' + esc(d.title || "Lecture") + "</div>";
+  if (cfg.show === "prompt") h += '<div class="promptbox">' + esc(d.prompt) + "</div>";
+  if (cfg.show === "topic") h += '<div class="promptbox"><b>Discussion topic:</b> ' + esc(d.topic) + "</div>";
+  return h;
+}
+function speakingAudioFn(f, cfg) {
+  var d = f.data;
+  if (!cfg.audio) return null;
+  if (f.type === "summarizeGroupDiscussion") return function () { return speakTurns(d.turns); };
+  if (f.type === "respondToSituation") return function () { return speak(d.audio || d.prompt); };
+  if (f.type === "retellLecture") return function () { return speak(d.text, { rate: 0.92 }); };
+  if (f.type === "repeatSentence" || f.type === "answerShortQuestion") return function () { return speak(d.text || d.question); };
+  return null;
+}
+function renderSpeaking(f, partLabel, cfg) {
+  var k = key(), d = f.data;
+  var timerId = state.mode === "real" ? "spTimer" : null;
+  var html = itemHead(f, partLabel, timerId) +
+    speakingContentHtml(f, cfg) +
+    '<div class="statusbar">' +
+    '<span class="recdot" id="dot"></span>' +
+    '<span class="statusline" id="stline">Waiting…</span>' +
+    '<div class="audbar" id="bar"><div></div></div>' +
+    '<span class="timechip" id="clock"></span>' +
+    "</div>";
+  if (state.mode === "guide") {
+    html += '<div class="statusbar">' +
+      (cfg.audio ? '<button class="btn sec small" id="gplay">▶ Play audio</button>' : "") +
+      '<button class="btn sec small" id="grec">● Start recording</button>' +
+      '<button class="btn sec small" id="gstop" disabled>■ Stop</button>' +
+      "</div>" + guideExtra(f.type, d) +
+      '<div id="guideNote"></div>';
+  }
+  html += '<div class="navrow"><span>' + (state.mode === "guide" ? '<button class="btn sec" id="prevbtn">← Back</button>' : "") + "</span>" +
+    '<button class="btn" id="nextbtn"' + (state.mode === "real" ? " disabled" : "") + ">Next →</button></div></div></div>";
+  render(html);
+
+  var stline = document.getElementById("stline"), clock = document.getElementById("clock"),
+      dot = document.getElementById("dot"), bar = document.getElementById("bar"),
+      nextBtn = document.getElementById("nextbtn");
+  var prevBtn = document.getElementById("prevbtn");
+  if (prevBtn) prevBtn.onclick = function () { state.step--; renderStep(); };
+  nextBtn.onclick = function () { stopRecording(); stopTTS(); next(); };
+
+  function setBar(p, rec) { bar.className = "audbar" + (rec ? " rec" : ""); bar.firstElementChild.style.width = Math.min(100, p) + "%"; }
+  function runTimer(sec, label, rec, done) {
+    var total = sec;
+    clock.textContent = fmt(sec);
+    every(function () {
+      sec -= 0.25; clock.textContent = fmt(sec); setBar((1 - sec / total) * 100, rec);
+      if (sec <= 0) { clearTimers(); done(); }
+    }, 250);
+  }
+  function startRecPhase() {
+    beep();
+    stline.textContent = "Recording — speak now";
+    dot.classList.add("on");
+    ensureMic().then(function (ok) { if (ok) startRecording(k); });
+    runTimer(cfg.rec, "rec", true, function () {
+      stopRecording(); dot.classList.remove("on");
+      stline.textContent = "Recording finished";
+      nextBtn.disabled = false;
+      if (state.mode === "real") later(next, 800);
+    });
+  }
+  function startPrepPhase() {
+    if (cfg.prep > 0) {
+      stline.textContent = "Preparing…";
+      runTimer(cfg.prep, "prep", false, startRecPhase);
+    } else startRecPhase();
+  }
+  function startAudioPhase() {
+    var fn = speakingAudioFn(f, cfg);
+    if (!fn) { startPrepPhase(); return; }
+    stline.textContent = "Playing audio…";
+    playAudio(k, fn, function () {
+      if (state.mode === "real") later(startPrepPhase, (cfg.delay || 2) * 1000);
+      else { stline.textContent = "Audio finished — press ● Start recording"; }
+    });
+  }
+
+  if (state.mode === "real") {
+    nextBtn.disabled = true;
+    if (cfg.audio) later(startAudioPhase, 1200);
+    else later(startPrepPhase, 1200);
+    var t = document.getElementById(timerId);
+    if (t) { var secs = cfg.prep + cfg.rec + (cfg.audio ? 200 : 0); }
+  } else {
+    nextBtn.disabled = false;
+    stline.textContent = "Guide mode — work at your own pace";
+    var gp = document.getElementById("gplay"), gr = document.getElementById("grec"), gs = document.getElementById("gstop");
+    if (gp) gp.onclick = function () { stopTTS(); playAudio(k + "_g", speakingAudioFn(f, cfg), function () { stline.textContent = "Audio finished"; }); stline.textContent = "Playing audio…"; };
+    gr.onclick = function () {
+      ensureMic().then(function (ok) {
+        if (!ok) { stline.textContent = "No microphone — recording skipped"; return; }
+        beep(); startRecording(k); dot.classList.add("on");
+        stline.textContent = "Recording — press ■ Stop when done";
+        gr.disabled = true; gs.disabled = false;
+      });
+    };
+    gs.onclick = function () { stopRecording(); dot.classList.remove("on"); stline.textContent = "Recording saved (see review at end)"; gr.disabled = false; gs.disabled = true; };
+  }
+  window._pteSample = d.sample || d.text || d.question || null;
+}
+
+/* ================= writing items ================= */
+var WRITE_RENDER = {};
+["summarizeWrittenText", "essay"].forEach(function (t) {
+  WRITE_RENDER[t] = function (f, partLabel) {
+    var k = key(), d = f.data;
+    var isSWT = t === "summarizeWrittenText";
+    var secs = isSWT ? 600 : 1200;
+    var min = isSWT ? 5 : 200, max = isSWT ? 75 : 300;
+    var html = itemHead(f, partLabel, state.mode === "real" ? "wTimer" : null) +
+      (isSWT ? '<div class="promptbox">' + esc(d.passage) + "</div>" : '<div class="promptbox"><b>' + esc(d.prompt) + "</b></div>") +
+      '<textarea id="wtext" rows="' + (isSWT ? 5 : 14) + '" placeholder="Type your response here…"></textarea>' +
+      '<div class="wordcount" id="wc">Word Count: 0 (target ' + min + "–" + max + ")</div>" +
+      guideExtra(t, d) +
+      '<div class="navrow"><span>' + (state.mode === "guide" ? '<button class="btn sec" id="prevbtn">← Back</button>' : "") + "</span>" +
+      '<button class="btn" id="nextbtn">Next →</button></div></div></div>';
+    render(html);
+    window._pteSample = d.sample || null;
+    var ta = document.getElementById("wtext"), wc = document.getElementById("wc");
+    var saved = state.answers[k]; if (saved) ta.value = saved;
+    function upd() {
+      var n = wordCount(ta.value);
+      wc.textContent = "Word Count: " + n + " (target " + min + "–" + max + ")";
+      wc.className = "wordcount" + ((n > 0 && (n < min || n > max)) ? " bad" : "");
+      state.answers[k] = ta.value;
+    }
+    ta.oninput = upd; upd();
+    var prevBtn = document.getElementById("prevbtn");
+    if (prevBtn) prevBtn.onclick = function () { state.answers[k] = ta.value; state.step--; renderStep(); };
+    document.getElementById("nextbtn").onclick = function () { state.answers[k] = ta.value; next(); };
+    if (state.mode === "real") {
+      var el = document.getElementById("wTimer"), left = secs;
+      el.textContent = fmt(left);
+      every(function () {
+        left--; el.textContent = fmt(left);
+        if (left <= 60) el.classList.add("warn");
+        if (left <= 0) { state.answers[k] = ta.value; clearTimers(); next(); }
+      }, 1000);
+    }
+  };
+});
+
+/* ================= reading part ================= */
+function startReadingPart() {
+  clearTimers(); stopRecording();
+  var items = readingItems();
+  var cur = 0;
+  var timerHtml = state.mode === "real" ? '<div class="timerbox" id="rdTimer">' + fmt(state.readingLeft) + "</div>" : "";
+  function draw() {
+    var it = items[cur], meta = TYPE_META[it.type], rk = rkey(it.type, it.idx);
+    var nav = items.map(function (x, i) {
+      var done = state.answers[rkey(x.type, x.idx)] != null;
+      return '<button class="' + (i === cur ? "cur " : "") + (done ? "done" : "") + '" data-i="' + i + '">' + meta2short(x.type) + " " + (x.idx + 1) + "</button>";
+    }).join("");
+    var h = chrome("Part 2: Reading · " + meta.title + " " + (it.idx + 1) + " of " + it.total, timerHtml) +
+      '<div class="main"><div class="readwrap"><div class="readnav">' + nav + "</div>" +
+      '<div class="readmain"><div class="card">' +
+      '<div class="qtype-head"><span class="qpos">' + (cur + 1) + " / " + items.length + '</span><span class="qtitle">' + meta.title + "</span></div>" +
+      '<div class="instructions">' + meta.ins + "</div>" + tipsHtml(it.type) +
+      '<div id="rbody"></div>' +
+      '<div class="navrow"><button class="btn sec" id="rprev"' + (cur === 0 ? " disabled" : "") + ">← Previous</button>" +
+      (cur < items.length - 1
+        ? '<button class="btn" id="rnext">Next →</button>'
+        : '<button class="btn warn" id="rfinish">' + (state.mode === "real" ? "End Reading Part" : "Finish Reading → Listening") + "</button>") +
+      "</div></div></div></div></div>";
+    render(h);
+    document.querySelectorAll(".readnav button").forEach(function (b) {
+      b.onclick = function () { saveCur(); cur = +b.dataset.i; draw(); };
+    });
+    drawReadingBody(it, rk);
+    var pv = document.getElementById("rprev"); if (pv) pv.onclick = function () { saveCur(); cur--; draw(); };
+    var nx = document.getElementById("rnext"); if (nx) nx.onclick = function () { saveCur(); cur++; draw(); };
+    var fn = document.getElementById("rfinish"); if (fn) fn.onclick = function () { saveCur(); finishReading(); };
+  }
+  function saveCur() {
+    var it = items[cur], rk = rkey(it.type, it.idx);
+    var v = collectReadingAnswer(it);
+    if (v != null) state.answers[rk] = v;
+  }
+  function finishReading() {
+    if (state.readingTick) { clearInterval(state.readingTick); state.readingTick = null; }
+    renderSectionIntro(3);
+  }
+  draw();
+  if (state.mode === "real") {
+    if (state.readingTick) clearInterval(state.readingTick);
+    state.readingTick = setInterval(function () {
+      state.readingLeft--;
+      var el = document.getElementById("rdTimer");
+      if (el) { el.textContent = fmt(state.readingLeft); if (state.readingLeft <= 120) el.classList.add("warn"); }
+      if (state.readingLeft <= 0) {
+        clearInterval(state.readingTick); state.readingTick = null;
+        try { saveCur(); } catch (e) {}
+        finishReading();
+      }
+    }, 1000);
+  }
+}
+function meta2short(t) {
+  return { fibDropdown: "FIB-RW", mcMultiple: "MC-M", reorder: "RO", fibDrag: "FIB-R", mcSingle: "MC-S" }[t] || t;
+}
+function blanksHtml(text, n) {
+  var out = esc(text);
+  for (var i = 1; i <= n; i++) out = out.replace(new RegExp("\\{\\{" + i + "\\}\\}", "g"), "⟦B" + i + "⟧");
+  return out;
+}
+function drawReadingBody(it, rk) {
+  var body = document.getElementById("rbody"), d = it.data, saved = state.answers[rk];
+  if (it.type === "fibDropdown") {
+    var n = d.blanks.length, html = '<div class="promptbox">' + blanksHtml(d.text, n) + "</div>";
+    body.innerHTML = html;
+    for (var i = 0; i < n; i++) {
+      var sel = '<select data-b="' + i + '"><option value="">— select —</option>' +
+        d.blanks[i].options.map(function (o, j) { return '<option value="' + j + '">' + esc(o) + "</option>"; }).join("") + "</select>";
+      body.innerHTML = body.innerHTML.replace("⟦B" + (i + 1) + "⟧", sel);
+    }
+    body.querySelectorAll("select").forEach(function (s) {
+      if (saved && saved[s.dataset.b] != null) s.value = saved[s.dataset.b];
+      s.onchange = function () {
+        var cur2 = state.answers[rk] || [];
+        cur2[s.dataset.b] = s.value === "" ? null : +s.value;
+        state.answers[rk] = cur2;
+      };
+    });
+  } else if (it.type === "mcMultiple" || it.type === "mcSingle") {
+    var multi = it.type === "mcMultiple";
+    var h = '<div class="promptbox">' + esc(d.passage) + "</div><h3>" + esc(d.question) + "</h3>";
+    h += d.options.map(function (o, j) {
+      return '<label class="optrow"><input type="' + (multi ? "checkbox" : "radio") + '" name="rq" value="' + j + '"> ' + esc(o) + "</label>";
+    }).join("");
+    body.innerHTML = h;
+    body.querySelectorAll("input").forEach(function (inp) {
+      if (saved != null && (multi ? saved.indexOf(+inp.value) >= 0 : saved === +inp.value)) inp.checked = true;
+      inp.onchange = function () {
+        if (multi) {
+          var vals = [];
+          body.querySelectorAll("input:checked").forEach(function (x) { vals.push(+x.value); });
+          state.answers[rk] = vals;
+        } else state.answers[rk] = +inp.value;
+      };
+    });
+  } else if (it.type === "reorder") {
+    var order = saved || shuffleIdx(d.sentences.length);
+    state.answers[rk] = order;
+    var render2 = function () {
+      body.innerHTML = "<h3>Arrange in the original order:</h3>" + order.map(function (si, pos) {
+        return '<div class="reitem"><div class="mv"><button data-p="' + pos + '" data-mv="-1">▲</button><button data-p="' + pos + '" data-mv="1">▼</button></div><div class="txt">' + esc(d.sentences[si]) + "</div></div>";
+      }).join("");
+      body.querySelectorAll("button").forEach(function (b) {
+        b.onclick = function () {
+          var p = +b.dataset.p, mv = +b.dataset.mv, q = p + mv;
+          if (q < 0 || q >= order.length) return;
+          var t = order[p]; order[p] = order[q]; order[q] = t;
+          state.answers[rk] = order; render2();
+        };
+      });
+    };
+    render2();
+  } else if (it.type === "fibDrag") {
+    var ans = saved ? saved.slice() : d.answers.map(function () { return null; });
+    state.answers[rk] = ans;
+    var nB = d.answers.length;
+    var render3 = function () {
+      var html = '<div class="promptbox">' + blanksHtml(d.text, nB) + "</div>";
+      html += '<div class="fibbank">' + d.bank.map(function (w) {
+        return '<span class="chip' + (ans.indexOf(w) >= 0 ? " used" : "") + '" data-w="' + esc(w) + '">' + esc(w) + "</span>";
+      }).join("") + "</div>";
+      body.innerHTML = html;
+      for (var i = 0; i < nB; i++) {
+        var b = '<span class="blank" data-b="' + i + '">' + (ans[i] ? esc(ans[i]) : "") + "</span>";
+        body.innerHTML = body.innerHTML.replace("⟦B" + (i + 1) + "⟧", b);
+      }
+      var selB = null;
+      body.querySelectorAll(".chip").forEach(function (c) {
+        c.onclick = function () {
+          if (selB == null) { var free = ans.indexOf(null); if (free < 0) return; selB = free; }
+          ans[selB] = c.dataset.w; selB = null; state.answers[rk] = ans; render3();
+        };
+      });
+      body.querySelectorAll(".blank").forEach(function (bEl) {
+        bEl.onclick = function () {
+          var bi = +bEl.dataset.b;
+          if (ans[bi]) { ans[bi] = null; state.answers[rk] = ans; render3(); }
+          else selB = bi;
+        };
+      });
+    };
+    render3();
+  }
+  if (state.mode === "guide") {
+    var gdiv = document.createElement("div");
+    gdiv.innerHTML = '<button class="btn sec small" style="margin-top:10px" id="gkey">Show answer key</button><div id="gkeyout"></div>';
+    body.appendChild(gdiv);
+    document.getElementById("gkey").onclick = function () {
+      document.getElementById("gkeyout").innerHTML = sampleHtml("Answer key", readingKeyText(it));
+    };
+  }
+}
+function collectReadingAnswer(it) { return state.answers[rkey(it.type, it.idx)] != null ? state.answers[rkey(it.type, it.idx)] : null; }
+function readingKeyText(it) {
+  var d = it.data;
+  if (it.type === "fibDropdown") return d.blanks.map(function (b, i) { return "Blank " + (i + 1) + ": " + b.options[b.correct]; }).join(" · ");
+  if (it.type === "fibDrag") return d.answers.map(function (a, i) { return "Blank " + (i + 1) + ": " + a; }).join(" · ");
+  if (it.type === "mcMultiple") return "Correct: " + d.answers.map(function (a) { return d.options[a]; }).join(" + ");
+  if (it.type === "mcSingle") return "Correct: " + d.options[d.answer];
+  if (it.type === "reorder") return "Correct order: " + d.sentences.map(function (s, i) { return "(" + (i + 1) + ") " + s; }).join(" ");
+  return "";
+}
+function shuffleIdx(n) {
+  var a = []; for (var i = 0; i < n; i++) a.push(i);
+  do {
+    for (var j = n - 1; j > 0; j--) { var r = Math.floor(Math.random() * (j + 1)); var t = a[j]; a[j] = a[r]; a[r] = t; }
+  } while (a.every(function (v, i) { return v === i; }) && n > 1);
+  return a;
+}
+
+/* ================= listening items ================= */
+var LISTEN_RENDER = {};
+function listenShell(f, partLabel, audioTextFn, bodyBuilder, opts) {
+  opts = opts || {};
+  var k = key(), timerId = state.mode === "real" ? "lTimer" : null;
+  var html = itemHead(f, partLabel, timerId) +
+    '<div class="statusbar"><span class="recdot" id="dot"></span>' +
+    '<span class="statusline" id="stline">Audio will play shortly…</span>' +
+    '<div class="audbar" id="bar"><div></div></div></div>' +
+    (state.mode === "guide" ? '<div class="statusbar"><button class="btn sec small" id="gplay">▶ Play audio</button></div>' : "") +
+    '<div id="lbody"></div>' +
+    (state.mode === "guide" ? '<div><button class="btn sec small" id="gkey" style="margin-top:10px">Show answer key</button><div id="gkeyout"></div></div>' : "") +
+    '<div class="navrow"><span>' + (state.mode === "guide" ? '<button class="btn sec" id="prevbtn">← Back</button>' : "") + "</span>" +
+    '<button class="btn" id="nextbtn"' + (state.mode === "real" && !opts.manualNext ? " disabled" : "") + ">Next →</button></div></div></div>";
+  render(html);
+  var body = document.getElementById("lbody");
+  bodyBuilder(body, k);
+  var prevBtn = document.getElementById("prevbtn"); if (prevBtn) prevBtn.onclick = function () { state.step--; renderStep(); };
+  var nextBtn = document.getElementById("nextbtn");
+  nextBtn.onclick = function () { stopTTS(); next(); };
+  var gk = document.getElementById("gkey");
+  if (gk) gk.onclick = function () {
+    document.getElementById("gkeyout").innerHTML = sampleHtml(opts.keyLabel || "Answer key / transcript", opts.keyText || f.data.audio || f.data.text || "");
+  };
+  var gp = document.getElementById("gplay");
+  if (gp) gp.onclick = function () { stopTTS(); playOnce(f, k, audioTextFn, opts, true); };
+  if (state.mode === "real") later(function () { playOnce(f, k, audioTextFn, opts, false); }, 1200);
+  else document.getElementById("stline").textContent = "Press ▶ Play audio when ready";
+  function enableNext() { if (nextBtn && opts.manualNext) nextBtn.disabled = false; }
+  return { enableNext: enableNext, nextBtn: nextBtn };
+}
+function playOnce(f, k, audioTextFn, opts, isGuide) {
+  var stline = document.getElementById("stline"), bar = document.getElementById("bar"), dot = document.getElementById("dot");
+  stline.textContent = "Playing audio…"; dot.classList.add("on");
+  var est = Math.min(150, Math.max(8, wordCount(opts.audioLen || "") * 0.42)) * 1000;
+  var t0 = Date.now(), stopped = false;
+  every(function () {
+    var p = (Date.now() - t0) / est * 100;
+    bar.firstElementChild.style.width = Math.min(99, p) + "%";
+    if (p >= 99 || !state.speaking) {
+      if (!state.speaking) { bar.firstElementChild.style.width = "100%"; }
+    }
+  }, 300);
+  playAudio(isGuide ? k + "_g" + Date.now() : k, audioTextFn, function () {
+    clearTimers(); dot.classList.remove("on");
+    bar.firstElementChild.style.width = "100%";
+    stline.textContent = "Audio finished";
+    if (state.mode === "real" && opts.autoAfter !== false) {
+      var nb = document.getElementById("nextbtn");
+      if (nb) { nb.disabled = false; if (opts.autoNext) later(next, opts.autoNext * 1000); }
+    }
+    if (opts.afterAudio) opts.afterAudio();
+  });
+}
+/* specific listening renderers */
+LISTEN_RENDER.sst = function (f, partLabel) {
+  var d = f.data, k = key();
+  var secs = 600;
+  var shell = listenShell(f, partLabel, function () { return speak(d.audio, { rate: 0.92 }); }, function (body) {
+    body.innerHTML = '<div class="promptbox"><b>Topic:</b> ' + esc(d.title) + "</div>" +
+      '<textarea rows="7" id="sstText" placeholder="Write your summary here (50–70 words)…"></textarea>' +
+      '<div class="wordcount" id="wc">Word Count: 0 (target 50–70)</div>';
+    var ta = body.querySelector("#sstText");
+    if (state.answers[k]) ta.value = state.answers[k];
+    ta.oninput = function () {
+      var n = wordCount(ta.value);
+      var wc = body.querySelector("#wc");
+      wc.textContent = "Word Count: " + n + " (target 50–70)";
+      wc.className = "wordcount" + ((n > 0 && (n < 50 || n > 70)) ? " bad" : "");
+      state.answers[k] = ta.value;
+    };
+  }, { keyText: d.sample, keyLabel: "Sample summary", autoNext: false, audioLen: d.audio });
+  if (state.mode === "real") {
+    var el = document.getElementById("lTimer"), left = secs;
+    el.textContent = fmt(left);
+    every(function () {
+      left--; el.textContent = fmt(left);
+      if (left <= 60) el.classList.add("warn");
+      if (left <= 0) { clearTimers(); next(); }
+    }, 1000);
+  }
+};
+function mcListenRender(f, partLabel, multi) {
+  var d = f.data, k = key();
+  listenShell(f, partLabel, function () { return speak(d.audio); }, function (body) {
+    var h = "<h3>" + esc(d.question) + "</h3>" + d.options.map(function (o, j) {
+      return '<label class="optrow"><input type="' + (multi ? "checkbox" : "radio") + '" name="lq" value="' + j + '"> ' + esc(o) + "</label>";
+    }).join("");
+    body.innerHTML = h;
+    body.querySelectorAll("input").forEach(function (inp) {
+      inp.onchange = function () {
+        if (multi) {
+          var v = [];
+          body.querySelectorAll("input:checked").forEach(function (x) { v.push(+x.value); });
+          state.answers[k] = v;
+        } else state.answers[k] = +inp.value;
+      };
+    });
+  }, { keyText: multi ? "Correct: " + d.answers.map(function (a) { return d.options[a]; }).join(" + ") : "Correct: " + d.options[d.answer], autoNext: state.mode === "real" ? 4 : false, audioLen: d.audio });
+}
+LISTEN_RENDER.mcmL = function (f, pl) { mcListenRender(f, pl, true); };
+LISTEN_RENDER.mcsL = function (f, pl) { mcListenRender(f, pl, false); };
+LISTEN_RENDER.hcs = function (f, pl) { mcListenRender({ type: "hcs", data: { audio: f.data.audio, question: "Click on the paragraph that best relates to the recording you have heard.", options: f.data.options, answer: f.data.answer }, idx: f.idx, total: f.total }, pl, false); };
+LISTEN_RENDER.smw = function (f, partLabel) {
+  var d = f.data;
+  listenShell(f, partLabel, function () { return speak(d.audio).then(function (ok) { beep(); return ok; }); }, function (body) {
+    body.innerHTML = "<h3>Select the missing word:</h3>" + d.options.map(function (o, j) {
+      return '<label class="optrow"><input type="radio" name="smw" value="' + j + '"> ' + esc(o) + "</label>";
+    }).join("");
+    body.querySelectorAll("input").forEach(function (inp) {
+      inp.onchange = function () { state.answers[key()] = +inp.value; };
+    });
+  }, { keyText: "Correct: " + d.options[d.answer] + " — full text: " + (d.fullText || d.audio), autoNext: state.mode === "real" ? 4 : false, audioLen: d.audio });
+};
+LISTEN_RENDER.fillBlanksL = function (f, partLabel) {
+  var d = f.data, k = key();
+  listenShell(f, partLabel, function () { return speak(d.audio); }, function (body) {
+    var n = d.answers.length, html = '<div class="promptbox">' + blanksHtml(d.display, n) + "</div>";
+    body.innerHTML = html;
+    for (var i = 0; i < n; i++) {
+      var inp = '<input type="text" data-b="' + i + '" style="width:150px" value=""> ';
+      body.innerHTML = body.innerHTML.replace("⟦B" + (i + 1) + "⟧", inp);
+    }
+    var saved = state.answers[k];
+    body.querySelectorAll("input").forEach(function (x) {
+      if (saved && saved[x.dataset.b]) x.value = saved[x.dataset.b];
+      x.oninput = function () {
+        var v = state.answers[k] || [];
+        v[x.dataset.b] = x.value;
+        state.answers[k] = v;
+      };
+    });
+  }, { keyText: "Answers: " + d.answers.join(" · ") + " — transcript: " + d.audio, autoNext: state.mode === "real" ? 8 : false, audioLen: d.audio });
+};
+LISTEN_RENDER.hiw = function (f, partLabel) {
+  var d = f.data, k = key();
+  var audioText = d.words.map(function (w) { return w.said || w.w; }).join(" ");
+  listenShell(f, partLabel, function () { return speak(audioText, { rate: 0.98 }); }, function (body) {
+    body.innerHTML = '<div class="promptbox">' + d.words.map(function (w, i) {
+      return '<span class="hiw-word" data-i="' + i + '">' + esc(w.w) + "</span>";
+    }).join(" ") + "</div>";
+    var sel = state.answers[k] || [];
+    state.answers[k] = sel;
+    body.querySelectorAll(".hiw-word").forEach(function (s) {
+      if (sel.indexOf(+s.dataset.i) >= 0) s.classList.add("sel");
+      s.onclick = function () {
+        var i = +s.dataset.i, p = sel.indexOf(i);
+        if (p >= 0) { sel.splice(p, 1); s.classList.remove("sel"); }
+        else { sel.push(i); s.classList.add("sel"); }
+      };
+    });
+  }, { keyText: "Incorrect words: " + d.words.filter(function (w) { return w.wrong; }).map(function (w) { return '"' + w.w + '" (said: "' + w.said + '")'; }).join(" · "), autoNext: state.mode === "real" ? 6 : false, audioLen: audioText });
+};
+LISTEN_RENDER.wfd = function (f, partLabel) {
+  var d = f.data, k = key();
+  listenShell(f, partLabel, function () { return speak(d.text, { rate: 0.95 }); }, function (body) {
+    body.innerHTML = '<textarea rows="3" id="wfdText" placeholder="Type the sentence exactly as you hear it…"></textarea>';
+    var ta = body.querySelector("#wfdText");
+    if (state.answers[k]) ta.value = state.answers[k];
+    ta.oninput = function () { state.answers[k] = ta.value; };
+  }, { keyText: d.text, autoNext: state.mode === "real" ? 10 : false, audioLen: d.text });
+};
+
+/* ================= scoring ================= */
+function norm(s) { return (s || "").toLowerCase().trim().replace(/[.,;:!?'"()-]/g, ""); }
+function scoreItem(type, d, ans) {
+  /* returns {got, max, detail} or null for non-objective */
+  if (type === "fibDropdown") {
+    var got = 0; d.blanks.forEach(function (b, i) { if (ans && ans[i] != null && +ans[i] === b.correct) got++; });
+    return { got: got, max: d.blanks.length };
+  }
+  if (type === "fibDrag") {
+    var g2 = 0; d.answers.forEach(function (a, i) { if (ans && norm(ans[i]) === norm(a)) g2++; });
+    return { got: g2, max: d.answers.length };
+  }
+  if (type === "mcMultiple" || type === "mcmL") {
+    if (!ans || !ans.length) return { got: 0, max: d.answers.length };
+    var sc = 0; ans.forEach(function (a) { sc += d.answers.indexOf(a) >= 0 ? 1 : -1; });
+    return { got: Math.max(0, sc), max: d.answers.length };
+  }
+  if (type === "mcSingle" || type === "mcsL" || type === "hcs" || type === "smw")
+    return { got: ans != null && +ans === d.answer ? 1 : 0, max: 1 };
+  if (type === "reorder") {
+    if (!ans) return { got: 0, max: d.sentences.length - 1 };
+    var pos = {}; ans.forEach(function (si, p) { pos[si] = p; });
+    var ok = 0; for (var i = 0; i < d.sentences.length - 1; i++) if (pos[i] < pos[i + 1]) ok++;
+    return { got: ok, max: d.sentences.length - 1 };
+  }
+  if (type === "fillBlanksL") {
+    var g3 = 0; d.answers.forEach(function (a, i) { if (ans && norm(ans[i]) === norm(a)) g3++; });
+    return { got: g3, max: d.answers.length };
+  }
+  if (type === "hiw") {
+    var wrongIdx = []; d.words.forEach(function (w, i) { if (w.wrong) wrongIdx.push(i); });
+    if (!ans || !ans.length) return { got: 0, max: wrongIdx.length };
+    var s2 = 0; ans.forEach(function (i) { s2 += wrongIdx.indexOf(i) >= 0 ? 1 : -1; });
+    return { got: Math.max(0, s2), max: wrongIdx.length };
+  }
+  if (type === "wfd") {
+    var ref = norm(d.text).split(/\s+/), usr = norm(ans).split(/\s+/), g4 = 0;
+    for (var j = 0; j < ref.length; j++) if (usr[j] === ref[j]) g4++;
+    return { got: g4, max: ref.length };
+  }
+  return null;
+}
+function answerSummary(type, d, ans) {
+  if (ans == null) return "<i>No answer</i>";
+  if (type === "fibDropdown") return d.blanks.map(function (b, i) { return "Blank " + (i + 1) + ": " + (ans[i] != null && ans[i] !== "" ? esc(b.options[ans[i]]) : "—"); }).join(" · ");
+  if (type === "fibDrag" || type === "fillBlanksL") return d.answers.map(function (a, i) { return "Blank " + (i + 1) + ": " + (ans[i] ? esc(ans[i]) : "—"); }).join(" · ");
+  if (type === "mcMultiple" || type === "mcmL") return ans.length ? ans.map(function (a) { return esc(d.options[a]); }).join(" + ") : "<i>No selection</i>";
+  if (type === "mcSingle" || type === "mcsL" || type === "hcs" || type === "smw") return esc(d.options[ans]);
+  if (type === "reorder") return ans.map(function (si) { return "(" + (si + 1) + ")"; }).join(" → ");
+  if (type === "hiw") return ans.length ? ans.map(function (i) { return '"' + esc(d.words[i].w) + '"'; }).join(" ") : "<i>No words highlighted</i>";
+  if (type === "wfd" || type === "summarizeWrittenText" || type === "essay" || type === "sst") return esc(ans).slice(0, 600);
+  return esc(JSON.stringify(ans));
+}
+function correctSummary(type, d) {
+  if (type === "fibDropdown" || type === "fibDrag" || type === "mcMultiple" || type === "mcSingle" || type === "reorder") return readingKeyText({ type: type, data: d });
+  if (type === "mcmL") return "Correct: " + d.answers.map(function (a) { return esc(d.options[a]); }).join(" + ");
+  if (type === "mcsL" || type === "hcs" || type === "smw") return "Correct: " + esc(d.options[d.answer]);
+  if (type === "fillBlanksL") return "Answers: " + d.answers.map(esc).join(" · ");
+  if (type === "hiw") return "Incorrect words: " + d.words.filter(function (w) { return w.wrong; }).map(function (w) { return '"' + esc(w.w) + '" → said "' + esc(w.said) + '"'; }).join(" · ");
+  if (type === "wfd") return esc(d.text);
+  return "";
+}
+
+/* ================= review / score report ================= */
+function renderReview() {
+  clearTimers(); stopRecording();
+  if (state.readingTick) { clearInterval(state.readingTick); state.readingTick = null; }
+  var totGot = 0, totMax = 0, rows = "";
+  flow.forEach(function (f, i) {
+    if (f.kind !== "item") return;
+    var k = "s" + i, ans = state.answers[k], meta = TYPE_META[f.type];
+    var sc = scoreItem(f.type, f.data, ans);
+    if (sc) { totGot += sc.got; totMax += sc.max; }
+    var badge = sc ? (sc.got >= sc.max ? '<span class="badge ok">' + sc.got + "/" + sc.max + "</span>" : '<span class="badge no">' + sc.got + "/" + sc.max + "</span>") : '<span class="badge na">self-review</span>';
+    var body = "";
+    if (SPEAK_CFG[f.type]) {
+      body += state.recordings[k]
+        ? '<audio controls src="' + state.recordings[k] + '"></audio>'
+        : '<div class="kv"><i>No recording captured (mic not enabled).</i></div>';
+      var samp = f.data.sample || f.data.text || f.data.question || null;
+      if (samp) body += sampleHtml(f.type === "answerShortQuestion" ? "Expected answer" : "Reference / sample", samp);
+    } else {
+      body += '<div class="ua"><b>Your answer:</b> ' + answerSummary(f.type, f.data, ans) + "</div>";
+      var cs = correctSummary(f.type, f.data);
+      if (cs) body += '<div class="ua" style="background:#eafaf0"><b>Correct:</b> ' + cs + "</div>";
+      if (f.data.sample) body += sampleHtml("Sample response", f.data.sample);
+      if (f.type === "summarizeWrittenText" || f.type === "essay" || f.type === "sst") {
+        var n = wordCount(ans), lim = f.type === "summarizeWrittenText" ? [5, 75] : f.type === "sst" ? [50, 70] : [200, 300];
+        body += '<div class="kv">Word count: <b class="' + (n >= lim[0] && n <= lim[1] ? "ok" : "no") + '">' + n + "</b> (required " + lim[0] + "–" + lim[1] + ")</div>";
+      }
+    }
+    rows += '<div class="revitem"><h4>' + meta.title + " " + (f.idx + 1) + badge + "</h4>" + body + "</div>";
+  });
+  var pct = totMax ? Math.round(totGot / totMax * 100) : 0;
+  render(chrome("Score report", "") +
+    '<div class="main"><div class="card" style="text-align:center">' +
+    "<h1>Score Report</h1>" +
+    '<div class="scorebig">' + pct + "%</div>" +
+    '<div class="kv">Auto-scored objective items: ' + totGot + " / " + totMax + " points</div>" +
+    '<div class="kv">Speaking &amp; open writing tasks are self-reviewed against the sample responses below. This is an indicative practice score, not a Pearson score.</div>' +
+    '<div class="navrow"><button class="btn sec" onclick="PTE.restart()">← Restart exam</button><button class="btn sec" onclick="PTE.toggleMode()">Switch to ' + (state.mode === "real" ? "Guide" : "Real") + " mode</button></div>" +
+    "</div>" + rows + "</div>");
+}
+
+/* ================= public API ================= */
+window.PTE = {
+  pickMode: function (m) {
+    state.mode = m;
+    ensureMic();
+    renderMicCheck();
+  },
+  showSample: function () {
+    var w = document.getElementById("sampleWrap");
+    if (w && window._pteSample) w.innerHTML = sampleHtml("Sample answer", window._pteSample);
+  },
+  restart: function () {
+    clearTimers();
+    state.step = -1; state.answers = {}; state.recordings = {}; state.audioPlayed = {}; state.readingLeft = 30 * 60;
+    renderHome();
+  },
+  toggleMode: function () {
+    state.mode = state.mode === "real" ? "guide" : "real";
+    clearTimers();
+    state.audioPlayed = {}; state.readingLeft = 30 * 60; state.step = -1;
+    renderSectionIntro(1);
+  }
+};
+
+/* ================= boot ================= */
+buildFlow();
+renderHome();
+})();
+
+</script>
+</body>
+</html>

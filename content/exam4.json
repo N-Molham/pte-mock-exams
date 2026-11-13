@@ -1,153 +1,841 @@
 {
-  "meta": { "id": 4, "title": "PTE Academic Mock Exam 4 (2026 Format)" },
+  "meta": {
+    "id": 4,
+    "title": "PTE Academic Mock Exam 4 (2026 Format)"
+  },
   "readAloud": [
-    { "text": "Deep-sea mining has attracted growing interest as demand for rare metals increases. The ocean floor contains vast deposits of cobalt, nickel, and manganese, which are essential for manufacturing batteries and electronic devices. However, marine scientists warn that extracting these minerals could destroy fragile ecosystems that have taken millions of years to develop and are still poorly understood by researchers." },
-    { "text": "Studying abroad offers students far more than academic qualifications. Living in a foreign country forces young people to navigate unfamiliar customs, manage their own finances, and communicate across language barriers on a daily basis. Employers increasingly value these experiences, regarding them as evidence of adaptability, independence, and cultural awareness that cannot easily be taught in a classroom." },
-    { "text": "Fermentation is one of the oldest methods of preserving food, practised by civilisations for thousands of years. During fermentation, microorganisms such as bacteria and yeast convert sugars into acids or alcohol, which inhibit the growth of harmful microbes. Beyond preservation, the process can enhance flavour, improve digestibility, and increase the nutritional value of everyday foods." },
-    { "text": "Glass is one of the few materials that can be recycled indefinitely without any loss of quality or purity. Recycling a single glass bottle saves enough energy to power a computer for twenty-five minutes, and using recycled glass reduces both raw material consumption and furnace emissions. Despite these advantages, recycling rates vary enormously between countries, largely reflecting differences in collection systems." },
-    { "text": "Noise pollution is increasingly recognised as a serious threat to public health rather than a mere annoyance. Prolonged exposure to traffic and aircraft noise has been linked to disturbed sleep, raised blood pressure, and impaired concentration in schoolchildren. The World Health Organization now recommends that average night-time noise levels in residential areas should not exceed forty decibels." },
-    { "text": "Sports science has transformed the way elite athletes train and compete. By analysing data on heart rate, muscle activity, and movement patterns, coaches can tailor training programmes to the individual physiology of each athlete. Nutrition, recovery, and even sleep are monitored with equal precision, allowing competitors to reach peak condition while minimising the risk of injury." },
-    { "text": "Museums are embracing digital technology to attract younger audiences and bring their collections to life. Interactive touchscreens, augmented reality headsets, and three-dimensional reconstructions allow visitors to examine fragile artefacts in ways that were previously impossible. Some institutions have also digitised their entire archives, making millions of objects freely accessible to researchers and the public around the world." }
+    {
+      "text": "Deep-sea mining has attracted growing interest as demand for rare metals increases. The ocean floor contains vast deposits of cobalt, nickel, and manganese, which are essential for manufacturing batteries and electronic devices. However, marine scientists warn that extracting these minerals could destroy fragile ecosystems that have taken millions of years to develop and are still poorly understood by researchers."
+    },
+    {
+      "text": "Studying abroad offers students far more than academic qualifications. Living in a foreign country forces young people to navigate unfamiliar customs, manage their own finances, and communicate across language barriers on a daily basis. Employers increasingly value these experiences, regarding them as evidence of adaptability, independence, and cultural awareness that cannot easily be taught in a classroom."
+    },
+    {
+      "text": "Fermentation is one of the oldest methods of preserving food, practised by civilisations for thousands of years. During fermentation, microorganisms such as bacteria and yeast convert sugars into acids or alcohol, which inhibit the growth of harmful microbes. Beyond preservation, the process can enhance flavour, improve digestibility, and increase the nutritional value of everyday foods."
+    },
+    {
+      "text": "Glass is one of the few materials that can be recycled indefinitely without any loss of quality or purity. Recycling a single glass bottle saves enough energy to power a computer for twenty-five minutes, and using recycled glass reduces both raw material consumption and furnace emissions. Despite these advantages, recycling rates vary enormously between countries, largely reflecting differences in collection systems."
+    },
+    {
+      "text": "Noise pollution is increasingly recognised as a serious threat to public health rather than a mere annoyance. Prolonged exposure to traffic and aircraft noise has been linked to disturbed sleep, raised blood pressure, and impaired concentration in schoolchildren. The World Health Organization now recommends that average night-time noise levels in residential areas should not exceed forty decibels."
+    },
+    {
+      "text": "Sports science has transformed the way elite athletes train and compete. By analysing data on heart rate, muscle activity, and movement patterns, coaches can tailor training programmes to the individual physiology of each athlete. Nutrition, recovery, and even sleep are monitored with equal precision, allowing competitors to reach peak condition while minimising the risk of injury."
+    },
+    {
+      "text": "Museums are embracing digital technology to attract younger audiences and bring their collections to life. Interactive touchscreens, augmented reality headsets, and three-dimensional reconstructions allow visitors to examine fragile artefacts in ways that were previously impossible. Some institutions have also digitised their entire archives, making millions of objects freely accessible to researchers and the public around the world."
+    }
   ],
   "repeatSentence": [
-    { "text": "The seminar on marine biology has been moved to the main hall." },
-    { "text": "All exchange students must attend the orientation session on Thursday morning." },
-    { "text": "The results of the survey will be published in the next journal." },
-    { "text": "Please return the borrowed equipment to the technical office by noon." },
-    { "text": "The guest lecturer spoke about the future of urban transport systems." },
-    { "text": "Tuition fees for international students are reviewed every academic year." },
-    { "text": "The recycling bins on campus are emptied twice a week." },
-    { "text": "Her dissertation examines the impact of tourism on coastal communities." },
-    { "text": "The sports centre offers discounted membership to full-time students." },
-    { "text": "Lecture notes will be uploaded to the website before each class." }
+    {
+      "text": "The seminar on marine biology has been moved to the main hall."
+    },
+    {
+      "text": "All exchange students must attend the orientation session on Thursday morning."
+    },
+    {
+      "text": "The results of the survey will be published in the next journal."
+    },
+    {
+      "text": "Please return the borrowed equipment to the technical office by noon."
+    },
+    {
+      "text": "The guest lecturer spoke about the future of urban transport systems."
+    },
+    {
+      "text": "Tuition fees for international students are reviewed every academic year."
+    },
+    {
+      "text": "The recycling bins on campus are emptied twice a week."
+    },
+    {
+      "text": "Her dissertation examines the impact of tourism on coastal communities."
+    },
+    {
+      "text": "The sports centre offers discounted membership to full-time students."
+    },
+    {
+      "text": "Lecture notes will be uploaded to the website before each class."
+    }
   ],
   "describeImage": [
-    { "title": "Glass packaging recycling rates by country (%)", "sample": "The bar chart shows the percentage of glass packaging recycled in four countries. Sweden has by far the highest rate, at around 95 percent, meaning almost all glass is recycled there. Germany and the United Kingdom follow with roughly 80 and 75 percent respectively. The United States lags far behind, recycling only about a third of its glass packaging. Overall, European countries recycle glass far more effectively than the United States.", "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0</text><text x='24' y='205' font-size='11'>25</text><text x='24' y='145' font-size='11'>50</text><text x='24' y='85' font-size='11'>75</text><text x='16' y='25' font-size='11'>100</text><rect x='90' y='32' width='70' height='228' fill='#4f9d69'/><rect x='190' y='68' width='70' height='192' fill='#4f9d69'/><rect x='290' y='80' width='70' height='180' fill='#4f9d69'/><rect x='390' y='181' width='70' height='79' fill='#4f9d69'/><text x='105' y='278' font-size='12'>Sweden</text><text x='200' y='278' font-size='12'>Germany</text><text x='318' y='278' font-size='12'>UK</text><text x='415' y='278' font-size='12'>USA</text></svg>" },
-    { "title": "Global drone parcel deliveries, 2019–2025 (millions)", "sample": "The line graph illustrates the growth in commercial drone parcel deliveries worldwide from 2019 to 2025. In 2019, only around half a million parcels were delivered by drone. Growth was slow at first, reaching about two million in 2021, but then accelerated sharply, climbing to roughly seven million in 2023. By 2025, deliveries had doubled again to about fourteen million. Overall, the graph shows exponential growth, particularly after 2021.", "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0</text><text x='24' y='185' font-size='11'>5</text><text x='18' y='105' font-size='11'>10</text><text x='18' y='25' font-size='11'>15</text><polyline points='80,252 150,244 220,228 290,196 360,148 430,100 500,36' fill='none' stroke='#2f6db3' stroke-width='3'/><circle cx='80' cy='252' r='4' fill='#2f6db3'/><circle cx='290' cy='196' r='4' fill='#2f6db3'/><circle cx='500' cy='36' r='4' fill='#2f6db3'/><text x='70' y='278' font-size='11'>2019</text><text x='280' y='278' font-size='11'>2022</text><text x='480' y='278' font-size='11'>2025</text></svg>" },
-    { "title": "Sources of microplastics in the ocean", "sample": "The pie chart presents the main sources of microplastic particles found in the ocean. The largest share, at 35 percent, comes from synthetic textiles, which shed fibres during washing. Tyre particles worn from road vehicles are the second largest source at 28 percent, followed by city dust at 24 percent. The remaining 13 percent comes from various other sources. In conclusion, everyday human activities, rather than plastic litter alone, are responsible for most ocean microplastics.", "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><circle cx='180' cy='150' r='110' fill='#999'/><path d='M180,150 L180,40 A110,110 0 0 1 269,215 Z' fill='#2f6db3'/><path d='M180,150 L269,215 A110,110 0 0 1 100,225 Z' fill='#e8a13d'/><path d='M180,150 L100,225 A110,110 0 0 1 100,75 Z' fill='#4f9d69'/><text x='320' y='90' font-size='12' fill='#2f6db3'>■ Synthetic textiles 35%</text><text x='320' y='120' font-size='12' fill='#e8a13d'>■ Tyre particles 28%</text><text x='320' y='150' font-size='12' fill='#4f9d69'>■ City dust 24%</text><text x='320' y='180' font-size='12' fill='#999'>■ Other 13%</text></svg>" }
+    {
+      "title": "Glass packaging recycling rates by country (%)",
+      "sample": "The bar chart shows the percentage of glass packaging recycled in four countries. Sweden has by far the highest rate, at around 95 percent, meaning almost all glass is recycled there. Germany and the United Kingdom follow with roughly 80 and 75 percent respectively. The United States lags far behind, recycling only about a third of its glass packaging. Overall, European countries recycle glass far more effectively than the United States.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0</text><text x='24' y='205' font-size='11'>25</text><text x='24' y='145' font-size='11'>50</text><text x='24' y='85' font-size='11'>75</text><text x='16' y='25' font-size='11'>100</text><rect x='90' y='32' width='70' height='228' fill='#4f9d69'/><rect x='190' y='68' width='70' height='192' fill='#4f9d69'/><rect x='290' y='80' width='70' height='180' fill='#4f9d69'/><rect x='390' y='181' width='70' height='79' fill='#4f9d69'/><text x='105' y='278' font-size='12'>Sweden</text><text x='200' y='278' font-size='12'>Germany</text><text x='318' y='278' font-size='12'>UK</text><text x='415' y='278' font-size='12'>USA</text></svg>"
+    },
+    {
+      "title": "Global drone parcel deliveries, 2019–2025 (millions)",
+      "sample": "The line graph illustrates the growth in commercial drone parcel deliveries worldwide from 2019 to 2025. In 2019, only around half a million parcels were delivered by drone. Growth was slow at first, reaching about two million in 2021, but then accelerated sharply, climbing to roughly seven million in 2023. By 2025, deliveries had doubled again to about fourteen million. Overall, the graph shows exponential growth, particularly after 2021.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0</text><text x='24' y='185' font-size='11'>5</text><text x='18' y='105' font-size='11'>10</text><text x='18' y='25' font-size='11'>15</text><polyline points='80,252 150,244 220,228 290,196 360,148 430,100 500,36' fill='none' stroke='#2f6db3' stroke-width='3'/><circle cx='80' cy='252' r='4' fill='#2f6db3'/><circle cx='290' cy='196' r='4' fill='#2f6db3'/><circle cx='500' cy='36' r='4' fill='#2f6db3'/><text x='70' y='278' font-size='11'>2019</text><text x='280' y='278' font-size='11'>2022</text><text x='480' y='278' font-size='11'>2025</text></svg>"
+    },
+    {
+      "title": "Sources of microplastics in the ocean",
+      "sample": "The pie chart presents the main sources of microplastic particles found in the ocean. The largest share, at 35 percent, comes from synthetic textiles, which shed fibres during washing. Tyre particles worn from road vehicles are the second largest source at 28 percent, followed by city dust at 24 percent. The remaining 13 percent comes from various other sources. In conclusion, everyday human activities, rather than plastic litter alone, are responsible for most ocean microplastics.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><circle cx='180' cy='150' r='110' fill='#999'/><path d='M180,150 L180,40 A110,110 0 0 1 269,215 Z' fill='#2f6db3'/><path d='M180,150 L269,215 A110,110 0 0 1 100,225 Z' fill='#e8a13d'/><path d='M180,150 L100,225 A110,110 0 0 1 100,75 Z' fill='#4f9d69'/><text x='320' y='90' font-size='12' fill='#2f6db3'>■ Synthetic textiles 35%</text><text x='320' y='120' font-size='12' fill='#e8a13d'>■ Tyre particles 28%</text><text x='320' y='150' font-size='12' fill='#4f9d69'>■ City dust 24%</text><text x='320' y='180' font-size='12' fill='#999'>■ Other 13%</text></svg>"
+    }
   ],
   "retellLecture": [
-    { "title": "Crowdsourcing in scientific research", "sample": "The lecture explained how crowdsourcing is used in scientific research. The speaker described citizen science projects in which volunteers classify galaxies or transcribe historical weather records, tasks computers still do poorly. The main advantages are speed and low cost, allowing researchers to analyse enormous datasets. However, the speaker noted concerns about data quality, which projects address by having several volunteers check the same item.", "text": "In recent years, scientists have increasingly turned to crowdsourcing, asking ordinary members of the public to help process research data. One famous project invites volunteers to classify the shapes of galaxies from telescope images, a task at which human eyes still outperform computers. Another asks people to transcribe handwritten weather logs from nineteenth-century ships, turning them into digital records that help climate researchers model long-term change. The advantages are clear: tasks that would take a small research team decades can be completed by thousands of volunteers in weeks, at almost no cost. Naturally, there are concerns about accuracy, since volunteers are not trained scientists. Projects therefore build in safeguards, typically showing each image or record to several different people and accepting only classifications where they agree. When designed carefully, crowdsourced science has proven remarkably reliable, and it also gives the public a genuine stake in discovery." },
-    { "title": "Wildfires: destruction and renewal", "sample": "The lecture discussed wildfires, explaining that although they cause enormous destruction, they are also a natural and necessary part of many ecosystems. Some plants, such as certain pine trees, actually need fire to release their seeds. The speaker warned that climate change and decades of suppressing all fires have made modern wildfires larger and more dangerous, and suggested controlled burning as a management strategy.", "text": "Wildfires are usually reported as pure disasters, destroying homes, forests, and wildlife habitats, and releasing huge quantities of carbon dioxide into the atmosphere. Yet fire has always been a natural part of many ecosystems, and some species depend on it. Certain pine trees, for example, produce cones that only open and release their seeds when exposed to intense heat, and fires clear away dead undergrowth, returning nutrients to the soil and letting sunlight reach young plants. The problem is that modern wildfires are becoming unnaturally severe. Climate change brings hotter, drier summers, while decades of extinguishing every small fire have allowed dense fuel to accumulate in forests. As a result, when fires do start, they burn with exceptional intensity. Many land managers now carry out controlled burns in cool seasons, deliberately reducing fuel so that inevitable future fires remain smaller, cooler, and less destructive." }
+    {
+      "title": "Crowdsourcing in scientific research",
+      "sample": "The lecture explained how crowdsourcing is used in scientific research. The speaker described citizen science projects in which volunteers classify galaxies or transcribe historical weather records, tasks computers still do poorly. The main advantages are speed and low cost, allowing researchers to analyse enormous datasets. However, the speaker noted concerns about data quality, which projects address by having several volunteers check the same item.",
+      "text": "In recent years, scientists have increasingly turned to crowdsourcing, asking ordinary members of the public to help process research data. One famous project invites volunteers to classify the shapes of galaxies from telescope images, a task at which human eyes still outperform computers. Another asks people to transcribe handwritten weather logs from nineteenth-century ships, turning them into digital records that help climate researchers model long-term change. The advantages are clear: tasks that would take a small research team decades can be completed by thousands of volunteers in weeks, at almost no cost. Naturally, there are concerns about accuracy, since volunteers are not trained scientists. Projects therefore build in safeguards, typically showing each image or record to several different people and accepting only classifications where they agree. When designed carefully, crowdsourced science has proven remarkably reliable, and it also gives the public a genuine stake in discovery."
+    },
+    {
+      "title": "Wildfires: destruction and renewal",
+      "sample": "The lecture discussed wildfires, explaining that although they cause enormous destruction, they are also a natural and necessary part of many ecosystems. Some plants, such as certain pine trees, actually need fire to release their seeds. The speaker warned that climate change and decades of suppressing all fires have made modern wildfires larger and more dangerous, and suggested controlled burning as a management strategy.",
+      "text": "Wildfires are usually reported as pure disasters, destroying homes, forests, and wildlife habitats, and releasing huge quantities of carbon dioxide into the atmosphere. Yet fire has always been a natural part of many ecosystems, and some species depend on it. Certain pine trees, for example, produce cones that only open and release their seeds when exposed to intense heat, and fires clear away dead undergrowth, returning nutrients to the soil and letting sunlight reach young plants. The problem is that modern wildfires are becoming unnaturally severe. Climate change brings hotter, drier summers, while decades of extinguishing every small fire have allowed dense fuel to accumulate in forests. As a result, when fires do start, they burn with exceptional intensity. Many land managers now carry out controlled burns in cool seasons, deliberately reducing fuel so that inevitable future fires remain smaller, cooler, and less destructive."
+    }
   ],
   "respondToSituation": [
-    { "prompt": "You are working on a group presentation worth 40 percent of your course grade. One member of your group has missed every meeting and has not done any of their assigned work. The presentation is in five days. Speak to this group member. What would you say?", "audio": "You are working on a group presentation worth 40 percent of your course grade. One member of your group has missed every meeting and has not done any of their assigned work. The presentation is in five days. Speak to this group member. What would you say?", "sample": "Hi, thanks for meeting me. I wanted to talk about the group presentation, because honestly we're all getting quite worried. You've missed the last three meetings, and the section you agreed to research still hasn't been started. This project is worth forty percent of our grade, so it affects all of us. Is everything okay? If you're struggling with the workload or something else is going on, please tell us — maybe we can rearrange the tasks. But if you can't contribute, we need to know now so we can divide your part between us, and we might have to mention the situation to our tutor. We'd really rather sort this out together as a team. So what do you think — can you take on a smaller section and have it ready by Wednesday?" },
-    { "prompt": "You bought a ticket for a concert, but on the day of the event you fell ill and could not attend. The ticket was expensive. Email the ticket company to ask about a refund or exchange. What would you write/say?", "audio": "You bought a ticket for a concert, but on the day of the event you fell ill and could not attend. The ticket was expensive. Email the ticket company to ask about a refund or exchange. What would you write/say?", "sample": "Dear customer service team, I am writing regarding my ticket for last Saturday's concert, order number TK-8834. Unfortunately, I fell ill on the day of the event and was unable to attend; I have attached a doctor's note as confirmation. I completely understand that tickets are normally non-refundable, but as the ticket was quite expensive, I would like to ask whether any exception is possible. Ideally, I would appreciate a refund, but I would gladly accept an exchange for a future event or credit towards another booking instead. I have been a loyal customer for several years and have never requested anything like this before. Please let me know what options are available. Thank you very much for your understanding, and I look forward to your reply. Kind regards, Alex." }
+    {
+      "prompt": "You borrowed a friend's camera for a weekend trip and accidentally dropped it, and the lens has cracked. Your friend will notice at some point, but you want to tell them first. Talk to your friend about it. What would you say?",
+      "audio": "You borrowed a friend's camera for a weekend trip and accidentally dropped it, and the lens has cracked. Your friend will notice at some point, but you want to tell them first. Talk to your friend about it. What would you say?",
+      "sample": "Hey, I've got something to tell you, and I'd rather you heard it from me. When I was packing up on Sunday I accidentally dropped your camera, and the lens has a crack in it now. I feel terrible about it — I know how much that camera means to you. I've already looked into repairs and the shop quoted me about eighty dollars, so I'd like to cover the full cost, or pay for a replacement lens if you'd prefer. Again, I'm really sorry. It was completely careless of me, and I hope it hasn't ruined your trust in lending me things."
+    },
+    {
+      "prompt": "You bought a ticket for a concert, but on the day of the event you fell ill and could not attend. The ticket was expensive. Email the ticket company to ask about a refund or exchange. What would you write/say?",
+      "audio": "You bought a ticket for a concert, but on the day of the event you fell ill and could not attend. The ticket was expensive. Email the ticket company to ask about a refund or exchange. What would you write/say?",
+      "sample": "Dear customer service team, I am writing regarding my ticket for last Saturday's concert, order number TK-8834. Unfortunately, I fell ill on the day of the event and was unable to attend; I have attached a doctor's note as confirmation. I completely understand that tickets are normally non-refundable, but as the ticket was quite expensive, I would like to ask whether any exception is possible. Ideally, I would appreciate a refund, but I would gladly accept an exchange for a future event or credit towards another booking instead. I have been a loyal customer for several years and have never requested anything like this before. Please let me know what options are available. Thank you very much for your understanding, and I look forward to your reply. Kind regards, Alex."
+    }
   ],
   "summarizeGroupDiscussion": [
-    { "topic": "Should all university students be required to spend a semester studying abroad?", "sample": "The students discussed whether a semester abroad should be compulsory. Speaker A strongly supported the idea, saying it builds independence and language skills that employers value. Speaker B objected that compulsory schemes are unfair to students who cannot afford extra costs or who have family responsibilities, and suggested generous scholarships instead. Speaker C proposed a middle ground: making study abroad optional but actively encouraged, with short-term programmes for those unable to go for a full semester. They agreed the experience was valuable but disagreed about making it mandatory.", "turns": [
-      { "speaker": "A", "text": "I think it should absolutely be compulsory. Spending a semester in another country completely changes you — you become independent, you pick up another language, and employers genuinely look for that kind of experience on a CV. If it's optional, most people never bother, and they miss out." },
-      { "speaker": "B", "text": "That sounds great if your parents can pay for it. Flights, visas, higher rent in some cities — plenty of students simply can't afford that, and some have part-time jobs or family members they care for. Making it mandatory punishes the students who are already struggling. I'm fine with encouraging it, but requiring it is unfair." },
-      { "speaker": "A", "text": "But universities could provide funding. If everyone went, the scheme would be huge, and costs could be negotiated down." },
-      { "speaker": "C", "text": "Maybe the answer is flexibility. Keep it optional, but actively promote it with proper scholarships, and offer shorter alternatives — say, a four-week summer programme — for students who genuinely can't commit to a whole semester. That way almost everyone gets some international experience without forcing anyone into debt." },
-      { "speaker": "B", "text": "I could support that. Short programmes plus real financial help would solve most of my objections." },
-      { "speaker": "A", "text": "I'd still prefer it to be the default option rather than something students have to opt into, but I'd accept that as a compromise." }
-    ] },
-    { "topic": "Drone delivery services in cities: benefit or nuisance?", "sample": "The group debated drone delivery in cities. Speaker A welcomed it, highlighting faster deliveries, lower emissions than vans, and reduced road congestion. Speaker B raised serious concerns about noise, safety failures, and privacy, arguing that regulation should come before expansion. Speaker C took a balanced view, supporting drones for urgent medical deliveries but questioning their use for routine shopping. Overall, the group agreed drones have real potential but need strict rules on routes, altitude and operating hours.", "turns": [
-      { "speaker": "A", "text": "I'm really excited about drone delivery. Parcels arrive in thirty minutes, delivery vans come off the roads, and the drones are electric, so emissions drop. For urgent things like medicine it could literally save lives." },
-      { "speaker": "B", "text": "Or it could be a nightmare. Imagine hundreds of buzzing drones over your garden all day. What happens when one malfunctions and falls onto a busy street? And they'll all have cameras filming everything below them. We need strict regulation before these services expand, not after." },
-      { "speaker": "C", "text": "I think both of you have a point. For medical emergencies — delivering defibrillators or blood supplies — drones are clearly brilliant. But do we really need drones bringing people takeaway coffee? The benefit there is tiny compared with the noise." },
-      { "speaker": "A", "text": "Fair enough, but the technology gets better and quieter the more it's used. If we restrict it too much, companies will just test elsewhere." },
-      { "speaker": "B", "text": "Then let's allow it with conditions: fixed flight corridors away from homes, no flying at night, and a proper licensing system." },
-      { "speaker": "C", "text": "That seems like a sensible way forward — encourage the valuable uses while protecting residents from the downsides." }
-    ] }
+    {
+      "topic": "Should all university students be required to spend a semester studying abroad?",
+      "sample": "The students discussed whether a semester abroad should be compulsory. Speaker A strongly supported the idea, saying it builds independence and language skills that employers value. Speaker B objected that compulsory schemes are unfair to students who cannot afford extra costs or who have family responsibilities, and suggested generous scholarships instead. Speaker C proposed a middle ground: making study abroad optional but actively encouraged, with short-term programmes for those unable to go for a full semester. They agreed the experience was valuable but disagreed about making it mandatory.",
+      "turns": [
+        {
+          "speaker": "A",
+          "text": "I think it should absolutely be compulsory. Spending a semester in another country completely changes you — you become independent, you pick up another language, and employers genuinely look for that kind of experience on a CV. If it's optional, most people never bother, and they miss out."
+        },
+        {
+          "speaker": "B",
+          "text": "That sounds great if your parents can pay for it. Flights, visas, higher rent in some cities — plenty of students simply can't afford that, and some have part-time jobs or family members they care for. Making it mandatory punishes the students who are already struggling. I'm fine with encouraging it, but requiring it is unfair."
+        },
+        {
+          "speaker": "A",
+          "text": "But universities could provide funding. If everyone went, the scheme would be huge, and costs could be negotiated down."
+        },
+        {
+          "speaker": "C",
+          "text": "Maybe the answer is flexibility. Keep it optional, but actively promote it with proper scholarships, and offer shorter alternatives — say, a four-week summer programme — for students who genuinely can't commit to a whole semester. That way almost everyone gets some international experience without forcing anyone into debt."
+        },
+        {
+          "speaker": "B",
+          "text": "I could support that. Short programmes plus real financial help would solve most of my objections."
+        },
+        {
+          "speaker": "A",
+          "text": "I'd still prefer it to be the default option rather than something students have to opt into, but I'd accept that as a compromise."
+        }
+      ]
+    },
+    {
+      "topic": "Drone delivery services in cities: benefit or nuisance?",
+      "sample": "The group debated drone delivery in cities. Speaker A welcomed it, highlighting faster deliveries, lower emissions than vans, and reduced road congestion. Speaker B raised serious concerns about noise, safety failures, and privacy, arguing that regulation should come before expansion. Speaker C took a balanced view, supporting drones for urgent medical deliveries but questioning their use for routine shopping. Overall, the group agreed drones have real potential but need strict rules on routes, altitude and operating hours.",
+      "turns": [
+        {
+          "speaker": "A",
+          "text": "I'm really excited about drone delivery. Parcels arrive in thirty minutes, delivery vans come off the roads, and the drones are electric, so emissions drop. For urgent things like medicine it could literally save lives."
+        },
+        {
+          "speaker": "B",
+          "text": "Or it could be a nightmare. Imagine hundreds of buzzing drones over your garden all day. What happens when one malfunctions and falls onto a busy street? And they'll all have cameras filming everything below them. We need strict regulation before these services expand, not after."
+        },
+        {
+          "speaker": "C",
+          "text": "I think both of you have a point. For medical emergencies — delivering defibrillators or blood supplies — drones are clearly brilliant. But do we really need drones bringing people takeaway coffee? The benefit there is tiny compared with the noise."
+        },
+        {
+          "speaker": "A",
+          "text": "Fair enough, but the technology gets better and quieter the more it's used. If we restrict it too much, companies will just test elsewhere."
+        },
+        {
+          "speaker": "B",
+          "text": "Then let's allow it with conditions: fixed flight corridors away from homes, no flying at night, and a proper licensing system."
+        },
+        {
+          "speaker": "C",
+          "text": "That seems like a sensible way forward — encourage the valuable uses while protecting residents from the downsides."
+        }
+      ]
+    }
   ],
   "answerShortQuestion": [
-    { "question": "What is the name of the instrument that measures atmospheric pressure?", "answer": "A barometer" },
-    { "question": "What do you call a person whose job is to design buildings?", "answer": "An architect" },
-    { "question": "Which document do you need to travel to another country?", "answer": "A passport" },
-    { "question": "What do we call the money workers pay to the government from their salary?", "answer": "Income tax" },
-    { "question": "What is the scientific study of earthquakes called?", "answer": "Seismology" }
+    {
+      "question": "What is the name of the instrument that measures atmospheric pressure?",
+      "answer": "A barometer"
+    },
+    {
+      "question": "What do you call a person whose job is to design buildings?",
+      "answer": "An architect"
+    },
+    {
+      "question": "Which document do you need to travel to another country?",
+      "answer": "A passport"
+    },
+    {
+      "question": "What do we call the money workers pay to the government from their salary?",
+      "answer": "Income tax"
+    },
+    {
+      "question": "What is the scientific study of earthquakes called?",
+      "answer": "Seismology"
+    }
   ],
   "summarizeWrittenText": [
-    { "passage": "Microplastics, fragments of plastic smaller than five millimetres, have been detected throughout the food chain, from seafood and salt to drinking water and even fruit and vegetables. Scientists have confirmed that humans consume tens of thousands of these particles every year, yet the consequences for health remain uncertain. Laboratory experiments show that high concentrations of microplastics can cause inflammation and cell damage in animals, but the doses used in such studies far exceed what people typically ingest. Complicating matters further, plastic particles can carry toxic chemicals and harmful bacteria on their surfaces, potentially transporting them into the body. Researchers agree that the greatest difficulty is measurement: there is no standardised method for detecting the smallest particles in human tissue, so estimates of exposure vary widely. Until long-term studies are completed, most experts advise a precautionary approach, urging consumers and policymakers to reduce plastic waste even though the precise risks are not yet fully understood.", "sample": "Although humans ingest tens of thousands of microplastic particles annually through food and water, the health effects remain unclear because laboratory studies use unrealistically high doses and no standardised measurement method exists, so experts recommend reducing plastic waste as a precaution while long-term research continues." },
-    { "passage": "Machine translation has improved beyond recognition in little more than a decade. Earlier systems translated word by word according to grammatical rules, producing output that was often comically inaccurate. Modern systems, by contrast, use neural networks trained on millions of human-translated texts, allowing them to capture context, idiom, and tone with remarkable success. For routine tasks such as translating product manuals or news summaries, machines now rival professional human translators in both speed and adequacy, at a fraction of the cost. Nevertheless, significant weaknesses remain. Literary translation still demands human creativity, since machines struggle with wordplay, cultural allusion, and deliberate ambiguity. Moreover, because neural systems learn from existing translations, they can reproduce and even amplify the biases contained in those texts. Most industry observers therefore predict not the disappearance of human translators but a transformation of their role: professionals increasingly edit and certify machine output rather than translating from scratch.", "sample": "Neural machine translation, trained on millions of human translations, now matches professional quality for routine texts at far lower cost, but because it still fails at literary creativity and inherits biases from its training data, human translators are expected to shift toward editing and certifying machine output rather than disappearing." }
+    {
+      "passage": "Microplastics, fragments of plastic smaller than five millimetres, have been detected throughout the food chain, from seafood and salt to drinking water and even fruit and vegetables. Scientists have confirmed that humans consume tens of thousands of these particles every year, yet the consequences for health remain uncertain. Laboratory experiments show that high concentrations of microplastics can cause inflammation and cell damage in animals, but the doses used in such studies far exceed what people typically ingest. Complicating matters further, plastic particles can carry toxic chemicals and harmful bacteria on their surfaces, potentially transporting them into the body. Researchers agree that the greatest difficulty is measurement: there is no standardised method for detecting the smallest particles in human tissue, so estimates of exposure vary widely. Until long-term studies are completed, most experts advise a precautionary approach, urging consumers and policymakers to reduce plastic waste even though the precise risks are not yet fully understood.",
+      "sample": "Although humans ingest tens of thousands of microplastic particles annually through food and water, the health effects remain unclear because laboratory studies use unrealistically high doses and no standardised measurement method exists, so experts recommend reducing plastic waste as a precaution while long-term research continues."
+    },
+    {
+      "passage": "Machine translation has improved beyond recognition in little more than a decade. Earlier systems translated word by word according to grammatical rules, producing output that was often comically inaccurate. Modern systems, by contrast, use neural networks trained on millions of human-translated texts, allowing them to capture context, idiom, and tone with remarkable success. For routine tasks such as translating product manuals or news summaries, machines now rival professional human translators in both speed and adequacy, at a fraction of the cost. Nevertheless, significant weaknesses remain. Literary translation still demands human creativity, since machines struggle with wordplay, cultural allusion, and deliberate ambiguity. Moreover, because neural systems learn from existing translations, they can reproduce and even amplify the biases contained in those texts. Most industry observers therefore predict not the disappearance of human translators but a transformation of their role: professionals increasingly edit and certify machine output rather than translating from scratch.",
+      "sample": "Neural machine translation, trained on millions of human translations, now matches professional quality for routine texts at far lower cost, but because it still fails at literary creativity and inherits biases from its training data, human translators are expected to shift toward editing and certifying machine output rather than disappearing."
+    }
   ],
   "essay": [
-    { "prompt": "Some people believe that international tourism damages local cultures and environments, while others argue it brings essential economic benefits. Discuss both views and give your own opinion. Write 200–300 words.", "sample": "Possible structure: (1) Introduction — paraphrase the debate, state your position. (2) Arguments against tourism: overcrowding of historic sites, pollution and pressure on water supplies, traditions turned into commercial performances, rising prices driving out local residents. (3) Arguments for tourism: major source of employment and foreign currency, funds conservation of monuments and national parks, encourages infrastructure that locals also use, promotes cross-cultural understanding. (4) Conclusion — your view, e.g. tourism is beneficial overall but must be managed sustainably through visitor limits and local investment. Useful phrases: 'It is frequently claimed that…', 'Critics point out that…', 'A strong counter-argument is…', 'On balance, I am convinced that…'" }
+    {
+      "prompt": "Some people believe a four-day working week would benefit both employees and employers, while others argue it would reduce productivity and raise costs. Discuss both views and give your own opinion. Write 200–300 words.",
+      "sample": "Possible structure: (1) Introduction — present the debate, state position. (2) Pro case: better work-life balance, less burnout, higher productivity per hour, environmental savings from reduced commuting. (3) Con case: reduced total output, customer-service coverage problems, higher staffing costs, not suited to all industries. (4) Conclusion — your stance, e.g. trial with measurable outcomes. Useful phrases: 'Advocates argue that…', 'Critics counter that…', 'The evidence from pilot schemes suggests…', 'On balance…'"
+    }
   ],
   "reading": {
     "fibDropdown": [
-      { "text": "Green building materials are gaining popularity as the construction industry seeks to reduce its environmental {{1}}. Materials such as bamboo, recycled steel, and compressed earth blocks require far less energy to {{2}} than conventional concrete. In addition, buildings constructed with these materials often provide better natural {{3}}, lowering heating and cooling costs. As a result, architects are increasingly {{4}} them in both residential and commercial projects.", "blanks": [
-        { "options": ["footprint", "fingerprint", "footstep", "footnote"], "correct": 0 },
-        { "options": ["consume", "produce", "destroy", "deliver"], "correct": 1 },
-        { "options": ["insulation", "isolation", "inspiration", "installation"], "correct": 0 },
-        { "options": ["avoiding", "specifying", "removing", "delaying"], "correct": 1 }
-      ] },
-      { "text": "Car-sharing schemes allow members to use vehicles for short periods without the costs of {{1}}. Participants typically book a car through a mobile app and pay only for the time they drive. Studies suggest that each shared car can {{2}} up to ten privately owned vehicles from the road, easing congestion and freeing up parking space. {{3}}, critics note that such schemes are still concentrated in wealthy urban districts and rarely {{4}} low-income neighbourhoods.", "blanks": [
-        { "options": ["ownership", "friendship", "leadership", "membership"], "correct": 0 },
-        { "options": ["remove", "borrow", "sell", "hide"], "correct": 0 },
-        { "options": ["Therefore", "However", "Similarly", "Moreover"], "correct": 1 },
-        { "options": ["damage", "charge", "reach", "block"], "correct": 2 }
-      ] },
-      { "text": "In elite sport, the difference between winning and losing is often measured in fractions of a second. Athletes therefore {{1}} heavily on sports scientists to gain even the smallest advantage. Through detailed {{2}} of training data, scientists can detect signs of fatigue before injury occurs. They also design personalised nutrition plans that {{3}} recovery between events. This scientific support has become so important that many teams now {{4}} as much on their laboratories as on their coaching staff.", "blanks": [
-        { "options": ["rely", "depend", "base", "focus"], "correct": 0 },
-        { "options": ["ignorance", "analysis", "rejection", "publication"], "correct": 1 },
-        { "options": ["delay", "prevent", "accelerate", "ignore"], "correct": 2 },
-        { "options": ["spend", "save", "waste", "earn"], "correct": 0 }
-      ] },
-      { "text": "Fermented foods such as yoghurt, kimchi, and sourdough bread have been eaten for centuries, but only recently have scientists begun to {{1}} their effects on health. Fermentation introduces live bacteria into the digestive system, and some studies {{2}} that these bacteria support a balanced gut environment. {{3}} the promising findings, researchers caution that many health claims remain {{4}} and that larger trials are needed before firm conclusions can be drawn.", "blanks": [
-        { "options": ["ignore", "investigate", "invent", "imitate"], "correct": 1 },
-        { "options": ["deny", "forget", "suggest", "demand"], "correct": 2 },
-        { "options": ["Because of", "Instead of", "Despite", "According to"], "correct": 2 },
-        { "options": ["proven", "unproven", "impossible", "obvious"], "correct": 1 }
-      ] },
-      { "text": "Chronic noise is an invisible pollutant that affects millions of urban residents. Long-term {{1}} to loud traffic has been shown to raise stress hormone levels, even among people who believe they have grown {{2}} to the sound. Children are particularly {{3}: research indicates that those attending schools near busy roads score lower on reading tests. City planners are therefore exploring quieter road surfaces and noise {{4}} to protect public health.", "blanks": [
-        { "options": ["exposure", "exhibition", "expansion", "explanation"], "correct": 0 },
-        { "options": ["allergic", "accustomed", "opposed", "addicted"], "correct": 1 },
-        { "options": ["protected", "entertained", "vulnerable", "qualified"], "correct": 2 },
-        { "options": ["barriers", "engines", "signals", "sources"], "correct": 0 }
-      ] }
+      {
+        "text": "Green building materials are gaining popularity as the construction industry seeks to reduce its environmental {{1}}. Materials such as bamboo, recycled steel, and compressed earth blocks require far less energy to {{2}} than conventional concrete. In addition, buildings constructed with these materials often provide better natural {{3}}, lowering heating and cooling costs. As a result, architects are increasingly {{4}} them in both residential and commercial projects.",
+        "blanks": [
+          {
+            "options": [
+              "footprint",
+              "fingerprint",
+              "footstep",
+              "footnote"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "consume",
+              "produce",
+              "destroy",
+              "deliver"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "insulation",
+              "isolation",
+              "inspiration",
+              "installation"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "avoiding",
+              "specifying",
+              "removing",
+              "delaying"
+            ],
+            "correct": 1
+          }
+        ]
+      },
+      {
+        "text": "Car-sharing schemes allow members to use vehicles for short periods without the costs of {{1}}. Participants typically book a car through a mobile app and pay only for the time they drive. Studies suggest that each shared car can {{2}} up to ten privately owned vehicles from the road, easing congestion and freeing up parking space. {{3}}, critics note that such schemes are still concentrated in wealthy urban districts and rarely {{4}} low-income neighbourhoods.",
+        "blanks": [
+          {
+            "options": [
+              "ownership",
+              "friendship",
+              "leadership",
+              "membership"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "remove",
+              "borrow",
+              "sell",
+              "hide"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "Therefore",
+              "However",
+              "Similarly",
+              "Moreover"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "damage",
+              "charge",
+              "reach",
+              "block"
+            ],
+            "correct": 2
+          }
+        ]
+      },
+      {
+        "text": "In elite sport, the difference between winning and losing is often measured in fractions of a second. Athletes therefore {{1}} heavily on sports scientists to gain even the smallest advantage. Through detailed {{2}} of training data, scientists can detect signs of fatigue before injury occurs. They also design personalised nutrition plans that {{3}} recovery between events. This scientific support has become so important that many teams now {{4}} as much on their laboratories as on their coaching staff.",
+        "blanks": [
+          {
+            "options": [
+              "rely",
+              "depend",
+              "base",
+              "focus"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "ignorance",
+              "analysis",
+              "rejection",
+              "publication"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "delay",
+              "prevent",
+              "accelerate",
+              "ignore"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "spend",
+              "save",
+              "waste",
+              "earn"
+            ],
+            "correct": 0
+          }
+        ]
+      },
+      {
+        "text": "Fermented foods such as yoghurt, kimchi, and sourdough bread have been eaten for centuries, but only recently have scientists begun to {{1}} their effects on health. Fermentation introduces live bacteria into the digestive system, and some studies {{2}} that these bacteria support a balanced gut environment. {{3}} the promising findings, researchers caution that many health claims remain {{4}} and that larger trials are needed before firm conclusions can be drawn.",
+        "blanks": [
+          {
+            "options": [
+              "ignore",
+              "investigate",
+              "invent",
+              "imitate"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "deny",
+              "forget",
+              "suggest",
+              "demand"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "Because of",
+              "Instead of",
+              "Despite",
+              "According to"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "proven",
+              "unproven",
+              "impossible",
+              "obvious"
+            ],
+            "correct": 1
+          }
+        ]
+      },
+      {
+        "text": "Chronic noise is an invisible pollutant that affects millions of urban residents. Long-term {{1}} to loud traffic has been shown to raise stress hormone levels, even among people who believe they have grown {{2}} to the sound. Children are particularly {{3}: research indicates that those attending schools near busy roads score lower on reading tests. City planners are therefore exploring quieter road surfaces and noise {{4}} to protect public health.",
+        "blanks": [
+          {
+            "options": [
+              "exposure",
+              "exhibition",
+              "expansion",
+              "explanation"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "allergic",
+              "accustomed",
+              "opposed",
+              "addicted"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "protected",
+              "entertained",
+              "vulnerable",
+              "qualified"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "barriers",
+              "engines",
+              "signals",
+              "sources"
+            ],
+            "correct": 0
+          }
+        ]
+      }
     ],
     "mcMultiple": [
-      { "passage": "Studying abroad is often described as a life-changing experience, and research supports many of the claims made for it. Graduates with international experience tend to find employment faster than their peers and frequently command higher starting salaries, particularly in multinational companies. Living overseas also develops problem-solving skills, as students must handle banking, housing, and bureaucracy in an unfamiliar language. However, the experience is not uniformly positive. A significant minority of exchange students report loneliness and difficulty forming friendships with local students, who may already have established social circles. Academic credit transfer can also be problematic, occasionally extending the time needed to complete a degree.", "question": "According to the passage, which of the following are effects of studying abroad?", "options": ["Graduates with international experience find jobs more quickly", "All exchange students become fluent in a foreign language", "Some exchange students feel socially isolated", "Credit transfer problems can lengthen degree completion time", "Universities charge lower fees for exchange semesters"], "answers": [0, 2, 3] },
-      { "passage": "Delivery drones promise to transform urban logistics, and pilot programmes have demonstrated impressive capabilities. In trials, drones have delivered medicines to remote clinics in minutes, a journey that would take hours by road. The electric aircraft also produce far lower emissions per parcel than diesel vans. Yet significant barriers remain before large-scale adoption is possible. Aviation authorities require proof that drones can safely avoid other aircraft and cope with sudden weather changes. Public acceptance is another hurdle: surveys show residents worry about noise, falling objects, and cameras passing over their homes. Finally, the economics are uncertain, since each drone currently carries only one small package, making the cost per delivery high compared with conventional vans.", "question": "Which of the following are mentioned in the passage as issues for drone delivery?", "options": ["Drones have already replaced delivery vans in several cities", "Regulators need evidence that drones can operate safely", "Residents are concerned about noise and privacy", "Drones can carry heavier loads than delivery vans", "Cost per delivery is currently high because drones carry single small packages"], "answers": [1, 2, 4] }
+      {
+        "passage": "Studying abroad is often described as a life-changing experience, and research supports many of the claims made for it. Graduates with international experience tend to find employment faster than their peers and frequently command higher starting salaries, particularly in multinational companies. Living overseas also develops problem-solving skills, as students must handle banking, housing, and bureaucracy in an unfamiliar language. However, the experience is not uniformly positive. A significant minority of exchange students report loneliness and difficulty forming friendships with local students, who may already have established social circles. Academic credit transfer can also be problematic, occasionally extending the time needed to complete a degree.",
+        "question": "According to the passage, which of the following are effects of studying abroad?",
+        "options": [
+          "Graduates with international experience find jobs more quickly",
+          "All exchange students become fluent in a foreign language",
+          "Some exchange students feel socially isolated",
+          "Credit transfer problems can lengthen degree completion time",
+          "Universities charge lower fees for exchange semesters"
+        ],
+        "answers": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "passage": "Delivery drones promise to transform urban logistics, and pilot programmes have demonstrated impressive capabilities. In trials, drones have delivered medicines to remote clinics in minutes, a journey that would take hours by road. The electric aircraft also produce far lower emissions per parcel than diesel vans. Yet significant barriers remain before large-scale adoption is possible. Aviation authorities require proof that drones can safely avoid other aircraft and cope with sudden weather changes. Public acceptance is another hurdle: surveys show residents worry about noise, falling objects, and cameras passing over their homes. Finally, the economics are uncertain, since each drone currently carries only one small package, making the cost per delivery high compared with conventional vans.",
+        "question": "Which of the following are mentioned in the passage as issues for drone delivery?",
+        "options": [
+          "Drones have already replaced delivery vans in several cities",
+          "Regulators need evidence that drones can operate safely",
+          "Residents are concerned about noise and privacy",
+          "Drones can carry heavier loads than delivery vans",
+          "Cost per delivery is currently high because drones carry single small packages"
+        ],
+        "answers": [
+          1,
+          2,
+          4
+        ]
+      }
     ],
     "reorder": [
-      { "sentences": ["Glass recycling follows a remarkably efficient process that allows the material to be reused endlessly.", "First, collected glass is sorted by colour, since mixing colours produces material that manufacturers cannot use.", "The sorted glass is then crushed into small pieces called cullet and cleaned to remove labels and metal caps.", "Finally, the cullet is melted in furnaces and moulded into new bottles, often returning to shop shelves within thirty days."] },
-      { "sentences": ["The domestication of the horse transformed human societies more profoundly than almost any other event in prehistory.", "Horses were first tamed on the Eurasian steppes around five and a half thousand years ago, probably for their milk and meat.", "Once people learned to ride, however, horses revolutionised transport, trade, and warfare across entire continents.", "By enabling messages and goods to travel at unprecedented speed, they effectively shrank the ancient world and connected distant civilisations."] }
+      {
+        "sentences": [
+          "Glass recycling follows a remarkably efficient process that allows the material to be reused endlessly.",
+          "First, collected glass is sorted by colour, since mixing colours produces material that manufacturers cannot use.",
+          "The sorted glass is then crushed into small pieces called cullet and cleaned to remove labels and metal caps.",
+          "Finally, the cullet is melted in furnaces and moulded into new bottles, often returning to shop shelves within thirty days."
+        ]
+      },
+      {
+        "sentences": [
+          "The domestication of the horse transformed human societies more profoundly than almost any other event in prehistory.",
+          "Horses were first tamed on the Eurasian steppes around five and a half thousand years ago, probably for their milk and meat.",
+          "Once people learned to ride, however, horses revolutionised transport, trade, and warfare across entire continents.",
+          "By enabling messages and goods to travel at unprecedented speed, they effectively shrank the ancient world and connected distant civilisations."
+        ]
+      }
     ],
     "fibDrag": [
-      { "text": "Deep-sea mining companies hope to extract valuable metals from the ocean {{1}}, but scientists warn that sediment clouds from the machinery could {{2}} organisms far beyond the mining sites themselves.", "answers": ["floor", "smother"], "bank": ["floor", "smother", "surface", "enrich", "quietly", "modern"] },
-      { "text": "Museums use augmented reality to let visitors {{1}} with objects that would otherwise sit behind glass. By pointing a phone at an exhibit, users can view three-dimensional reconstructions that {{2}} on their screens.", "answers": ["interact", "appear"], "bank": ["interact", "appear", "vanish", "fragile", "heavily", "compete"] },
-      { "text": "Although wildfires cause severe {{1}}, many ecosystems depend on periodic burning. Fire clears dead vegetation and releases {{2}} that enrich the soil for new growth.", "answers": ["damage", "nutrients"], "bank": ["damage", "nutrients", "plastic", "improve", "rapidly", "distant"] },
-      { "text": "Crowdsourcing allows researchers to analyse {{1}} amounts of data with the help of volunteers. Because participants are untrained, projects must {{2}} accuracy by asking several people to check the same information.", "answers": ["enormous", "ensure"], "bank": ["enormous", "ensure", "tiny", "ignore", "colourful", "barely"] }
+      {
+        "text": "Deep-sea mining companies hope to extract valuable metals from the ocean {{1}}, but scientists warn that sediment clouds from the machinery could {{2}} organisms far beyond the mining sites themselves.",
+        "answers": [
+          "floor",
+          "smother"
+        ],
+        "bank": [
+          "floor",
+          "smother",
+          "surface",
+          "enrich",
+          "quietly",
+          "modern"
+        ]
+      },
+      {
+        "text": "Museums use augmented reality to let visitors {{1}} with objects that would otherwise sit behind glass. By pointing a phone at an exhibit, users can view three-dimensional reconstructions that {{2}} on their screens.",
+        "answers": [
+          "interact",
+          "appear"
+        ],
+        "bank": [
+          "interact",
+          "appear",
+          "vanish",
+          "fragile",
+          "heavily",
+          "compete"
+        ]
+      },
+      {
+        "text": "Although wildfires cause severe {{1}}, many ecosystems depend on periodic burning. Fire clears dead vegetation and releases {{2}} that enrich the soil for new growth.",
+        "answers": [
+          "damage",
+          "nutrients"
+        ],
+        "bank": [
+          "damage",
+          "nutrients",
+          "plastic",
+          "improve",
+          "rapidly",
+          "distant"
+        ]
+      },
+      {
+        "text": "Crowdsourcing allows researchers to analyse {{1}} amounts of data with the help of volunteers. Because participants are untrained, projects must {{2}} accuracy by asking several people to check the same information.",
+        "answers": [
+          "enormous",
+          "ensure"
+        ],
+        "bank": [
+          "enormous",
+          "ensure",
+          "tiny",
+          "ignore",
+          "colourful",
+          "barely"
+        ]
+      }
     ],
     "mcSingle": [
-      { "passage": "Microplastics have now been found in every environment scientists have examined, from Arctic ice to the deepest ocean trenches. Detecting them in the human body, however, presents extraordinary difficulties. The smallest particles are far thinner than a human hair, and no agreed standard exists for identifying them in blood or tissue. Different laboratories use different methods, which explains why published estimates of human exposure vary by a factor of a thousand. Until measurement techniques are standardised, claims about the effects of microplastics on health will remain difficult to verify.", "question": "According to the passage, why is human exposure to microplastics hard to determine?", "options": ["Microplastics exist only in remote environments", "Laboratories lack any equipment to study plastic", "There is no standardised method for detecting the smallest particles", "Humans do not ingest microplastics through food"], "answer": 2 },
-      { "passage": "Urban planners have long treated noise as a minor inconvenience, but medical research is forcing a reassessment. Large population studies in Europe have found that people living under flight paths or beside busy roads suffer higher rates of heart disease, even after accounting for air pollution and income. The likely mechanism is stress: the body reacts to sudden or continuous noise with hormonal responses that, over decades, damage blood vessels. Researchers note that people often believe they have adapted to noise, yet their bodies continue to show the physiological signs. Quiet, it seems, is not a luxury but a public health necessity.", "question": "What is the main idea of the passage?", "options": ["Noise causes more deaths than air pollution in cities", "Chronic noise is a serious health risk even when people feel accustomed to it", "People near airports should move to the countryside", "Urban planners have always prioritised noise reduction"], "answer": 1 }
+      {
+        "passage": "Microplastics have now been found in every environment scientists have examined, from Arctic ice to the deepest ocean trenches. Detecting them in the human body, however, presents extraordinary difficulties. The smallest particles are far thinner than a human hair, and no agreed standard exists for identifying them in blood or tissue. Different laboratories use different methods, which explains why published estimates of human exposure vary by a factor of a thousand. Until measurement techniques are standardised, claims about the effects of microplastics on health will remain difficult to verify.",
+        "question": "According to the passage, why is human exposure to microplastics hard to determine?",
+        "options": [
+          "Microplastics exist only in remote environments",
+          "Laboratories lack any equipment to study plastic",
+          "There is no standardised method for detecting the smallest particles",
+          "Humans do not ingest microplastics through food"
+        ],
+        "answer": 2
+      },
+      {
+        "passage": "Urban planners have long treated noise as a minor inconvenience, but medical research is forcing a reassessment. Large population studies in Europe have found that people living under flight paths or beside busy roads suffer higher rates of heart disease, even after accounting for air pollution and income. The likely mechanism is stress: the body reacts to sudden or continuous noise with hormonal responses that, over decades, damage blood vessels. Researchers note that people often believe they have adapted to noise, yet their bodies continue to show the physiological signs. Quiet, it seems, is not a luxury but a public health necessity.",
+        "question": "Which of the following best summarises the writer’s purpose?",
+        "options": [
+          "Noise causes more deaths than air pollution in cities",
+          "Chronic noise is a serious health risk even when people feel accustomed to it",
+          "People near airports should move to the countryside",
+          "Urban planners have always prioritised noise reduction"
+        ],
+        "answer": 1
+      }
     ]
   },
   "listening": {
     "summarizeSpokenText": [
-      { "title": "The debate over deep-sea mining", "sample": "The lecture examined the debate over deep-sea mining. Supporters argue that mining the ocean floor could supply the metals needed for batteries and reduce the environmental and ethical problems of land mining. Opponents warn that deep-sea ecosystems are largely unknown and that mining could cause irreversible damage, including sediment plumes that smother marine life. The speaker concluded that many scientists are calling for a pause until more research is done.", "audio": "The demand for metals like cobalt and nickel, essential for electric vehicle batteries, has turned attention to the deepest parts of the ocean, where potato-sized nodules rich in these metals lie scattered across the seabed. Supporters of deep-sea mining argue that collecting these nodules could supply the green energy revolution while avoiding the deforestation, pollution, and child labour associated with some mines on land. The nodules, they point out, simply sit on the surface, so no digging or blasting is required. Opponents respond that we know astonishingly little about deep-sea life. The regions targeted for mining may contain millions of species never yet described by science, and the sediment clouds raised by mining machines could drift for kilometres, smothering organisms far from the actual site. Because these ecosystems grow and recover extremely slowly, damage could persist for thousands of years. Many marine scientists are therefore calling for a moratorium until far more research has been completed." },
-      { "title": "How wildfires have become megafires", "sample": "The lecture explained why wildfires have grown into destructive megafires. Fire is natural and many ecosystems need it, but two factors have made fires worse: climate change producing hotter, drier conditions, and a century of suppressing all fires, which let fuel build up. The speaker described how megafires create their own weather, and recommended controlled burning and better land management to reduce the danger.", "audio": "In the past few decades, wildfires in many regions have grown so large and intense that a new word was invented for them: megafires. Fire itself is nothing new — forests and grasslands have burned for millions of years, and many species actually depend on regular burning. Two human factors, however, have changed the equation. The first is climate change: hotter temperatures and longer droughts dry out vegetation, turning forests into tinder. The second is a century of well-intentioned but misguided policy. For generations, fire services extinguished every blaze as quickly as possible. Without small, frequent fires to clear it away, dead wood accumulated year after year, so when fire finally escapes control, it burns with terrifying intensity. The largest megafires generate so much heat that they create their own weather systems, including fire tornadoes and lightning that ignites new blazes. Experts increasingly recommend a return to controlled burning, deliberately setting small fires in safe conditions to reduce the fuel waiting for the next big one." }
+      {
+        "title": "The debate over deep-sea mining",
+        "sample": "The lecture examined the debate over deep-sea mining. Supporters argue that mining the ocean floor could supply the metals needed for batteries and reduce the environmental and ethical problems of land mining. Opponents warn that deep-sea ecosystems are largely unknown and that mining could cause irreversible damage, including sediment plumes that smother marine life. The speaker concluded that many scientists are calling for a pause until more research is done.",
+        "audio": "The demand for metals like cobalt and nickel, essential for electric vehicle batteries, has turned attention to the deepest parts of the ocean, where potato-sized nodules rich in these metals lie scattered across the seabed. Supporters of deep-sea mining argue that collecting these nodules could supply the green energy revolution while avoiding the deforestation, pollution, and child labour associated with some mines on land. The nodules, they point out, simply sit on the surface, so no digging or blasting is required. Opponents respond that we know astonishingly little about deep-sea life. The regions targeted for mining may contain millions of species never yet described by science, and the sediment clouds raised by mining machines could drift for kilometres, smothering organisms far from the actual site. Because these ecosystems grow and recover extremely slowly, damage could persist for thousands of years. Many marine scientists are therefore calling for a moratorium until far more research has been completed."
+      },
+      {
+        "title": "How wildfires have become megafires",
+        "sample": "The lecture explained why wildfires have grown into destructive megafires. Fire is natural and many ecosystems need it, but two factors have made fires worse: climate change producing hotter, drier conditions, and a century of suppressing all fires, which let fuel build up. The speaker described how megafires create their own weather, and recommended controlled burning and better land management to reduce the danger.",
+        "audio": "In the past few decades, wildfires in many regions have grown so large and intense that a new word was invented for them: megafires. Fire itself is nothing new — forests and grasslands have burned for millions of years, and many species actually depend on regular burning. Two human factors, however, have changed the equation. The first is climate change: hotter temperatures and longer droughts dry out vegetation, turning forests into tinder. The second is a century of well-intentioned but misguided policy. For generations, fire services extinguished every blaze as quickly as possible. Without small, frequent fires to clear it away, dead wood accumulated year after year, so when fire finally escapes control, it burns with terrifying intensity. The largest megafires generate so much heat that they create their own weather systems, including fire tornadoes and lightning that ignites new blazes. Experts increasingly recommend a return to controlled burning, deliberately setting small fires in safe conditions to reduce the fuel waiting for the next big one."
+      }
     ],
     "mcMultiple": [
-      { "audio": "Before we finish, some announcements about next week's careers fair. The fair will take place in the sports hall on Tuesday and Wednesday, from ten until four each day. Over sixty employers have confirmed, including several engineering firms and, for the first time, three international organisations offering placements abroad. All students must register online by Sunday evening to receive their entry pass. Bring printed copies of your CV, as many recruiters will accept them on the spot. Please note that Thursday's careers workshop has been cancelled because the speaker is unwell, but the CV review sessions in the library will run as normal throughout the week.", "question": "According to the announcement, which statements are correct?", "options": ["The careers fair will be held in the sports hall", "Students can register for the fair at any time during the event", "Some employers are offering opportunities abroad", "Thursday's careers workshop will go ahead as planned", "CV review sessions will take place in the library"], "answers": [0, 2, 4] }
+      {
+        "audio": "Before we finish, some announcements about next week's careers fair. The fair will take place in the sports hall on Tuesday and Wednesday, from ten until four each day. Over sixty employers have confirmed, including several engineering firms and, for the first time, three international organisations offering placements abroad. All students must register online by Sunday evening to receive their entry pass. Bring printed copies of your CV, as many recruiters will accept them on the spot. Please note that Thursday's careers workshop has been cancelled because the speaker is unwell, but the CV review sessions in the library will run as normal throughout the week.",
+        "question": "Select all options that the announcement confirms.",
+        "options": [
+          "The careers fair will be held in the sports hall",
+          "Students can register for the fair at any time during the event",
+          "Some employers are offering opportunities abroad",
+          "Thursday's careers workshop will go ahead as planned",
+          "CV review sessions will take place in the library"
+        ],
+        "answers": [
+          0,
+          2,
+          4
+        ]
+      }
     ],
     "fillBlanks": [
-      { "display": "Today's lecture examines the {{1}} of fermentation in human history. Long before refrigeration existed, people relied on microbes to {{2}} milk, vegetables, and grains. This ancient technique remains central to many {{3}} around the world today.", "answers": ["role", "preserve", "cuisines"], "audio": "Today's lecture examines the role of fermentation in human history. Long before refrigeration existed, people relied on microbes to preserve milk, vegetables, and grains. This ancient technique remains central to many cuisines around the world today." },
-      { "display": "Students wishing to join the geology field trip should submit the consent {{1}} by Friday. The trip involves walking across {{2}} terrain, so sturdy boots are essential, and everyone must carry a basic first-aid {{3}}.", "answers": ["form", "rough", "kit"], "audio": "Students wishing to join the geology field trip should submit the consent form by Friday. The trip involves walking across rough terrain, so sturdy boots are essential, and everyone must carry a basic first-aid kit." },
-      { "display": "The new sports science laboratory allows researchers to {{1}} athletes' performance in fine detail. Sensors attached to the body {{2}} heart rate and muscle activity, while cameras record every {{3}} from multiple angles.", "answers": ["measure", "track", "movement"], "audio": "The new sports science laboratory allows researchers to measure athletes' performance in fine detail. Sensors attached to the body track heart rate and muscle activity, while cameras record every movement from multiple angles." }
+      {
+        "display": "Today's lecture examines the {{1}} of fermentation in human history. Long before refrigeration existed, people relied on microbes to {{2}} milk, vegetables, and grains. This ancient technique remains central to many {{3}} around the world today.",
+        "answers": [
+          "role",
+          "preserve",
+          "cuisines"
+        ],
+        "audio": "Today's lecture examines the role of fermentation in human history. Long before refrigeration existed, people relied on microbes to preserve milk, vegetables, and grains. This ancient technique remains central to many cuisines around the world today."
+      },
+      {
+        "display": "Students wishing to join the geology field trip should submit the consent {{1}} by Friday. The trip involves walking across {{2}} terrain, so sturdy boots are essential, and everyone must carry a basic first-aid {{3}}.",
+        "answers": [
+          "form",
+          "rough",
+          "kit"
+        ],
+        "audio": "Students wishing to join the geology field trip should submit the consent form by Friday. The trip involves walking across rough terrain, so sturdy boots are essential, and everyone must carry a basic first-aid kit."
+      },
+      {
+        "display": "The new sports science laboratory allows researchers to {{1}} athletes' performance in fine detail. Sensors attached to the body {{2}} heart rate and muscle activity, while cameras record every {{3}} from multiple angles.",
+        "answers": [
+          "measure",
+          "track",
+          "movement"
+        ],
+        "audio": "The new sports science laboratory allows researchers to measure athletes' performance in fine detail. Sensors attached to the body track heart rate and muscle activity, while cameras record every movement from multiple angles."
+      }
     ],
     "highlightCorrectSummary": [
-      { "audio": "Glass is often called the perfect recyclable material because it can be melted down and reformed endlessly without losing quality. Yet recycling rates differ dramatically between countries, and the reasons are mainly practical rather than cultural. Nations with deposit-return schemes, where consumers pay a small deposit refunded when they return the bottle, consistently achieve rates above ninety percent. Countries relying on kerbside collection do considerably worse, particularly where glass of all colours is collected together, since mixed-colour glass has little commercial value. Perhaps surprisingly, the energy saved by recycling glass is modest compared with aluminium. The real environmental prize is reducing the sand, soda ash, and limestone that must otherwise be quarried for new glass.", "options": ["Countries with high glass recycling rates achieve them because their citizens are more environmentally aware than others.", "Deposit-return schemes produce the highest glass recycling rates, while mixed-colour kerbside collection lowers the commercial value of recycled glass.", "Glass recycling saves far more energy than aluminium recycling, which is why governments promote it.", "Mixed-colour glass is the most valuable form of recycled material for manufacturers."], "answer": 1 }
+      {
+        "audio": "Glass is often called the perfect recyclable material because it can be melted down and reformed endlessly without losing quality. Yet recycling rates differ dramatically between countries, and the reasons are mainly practical rather than cultural. Nations with deposit-return schemes, where consumers pay a small deposit refunded when they return the bottle, consistently achieve rates above ninety percent. Countries relying on kerbside collection do considerably worse, particularly where glass of all colours is collected together, since mixed-colour glass has little commercial value. Perhaps surprisingly, the energy saved by recycling glass is modest compared with aluminium. The real environmental prize is reducing the sand, soda ash, and limestone that must otherwise be quarried for new glass.",
+        "options": [
+          "Countries with high glass recycling rates achieve them because their citizens are more environmentally aware than others.",
+          "Deposit-return schemes produce the highest glass recycling rates, while mixed-colour kerbside collection lowers the commercial value of recycled glass.",
+          "Glass recycling saves far more energy than aluminium recycling, which is why governments promote it.",
+          "Mixed-colour glass is the most valuable form of recycled material for manufacturers."
+        ],
+        "answer": 1
+      }
     ],
     "mcSingle": [
-      { "audio": "Hi Dr Lane, do you have a moment? I got my essay back yesterday and I'm a bit confused about the mark. The comment says my analysis was too descriptive, but I spent three paragraphs explaining the theory. Could you help me understand what I should have done differently before the next assignment?", "question": "Why did the student speak to Dr Lane?", "options": ["To ask for an extension on the next assignment", "To complain that the essay was marked unfairly", "To clarify feedback about the essay being too descriptive", "To request permission to change essay topics"], "answer": 2 }
+      {
+        "audio": "Hi Dr Lane, do you have a moment? I got my essay back yesterday and I'm a bit confused about the mark. The comment says my analysis was too descriptive, but I spent three paragraphs explaining the theory. Could you help me understand what I should have done differently before the next assignment?",
+        "question": "What does the student want to discuss?",
+        "options": [
+          "To ask for an extension on the next assignment",
+          "To complain that the essay was marked unfairly",
+          "To clarify feedback about the essay being too descriptive",
+          "To request permission to change essay topics"
+        ],
+        "answer": 2
+      }
     ],
     "selectMissingWord": [
-      { "audio": "Recycling rates tell us only part of the story. A country can collect enormous amounts of material and still perform poorly if that material is contaminated or exported rather than genuinely reprocessed. What really matters is not how much we collect, but how much we actually", "options": ["discard", "reuse", "purchase", "measure"], "answer": 1, "fullText": "What really matters is not how much we collect, but how much we actually reuse." }
+      {
+        "audio": "Recycling rates tell us only part of the story. A country can collect enormous amounts of material and still perform poorly if that material is contaminated or exported rather than genuinely reprocessed. What really matters is not how much we collect, but how much we actually",
+        "options": [
+          "discard",
+          "reuse",
+          "purchase",
+          "measure"
+        ],
+        "answer": 1,
+        "fullText": "What really matters is not how much we collect, but how much we actually reuse."
+      }
     ],
     "highlightIncorrectWords": [
-      { "words": [ { "w": "The" }, { "w": "museum" }, { "w": "has" }, { "w": "installed" }, { "w": "interactive" }, { "w": "screens" }, { "w": "that" }, { "w": "allow" }, { "w": "visitors" }, { "w": "to" }, { "w": "explore" }, { "w": "ancient" }, { "w": "artefacts", "wrong": true, "said": "monuments" }, { "w": "in" }, { "w": "three" }, { "w": "dimensions" }, { "w": "without" }, { "w": "touching", "wrong": true, "said": "damaging" }, { "w": "the" }, { "w": "original" }, { "w": "objects." }, { "w": "School" }, { "w": "groups" }, { "w": "especially" }, { "w": "enjoy", "wrong": true, "said": "prefer" }, { "w": "this" }, { "w": "technology." } ] },
-      { "words": [ { "w": "Fermented" }, { "w": "foods" }, { "w": "such" }, { "w": "as" }, { "w": "yoghurt" }, { "w": "and" }, { "w": "kimchi" }, { "w": "contain" }, { "w": "live" }, { "w": "bacteria" }, { "w": "that" }, { "w": "may" }, { "w": "harm", "wrong": true, "said": "help" }, { "w": "digestion." }, { "w": "Scientists" }, { "w": "believe" }, { "w": "these" }, { "w": "microbes" }, { "w": "support" }, { "w": "a" }, { "w": "balanced" }, { "w": "gut" }, { "w": "environment", "wrong": true, "said": "ecosystem" }, { "w": "and" }, { "w": "possibly" }, { "w": "stronger" }, { "w": "immunity." } ] }
+      {
+        "words": [
+          {
+            "w": "The"
+          },
+          {
+            "w": "museum"
+          },
+          {
+            "w": "has"
+          },
+          {
+            "w": "installed"
+          },
+          {
+            "w": "interactive"
+          },
+          {
+            "w": "screens"
+          },
+          {
+            "w": "that"
+          },
+          {
+            "w": "allow"
+          },
+          {
+            "w": "visitors"
+          },
+          {
+            "w": "to"
+          },
+          {
+            "w": "explore"
+          },
+          {
+            "w": "ancient"
+          },
+          {
+            "w": "artefacts",
+            "wrong": true,
+            "said": "monuments"
+          },
+          {
+            "w": "in"
+          },
+          {
+            "w": "three"
+          },
+          {
+            "w": "dimensions"
+          },
+          {
+            "w": "without"
+          },
+          {
+            "w": "touching",
+            "wrong": true,
+            "said": "damaging"
+          },
+          {
+            "w": "the"
+          },
+          {
+            "w": "original"
+          },
+          {
+            "w": "objects."
+          },
+          {
+            "w": "School"
+          },
+          {
+            "w": "groups"
+          },
+          {
+            "w": "especially"
+          },
+          {
+            "w": "enjoy",
+            "wrong": true,
+            "said": "prefer"
+          },
+          {
+            "w": "this"
+          },
+          {
+            "w": "technology."
+          }
+        ]
+      },
+      {
+        "words": [
+          {
+            "w": "Fermented"
+          },
+          {
+            "w": "foods"
+          },
+          {
+            "w": "such"
+          },
+          {
+            "w": "as"
+          },
+          {
+            "w": "yoghurt"
+          },
+          {
+            "w": "and"
+          },
+          {
+            "w": "kimchi"
+          },
+          {
+            "w": "contain"
+          },
+          {
+            "w": "live"
+          },
+          {
+            "w": "bacteria"
+          },
+          {
+            "w": "that"
+          },
+          {
+            "w": "may"
+          },
+          {
+            "w": "harm",
+            "wrong": true,
+            "said": "help"
+          },
+          {
+            "w": "digestion."
+          },
+          {
+            "w": "Scientists"
+          },
+          {
+            "w": "believe"
+          },
+          {
+            "w": "these"
+          },
+          {
+            "w": "microbes"
+          },
+          {
+            "w": "support"
+          },
+          {
+            "w": "a"
+          },
+          {
+            "w": "balanced"
+          },
+          {
+            "w": "gut"
+          },
+          {
+            "w": "environment",
+            "wrong": true,
+            "said": "ecosystem"
+          },
+          {
+            "w": "and"
+          },
+          {
+            "w": "possibly"
+          },
+          {
+            "w": "stronger"
+          },
+          {
+            "w": "immunity."
+          }
+        ]
+      }
     ],
     "writeFromDictation": [
-      { "text": "The recycling centre accepts glass, paper, and metal containers." },
-      { "text": "Exchange students must register with the local authorities." },
-      { "text": "The lecture on marine biology starts at nine sharp." }
+      {
+        "text": "The recycling centre accepts glass, paper, and metal containers."
+      },
+      {
+        "text": "Exchange students must register with the local authorities."
+      },
+      {
+        "text": "The lecture on marine biology starts at nine sharp."
+      }
     ]
   }
 }

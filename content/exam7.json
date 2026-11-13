@@ -1,0 +1,809 @@
+{
+  "meta": {
+    "id": 7,
+    "title": "PTE Academic Mock Exam 7 (2026 Format)"
+  },
+  "readAloud": [
+    {
+      "text": "Denim began as a tough cotton cloth produced in the French town of Nîmes, whose name gave us the phrase 'de Nîmes', later shortened to denim. In the 1870s, a Latvian tailor and a dry-goods supplier added copper rivets to strengthen work trousers, and blue jeans were born. Once clothing for miners and farmers, jeans became a global symbol of youth and casual style within a century."
+    },
+    {
+      "text": "Every autumn, billions of birds leave their breeding grounds in the Northern Hemisphere and travel south in search of food. Arctic terns make the longest journey of all, flying from pole to pole and cover seventy thousand kilometres a year. To navigate, birds combine cues: the position of the sun by day and the pattern of the stars by night. This remarkable ability continues to fascinate scientists."
+    },
+    {
+      "text": "In 1869, the Russian chemist Dmitri Mendeleev arranged the known elements into a table by atomic weight, leaving gaps where no known element seemed to fit. He predicted that new elements would be discovered to fill those spaces, and described their properties in advance. When gallium and germanium were later found to match his predictions almost exactly, the periodic table became the foundation of modern chemistry."
+    },
+    {
+      "text": "Desert ants are among the most gifted navigators in the animal kingdom. After wandering hundreds of metres in search of food, a single ant walks home in an almost perfectly straight line. It achieves this by counting its steps and continuously measuring the angle it has turned relative to the sun. When researchers lengthened the ant's legs, it still overshot the nest by a predictable distance."
+    },
+    {
+      "text": "In 1922, the British archaeologist Howard Carter opened the tomb of Tutankhamun in Egypt's Valley of the Kings. Unlike most royal tombs, it had escaped grave robbers and still held more than five thousand objects, including the golden mask that made the boy king famous worldwide. The discovery gave historians an extraordinary picture of ancient Egyptian burial customs."
+    },
+    {
+      "text": "Yawning remains one of the most familiar yet least understood human behaviours. A common theory holds that yawns help cool the brain, since people yawn more often in warm rooms than in cool ones. Even more striking is contagious yawning: watching or reading about a yawn can trigger one. Psychologists link this response to empathy, noting that young children who have not yet developed it rarely catch yawns."
+    },
+    {
+      "text": "The pencil is a humble object with a surprisingly dramatic history. Its core is graphite, a form of carbon discovered in England in the sixteenth century, when an entire mountain of the substance was found near Keswick. Because graphite is soft and brittle, early users wrapped the sticks in string or sheepskin. Later, a German chemist mixed graphite with clay, allowing pencils to be made in different hardnesses — a formula still used worldwide today."
+    }
+  ],
+  "repeatSentence": [
+    {
+      "text": "The registrar's office opens at nine and closes at four on weekdays."
+    },
+    {
+      "text": "Please hand in your lab report before the end of next week."
+    },
+    {
+      "text": "The guest speaker arrived early to test the projector and microphones."
+    },
+    {
+      "text": "Internship applications for the summer programme close on Monday."
+    },
+    {
+      "text": "The shuttle bus to the north campus runs every fifteen minutes."
+    },
+    {
+      "text": "Your final essay should include at least six academic sources."
+    },
+    {
+      "text": "The careers fair will be held in the sports hall this Thursday."
+    },
+    {
+      "text": "She won a scholarship to study marine biology in Australia."
+    },
+    {
+      "text": "Water freezes at zero degrees and boils at one hundred."
+    },
+    {
+      "text": "The seminar on ancient coins has been moved to room twelve."
+    }
+  ],
+  "describeImage": [
+    {
+      "title": "Book sales by format (millions of copies)",
+      "sample": "The bar chart shows annual sales of books by format, in millions of copies. Print books dominate with about 210 million copies sold, roughly sixty percent more than e-books at 130 million. Audiobooks account for the smallest share, at around 60 million, although they are growing quickly. Overall, printed books remain the most popular format by a clear margin.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0</text><text x='24' y='216' font-size='11'>50</text><text x='20' y='168' font-size='11'>100</text><text x='20' y='120' font-size='11'>150</text><text x='20' y='72' font-size='11'>200</text><text x='20' y='24' font-size='11'>250</text><rect x='100' y='58' width='80' height='202' fill='#2f6db3'/><rect x='220' y='135' width='80' height='125' fill='#2f6db3'/><rect x='340' y='202' width='80' height='58' fill='#2f6db3'/><text x='118' y='278' font-size='12'>Print</text><text x='236' y='278' font-size='12'>E-book</text><text x='352' y='278' font-size='12'>Audiobook</text></svg>"
+    },
+    {
+      "title": "Global sea level rise, 1990–2025 (mm above 1990 level)",
+      "sample": "The line graph tracks global sea level rise between 1990 and 2025, measured in millimetres above the 1990 level. Sea level rose slowly at first, gaining around 30 millimetres by 2000, but the rate of increase has accelerated, reaching approximately 120 millimetres by 2025. Overall, the graph shows that the pace of sea level rise has more than doubled over the period.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0</text><text x='24' y='185' font-size='11'>50</text><text x='18' y='105' font-size='11'>100</text><text x='18' y='25' font-size='11'>150</text><polyline points='80,260 195,212 310,148 425,92 480,68' fill='none' stroke='#d1495b' stroke-width='3'/><circle cx='80' cy='260' r='4' fill='#d1495b'/><circle cx='195' cy='212' r='4' fill='#d1495b'/><circle cx='310' cy='148' r='4' fill='#d1495b'/><circle cx='425' cy='92' r='4' fill='#d1495b'/><circle cx='480' cy='68' r='4' fill='#d1495b'/><text x='68' y='278' font-size='11'>1990</text><text x='286' y='278' font-size='11'>2010</text><text x='458' y='278' font-size='11'>2025</text></svg>"
+    },
+    {
+      "title": "How teenagers spend a typical day",
+      "sample": "The pie chart shows how a typical teenager spends a normal day. Sleep takes the largest share at 32 percent, followed by school at 25 percent and screen time at 20 percent. Sport and other activities account for 13 percent, while homework represents just 10 percent. Overall, sleep, school, and screens together occupy more than three-quarters of the day.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><circle cx='180' cy='150' r='110' fill='#2f6db3'/><path d='M180,150 L280,197 A110,110 0 0 1 133,250 Z' fill='#e8a13d'/><path d='M180,150 L133,250 A110,110 0 0 1 71,136 Z' fill='#4f9d69'/><path d='M180,150 L71,136 A110,110 0 0 1 115,61 Z' fill='#d1495b'/><path d='M180,150 L115,61 A110,110 0 0 1 180,40 Z' fill='#999'/><text x='330' y='80' font-size='12' fill='#2f6db3'>■ Sleep 32%</text><text x='330' y='110' font-size='12' fill='#e8a13d'>■ School 25%</text><text x='330' y='140' font-size='12' fill='#4f9d69'>■ Screens 20%</text><text x='330' y='170' font-size='12' fill='#d1495b'>■ Sport &amp; other 13%</text><text x='330' y='200' font-size='12' fill='#999'>■ Homework 10%</text></svg>"
+    }
+  ],
+  "retellLecture": [
+    {
+      "title": "The Terracotta Army",
+      "sample": "The lecture described the discovery of the Terracotta Army in 1974, when farmers digging a well near Xi'an found thousands of life-sized clay soldiers buried around 210 BC to guard the tomb of China's first emperor. No two faces are alike, and the figures once held real bronze weapons and wore bright paint, which flaked away minutes after excavation. Part of the army remains buried because conservation technology is still developing.",
+      "text": "In 1974, farmers digging a well near Xi'an in China stumbled upon one of the greatest archaeological discoveries: the Terracotta Army. More than eight thousand life-sized clay soldiers, along with horses and chariots, had been buried around 210 BC to guard the tomb of Qin Shi Huang, the first emperor of China. Astonishingly, no two faces are alike, and each figure once carried real bronze weapons. The soldiers were originally painted in bright colours, but exposure to air after excavation made the paint flake away within minutes. Today, conservationists work slowly at the site, and part of the army remains buried to protect it until conservation technology improves."
+    },
+    {
+      "title": "Building the Great Wall",
+      "sample": "The lecture explained that the Great Wall of China is actually a series of fortifications rebuilt over two thousand years, from rammed earth in early states to brick and mortar under the Ming dynasty. Watchtowers relayed smoke warnings within hours. Contrary to popular belief, the wall never fully stopped invaders; its value lay in slowing armies, channelling them toward defended passes, and controlling trade, making communication and control as important as defence.",
+      "text": "The Great Wall of China is not a single wall but a series of fortifications built and rebuilt over more than two thousand years. Early states used rammed earth and local stone; under the Ming dynasty, engineers added bricks and mortar, and watchtowers were positioned so that smoke signals could relay warnings between them in hours. Contrary to popular belief, the wall never stopped invaders completely; its value lay in slowing armies, channelling them toward defended passes, and giving early warning. The wall's real function was communication and control of trade as much as defence."
+    }
+  ],
+  "respondToSituation": [
+    {
+      "prompt": "You missed your dentist appointment yesterday because your bus broke down, and the clinic has sent a letter warning that patients who miss appointments without notice may be charged. You want to keep seeing the same dentist. Call the clinic's reception. What would you say?",
+      "audio": "You missed your dentist appointment yesterday because your bus broke down, and the clinic has sent a letter warning that patients who miss appointments without notice may be charged. You want to keep seeing the same dentist. Call the clinic's reception. What would you say?",
+      "sample": "Hello, this is Jordan Blake, I have an appointment with Doctor Reyes. I'm calling because I missed my visit yesterday, and I feel terrible about it. My bus broke down on the way, and by the time I reached a phone, the surgery was already closed. I know the clinic charges for missed appointments, and I understand the policy — I'd be happy to pay the fee. What I'd really like is to rebook with Doctor Reyes as soon as possible, because I still need the treatment we discussed. Could you let me know the earliest available slot? I can come at any time this week. Thank you very much, and again, I'm sorry for the confusion."
+    },
+    {
+      "prompt": "You are on a study trip abroad and your passport has been stolen along with your bag. Your flight home is in four days. Call your country's embassy or consulate for advice. What would you say?",
+      "audio": "You are on a study trip abroad and your passport has been stolen along with your bag. Your flight home is in four days. Call your country's embassy or consulate for advice. What would you say?",
+      "sample": "Good morning. My name is Casey Nguyen, and I'm a student from your country studying here on a short trip. I'm afraid my bag was stolen this morning, and my passport was inside it. I've already reported the theft to the local police and I have the report number here. My flight home is in four days, so I need to get an emergency travel document as quickly as possible. Could you tell me exactly what documents I should bring, what the fee is, and how long the replacement process usually takes? I'm free to come to the consulate at any time today or tomorrow. I'd really appreciate your help — thank you."
+    }
+  ],
+  "summarizeGroupDiscussion": [
+    {
+      "topic": "The university is considering adding a compulsory financial literacy module for all first-year students. Discuss.",
+      "sample": "The students discussed a proposal to make financial literacy compulsory for first-years. Speaker A supported it strongly, arguing that many graduates accumulate debt without understanding loans, taxes, or budgeting, and that payday lenders exploit this ignorance. Speaker B objected that the curriculum is already crowded and that a one-off module would be quickly forgotten, preferring optional workshops. Speaker C proposed a short online module with practical tasks such as a budgeting simulation. They agreed that a brief, practical, compulsory online course was a reasonable compromise.",
+      "turns": [
+        {
+          "speaker": "A",
+          "text": "I think this is long overdue. Most of us will sign loan agreements worth thousands this year, and how many of us actually understand interest rates or how taxes work? Financial mistakes at eighteen can follow you for a decade."
+        },
+        {
+          "speaker": "B",
+          "text": "I understand the motivation, but the timetable is already full. Another compulsory module means either cutting something real or overloading students. And honestly, a two-hour lecture on compound interest in week three will be forgotten by Christmas."
+        },
+        {
+          "speaker": "C",
+          "text": "What if it were online and short? A few hours of material with practical tasks — build a budget for a student loan, compare two phone contracts, spot the hidden fees in a payday loan ad. You could complete it in a week."
+        },
+        {
+          "speaker": "A",
+          "text": "That would still help. The cost of not knowing this is enormous — people get trapped by payday lenders precisely because nobody taught them what the interest really means."
+        },
+        {
+          "speaker": "B",
+          "text": "If it's brief, practical, and genuinely useful — not a box-ticking lecture — I could accept making it compulsory. Make the tasks real, like planning a term's budget with our actual living costs."
+        },
+        {
+          "speaker": "C",
+          "text": "So: short online module, real-life scenarios, completed before the first loan instalment arrives. That seems like something everyone could support."
+        }
+      ]
+    },
+    {
+      "topic": "Should primary schools stop setting homework? Discuss.",
+      "sample": "The students discussed whether primary schools should abolish homework. Speaker A argued that young children are exhausted after a full school day and that research shows little academic benefit from homework at that age. Speaker B supported homework for building routines and involving parents, but only in small amounts, mainly daily reading. Speaker C raised the issue of unequal home environments and suggested replacing worksheets with reading and practical activities. They agreed that daily reading should remain, but formal written homework should be minimal or removed.",
+      "turns": [
+        {
+          "speaker": "A",
+          "text": "Honestly, I'd get rid of it. Children in primary school are only young, and after six hours of lessons they need to play and rest. The research I've read says homework adds almost nothing academically at that age, but it causes plenty of evening arguments."
+        },
+        {
+          "speaker": "B",
+          "text": "I see the argument, but homework isn't only about marks. Ten minutes of reading with a parent builds a routine, and it shows families what their children are learning. I'd keep that, even if we cut everything else."
+        },
+        {
+          "speaker": "C",
+          "text": "There's another problem nobody mentions: not every home is the same. Some children share a room with three siblings, or their parents work evenings. Marks-based homework ends up measuring home circumstances, not effort."
+        },
+        {
+          "speaker": "A",
+          "text": "Exactly, and that's why I'd replace worksheets with things any family can do — reading a story, cooking and measuring, that kind of task."
+        },
+        {
+          "speaker": "B",
+          "text": "So daily reading stays, formal written homework goes, and anything optional is practical. That sounds like a fair balance to me."
+        }
+      ]
+    }
+  ],
+  "answerShortQuestion": [
+    {
+      "question": "What do you call a professional who designs buildings?",
+      "answer": "An architect"
+    },
+    {
+      "question": "Which organ pumps blood around the human body?",
+      "answer": "The heart"
+    },
+    {
+      "question": "What is the past tense of the verb 'teach'?",
+      "answer": "Taught"
+    },
+    {
+      "question": "What do you call the place where aircraft take off and land?",
+      "answer": "An airport"
+    },
+    {
+      "question": "What is a group of lions called?",
+      "answer": "A pride"
+    }
+  ],
+  "summarizeWrittenText": [
+    {
+      "passage": "Within seconds of meeting someone, people form judgements about trustworthiness and competence, and research shows these snap decisions are surprisingly durable. Studies find that observers agree strongly with one another about who looks friendly or capable, even when shown faces for a tenth of a second. Such judgements are shaped by facial structure, clothing, posture, and voice, and they influence real outcomes: interviewers favour candidates who appear confident, and voters often support candidates who simply look competent. Critics argue that these impressions are frequently wrong, because they rely on superficial cues rather than actual behaviour. Nevertheless, first impressions are difficult to overturn, since later information tends to be interpreted in ways that confirm the initial judgement. For this reason, communication experts advise preparing carefully for first encounters.",
+      "sample": "First impressions form within seconds, are shaped largely by superficial cues, and strongly influence real outcomes such as hiring and voting; although they are often inaccurate, they persist because later information is interpreted to confirm them, so experts advise preparing carefully for first encounters."
+    },
+    {
+      "passage": "Procrastination is often misunderstood as laziness, but psychologists describe it as a problem of emotion regulation rather than time management. When a task triggers anxiety, boredom, or self-doubt, delaying it provides immediate relief, and the brain learns to repeat the pattern. Unfortunately, avoidance increases stress as deadlines approach, and the task itself becomes even more threatening. Research suggests that breaking projects into small, specific steps reduces the emotional barrier, because starting is the hardest part. Self-compassion also helps: students who forgive themselves for procrastinating procrastinate less afterwards, while harsh self-criticism deepens the cycle. Deadlines imposed by others help only partially, since the underlying emotions remain. Effective strategies therefore focus on lowering the cost of beginning rather than on willpower alone.",
+      "sample": "Psychologists view procrastination as emotion regulation rather than laziness, since delaying anxiety-inducing tasks brings relief that reinforces avoidance; effective responses include breaking work into small steps and practising self-compassion, which lower the emotional cost of starting, whereas harsh self-criticism and external deadlines help little."
+    }
+  ],
+  "essay": [
+    {
+      "prompt": "In some countries, voting in national elections is compulsory; in others, voting is voluntary. Discuss the advantages and disadvantages of compulsory voting and give your own opinion. Write 200–300 words.",
+      "sample": "Possible structure: (1) Introduction — outline the debate (compulsory vs voluntary voting) and state your position. (2) Advantages: higher and more representative turnout, elections reflect the whole population rather than only motivated voters, reduces the influence of extreme groups that mobilise small bases, easier campaigning focused on policies. (3) Disadvantages: personal freedom arguments — voting as a right, not a duty; uninformed or resentful votes may distort results; fines punish the poor disproportionately. (4) Conclusion — your view, e.g. compulsory voting is justified because democratic legitimacy outweighs the freedom argument, possibly with a 'none of the above' option. Useful phrases: 'It is widely debated whether…', 'A frequently cited advantage is…', 'Critics counter that…', 'Weighing both sides, I would argue…'"
+    }
+  ],
+  "reading": {
+    "fibDropdown": [
+      {
+        "text": "The number zero, so familiar today, took centuries to {{1}} as a true number. Early counting systems used blank spaces or symbols for nothing, but traders in ancient India treated zero as a quantity that could be {{2}} in calculations. Arab scholars carried the idea westward, and European mathematicians gradually {{3}} it, although some Italian cities initially banned the new numerals in favour of Roman ones. Today, digital technology rests entirely on strings of ones and {{4}}.",
+        "blanks": [
+          {
+            "options": [
+              "emerge",
+              "merge",
+              "submerge",
+              "immerse"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "used",
+              "abused",
+              "amused",
+              "accused"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "adopted",
+              "adapted",
+              "adjusted",
+              "admitted"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "zeros",
+              "blanks",
+              "hollows",
+              "vacuums"
+            ],
+            "correct": 0
+          }
+        ]
+      },
+      {
+        "text": "In 1940, four teenagers chasing a lost dog near the French village of Montignac discovered a cave {{1}} with hundreds of prehistoric paintings. The Lascaux images, created around seventeen thousand years ago, show bulls, horses, and deer rendered with remarkable {{2}}. The cave was opened to visitors after the war, but the breath and heat of thousands of tourists {{3}} the paintings, and the site was {{4}} in 1963; visitors now tour a full-scale replica nearby instead.",
+        "blanks": [
+          {
+            "options": [
+              "decorated",
+              "decorating",
+              "decorate",
+              "decoration"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "detail",
+              "retail",
+              "tailor",
+              "detain"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "engaged",
+              "managed",
+              "damaged",
+              "voyaged"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "closed",
+              "clothed",
+              "classified",
+              "crossed"
+            ],
+            "correct": 0
+          }
+        ]
+      },
+      {
+        "text": "Twice each day, most coastlines experience the rhythmic {{1}} and fall of the tide. These movements are caused chiefly by the gravitational {{2}} of the moon, which drags the oceans slightly towards it. When the sun, moon, and Earth line up, their combined pull produces exceptionally high {{3}} known as spring tides. Tidal energy schemes exploit this dependable motion to {{4}} electricity.",
+        "blanks": [
+          {
+            "options": [
+              "risen",
+              "rise",
+              "rising",
+              "arise"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "attraction",
+              "attribution",
+              "attention",
+              "attitude"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "tiles",
+              "timbers",
+              "tides",
+              "titles"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "grant",
+              "grate",
+              "generate",
+              "regret"
+            ],
+            "correct": 2
+          }
+        ]
+      },
+      {
+        "text": "Camels are famously {{1}} to life in the desert. Their humps store fat rather than water, allowing them to {{2}} for days without drinking. Their wide, padded feet spread their weight on soft sand, and long eyelashes {{3}} blowing dust out of their eyes. When water finally becomes available, a thirsty camel can drink more than one hundred litres in minutes, rehydrating far faster than most {{4}} could survive.",
+        "blanks": [
+          {
+            "options": [
+              "adopted",
+              "adapted",
+              "adept",
+              "adequate"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "support",
+              "survive",
+              "supply",
+              "subscribe"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "protest",
+              "provide",
+              "protect",
+              "provoke"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "mumbles",
+              "medals",
+              "models",
+              "mammals"
+            ],
+            "correct": 3
+          }
+        ]
+      },
+      {
+        "text": "In 1895, the German physicist Wilhelm Röntgen was experimenting with rays emitted from a glass tube when he noticed that a nearby screen {{1}} with light, although the tube was covered. He had discovered X-rays, an invisible radiation that {{2}} through flesh but is stopped by bone. Within months, hospitals were using the rays to {{3}} broken bones, and Röntgen received the first Nobel Prize in Physics in 1901. He famously refused to {{4}} patents, insisting that scientific discoveries should benefit everyone.",
+        "blanks": [
+          {
+            "options": [
+              "glowed",
+              "grew",
+              "blown",
+              "glittered"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "presses",
+              "praises",
+              "passes",
+              "promises"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "lodge",
+              "loft",
+              "locate",
+              "lock"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "fill",
+              "file",
+              "fail",
+              "fall"
+            ],
+            "correct": 1
+          }
+        ]
+      }
+    ],
+    "mcMultiple": [
+      {
+        "passage": "In 1977, NASA attached a gold-plated record to each of the two Voyager spacecraft before their journey out of the solar system. The records carry a variety of sounds selected to represent humanity: greetings in dozens of languages, whale song, classical and folk music, and a message from the United Nations. Encoded images show everything from the structure of DNA to a supermarket checkout. Because no one knows whether anything will ever find them, the records function less as communication than as a time capsule — a statement about who we were when the probes were launched.",
+        "question": "Which of the following are stated in the passage about the Voyager records?",
+        "options": [
+          "They include greetings spoken in many languages",
+          "They contain video footage of major cities",
+          "They include recorded whale song",
+          "They carry images encoded on the disc",
+          "They are expected to be discovered within a century"
+        ],
+        "answers": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "passage": "Louis Braille lost his sight as a young child after an accident in his father's workshop. At the age of ten, he won a scholarship to one of the world's first schools for blind students in Paris. There he learned a military code that used raised dots to pass messages at night, and he spent years simplifying and refining it. The six-dot system he created can represent every letter, number, and musical symbol. Although it was slow to be adopted — many teachers resisted it, and early trials in schools were delayed — Braille eventually became the standard reading system for blind people worldwide.",
+        "question": "According to the passage, which of the following are true?",
+        "options": [
+          "Braille was blinded in childhood by an accident",
+          "He copied the military code exactly without changing it",
+          "The system can encode numbers and music as well as letters",
+          "The system was accepted quickly and without opposition",
+          "He studied at one of the first schools for blind students"
+        ],
+        "answers": [
+          0,
+          2,
+          4
+        ]
+      }
+    ],
+    "reorder": [
+      {
+        "sentences": [
+          "The life cycle of a star can span billions of years, from birth in a cloud of gas to a spectacular end.",
+          "A star is born when gravity pulls the gas and dust of a nebula into a dense, glowing ball.",
+          "For most of its life, the star burns steadily, fusing hydrogen into helium in its core.",
+          "When the fuel finally runs out, the star expands into a red giant before collapsing into a white dwarf or exploding as a supernova."
+        ]
+      },
+      {
+        "sentences": [
+          "Bread has been a staple food for thousands of years, and its basic production process has changed little.",
+          "First, flour is mixed with water and yeast to form a dough.",
+          "The dough is then left to rise, as the yeast releases gas that makes it expand.",
+          "Finally, it is baked at a high temperature, which sets its structure and produces the crust."
+        ]
+      }
+    ],
+    "fibDrag": [
+      {
+        "text": "Early mapmakers combined careful observation with educated {{1}}. Sailors recorded coastlines and landmarks, while scholars filled the unknown interior with monsters and speculations. Only when surveys became systematic did maps {{2}} resemble the world as it is.",
+        "answers": [
+          "guesses",
+          "closely"
+        ],
+        "bank": [
+          "guesses",
+          "closely",
+          "anchors",
+          "hollow",
+          "freely",
+          "trades"
+        ]
+      },
+      {
+        "text": "Musicians improve not simply by playing for hours but by practising {{1}}. Isolating difficult passages and repeating them slowly builds accuracy far faster than playing a whole piece repeatedly. Rest matters too: skills continue to develop during sleep, when the brain {{2}} what was rehearsed.",
+        "answers": [
+          "deliberately",
+          "consolidates"
+        ],
+        "bank": [
+          "deliberately",
+          "consolidates",
+          "casually",
+          "forgets",
+          "melody",
+          "instantly"
+        ]
+      },
+      {
+        "text": "Governments conduct a census to {{1}} how many people live in a country and where. The results determine how seats in parliament are allocated and how public money is {{2}} between regions. Because populations move and change, the exercise must be repeated every few years.",
+        "answers": [
+          "count",
+          "distributed"
+        ],
+        "bank": [
+          "count",
+          "distributed",
+          "hide",
+          "invented",
+          "rarely",
+          "scattered"
+        ]
+      },
+      {
+        "text": "Before {{1}} became common, households preserved food by salting, smoking, or packing it in ice. The first practical refrigerator for the home appeared in the 1920s, and it soon {{2}} both the frequency of shopping trips and the amount of food thrown away.",
+        "answers": [
+          "refrigeration",
+          "reduced"
+        ],
+        "bank": [
+          "refrigeration",
+          "reduced",
+          "heating",
+          "spoiled",
+          "delivered",
+          "rapidly"
+        ]
+      }
+    ],
+    "mcSingle": [
+      {
+        "passage": "In 1782, Joseph-Michel Montgolfier watched laundry rise above a fire and wondered whether smoke could lift a balloon. Together with his brother Jacques-Étienne, he built a paper-lined fabric balloon and filled it with hot air from a burning fire of straw and wool. In 1783 their craft carried the first living passengers — a sheep, a duck, and a rooster — before a manned flight was attempted in Paris. Their invention astonished crowds and made the brothers celebrities across Europe. Within a year, hydrogen balloons were competing with their design, but the Montgolfiers' name remained attached to hot-air flight.",
+        "question": "What is the principal claim of this passage?",
+        "options": [
+          "Why hot air balloons are safer than hydrogen balloons",
+          "How the Montgolfier brothers developed the first hot-air balloon",
+          "The first manned flight across the English Channel",
+          "The use of farm animals in scientific experiments"
+        ],
+        "answer": 1
+      },
+      {
+        "passage": "Nylon, the world's first fully synthetic fibre, was created in 1935 by a chemist named Wallace Carothers working for the DuPont company. Publicised as stronger than silk and as fine as a spider's thread, it first appeared in toothbrush bristles, then in women's stockings, which sold out across America within days of reaching the shops. During the Second World War, nylon was diverted to make parachutes and ropes, and women famously traded their last stockings to support the war effort. The fibre's success launched an entire industry of synthetic materials.",
+        "question": "What is the key message the writer wants to convey?",
+        "options": [
+          "Nylon stockings remained more popular in Europe than in America",
+          "Nylon was the first synthetic fibre, first used in bristles and stockings before wartime demand redirected it",
+          "DuPont invented nylon specifically to supply wartime parachutes",
+          "Nylon proved weaker than silk but far cheaper to produce"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  "listening": {
+    "summarizeSpokenText": [
+      {
+        "title": "Recording without writing: the Inca quipu",
+        "sample": "The lecture explained how the Inca empire kept detailed records without writing, using the quipu — coloured cords hung with smaller strings and knots. The position, colour, and type of knot encoded numbers such as crops stored, taxes owed, and population figures for whole provinces. Because the code has never been fully deciphered, scholars debate whether quipu also recorded stories or songs. The speaker concluded that the quipu proves a civilisation can organise information without literacy.",
+        "audio": "The Inca empire ruled millions of people without any known system of writing, yet its administrators kept remarkably detailed records. Their tool was the quipu, a set of coloured cords from which smaller strings hung, each decorated with knots. The position, colour, and type of knot encoded numbers: crops stored, taxes owed, and population figures for entire provinces. Because the code has never been fully deciphered, scholars debate whether quipu also recorded stories or songs. Whatever the answer, the quipu shows that a sophisticated civilisation can organise information without a single written sentence — a useful reminder that literacy is not the only path to administration."
+      },
+      {
+        "title": "A short history of ice cream",
+        "sample": "The lecture traced ice cream from its ancient roots, when Chinese and Persian cooks mixed snow with fruit syrups and chilled dairy, to the iced desserts served by European nobility, which demanded huge stores of ice. The modern cone appeared by accident at the 1904 World's Fair when vendors ran out of dishes and borrowed waffles from a neighbouring stall. Industrial refrigeration then turned the luxury into an everyday treat, illustrating how technologies invented for the wealthy eventually become affordable for everyone.",
+        "audio": "Ice cream has surprisingly ancient roots. Chinese and Persian cooks were mixing snow with fruit syrups and chilled dairy more than a thousand years ago, and European nobility later impressed guests with iced desserts that required enormous quantities of stored ice. The modern cone appeared at the 1904 World's Fair in America, where vendors ran out of dishes and borrowed thin waffles from a neighbouring stall. Industrial refrigeration then turned a luxury into an everyday treat. The speaker ends by noting that ice cream illustrates a familiar pattern: technologies invented for the wealthy eventually become affordable for everyone."
+      }
+    ],
+    "mcMultiple": [
+      {
+        "audio": "Good morning. A few reminders about Friday's field trip to the coastal science museum. The coach leaves from the main gate at eight fifteen. Please bring a packed lunch, as the museum café is being refurbished and will be closed. At the museum, you will attend a short talk on tides and then complete a worksheet in pairs; the worksheet must be handed to your tutor before you board the coach home. Anyone who has not returned a signed permission slip must do so by Wednesday afternoon.",
+        "question": "Which statements are confirmed by the announcement you just heard?",
+        "options": [
+          "The coach departs at a quarter past eight",
+          "Students should buy lunch at the museum café",
+          "The worksheet is completed in pairs",
+          "Signed permission slips are due by Wednesday afternoon",
+          "The trip has been cancelled because of refurbishment"
+        ],
+        "answers": [
+          0,
+          2,
+          3
+        ]
+      }
+    ],
+    "fillBlanks": [
+      {
+        "display": "Roman engineers built {{1}} to carry fresh water from hills into cities. The channels sloped very gently, sometimes dropping only a few {{2}} over a kilometre. Water fed public fountains, bath houses, and the private homes of the {{3}}.",
+        "answers": [
+          "aqueducts",
+          "centimetres",
+          "wealthy"
+        ],
+        "audio": "Roman engineers built aqueducts to carry fresh water from hills into cities. The channels sloped very gently, sometimes dropping only a few centimetres over a kilometre. Water fed public fountains, bath houses, and the private homes of the wealthy."
+      },
+      {
+        "display": "Before Friday's performance, the cast will hold a full {{1}} in costume. Please arrive by six, as the lighting crew needs time to {{2}} the spotlights. Actors should speak clearly and wait for the {{3}} before crossing the stage.",
+        "answers": [
+          "rehearsal",
+          "adjust",
+          "cue"
+        ],
+        "audio": "Before Friday's performance, the cast will hold a full rehearsal in costume. Please arrive by six, as the lighting crew needs time to adjust the spotlights. Actors should speak clearly and wait for the cue before crossing the stage."
+      },
+      {
+        "display": "For this project, each pair will investigate one major river and give a short {{1}} next week. Focus on how the river is used for transport, farming, or {{2}} — that is, producing electricity. Remember to {{3}} where your maps and statistics came from.",
+        "answers": [
+          "presentation",
+          "power",
+          "acknowledge"
+        ],
+        "audio": "For this project, each pair will investigate one major river and give a short presentation next week. Focus on how the river is used for transport, farming, or power — that is, producing electricity. Remember to acknowledge where your maps and statistics came from."
+      }
+    ],
+    "highlightCorrectSummary": [
+      {
+        "audio": "Most people assume that a purring cat is a happy cat, and purring does often signal contentment. Yet cats also purr in stressful situations — at the vet's clinic, during labour, or when injured — which makes pure happiness an incomplete explanation. One leading theory suggests purring evolved as a self-repair mechanism: the low-frequency vibrations may promote the healing of bones and tissue. Kittens purr while nursing, perhaps to signal well-being to their mother, and mother cats purr to reassure them.",
+        "options": [
+          "Purring is only produced when a cat feels safe and content",
+          "Cats purr in both calm and stressful situations, and one theory holds that the vibrations may aid physical healing, making it a multipurpose signal",
+          "Cats purr only to reassure their kittens during nursing",
+          "Vets believe purring is usually a sign of serious illness in cats"
+        ],
+        "answer": 1
+      }
+    ],
+    "mcSingle": [
+      {
+        "audio": "Excuse me, Dr Palmer. For my sociology essay I've used an interview I heard on a podcast. I'm not sure how to list it in my references — do I cite the person who was interviewed or the person who hosted the show? And do I need the exact date it was published?",
+        "question": "Why is the student speaking to Dr Palmer?",
+        "options": [
+          "To ask how to reference a podcast interview",
+          "To complain about a low essay mark",
+          "To request an interview for a sociology project",
+          "To ask for an extension on an essay"
+        ],
+        "answer": 0
+      }
+    ],
+    "selectMissingWord": [
+      {
+        "audio": "When you deliver a presentation, your slides should support what you say, not replace it. Keep the text on each slide short, choose images that genuinely add meaning, and face your audience rather than the screen. Practise out loud at least once, because reading from notes always sounds flat. Most importantly, close with a clear summary of your main",
+        "options": [
+          "points",
+          "slides",
+          "notes",
+          "jokes"
+        ],
+        "answer": 0,
+        "fullText": "Most importantly, close with a clear summary of your main points."
+      }
+    ],
+    "highlightIncorrectWords": [
+      {
+        "words": [
+          {
+            "w": "The"
+          },
+          {
+            "w": "city"
+          },
+          {
+            "w": "museum"
+          },
+          {
+            "w": "offers"
+          },
+          {
+            "w": "free",
+            "wrong": true,
+            "said": "three"
+          },
+          {
+            "w": "entry"
+          },
+          {
+            "w": "on"
+          },
+          {
+            "w": "Sundays,"
+          },
+          {
+            "w": "and"
+          },
+          {
+            "w": "a"
+          },
+          {
+            "w": "volunteer"
+          },
+          {
+            "w": "leads"
+          },
+          {
+            "w": "guided"
+          },
+          {
+            "w": "tours"
+          },
+          {
+            "w": "every"
+          },
+          {
+            "w": "two"
+          },
+          {
+            "w": "hours.",
+            "wrong": true,
+            "said": "minutes"
+          },
+          {
+            "w": "Children"
+          },
+          {
+            "w": "must"
+          },
+          {
+            "w": "be"
+          },
+          {
+            "w": "accompanied"
+          },
+          {
+            "w": "always.",
+            "wrong": true,
+            "said": "alone"
+          }
+        ]
+      },
+      {
+        "words": [
+          {
+            "w": "Our"
+          },
+          {
+            "w": "next"
+          },
+          {
+            "w": "assignment"
+          },
+          {
+            "w": "is"
+          },
+          {
+            "w": "worth"
+          },
+          {
+            "w": "fifteen",
+            "wrong": true,
+            "said": "fifty"
+          },
+          {
+            "w": "percent"
+          },
+          {
+            "w": "of"
+          },
+          {
+            "w": "the"
+          },
+          {
+            "w": "final"
+          },
+          {
+            "w": "grade,"
+          },
+          {
+            "w": "so"
+          },
+          {
+            "w": "please"
+          },
+          {
+            "w": "read"
+          },
+          {
+            "w": "the"
+          },
+          {
+            "w": "instructions"
+          },
+          {
+            "w": "carefully",
+            "wrong": true,
+            "said": "cheerfully"
+          },
+          {
+            "w": "before"
+          },
+          {
+            "w": "you"
+          },
+          {
+            "w": "start",
+            "wrong": true,
+            "said": "stop"
+          },
+          {
+            "w": "writing"
+          },
+          {
+            "w": "tonight."
+          }
+        ]
+      }
+    ],
+    "writeFromDictation": [
+      {
+        "text": "The library garden project was funded by former students."
+      },
+      {
+        "text": "Accurate measurement is essential in every scientific experiment."
+      },
+      {
+        "text": "Many coastal towns depend on tourism during the summer."
+      }
+    ]
+  }
+}

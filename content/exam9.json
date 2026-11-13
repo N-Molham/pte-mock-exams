@@ -1,0 +1,822 @@
+{
+  "meta": {
+    "id": 9,
+    "title": "PTE Academic Mock Exam 9 (2026 Format)"
+  },
+  "readAloud": [
+    {
+      "text": "In 1582, Pope Gregory the Thirteenth reformed the Julian calendar, which had drifted from the solar year by ten days. The reform removed leap days in most century years, so the calendar year stayed aligned with the seasons. Adoption spread slowly, however, and Britain did not accept the Gregorian calendar until seventeen fifty-two. Russia waited until the twentieth century."
+    },
+    {
+      "text": "Cartography, the science of making maps, has developed alongside human exploration for thousands of years. Early mapmakers worked from travellers' accounts and rough measurements, so their charts were often distorted. The systematic surveys of the eighteenth century brought far greater accuracy, and satellite technology has since made detailed mapping of even remote regions possible for the first time."
+    },
+    {
+      "text": "Medieval cathedral builders faced enormous engineering challenges without the benefit of modern mathematics. Their soaring structures relied on pointed arches, ribbed vaults, and flying buttresses to channel the weight of the roof safely downward. Although several collapses occurred during construction, the surviving cathedrals testify to a sophisticated understanding of stone, light, and proportion. Many visitors today underestimate this achievement."
+    },
+    {
+      "text": "The bicycle, developed in its modern form during the late nineteenth century, transformed personal mobility. For the first time, ordinary people could travel farther and faster under their own power. The machine also advanced engineering, popularising pneumatic tyres, ball bearings, and chain drives, technologies that later shaped the motorcar and the aeroplane. Its social impact was equally profound, particularly for women."
+    },
+    {
+      "text": "Mangrove forests grow along tropical coastlines where salt and fresh water meet. Their tangled roots trap sediment, stabilise the shoreline, and shelter juvenile fish among the tides. Scientists estimate that a healthy mangrove belt absorbs the energy of most storm waves, making these forests a natural and cost-effective defence against coastal flooding. Yet large areas continue to be cleared for aquaculture and development."
+    },
+    {
+      "text": "The Rosetta Stone, discovered in Egypt in 1799, carries the same decree carved in three scripts: hieroglyphic, demotic, and ancient Greek. Because scholars could already read Greek, the stone provided the key to deciphering hieroglyphs, a script that had been silent for well over a thousand years, and thereby reopened the written record of ancient Egypt."
+    },
+    {
+      "text": "Global trade in second-hand clothing has grown into a multi-billion-dollar industry. Donated garments from wealthier countries are sorted, graded, and exported to markets across Africa and Asia, where they support millions of livelihoods. Critics, however, argue that the trade can undermine local textile production and masks the problem of overconsumption at its source. Regulation is increasingly under discussion."
+    }
+  ],
+  "repeatSentence": [
+    {
+      "text": "The careers fair in the sports hall has been moved to next Thursday."
+    },
+    {
+      "text": "Please remember to bring your laboratory coat to the afternoon session."
+    },
+    {
+      "text": "The final marks will be published on the student portal next Wednesday."
+    },
+    {
+      "text": "A visiting lecturer from Norway will speak about polar navigation tomorrow evening."
+    },
+    {
+      "text": "Free dictionary workshops are offered to international students every month."
+    },
+    {
+      "text": "The bus to the research station leaves promptly at eight o'clock."
+    },
+    {
+      "text": "Course enrolment for the spring semester opens on the first of March."
+    },
+    {
+      "text": "Lunchtime concerts in the courtyard are open to staff and students alike."
+    },
+    {
+      "text": "The assignment guidelines have been updated, so please download the latest version."
+    },
+    {
+      "text": "Photography is not permitted inside the conservation area without written permission."
+    }
+  ],
+  "describeImage": [
+    {
+      "title": "Unemployment rate by country (%)",
+      "sample": "The bar chart compares the unemployment rate in four countries. Spain has by far the highest rate, at nearly twelve percent, followed by Canada at around six percent. Germany and Japan have much lower figures, at roughly three percent and two and a half percent respectively. Overall, Spain's unemployment rate is approximately double that of Canada and more than four times that of Japan or Germany.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0</text><text x='24' y='205' font-size='11'>3</text><text x='24' y='145' font-size='11'>6</text><text x='24' y='85' font-size='11'>9</text><text x='20' y='25' font-size='11'>12</text><rect x='90' y='24' width='70' height='236' fill='#2f6db3'/><rect x='190' y='138' width='70' height='122' fill='#2f6db3'/><rect x='290' y='192' width='70' height='68' fill='#2f6db3'/><rect x='390' y='208' width='70' height='52' fill='#2f6db3'/><text x='110' y='278' font-size='12'>Spain</text><text x='210' y='278' font-size='12'>Canada</text><text x='315' y='278' font-size='12'>Germany</text><text x='410' y='278' font-size='12'>Japan</text></svg>"
+    },
+    {
+      "title": "Cinema attendance, 2015–2025 (millions of tickets per year)",
+      "sample": "The line graph shows annual cinema attendance between 2015 and 2025. Attendance rose slightly from about 55 million tickets in 2015 to a peak of 60 million in 2019, then collapsed to around 22 million in 2020. It recovered steadily afterwards, reaching roughly 52 million by 2025. In summary, cinema attendance fell sharply in 2020 but has been climbing back towards its former level ever since.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0</text><text x='24' y='185' font-size='11'>20</text><text x='24' y='105' font-size='11'>40</text><text x='24' y='25' font-size='11'>60</text><polyline points='80,72 140,61 200,54 230,185 290,123 350,95 380,81' fill='none' stroke='#d1495b' stroke-width='3'/><circle cx='80' cy='72' r='4' fill='#d1495b'/><circle cx='200' cy='54' r='4' fill='#d1495b'/><circle cx='230' cy='185' r='4' fill='#d1495b'/><circle cx='380' cy='81' r='4' fill='#d1495b'/><text x='70' y='278' font-size='11'>2015</text><text x='220' y='278' font-size='11'>2020</text><text x='365' y='278' font-size='11'>2025</text></svg>"
+    },
+    {
+      "title": "Where students buy their textbooks (%)",
+      "sample": "The pie chart shows where university students obtain their textbooks. Online retailers are the largest source at 40 percent, slightly ahead of the campus bookshop at 35 percent. Second-hand purchases make up 18 percent, while digital copies account for only 7 percent. A small share, about 5 percent of students, rely on library copies shared with others. Overall, most students now buy their books online rather than on campus.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><circle cx='180' cy='150' r='110' fill='#2f6db3'/><path d='M180,150 L180,40 A110,110 0 0 1 285,182 Z' fill='#e8a13d'/><path d='M180,150 L285,182 A110,110 0 0 1 100,242 Z' fill='#4f9d69'/><path d='M180,150 L100,242 A110,110 0 0 1 73,132 Z' fill='#d1495b'/><path d='M180,150 L73,132 A110,110 0 0 1 180,40 Z' fill='#8a6fbf'/><text x='320' y='80' font-size='12' fill='#2f6db3'>■ Online retailers 40%</text><text x='320' y='110' font-size='12' fill='#e8a13d'>■ Campus bookshop 35%</text><text x='320' y='140' font-size='12' fill='#4f9d69'>■ Second-hand 18%</text><text x='320' y='170' font-size='12' fill='#d1495b'>■ Digital copies 7%</text><text x='320' y='200' font-size='12' fill='#8a6fbf'>■ Library 0% shared</text><text x='320' y='220' font-size='12' fill='#555'>(no single owner)</text></svg>"
+    }
+  ],
+  "retellLecture": [
+    {
+      "title": "What Antarctic ice cores tell us",
+      "sample": "The lecture explained how Antarctic ice cores record the Earth's past climate. Snow traps bubbles of ancient air and forms one layer each year, like tree rings, so drilling three kilometres recovers ice over eight hundred thousand years old. Analysing the layers shows past temperatures and greenhouse gas levels, and reveals that today's carbon dioxide concentration is higher than at any time in that record, making the cores both a history of climate and a warning.",
+      "text": "Antarctic ice cores are among the most valuable records of the Earth's past climate. Snow falling on the polar ice sheet traps bubbles of ancient air, and each year's snowfall forms a distinct layer, like the rings of a tree. By drilling down more than three kilometres, scientists can recover ice that fell over eight hundred thousand years ago. Analysis of these layers reveals past temperatures and the concentration of greenhouse gases, showing that carbon dioxide today is higher than at any point in that long record. The cores therefore provide both a natural history of climate change and a warning about its pace."
+    },
+    {
+      "title": "The invention of the compass",
+      "sample": "The lecture traced the history of the compass, one of China's great inventions. Early lodestone ladles were first used for arranging buildings, but magnetised needles floating in water later gave sailors a reliable direction-finder even when clouds hid the sun and stars. Reaching Europe through the Islamic world, the compass, together with improved maps, made long ocean voyages possible and opened the age of global exploration.",
+      "text": "The compass, one of China's Four Great Inventions, transformed navigation at sea. Early versions were ladles of lodestone that swung to align with the Earth's magnetic field, used at first for arranging buildings according to feng shui principles. By the eleventh century, magnetised iron needles floating in water gave mariners a direction-finder that worked when clouds hid the sun and stars. The technology reached Europe through the Islamic world, and the compass, together with improved maps and charts, made long ocean voyages practical. Historians argue that without this small instrument, the age of global exploration could not have begun as it did."
+    }
+  ],
+  "respondToSituation": [
+    {
+      "prompt": "You arrived for a two-week holiday, but your checked suitcase did not appear on the baggage carousel. Your clothes, medication, and camera were all inside it. Go to the airline's lost baggage desk inside the airport. What would you say?",
+      "audio": "You arrived for a two-week holiday, but your checked suitcase did not appear on the baggage carousel. Your clothes, medication, and camera were all inside it. Go to the airline's lost baggage desk inside the airport. What would you say?",
+      "sample": "Hello, I hope you can help me. My name is Jordan, and I've just arrived on flight 214 from Lisbon, but my suitcase never appeared on the carousel. It's a navy blue hard-shell case, and my baggage receipt number is on this stub. Inside are my clothes for two weeks, my daily medication, and my camera, so it's quite urgent. Could you check where the bag was last scanned? If it's still in Lisbon, please tell me when I can expect it, and explain how I'll be reimbursed for essentials like toiletries and clothing in the meantime. My hotel contact details are on this form. Thank you very much."
+    },
+    {
+      "prompt": "Your close friend asks to borrow a large sum of money to cover this month's rent, but you are saving for your own tuition and cannot afford to lend it. Meet your friend and explain. What would you say?",
+      "sample": "Thanks for being honest with me about how tight things are — I know this is stressful. I have to be honest back, though. I've been saving every month for my tuition fees, and the payment deadline is close, so I genuinely can't lend you that amount right now. It isn't because I don't trust you; it's simply money I've already promised for my studies. What I can do is help you look at other options: I could lend a small amount for food this week, go with you to ask the landlord about a short extension, or help you find extra shifts. I'm sorry I can't do more, and I hope we can figure the rest out together."
+    }
+  ],
+  "summarizeGroupDiscussion": [
+    {
+      "topic": "Should the university canteens go fully vegetarian?",
+      "sample": "The students discussed whether campus canteens should stop serving meat entirely. Speaker A argued it would cut emissions, improve sustainability credentials, and reflect student demand. Speaker B objected that choice should remain, that some athletes need more protein options, and that revenue could fall if students ate off campus. Speaker C proposed a trial in one canteen plus a survey, with nutritionists designing the menus. They agreed to support a semester-long trial rather than an immediate, university-wide change.",
+      "turns": [
+        {
+          "speaker": "A",
+          "text": "I think going fully vegetarian is the right call. Food is one of the university's biggest sources of emissions, several campuses abroad have already made the switch, and honestly the demand is there — the vegetarian stall always has the longest queue at lunchtime."
+        },
+        {
+          "speaker": "B",
+          "text": "I'm not convinced. Taking choice away entirely will backfire: students on sports scholarships need serious protein options, and if people start buying sandwiches off campus, the canteens could actually lose money. Serving less meat, not zero meat, seems smarter to me."
+        },
+        {
+          "speaker": "C",
+          "text": "Could we trial it first? For one semester, make the north canteen fully vegetarian while the others keep the current menu, and survey users before and after. That way we get real data instead of arguments."
+        },
+        {
+          "speaker": "A",
+          "text": "A trial is fine by me, as long as it's advertised properly. Half the time students don't even know what's on offer in the north canteen."
+        },
+        {
+          "speaker": "B",
+          "text": "Alright, I could accept a trial on those terms — but a nutritionist should design the menus so it's genuinely balanced, not just ten different versions of pasta."
+        },
+        {
+          "speaker": "C",
+          "text": "Agreed. I'll draft the proposal tonight: one semester, one canteen, survey attached, and a review meeting at the end."
+        }
+      ]
+    },
+    {
+      "topic": "Should athletes who cheat through doping be banned from sport for life?",
+      "sample": "The students debated whether doping should end an athlete's career permanently. Speaker A supported a lifetime ban, arguing that cheating steals medals and funding from clean athletes and that only a permanent penalty deters professionals. Speaker B thought lifetime bans were disproportionate, pointing to accidental contamination in supplements and young athletes' mistakes, and favoured suspensions with education. Speaker C suggested distinguishing deliberate cheating from negligence, with lifetime bans for repeat or deliberate offenders. They agreed the current penalties were inconsistent and favoured a tiered system with lifetime bans reserved for intentional, serious violations.",
+      "turns": [
+        {
+          "speaker": "A",
+          "text": "For me it's simple: if you dope, you're finished. A doping programme isn't a mistake, it's organised theft — you take medals, prize money, and sponsorship from athletes who trained clean. Only a lifetime ban makes the risk bigger than the reward."
+        },
+        {
+          "speaker": "B",
+          "text": "I understand the anger, but a lifetime ban punishes everyone the same way. Supplements get contaminated without the athlete knowing, and a nineteen-year-old who makes one bad decision shouldn't lose everything at the start of their career. Suspensions plus mandatory education would reform more people than exclusion."
+        },
+        {
+          "speaker": "C",
+          "text": "Maybe the real problem is that the rules don't distinguish between deliberate cheating and carelessness. What if deliberate or repeated doping carried a lifetime ban, while first-time negligence meant a shorter suspension?"
+        },
+        {
+          "speaker": "A",
+          "text": "That sounds reasonable in theory, but 'I didn't know' is exactly what every cheat says. Without strict liability, you get endless legal arguments, and the offenders' teams just get better at hiding it."
+        },
+        {
+          "speaker": "B",
+          "text": "Strict liability does exist already, and I'd keep it — the tiering would come at sentencing, not at the standard of proof. Harsh sentences for deliberate cases, second chances for proven accidents."
+        },
+        {
+          "speaker": "C",
+          "text": "So we broadly agree: tougher and more consistent, with lifetime bans reserved for intentional or repeat offenders. I think that's what we should present."
+        }
+      ]
+    }
+  ],
+  "answerShortQuestion": [
+    {
+      "question": "What do you call the written list of items to be discussed at a meeting?",
+      "answer": "An agenda"
+    },
+    {
+      "question": "Which colour do you get if you mix blue and yellow paint?",
+      "answer": "Green"
+    },
+    {
+      "question": "What do we call a period of ten years?",
+      "answer": "A decade"
+    },
+    {
+      "question": "Which organ in the human body pumps blood around the body?",
+      "answer": "The heart"
+    },
+    {
+      "question": "What is the opposite of the verb 'arrive'?",
+      "answer": "Depart"
+    }
+  ],
+  "summarizeWrittenText": [
+    {
+      "passage": "When two communities trade, migrate, or conquer one another, their languages exchange words, a process linguists call borrowing. English, for example, has absorbed thousands of terms from Norman French, Latin, Norse, and dozens of other tongues, so much so that only a minority of its vocabulary descends directly from Old English. Borrowed words are rarely identical to their originals: speakers reshape unfamiliar sounds into their own sound system, and meanings often shift along the way. Some borrowed words fade again within a generation, while others become so ordinary that nobody notices their foreign birth. Because borrowing records contact between peoples, linguists treat the vocabulary of a language as a kind of archaeological archive of its history.",
+      "sample": "Borrowing happens when communities interact, and English has absorbed vocabulary from many tongues; because borrowed words are reshaped, sometimes fade, and often pass unnoticed, linguists view a language's vocabulary as an archive recording the historical contacts of its speakers."
+    },
+    {
+      "passage": "Paper money first appeared in China during the Tang and Song dynasties, when merchants grew tired of carrying heavy strings of metal coins and began using receipts issued by trusted deposit shops. The government later took over the practice, printing the world's earliest banknotes, although over-issuance eventually caused severe inflation. European countries adopted paper money centuries later, initially through privately issued notes promising to pay the bearer gold on demand. Trust was the entire foundation of the system: a note was worthless if people doubted that it could be exchanged. Modern currencies no longer promise gold at all, yet the principle remains unchanged — money functions because the public believes others will accept it in payment.",
+      "sample": "Paper money originated in China as merchant receipts later taken over by the government, reached Europe through gold-backed private notes, and has always depended on public trust, a principle that persists today even though modern currencies no longer promise conversion into gold."
+    }
+  ],
+  "essay": [
+    {
+      "prompt": "Some countries start formal schooling at the age of four or five, while others delay it until children are six or seven. Which approach benefits children more? Discuss both views and give your own opinion. Write 200–300 words.",
+      "sample": "Possible structure: (1) Introduction — paraphrase the debate about the right age to begin formal schooling, state your position. (2) Arguments for starting early: young children absorb languages and routines quickly, school supports working parents, early screening can identify learning difficulties. (3) Arguments for starting later: play-based learning is crucial in early childhood, formal instruction too soon can cause stress and put children off learning, later starters often catch up quickly and show better wellbeing. (4) Conclusion — your view, e.g. a later start with high-quality, play-based preschool provision. Useful phrases: 'The appropriate age at which children should begin formal education is widely debated.', 'Proponents of an early start argue that…', 'Conversely, child development research suggests…', 'On balance, I believe…'"
+    }
+  ],
+  "reading": {
+    "fibDropdown": [
+      {
+        "text": "Cacao was first cultivated in Central America, where ancient peoples consumed chocolate as a bitter {{1}} during religious ceremonies. European explorers carried cacao beans home in the sixteenth century, and the addition of sugar soon made the drink {{2}} popular across the continent. For centuries, chocolate remained a luxury that only the {{3}} could afford. The invention of solid chocolate in the nineteenth century finally {{4}} its price, and the confection spread to every social class.",
+        "blanks": [
+          {
+            "options": [
+              "beverage",
+              "vegetable",
+              "device",
+              "vehicle"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "rarely",
+              "increasingly",
+              "hardly",
+              "barely"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "wealthy",
+              "healthy",
+              "worthy",
+              "sturdy"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "raised",
+              "lowered",
+              "folded",
+              "widened"
+            ],
+            "correct": 1
+          }
+        ]
+      },
+      {
+        "text": "Most bats navigate in complete darkness using a system called echolocation. The animal emits high-pitched {{1}} and listens to the echoes that bounce back from nearby objects. From these returning sounds, the bat can determine the {{2}} of obstacles and even catch insects in mid-air. Human-made sonar works on a similar {{3}}, which is why engineers have long taken an {{4}} in studying bats.",
+        "blanks": [
+          {
+            "options": [
+              "signals",
+              "stitches",
+              "shadows",
+              "circuits"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "poetry",
+              "position",
+              "pension",
+              "portion"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "principle",
+              "holiday",
+              "festival",
+              "ceremony"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "absence",
+              "entrance",
+              "interest",
+              "evidence"
+            ],
+            "correct": 2
+          }
+        ]
+      },
+      {
+        "text": "The ancient Olympic Games were held at Olympia every four years in honour of the god Zeus. During the festival, wars between rival city-states were {{1}} suspended so that athletes could travel safely. Events included running, wrestling, and chariot racing, and victors received olive {{2}} rather than money. The Games were {{3}} abolished in 393 CE, and the modern version revived them more than a thousand years {{4}}.",
+        "blanks": [
+          {
+            "options": [
+              "peacefully",
+              "secretly",
+              "briefly",
+              "wrongly"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "branches",
+              "leaves",
+              "wreaths",
+              "roots"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "eventually",
+              "rarely",
+              "lately",
+              "hardly"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "later",
+              "sooner",
+              "before",
+              "ahead"
+            ],
+            "correct": 0
+          }
+        ]
+      },
+      {
+        "text": "Healthy soil is a living ecosystem containing minerals, organic matter, air, water, and billions of organisms. Intensive farming can {{1}} soil structure, leaving it compacted and unable to hold water. Farmers increasingly plant cover crops during winter to protect the {{2}} and return nutrients to the ground. These practices {{3}} erosion, improve fertility, and can even {{4}} carbon dioxide from the atmosphere into the soil.",
+        "blanks": [
+          {
+            "options": [
+              "damage",
+              "polish",
+              "decorate",
+              "admire"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "ceiling",
+              "highway",
+              "surface",
+              "interior"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "ignore",
+              "reduce",
+              "imitate",
+              "increase"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "push",
+              "lock",
+              "throw",
+              "draw"
+            ],
+            "correct": 3
+          }
+        ]
+      },
+      {
+        "text": "Sign languages are fully developed languages with their own grammar and vocabulary; they are not simply {{1}} versions of spoken words. Linguists note that children who grow up with sign language reach the same developmental {{2}} as hearing children. Sign languages also {{3}} from country to country, so British and American sign language are mutually unintelligible. {{4}}, universities increasingly recognise sign languages as legitimate subjects of academic study.",
+        "blanks": [
+          {
+            "options": [
+              "gestured",
+              "typed",
+              "printed",
+              "written"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "obstacles",
+              "milestones",
+              "packages",
+              "ingredients"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "suffer",
+              "differ",
+              "copy",
+              "agree"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "Rarely",
+              "Suddenly",
+              "Accordingly",
+              "Conversely"
+            ],
+            "correct": 2
+          }
+        ]
+      }
+    ],
+    "mcMultiple": [
+      {
+        "passage": "The placebo effect occurs when patients feel better after taking a treatment that has no active ingredient. Studies show the effect is genuine: brain imaging reveals real changes in regions involved in pain and emotion, and patients often report meaningful relief. Expectations matter, and so does ritual — the act of seeing a professional, receiving a capsule, and following a routine all contribute. Placebos are not magic, however. They cannot shrink tumours or cure infections, and their strongest effects appear in subjective experiences such as pain, nausea, and fatigue. Researchers now debate whether placebos could complement standard care, provided patients are informed that the treatment contains nothing active.",
+        "question": "Which of the following statements are supported by the passage?",
+        "options": [
+          "Placebos can produce measurable changes in the brain",
+          "Placebos can eliminate bacterial infections",
+          "The ritual of receiving treatment contributes to the effect",
+          "Placebos work best on subjective symptoms such as pain",
+          "Placebo effects occur only in children"
+        ],
+        "answers": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "passage": "Beneath a mountain on a Norwegian island inside the Arctic Circle lies the Svalbard Global Seed Vault, often called the doomsday vault. Its purpose is straightforward: to preserve backup copies of seeds from gene banks around the world in case the originals are lost to war, natural disaster, or simple mismanagement. The tunnel's thick rock and permafrost keep the vault cold even if power fails, and seeds are stored in sealed packets at minus eighteen degrees Celsius. The facility does not lend seeds to farmers; instead, depositing institutions remain the owners of their samples and may withdraw them when local stocks are threatened. Over a million seed varieties are now stored there.",
+        "question": "According to the passage, which statements about the Svalbard vault are correct?",
+        "options": [
+          "It stores duplicate samples of seeds held elsewhere",
+          "It stays cold naturally even if the power supply fails",
+          "It distributes seeds directly to farmers every season",
+          "Depositing institutions retain ownership of their samples",
+          "It is located close to the equator"
+        ],
+        "answers": [
+          0,
+          1,
+          3
+        ]
+      }
+    ],
+    "reorder": [
+      {
+        "sentences": [
+          "Tea is the world's second most consumed drink, after water.",
+          "The drink originated in China, where legend credits its discovery to Emperor Shennong nearly five thousand years ago.",
+          "From China, tea spread along trade routes to Japan, the Middle East, and eventually Europe.",
+          "British cultivation of tea in India in the nineteenth century turned an expensive luxury into an everyday commodity."
+        ]
+      },
+      {
+        "sentences": [
+          "Measuring body temperature accurately changed the practice of medicine.",
+          "Early thermometers, developed in the seventeenth century, were unreliable and slow to give a reading.",
+          "In 1868, Carl Wunderlich showed that fever followed measurable patterns in disease, making the thermometer a genuine diagnostic tool.",
+          "Compact clinical thermometers soon appeared in every hospital ward, and temperature became a routine vital sign."
+        ]
+      }
+    ],
+    "fibDrag": [
+      {
+        "text": "Seagrass meadows grow in shallow coastal waters, where they {{1}} carbon dioxide and stabilise the seabed. The dense leaves also provide {{2}} for young fish, crabs, and other marine creatures.",
+        "answers": [
+          "absorb",
+          "shelter"
+        ],
+        "bank": [
+          "absorb",
+          "shelter",
+          "release",
+          "desert",
+          "loudly",
+          "ancient"
+        ]
+      },
+      {
+        "text": "Many birds {{1}} thousands of kilometres every year, guided partly by the Earth's {{2}} field and the position of the stars.",
+        "answers": [
+          "migrate",
+          "magnetic"
+        ],
+        "bank": [
+          "migrate",
+          "magnetic",
+          "digest",
+          "electric",
+          "opposite",
+          "faintly"
+        ]
+      },
+      {
+        "text": "Bones {{1}} the body and shield vital organs from injury. The soft marrow at their centre constantly produces new {{2}} cells.",
+        "answers": [
+          "support",
+          "blood"
+        ],
+        "bank": [
+          "support",
+          "blood",
+          "destroy",
+          "skin",
+          "silently",
+          "heavy"
+        ]
+      },
+      {
+        "text": "Poor posture {{1}} strain on the spine during long hours at a desk. Adjustable chairs and screens placed at eye {{2}} can prevent much of this discomfort.",
+        "answers": [
+          "reduces",
+          "level"
+        ],
+        "bank": [
+          "reduces",
+          "level",
+          "increases",
+          "height",
+          "roughly",
+          "absent"
+        ]
+      }
+    ],
+    "mcSingle": [
+      {
+        "passage": "Recovered from a Roman-era shipwreck in 1901, the Antikythera mechanism consists of corroded bronze gears packed into a wooden case the size of a shoe box. Decades of X-ray imaging eventually revealed that the device predicted eclipses, tracked the positions of the sun and moon, and even followed the four-year cycle of ancient athletic games. Nothing of comparable mechanical sophistication is known from Europe for well over a thousand years afterwards, and historians still debate who built such advanced instruments and how many were lost.",
+        "question": "What is the passage primarily about?",
+        "options": [
+          "The device was a primitive navigation compass used by sailors",
+          "The mechanism reveals that complex geared devices existed far earlier than previously assumed",
+          "X-ray imaging destroyed most of the mechanism's gears",
+          "The device was built to predict the weather for farmers"
+        ],
+        "answer": 1
+      },
+      {
+        "passage": "The alphabet used across much of the world today descends from a system developed by the Phoenicians around 1050 BCE. Rather than writing each syllable or idea with a separate symbol, as earlier scripts did, the Phoenicians assigned one symbol to each consonant sound. The Greeks later added vowels, and the system passed to the Romans and then spread with Latin. Because it required only about two dozen signs, the alphabet could be learned by ordinary people, not just trained scribes.",
+        "question": "According to the passage, why did the alphabet spread so widely?",
+        "options": [
+          "Because it recorded ideas with thousands of distinct symbols",
+          "Because its small number of signs made it easy for ordinary people to learn",
+          "Because the Romans forced every conquered city to abandon its own script",
+          "Because the Phoenicians taught it only to professional scribes"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  "listening": {
+    "summarizeSpokenText": [
+      {
+        "title": "The legacy of the Silk Road",
+        "sample": "The speaker explained that the Silk Road was a changing network of caravan routes linking China with Europe, carrying not only silk and other goods but also religions, technologies, and ideas in both directions. The network declined as sea transport became cheaper, but its lasting legacy was the exchange and mixing of cultures, languages, foods, and even diseases, making it an early engine of globalisation.",
+        "audio": "The Silk Road was never a single road but a shifting network of caravan routes linking China with Central Asia, the Middle East, and Europe. Its most famous cargo was silk, but the caravans also carried glass, paper, spices, and, less visibly, ideas. Buddhism travelled east along these routes into China and Japan, while technologies such as papermaking and gunpowder moved west. The network declined when sea transport became cheaper and more reliable. Historians stress that the Silk Road's true legacy is the mixing of cultures: languages, religions, foods, and even diseases circulated along it, making it an early engine of global exchange."
+      },
+      {
+        "title": "Why we dream",
+        "sample": "The lecture reviewed several theories of dreaming: memory consolidation, safe rehearsal of threats, and emotional processing, noting that dreams contain more negative emotion than waking life. Most vivid dreams occur in rapid eye movement sleep, when the brain is highly active. Dreaming appears to be universal, and losing dream sleep disturbs mood and learning, even though no single theory fully explains it.",
+        "audio": "Despite decades of research, no one theory fully explains why we dream. One influential view holds that dreaming helps the brain consolidate memories, replaying the day's experiences and deciding what to keep. Others argue that dreams act as a rehearsal space, letting us practise responses to threats in complete safety. A third perspective emphasises emotional processing, noting that dreams contain far more negative emotion than waking life. Sleep laboratories show that most vivid dreaming occurs during rapid eye movement sleep, when the brain is almost as active as when we are awake. What is clear is that dreaming is universal, and that dream deprivation itself disturbs mood and learning."
+      }
+    ],
+    "mcMultiple": [
+      {
+        "audio": "Attention, everyone. I have a few reminders about next month's geography field course. Because places are limited, please sign up through the department website by this Friday; no email applications will be accepted. The trip itself is free, but everyone must pay a ten-dollar deposit, which will be refunded after the course. We will be outdoors for most of the day, so bring waterproof clothing and sturdy boots — trainers are not suitable for the rocky paths. Finally, students who have not submitted the signed consent form cannot board the coach.",
+        "question": "Which of the details below did the announcement include?",
+        "options": [
+          "Sign-up for the field course closes on Friday",
+          "The course is completely free with no payment of any kind",
+          "Trainers are acceptable footwear for the trip",
+          "A refundable deposit is required from every participant",
+          "Students without a signed consent form cannot join the trip"
+        ],
+        "answers": [
+          0,
+          3,
+          4
+        ]
+      }
+    ],
+    "fillBlanks": [
+      {
+        "display": "Today's lecture follows a single drop of water through the cycle. The sun warms the ocean surface, and the drop {{1}} into the air. Higher up, cooling causes it to {{2}} into tiny cloud droplets, which eventually fall as {{3}} over the land.",
+        "answers": [
+          "evaporates",
+          "condense",
+          "rain"
+        ],
+        "audio": "Today's lecture follows a single drop of water through the cycle. The sun warms the ocean surface, and the drop evaporates into the air. Higher up, cooling causes it to condense into tiny cloud droplets, which eventually fall as rain over the land."
+      },
+      {
+        "display": "In today's seminar we examine why the Western Roman Empire {{1}}. Historians no longer blame a single cause; instead they point to economic trouble, pressure along the {{2}}, and political instability. By 476 CE, the last western emperor had been {{3}}.",
+        "answers": [
+          "declined",
+          "borders",
+          "removed"
+        ],
+        "audio": "In today's seminar we examine why the Western Roman Empire declined. Historians no longer blame a single cause; instead they point to economic trouble, pressure along the borders, and political instability. By 476 CE, the last western emperor had been removed."
+      },
+      {
+        "display": "A reminder that the university planetarium will hold open evenings this week. Visitors can observe the night sky through a powerful {{1}}, and staff will explain how to recognise constellations in the {{2}} night sky. Entry is free, but places must be {{3}} in advance.",
+        "answers": [
+          "telescope",
+          "winter",
+          "reserved"
+        ],
+        "audio": "A reminder that the university planetarium will hold open evenings this week. Visitors can observe the night sky through a powerful telescope, and staff will explain how to recognise constellations in the winter night sky. Entry is free, but places must be reserved in advance."
+      }
+    ],
+    "highlightCorrectSummary": [
+      {
+        "audio": "Fossils form only under particular conditions. When an animal dies, its soft parts usually decay or are eaten quickly, so it is normally the hard parts — bones, shells, and teeth — that survive. For fossilisation to occur, the remains must be buried rapidly by sediment, which protects them from weathering and scavengers. Over millions of years, minerals seep into the pores of the bone and replace the original material, turning it to stone. Because of all these requirements, the fossil record represents only a tiny fraction of the species that have ever lived.",
+        "options": [
+          "Fossils form whenever an animal dies on land, and most dead animals eventually become fossils.",
+          "Fossils require rapid burial by sediment and mineral replacement of hard parts, so the fossil record preserves only a small share of past species.",
+          "Soft body parts survive better than bones because they decay more slowly.",
+          "Scavengers help fossilisation by cleaning the bones before burial."
+        ],
+        "answer": 1
+      }
+    ],
+    "mcSingle": [
+      {
+        "audio": "Excuse me, Dr Patel. About my essay — several websites I found disagree about the statistics on coastal erosion, and one blog says the measurements are decades old. Should I use them, or is there somewhere better to get the figures? The assignment says sources must be credible.",
+        "question": "What does the student want to know?",
+        "options": [
+          "How to cite websites in the reference list",
+          "Whether to extend the essay deadline",
+          "Where to find reliable statistics for the essay",
+          "Whether coastal erosion should be the essay topic"
+        ],
+        "answer": 2
+      }
+    ],
+    "selectMissingWord": [
+      {
+        "audio": "Announcing a new policy, the dean said the university will fund every undergraduate research project up to two thousand dollars, provided the proposal is approved by a faculty member before the end of the",
+        "options": [
+          "autumn",
+          "semester",
+          "holiday",
+          "decade"
+        ],
+        "answer": 1,
+        "fullText": "Announcing a new policy, the dean said the university will fund every undergraduate research project up to two thousand dollars, provided the proposal is approved by a faculty member before the end of the semester."
+      }
+    ],
+    "highlightIncorrectWords": [
+      {
+        "words": [
+          {
+            "w": "Glaciers"
+          },
+          {
+            "w": "move"
+          },
+          {
+            "w": "slowly",
+            "wrong": true,
+            "said": "quickly"
+          },
+          {
+            "w": "downhill"
+          },
+          {
+            "w": "under"
+          },
+          {
+            "w": "their"
+          },
+          {
+            "w": "own"
+          },
+          {
+            "w": "enormous"
+          },
+          {
+            "w": "weight"
+          },
+          {
+            "w": "and"
+          },
+          {
+            "w": "their"
+          },
+          {
+            "w": "icy"
+          },
+          {
+            "w": "edges"
+          },
+          {
+            "w": "advance",
+            "wrong": true,
+            "said": "shrink"
+          },
+          {
+            "w": "whenever"
+          },
+          {
+            "w": "snowfall"
+          },
+          {
+            "w": "at"
+          },
+          {
+            "w": "the"
+          },
+          {
+            "w": "top",
+            "wrong": true,
+            "said": "valley"
+          },
+          {
+            "w": "exceeds"
+          },
+          {
+            "w": "melting"
+          },
+          {
+            "w": "at"
+          },
+          {
+            "w": "the"
+          },
+          {
+            "w": "bottom."
+          }
+        ]
+      },
+      {
+        "words": [
+          {
+            "w": "The"
+          },
+          {
+            "w": "human"
+          },
+          {
+            "w": "tongue"
+          },
+          {
+            "w": "can"
+          },
+          {
+            "w": "detect"
+          },
+          {
+            "w": "five",
+            "wrong": true,
+            "said": "seven"
+          },
+          {
+            "w": "basic"
+          },
+          {
+            "w": "tastes"
+          },
+          {
+            "w": "and"
+          },
+          {
+            "w": "recent"
+          },
+          {
+            "w": "research"
+          },
+          {
+            "w": "suggests"
+          },
+          {
+            "w": "a"
+          },
+          {
+            "w": "sixth"
+          },
+          {
+            "w": "taste"
+          },
+          {
+            "w": "sensitive"
+          },
+          {
+            "w": "to"
+          },
+          {
+            "w": "fatty",
+            "wrong": true,
+            "said": "salty"
+          },
+          {
+            "w": "foods"
+          },
+          {
+            "w": "may"
+          },
+          {
+            "w": "also"
+          },
+          {
+            "w": "exist"
+          },
+          {
+            "w": "in"
+          },
+          {
+            "w": "humans."
+          }
+        ]
+      }
+    ],
+    "writeFromDictation": [
+      {
+        "text": "The lecture on marine ecosystems has been rescheduled to Friday morning."
+      },
+      {
+        "text": "Applicants must demonstrate proficiency in English before admission is granted."
+      },
+      {
+        "text": "Careful record keeping is essential for every scientific experiment."
+      }
+    ]
+  }
+}

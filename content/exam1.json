@@ -1,152 +1,818 @@
 {
-  "meta": { "id": 1, "title": "PTE Academic Mock Exam 1 (2026 Format)" },
+  "meta": {
+    "id": 1,
+    "title": "PTE Academic Mock Exam 1 (2026 Format)"
+  },
   "readAloud": [
-    { "text": "Urban green spaces provide far more than aesthetic value to city residents. Research conducted across several metropolitan areas has demonstrated that access to parks and gardens significantly reduces stress levels, encourages physical activity, and strengthens community ties. Consequently, many city councils now require developers to include public greenery in all new residential projects." },
-    { "text": "The printing press, invented by Johannes Gutenberg in the fifteenth century, revolutionised the spread of information throughout Europe. Before its invention, books were copied by hand, a slow and expensive process that limited literacy to the wealthy elite. Within fifty years of the press's introduction, millions of books had been produced, transforming education, science, and religion." },
-    { "text": "Marine biologists have observed that coral reefs support approximately a quarter of all ocean species, despite covering less than one percent of the sea floor. These delicate ecosystems are highly sensitive to changes in water temperature and acidity. When conditions become unfavourable, corals expel the algae living within their tissues, a phenomenon known as bleaching." },
-    { "text": "Universities increasingly collaborate with industry partners to ensure that graduates possess skills relevant to the modern workforce. Such partnerships allow students to undertake internships, work on real commercial projects, and build professional networks before completing their degrees. Employers, in turn, gain early access to talented graduates who already understand their organisations." },
-    { "text": "Honey bees communicate the location of food sources through a remarkable behaviour known as the waggle dance. By moving in a precise figure-eight pattern, a returning forager conveys both the direction and the distance of flowers relative to the position of the sun. This sophisticated system allows the colony to exploit resources efficiently across a wide area." },
-    { "text": "Renewable energy capacity has grown dramatically over the past decade, driven by falling costs and government incentives. Solar panels, once prohibitively expensive for households, are now among the cheapest sources of electricity in many regions. Nevertheless, the intermittent nature of wind and solar power continues to pose challenges for grid operators." },
-    { "text": "Sleep plays a crucial role in consolidating memories and processing emotional experiences. During deep sleep, the brain replays the day's events, transferring important information from short-term to long-term storage. Chronic sleep deprivation, therefore, does not merely cause tiredness; it impairs learning, decision-making, and mental health in measurable ways." }
+    {
+      "text": "Urban green spaces provide far more than aesthetic value to city residents. Research conducted across several metropolitan areas has demonstrated that access to parks and gardens significantly reduces stress levels, encourages physical activity, and strengthens community ties. Consequently, many city councils now require developers to include public greenery in all new residential projects."
+    },
+    {
+      "text": "The printing press, invented by Johannes Gutenberg in the fifteenth century, revolutionised the spread of information throughout Europe. Before its invention, books were copied by hand, a slow and expensive process that limited literacy to the wealthy elite. Within fifty years of the press's introduction, millions of books had been produced, transforming education, science, and religion."
+    },
+    {
+      "text": "Marine biologists have observed that coral reefs support approximately a quarter of all ocean species, despite covering less than one percent of the sea floor. These delicate ecosystems are highly sensitive to changes in water temperature and acidity. When conditions become unfavourable, corals expel the algae living within their tissues, a phenomenon known as bleaching."
+    },
+    {
+      "text": "Universities increasingly collaborate with industry partners to ensure that graduates possess skills relevant to the modern workforce. Such partnerships allow students to undertake internships, work on real commercial projects, and build professional networks before completing their degrees. Employers, in turn, gain early access to talented graduates who already understand their organisations."
+    },
+    {
+      "text": "Honey bees communicate the location of food sources through a remarkable behaviour known as the waggle dance. By moving in a precise figure-eight pattern, a returning forager conveys both the direction and the distance of flowers relative to the position of the sun. This sophisticated system allows the colony to exploit resources efficiently across a wide area."
+    },
+    {
+      "text": "Renewable energy capacity has grown dramatically over the past decade, driven by falling costs and government incentives. Solar panels, once prohibitively expensive for households, are now among the cheapest sources of electricity in many regions. Nevertheless, the intermittent nature of wind and solar power continues to pose challenges for grid operators."
+    },
+    {
+      "text": "Sleep plays a crucial role in consolidating memories and processing emotional experiences. During deep sleep, the brain replays the day's events, transferring important information from short-term to long-term storage. Chronic sleep deprivation, therefore, does not merely cause tiredness; it impairs learning, decision-making, and mental health in measurable ways."
+    }
   ],
   "repeatSentence": [
-    { "text": "The library will be closed for renovations during the summer break." },
-    { "text": "Students must submit their assignments through the online portal by Friday." },
-    { "text": "The professor postponed the lecture because of the unexpected power failure." },
-    { "text": "Most of the research funding goes to projects with practical applications." },
-    { "text": "You can collect your student identification card from the administration office." },
-    { "text": "The chemistry laboratory on the second floor is equipped with modern instruments." },
-    { "text": "Public transport fares are expected to increase slightly next year." },
-    { "text": "Attendance at the introductory workshop is strongly recommended for all new students." },
-    { "text": "The committee will announce its final decision at the end of the month." },
-    { "text": "Regular exercise improves concentration as well as physical health." }
+    {
+      "text": "The library will be closed for renovations during the summer break."
+    },
+    {
+      "text": "Students must submit their assignments through the online portal by Friday."
+    },
+    {
+      "text": "The professor postponed the lecture because of the unexpected power failure."
+    },
+    {
+      "text": "Most of the research funding goes to projects with practical applications."
+    },
+    {
+      "text": "You can collect your student identification card from the administration office."
+    },
+    {
+      "text": "The chemistry laboratory on the second floor is equipped with modern instruments."
+    },
+    {
+      "text": "Public transport fares are expected to increase slightly next year."
+    },
+    {
+      "text": "Attendance at the introductory workshop is strongly recommended for all new students."
+    },
+    {
+      "text": "The committee will announce its final decision at the end of the month."
+    },
+    {
+      "text": "Regular exercise improves concentration as well as physical health."
+    }
   ],
   "describeImage": [
-    { "title": "Annual coffee consumption per person (kg)", "sample": "The bar chart compares annual coffee consumption per person across four countries. Finland clearly has the highest consumption at around 12 kilograms per person, followed by Germany at approximately 7 kilograms. The United Kingdom consumes much less, at roughly 3 kilograms, while China has the lowest figure, at less than 1 kilogram per person. Overall, European countries drink far more coffee than China.", "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0</text><text x='24' y='205' font-size='11'>3</text><text x='24' y='145' font-size='11'>6</text><text x='24' y='85' font-size='11'>9</text><text x='20' y='25' font-size='11'>12</text><rect x='90' y='20' width='70' height='240' fill='#2f6db3'/><rect x='190' y='120' width='70' height='140' fill='#2f6db3'/><rect x='290' y='200' width='70' height='60' fill='#2f6db3'/><rect x='390' y='245' width='70' height='15' fill='#2f6db3'/><text x='110' y='278' font-size='12'>Finland</text><text x='205' y='278' font-size='12'>Germany</text><text x='310' y='278' font-size='12'>UK</text><text x='410' y='278' font-size='12'>China</text></svg>" },
-    { "title": "Global smartphone users, 2016–2025 (billions)", "sample": "The line graph illustrates the growth in global smartphone users from 2016 to 2025. In 2016 there were about 2.5 billion users. The number rose steadily to roughly 4 billion in 2019 and continued climbing more gradually, reaching around 5.8 billion by 2025. Overall, smartphone usage more than doubled over the period, with the fastest growth occurring before 2020.", "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0</text><text x='24' y='185' font-size='11'>2</text><text x='24' y='105' font-size='11'>4</text><text x='24' y='25' font-size='11'>6</text><polyline points='80,160 130,140 180,118 230,100 280,90 330,78 380,65 430,55 480,48 500,45' fill='none' stroke='#d1495b' stroke-width='3'/><circle cx='80' cy='160' r='4' fill='#d1495b'/><circle cx='280' cy='90' r='4' fill='#d1495b'/><circle cx='500' cy='45' r='4' fill='#d1495b'/><text x='70' y='278' font-size='11'>2016</text><text x='268' y='278' font-size='11'>2020</text><text x='480' y='278' font-size='11'>2025</text></svg>" },
-    { "title": "Household energy use by category", "sample": "The pie chart shows how energy is used in a typical household. Heating accounts for the largest share, at 45 percent of total consumption. Appliances are the second largest category at 25 percent, followed by water heating at 18 percent. Lighting and cooking make up the smallest shares, at 7 and 5 percent respectively. In conclusion, temperature control dominates household energy use.", "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><circle cx='180' cy='150' r='110' fill='#2f6db3'/><path d='M180,150 L180,40 A110,110 0 0 1 286,177 Z' fill='#e8a13d'/><path d='M180,150 L286,177 A110,110 0 0 1 141,257 Z' fill='#4f9d69'/><path d='M180,150 L141,257 A110,110 0 0 1 76,129 Z' fill='#d1495b'/><text x='330' y='80' font-size='12' fill='#2f6db3'>■ Heating 45%</text><text x='330' y='110' font-size='12' fill='#e8a13d'>■ Appliances 25%</text><text x='330' y='140' font-size='12' fill='#4f9d69'>■ Water heating 18%</text><text x='330' y='170' font-size='12' fill='#d1495b'>■ Lighting 7%</text><text x='330' y='200' font-size='12' fill='#999'>■ Cooking 5%</text></svg>" }
+    {
+      "title": "Annual coffee consumption per person (kg)",
+      "sample": "The bar chart compares annual coffee consumption per person across four countries. Finland clearly has the highest consumption at around 12 kilograms per person, followed by Germany at approximately 7 kilograms. The United Kingdom consumes much less, at roughly 3 kilograms, while China has the lowest figure, at less than 1 kilogram per person. Overall, European countries drink far more coffee than China.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0</text><text x='24' y='205' font-size='11'>3</text><text x='24' y='145' font-size='11'>6</text><text x='24' y='85' font-size='11'>9</text><text x='20' y='25' font-size='11'>12</text><rect x='90' y='20' width='70' height='240' fill='#2f6db3'/><rect x='190' y='120' width='70' height='140' fill='#2f6db3'/><rect x='290' y='200' width='70' height='60' fill='#2f6db3'/><rect x='390' y='245' width='70' height='15' fill='#2f6db3'/><text x='110' y='278' font-size='12'>Finland</text><text x='205' y='278' font-size='12'>Germany</text><text x='310' y='278' font-size='12'>UK</text><text x='410' y='278' font-size='12'>China</text></svg>"
+    },
+    {
+      "title": "Global smartphone users, 2016–2025 (billions)",
+      "sample": "The line graph illustrates the growth in global smartphone users from 2016 to 2025. In 2016 there were about 2.5 billion users. The number rose steadily to roughly 4 billion in 2019 and continued climbing more gradually, reaching around 5.8 billion by 2025. Overall, smartphone usage more than doubled over the period, with the fastest growth occurring before 2020.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><line x1='60' y1='260' x2='500' y2='260' stroke='#333'/><line x1='60' y1='20' x2='60' y2='260' stroke='#333'/><text x='30' y='265' font-size='11'>0</text><text x='24' y='185' font-size='11'>2</text><text x='24' y='105' font-size='11'>4</text><text x='24' y='25' font-size='11'>6</text><polyline points='80,160 130,140 180,118 230,100 280,90 330,78 380,65 430,55 480,48 500,45' fill='none' stroke='#d1495b' stroke-width='3'/><circle cx='80' cy='160' r='4' fill='#d1495b'/><circle cx='280' cy='90' r='4' fill='#d1495b'/><circle cx='500' cy='45' r='4' fill='#d1495b'/><text x='70' y='278' font-size='11'>2016</text><text x='268' y='278' font-size='11'>2020</text><text x='480' y='278' font-size='11'>2025</text></svg>"
+    },
+    {
+      "title": "Household energy use by category",
+      "sample": "The pie chart shows how energy is used in a typical household. Heating accounts for the largest share, at 45 percent of total consumption. Appliances are the second largest category at 25 percent, followed by water heating at 18 percent. Lighting and cooking make up the smallest shares, at 7 and 5 percent respectively. In conclusion, temperature control dominates household energy use.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'><rect width='520' height='300' fill='#fff'/><circle cx='180' cy='150' r='110' fill='#2f6db3'/><path d='M180,150 L180,40 A110,110 0 0 1 286,177 Z' fill='#e8a13d'/><path d='M180,150 L286,177 A110,110 0 0 1 141,257 Z' fill='#4f9d69'/><path d='M180,150 L141,257 A110,110 0 0 1 76,129 Z' fill='#d1495b'/><text x='330' y='80' font-size='12' fill='#2f6db3'>■ Heating 45%</text><text x='330' y='110' font-size='12' fill='#e8a13d'>■ Appliances 25%</text><text x='330' y='140' font-size='12' fill='#4f9d69'>■ Water heating 18%</text><text x='330' y='170' font-size='12' fill='#d1495b'>■ Lighting 7%</text><text x='330' y='200' font-size='12' fill='#999'>■ Cooking 5%</text></svg>"
+    }
   ],
   "retellLecture": [
-    { "title": "The history of timekeeping", "sample": "The lecture discussed how humans have measured time throughout history. The speaker explained that early civilisations used sundials and water clocks, which were inaccurate and impractical at night. Mechanical clocks appeared in medieval Europe, and the pendulum clock of 1656 greatly improved accuracy. Finally, the speaker noted that modern atomic clocks are so precise they lose less than a second over millions of years.", "text": "Throughout history, humans have devised increasingly accurate ways to measure time. Ancient civilisations relied on the movement of the sun, using sundials to divide the day into parts, while water clocks measured hours by the steady dripping of water from one vessel to another. These methods, however, were unreliable on cloudy days or during the night. The first mechanical clocks appeared in European monasteries in the late thirteenth century, driven by weights and gears rather than sunlight. A major breakthrough came in 1656, when Christiaan Huygens built the first pendulum clock, which was accurate to within a minute a day. Today, atomic clocks define the international standard, losing less than one second over tens of millions of years, and they underpin technologies such as GPS navigation and high-frequency financial trading." },
-    { "title": "Why cities are warmer than the countryside", "sample": "The lecture explained the urban heat island effect, meaning cities are warmer than surrounding rural areas. The speaker gave two main reasons: dark surfaces like asphalt absorb sunlight, and waste heat comes from vehicles and air conditioners. The speaker also mentioned consequences such as higher energy use and health risks, and suggested solutions including green roofs and planting more trees.", "text": "Scientists use the term urban heat island to describe the fact that cities are consistently warmer than the countryside around them, sometimes by as much as seven degrees Celsius at night. There are two principal causes. First, building materials such as asphalt and concrete absorb solar radiation during the day and release it slowly overnight, whereas vegetation cools the land through evaporation. Second, cities generate their own heat: cars, factories, and millions of air conditioners all pump warmth into the streets. The consequences are serious. Higher temperatures increase energy demand for cooling, worsen air pollution, and raise the risk of heat-related illness during summer. To combat the effect, many cities are now painting roofs white, planting street trees, and creating green roofs that insulate buildings and cool the surrounding air." }
+    {
+      "title": "The history of timekeeping",
+      "sample": "The lecture discussed how humans have measured time throughout history. The speaker explained that early civilisations used sundials and water clocks, which were inaccurate and impractical at night. Mechanical clocks appeared in medieval Europe, and the pendulum clock of 1656 greatly improved accuracy. Finally, the speaker noted that modern atomic clocks are so precise they lose less than a second over millions of years.",
+      "text": "Throughout history, humans have devised increasingly accurate ways to measure time. Ancient civilisations relied on the movement of the sun, using sundials to divide the day into parts, while water clocks measured hours by the steady dripping of water from one vessel to another. These methods, however, were unreliable on cloudy days or during the night. The first mechanical clocks appeared in European monasteries in the late thirteenth century, driven by weights and gears rather than sunlight. A major breakthrough came in 1656, when Christiaan Huygens built the first pendulum clock, which was accurate to within a minute a day. Today, atomic clocks define the international standard, losing less than one second over tens of millions of years, and they underpin technologies such as GPS navigation and high-frequency financial trading."
+    },
+    {
+      "title": "Why cities are warmer than the countryside",
+      "sample": "The lecture explained the urban heat island effect, meaning cities are warmer than surrounding rural areas. The speaker gave two main reasons: dark surfaces like asphalt absorb sunlight, and waste heat comes from vehicles and air conditioners. The speaker also mentioned consequences such as higher energy use and health risks, and suggested solutions including green roofs and planting more trees.",
+      "text": "Scientists use the term urban heat island to describe the fact that cities are consistently warmer than the countryside around them, sometimes by as much as seven degrees Celsius at night. There are two principal causes. First, building materials such as asphalt and concrete absorb solar radiation during the day and release it slowly overnight, whereas vegetation cools the land through evaporation. Second, cities generate their own heat: cars, factories, and millions of air conditioners all pump warmth into the streets. The consequences are serious. Higher temperatures increase energy demand for cooling, worsen air pollution, and raise the risk of heat-related illness during summer. To combat the effect, many cities are now painting roofs white, planting street trees, and creating green roofs that insulate buildings and cool the surrounding air."
+    }
   ],
   "respondToSituation": [
-    { "prompt": "You ordered a laptop online two weeks ago, but it has not arrived and the tracking page has not updated for ten days. You need the laptop urgently for your university course. Call the delivery company's customer service line. What would you say?", "audio": "You ordered a laptop online two weeks ago, but it has not arrived and the tracking page has not updated for ten days. You need the laptop urgently for your university course. Call the delivery company's customer service line. What would you say?", "sample": "Hello, my name is Alex, and I'm calling about a parcel that seems to be lost. I ordered a laptop two weeks ago — the order number is AB-4521 — and the tracking information hasn't been updated for ten days. I completely understand that delays happen, but I urgently need the computer for my university course, which starts on Monday. Could you please investigate where the package is and tell me when I can realistically expect it? If it can't be located within the next two days, I'd like to know how to request a replacement or a full refund. I'd really appreciate any help you can give me. Thank you." },
-    { "prompt": "Your neighbour's dog barks loudly every night and you cannot sleep. You have an important exam next week. Go to your neighbour's house and talk to them. What would you say?", "audio": "Your neighbour's dog barks loudly every night and you cannot sleep. You have an important exam next week. Go to your neighbour's house and talk to them. What would you say?", "sample": "Hi, sorry to bother you. I'm Sam from next door. I wanted to talk to you about your dog — he's been barking quite a lot during the night recently, and to be honest I haven't been sleeping well. I've got a really important exam next week, so it's been a bit stressful. I know dogs bark, and he's a lovely dog, but I was wondering if maybe he could sleep indoors, or if there's anything that might keep him quieter at night. I'd be happy to help if there's anything I can do. Thanks so much for understanding." }
+    {
+      "prompt": "You ordered a laptop online two weeks ago, but it has not arrived and the tracking page has not updated for ten days. You need the laptop urgently for your university course. Call the delivery company's customer service line. What would you say?",
+      "audio": "You ordered a laptop online two weeks ago, but it has not arrived and the tracking page has not updated for ten days. You need the laptop urgently for your university course. Call the delivery company's customer service line. What would you say?",
+      "sample": "Hello, my name is Alex, and I'm calling about a parcel that seems to be lost. I ordered a laptop two weeks ago — the order number is AB-4521 — and the tracking information hasn't been updated for ten days. I completely understand that delays happen, but I urgently need the computer for my university course, which starts on Monday. Could you please investigate where the package is and tell me when I can realistically expect it? If it can't be located within the next two days, I'd like to know how to request a replacement or a full refund. I'd really appreciate any help you can give me. Thank you."
+    },
+    {
+      "prompt": "Your neighbour's dog barks loudly every night and you cannot sleep. You have an important exam next week. Go to your neighbour's house and talk to them. What would you say?",
+      "audio": "Your neighbour's dog barks loudly every night and you cannot sleep. You have an important exam next week. Go to your neighbour's house and talk to them. What would you say?",
+      "sample": "Hi, sorry to bother you. I'm Sam from next door. I wanted to talk to you about your dog — he's been barking quite a lot during the night recently, and to be honest I haven't been sleeping well. I've got a really important exam next week, so it's been a bit stressful. I know dogs bark, and he's a lovely dog, but I was wondering if maybe he could sleep indoors, or if there's anything that might keep him quieter at night. I'd be happy to help if there's anything I can do. Thanks so much for understanding."
+    }
   ],
   "summarizeGroupDiscussion": [
-    { "topic": "Should the university extend library opening hours to 24/7?", "sample": "The students discussed whether the library should open around the clock. Speaker A supported the idea because many students study late and commuter students need flexible access. Speaker B raised concerns about the cost of staffing and security at night, suggesting extended hours only during exam periods. Speaker C proposed a compromise: keeping one floor open all night with student-card entry. Overall, they agreed that longer hours were needed but disagreed about how to fund them.", "turns": [
-      { "speaker": "A", "text": "I honestly think the library should be open twenty-four hours. A lot of us study best late at night, and students who commute or work part-time jobs can't always come during normal hours. Other universities already do this, so why can't we?" },
-      { "speaker": "B", "text": "I see your point, but somebody has to pay for it. Overnight staffing, heating, security — that costs a lot of money, and it might mean higher fees. I'd rather see extended hours just during the exam period, when demand is genuinely high, instead of all year round." },
-      { "speaker": "A", "text": "That's fair, but demand is high all semester for some courses. Medical and engineering students basically live in the library." },
-      { "speaker": "C", "text": "Maybe there's a middle ground. We could keep just one floor open overnight with student card entry, so there's no need for extra staff at the desk. A few universities use security cameras plus card access, and it seems to work. That would cut the cost a lot." },
-      { "speaker": "B", "text": "That actually sounds reasonable. If it's limited to one floor, the cost would be much lower, and we could trial it for a semester." },
-      { "speaker": "A", "text": "I'd be happy with that as a first step, as long as the trial includes the quiet study zones." }
-    ] },
-    { "topic": "The city council plans to ban cars from the city centre. Discuss.", "sample": "The speakers discussed a proposal to ban cars from the city centre. Speaker A argued the ban would reduce pollution and make streets safer for pedestrians and cyclists. Speaker B worried about shops losing customers and elderly people who depend on cars, suggesting exemptions and better public transport first. Speaker C supported the ban but stressed the need for park-and-ride facilities. They broadly agreed the goal was positive but that transport alternatives must be in place before the ban.", "turns": [
-      { "speaker": "A", "text": "I'm completely in favour of the ban. The city centre is choked with traffic, the air quality is terrible, and pedestrians are constantly dodging cars. European cities that have done this are now much more pleasant places to live and shop." },
-      { "speaker": "B", "text": "In principle I agree, but we have to be realistic. Many elderly people rely on their cars, and shop owners are worried customers will simply drive to out-of-town malls instead. We need proper public transport in place before we even think about a ban." },
-      { "speaker": "C", "text": "That's exactly what happened in my hometown — they built park-and-ride car parks on the edge of the centre with cheap shuttle buses every ten minutes. Once people saw it was convenient, most of them stopped driving in." },
-      { "speaker": "A", "text": "Park-and-ride sounds like a sensible compromise. And delivery vehicles would obviously need permits, at least in the mornings." },
-      { "speaker": "B", "text": "If the council guarantees frequent, affordable buses and exemptions for disabled drivers, then yes, I could support the plan." }
-    ] }
+    {
+      "topic": "Should the university extend library opening hours to 24/7?",
+      "sample": "The students discussed whether the library should open around the clock. Speaker A supported the idea because many students study late and commuter students need flexible access. Speaker B raised concerns about the cost of staffing and security at night, suggesting extended hours only during exam periods. Speaker C proposed a compromise: keeping one floor open all night with student-card entry. Overall, they agreed that longer hours were needed but disagreed about how to fund them.",
+      "turns": [
+        {
+          "speaker": "A",
+          "text": "I honestly think the library should be open twenty-four hours. A lot of us study best late at night, and students who commute or work part-time jobs can't always come during normal hours. Other universities already do this, so why can't we?"
+        },
+        {
+          "speaker": "B",
+          "text": "I see your point, but somebody has to pay for it. Overnight staffing, heating, security — that costs a lot of money, and it might mean higher fees. I'd rather see extended hours just during the exam period, when demand is genuinely high, instead of all year round."
+        },
+        {
+          "speaker": "A",
+          "text": "That's fair, but demand is high all semester for some courses. Medical and engineering students basically live in the library."
+        },
+        {
+          "speaker": "C",
+          "text": "Maybe there's a middle ground. We could keep just one floor open overnight with student card entry, so there's no need for extra staff at the desk. A few universities use security cameras plus card access, and it seems to work. That would cut the cost a lot."
+        },
+        {
+          "speaker": "B",
+          "text": "That actually sounds reasonable. If it's limited to one floor, the cost would be much lower, and we could trial it for a semester."
+        },
+        {
+          "speaker": "A",
+          "text": "I'd be happy with that as a first step, as long as the trial includes the quiet study zones."
+        }
+      ]
+    },
+    {
+      "topic": "The city council plans to ban cars from the city centre. Discuss.",
+      "sample": "The speakers discussed a proposal to ban cars from the city centre. Speaker A argued the ban would reduce pollution and make streets safer for pedestrians and cyclists. Speaker B worried about shops losing customers and elderly people who depend on cars, suggesting exemptions and better public transport first. Speaker C supported the ban but stressed the need for park-and-ride facilities. They broadly agreed the goal was positive but that transport alternatives must be in place before the ban.",
+      "turns": [
+        {
+          "speaker": "A",
+          "text": "I'm completely in favour of the ban. The city centre is choked with traffic, the air quality is terrible, and pedestrians are constantly dodging cars. European cities that have done this are now much more pleasant places to live and shop."
+        },
+        {
+          "speaker": "B",
+          "text": "In principle I agree, but we have to be realistic. Many elderly people rely on their cars, and shop owners are worried customers will simply drive to out-of-town malls instead. We need proper public transport in place before we even think about a ban."
+        },
+        {
+          "speaker": "C",
+          "text": "That's exactly what happened in my hometown — they built park-and-ride car parks on the edge of the centre with cheap shuttle buses every ten minutes. Once people saw it was convenient, most of them stopped driving in."
+        },
+        {
+          "speaker": "A",
+          "text": "Park-and-ride sounds like a sensible compromise. And delivery vehicles would obviously need permits, at least in the mornings."
+        },
+        {
+          "speaker": "B",
+          "text": "If the council guarantees frequent, affordable buses and exemptions for disabled drivers, then yes, I could support the plan."
+        }
+      ]
+    }
   ],
   "answerShortQuestion": [
-    { "question": "What do you call a person who studies the stars and planets?", "answer": "An astronomer" },
-    { "question": "If a doctor gives you a note listing medicines you need, what is that note called?", "answer": "A prescription" },
-    { "question": "What is the name of the instrument used to measure temperature?", "answer": "A thermometer" },
-    { "question": "Which season comes immediately after winter?", "answer": "Spring" },
-    { "question": "What do we call the money that students borrow to pay for university tuition?", "answer": "A student loan" }
+    {
+      "question": "What do you call a person who studies the stars and planets?",
+      "answer": "An astronomer"
+    },
+    {
+      "question": "If a doctor gives you a note listing medicines you need, what is that note called?",
+      "answer": "A prescription"
+    },
+    {
+      "question": "What is the name of the instrument used to measure temperature?",
+      "answer": "A thermometer"
+    },
+    {
+      "question": "Which season comes immediately after winter?",
+      "answer": "Spring"
+    },
+    {
+      "question": "What do we call the money that students borrow to pay for university tuition?",
+      "answer": "A student loan"
+    }
   ],
   "summarizeWrittenText": [
-    { "passage": "Electric vehicles are often praised as a solution to urban air pollution, and it is true that they produce no exhaust emissions while driving. However, a complete assessment of their environmental impact must consider the entire life cycle of the vehicle. Manufacturing an electric car, particularly its lithium-ion battery, generates substantially more carbon dioxide than manufacturing a conventional petrol car, mainly because extracting and refining lithium, cobalt, and nickel is energy-intensive. Whether an electric vehicle ultimately produces fewer emissions than a petrol equivalent depends largely on how the electricity used to charge it is generated. In countries whose grids rely heavily on coal, an electric car may need to be driven for many years before its lifetime emissions fall below those of a petrol car; in countries with abundant hydroelectric or nuclear power, the break-even point arrives much sooner. Furthermore, as battery recycling improves and electricity grids continue to decarbonise, the environmental advantage of electric vehicles is expected to grow steadily over the coming decades.", "sample": "Although electric vehicles produce no exhaust emissions, their overall environmental benefit depends on the carbon-intensive battery manufacturing process and the source of electricity used for charging, meaning they deliver the greatest advantage in countries with clean power grids, an advantage that will grow as grids decarbonise and battery recycling improves." },
-    { "passage": "For most of human history, people acquired language simply by growing up surrounded by it, and the question of how adults should learn a second language received little systematic attention. In the twentieth century, however, researchers began to compare different teaching methods, and their findings challenged long-held assumptions. Studies of immersion programmes, in which students are taught all subjects through the new language, showed that learners developed stronger comprehension skills than those taught grammar rules in isolation, though their writing often retained persistent errors. Later research emphasised the importance of noticing: learners improve fastest when they receive feedback that highlights the gap between their own output and accurate forms. Motivation, too, proved decisive, but not always in the expected direction; adults learning a language for immediate practical needs, such as employment, frequently outperformed those studying for examinations. Modern approaches therefore combine meaningful communication, explicit feedback, and opportunities to use the language for genuine purposes.", "sample": "Twentieth-century research into second language learning found that immersion develops strong comprehension but leaves writing errors, that explicit feedback helps learners notice the gap between their output and accurate language, and that practical motivation drives faster progress, leading modern teaching to combine communication, feedback and purposeful use." }
+    {
+      "passage": "Electric vehicles are often praised as a solution to urban air pollution, and it is true that they produce no exhaust emissions while driving. However, a complete assessment of their environmental impact must consider the entire life cycle of the vehicle. Manufacturing an electric car, particularly its lithium-ion battery, generates substantially more carbon dioxide than manufacturing a conventional petrol car, mainly because extracting and refining lithium, cobalt, and nickel is energy-intensive. Whether an electric vehicle ultimately produces fewer emissions than a petrol equivalent depends largely on how the electricity used to charge it is generated. In countries whose grids rely heavily on coal, an electric car may need to be driven for many years before its lifetime emissions fall below those of a petrol car; in countries with abundant hydroelectric or nuclear power, the break-even point arrives much sooner. Furthermore, as battery recycling improves and electricity grids continue to decarbonise, the environmental advantage of electric vehicles is expected to grow steadily over the coming decades.",
+      "sample": "Although electric vehicles produce no exhaust emissions, their overall environmental benefit depends on the carbon-intensive battery manufacturing process and the source of electricity used for charging, meaning they deliver the greatest advantage in countries with clean power grids, an advantage that will grow as grids decarbonise and battery recycling improves."
+    },
+    {
+      "passage": "For most of human history, people acquired language simply by growing up surrounded by it, and the question of how adults should learn a second language received little systematic attention. In the twentieth century, however, researchers began to compare different teaching methods, and their findings challenged long-held assumptions. Studies of immersion programmes, in which students are taught all subjects through the new language, showed that learners developed stronger comprehension skills than those taught grammar rules in isolation, though their writing often retained persistent errors. Later research emphasised the importance of noticing: learners improve fastest when they receive feedback that highlights the gap between their own output and accurate forms. Motivation, too, proved decisive, but not always in the expected direction; adults learning a language for immediate practical needs, such as employment, frequently outperformed those studying for examinations. Modern approaches therefore combine meaningful communication, explicit feedback, and opportunities to use the language for genuine purposes.",
+      "sample": "Twentieth-century research into second language learning found that immersion develops strong comprehension but leaves writing errors, that explicit feedback helps learners notice the gap between their output and accurate language, and that practical motivation drives faster progress, leading modern teaching to combine communication, feedback and purposeful use."
+    }
   ],
   "essay": [
-    { "prompt": "Some people believe that university education should be free for all students, while others argue that students should pay for their own tuition. Discuss both views and give your own opinion. Write 200–300 words.", "sample": "Possible structure: (1) Introduction — paraphrase the debate, state your position. (2) Arguments for free tuition: equal opportunity regardless of wealth, society benefits from an educated workforce, graduates without debt contribute more to the economy. (3) Arguments for paying: universities need funding, students value education more when they invest in it, taxpayers without degrees shouldn't fund others. (4) Conclusion — your view, e.g. free tuition with graduates repaying through higher taxes. Useful phrases: 'It is often argued that…', 'On the one hand… on the other hand…', 'A compelling argument is…', 'In conclusion, I believe…'" }
+    {
+      "prompt": "Some people believe that university education should be free for all students, while others argue that students should pay for their own tuition. Discuss both views and give your own opinion. Write 200–300 words.",
+      "sample": "Possible structure: (1) Introduction — paraphrase the debate, state your position. (2) Arguments for free tuition: equal opportunity regardless of wealth, society benefits from an educated workforce, graduates without debt contribute more to the economy. (3) Arguments for paying: universities need funding, students value education more when they invest in it, taxpayers without degrees shouldn't fund others. (4) Conclusion — your view, e.g. free tuition with graduates repaying through higher taxes. Useful phrases: 'It is often argued that…', 'On the one hand… on the other hand…', 'A compelling argument is…', 'In conclusion, I believe…'"
+    }
   ],
   "reading": {
     "fibDropdown": [
-      { "text": "Climate change is one of the most pressing {{1}} of our time. Rising global temperatures have already {{2}} to more frequent heatwaves and extreme weather events. Scientists warn that without significant reductions in greenhouse gas emissions, these trends will {{3}} over the coming decades. Governments around the world are therefore under growing pressure to {{4}} effective climate policies.", "blanks": [
-        { "options": ["challenges", "chances", "choices", "channels"], "correct": 0 },
-        { "options": ["led", "lead", "leading", "leads"], "correct": 0 },
-        { "options": ["weaken", "intensify", "disappear", "stabilise"], "correct": 1 },
-        { "options": ["prevent", "avoid", "implement", "reduce"], "correct": 2 }
-      ] },
-      { "text": "The human brain contains approximately 86 billion neurons, each capable of forming thousands of {{1}} with other cells. This vast network allows the brain to process information at remarkable speed. {{2}}, the brain consumes about twenty percent of the body's total energy, {{3}} representing only two percent of its weight. Understanding how these connections give rise to thought remains one of the greatest {{4}} in modern science.", "blanks": [
-        { "options": ["connections", "collections", "corrections", "directions"], "correct": 0 },
-        { "options": ["However", "Remarkably", "Therefore", "Instead"], "correct": 1 },
-        { "options": ["although", "because", "unless", "until"], "correct": 0 },
-        { "options": ["answers", "solutions", "mysteries", "discoveries"], "correct": 2 }
-      ] },
-      { "text": "Online learning has transformed higher education over the past decade. Students can now {{1}} lectures from leading universities without leaving their homes, and course materials are available around the clock. {{2}} critics argue that online education lacks the social interaction of traditional classrooms, supporters {{3}} that discussion forums and video conferencing can {{4}} this gap effectively.", "blanks": [
-        { "options": ["attend", "access", "apply", "arrive"], "correct": 1 },
-        { "options": ["Because", "Unless", "While", "Since"], "correct": 2 },
-        { "options": ["counter", "count", "account", "discount"], "correct": 0 },
-        { "options": ["cross", "close", "bridge", "build"], "correct": 2 }
-      ] },
-      { "text": "Antibiotics have saved millions of lives since their discovery, but their effectiveness is now under {{1}}. When antibiotics are used too frequently, bacteria can {{2}} resistance to them, making infections harder to treat. Health experts recommend that doctors {{3}} antibiotics only when truly necessary and that patients always complete their full {{4}} of treatment.", "blanks": [
-        { "options": ["attack", "threat", "danger", "risk"], "correct": 1 },
-        { "options": ["develop", "create", "invent", "produce"], "correct": 0 },
-        { "options": ["describe", "prescribe", "subscribe", "inscribe"], "correct": 1 },
-        { "options": ["period", "duration", "course", "series"], "correct": 2 }
-      ] },
-      { "text": "The Amazon rainforest plays a vital role in regulating the Earth's climate. Its trees {{1}} enormous quantities of carbon dioxide from the atmosphere and release oxygen in return. {{2}}, large areas of the forest are cleared every year for agriculture and logging. This deforestation not only destroys the {{3}} of countless species but also {{4}} the region's ability to store carbon.", "blanks": [
-        { "options": ["absorb", "admit", "adopt", "adapt"], "correct": 0 },
-        { "options": ["Fortunately", "Moreover", "However", "Similarly"], "correct": 2 },
-        { "options": ["habitat", "custom", "pattern", "territory"], "correct": 0 },
-        { "options": ["strengthens", "weakens", "improves", "maintains"], "correct": 1 }
-      ] }
+      {
+        "text": "Climate change is one of the most pressing {{1}} of our time. Rising global temperatures have already {{2}} to more frequent heatwaves and extreme weather events. Scientists warn that without significant reductions in greenhouse gas emissions, these trends will {{3}} over the coming decades. Governments around the world are therefore under growing pressure to {{4}} effective climate policies.",
+        "blanks": [
+          {
+            "options": [
+              "challenges",
+              "chances",
+              "choices",
+              "channels"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "led",
+              "lead",
+              "leading",
+              "leads"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "weaken",
+              "intensify",
+              "disappear",
+              "stabilise"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "prevent",
+              "avoid",
+              "implement",
+              "reduce"
+            ],
+            "correct": 2
+          }
+        ]
+      },
+      {
+        "text": "The human brain contains approximately 86 billion neurons, each capable of forming thousands of {{1}} with other cells. This vast network allows the brain to process information at remarkable speed. {{2}}, the brain consumes about twenty percent of the body's total energy, {{3}} representing only two percent of its weight. Understanding how these connections give rise to thought remains one of the greatest {{4}} in modern science.",
+        "blanks": [
+          {
+            "options": [
+              "connections",
+              "collections",
+              "corrections",
+              "directions"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "However",
+              "Remarkably",
+              "Therefore",
+              "Instead"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "although",
+              "because",
+              "unless",
+              "until"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "answers",
+              "solutions",
+              "mysteries",
+              "discoveries"
+            ],
+            "correct": 2
+          }
+        ]
+      },
+      {
+        "text": "Online learning has transformed higher education over the past decade. Students can now {{1}} lectures from leading universities without leaving their homes, and course materials are available around the clock. {{2}} critics argue that online education lacks the social interaction of traditional classrooms, supporters {{3}} that discussion forums and video conferencing can {{4}} this gap effectively.",
+        "blanks": [
+          {
+            "options": [
+              "attend",
+              "access",
+              "apply",
+              "arrive"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "Because",
+              "Unless",
+              "While",
+              "Since"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "counter",
+              "count",
+              "account",
+              "discount"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "cross",
+              "close",
+              "bridge",
+              "build"
+            ],
+            "correct": 2
+          }
+        ]
+      },
+      {
+        "text": "Antibiotics have saved millions of lives since their discovery, but their effectiveness is now under {{1}}. When antibiotics are used too frequently, bacteria can {{2}} resistance to them, making infections harder to treat. Health experts recommend that doctors {{3}} antibiotics only when truly necessary and that patients always complete their full {{4}} of treatment.",
+        "blanks": [
+          {
+            "options": [
+              "attack",
+              "threat",
+              "danger",
+              "risk"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "develop",
+              "create",
+              "invent",
+              "produce"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "describe",
+              "prescribe",
+              "subscribe",
+              "inscribe"
+            ],
+            "correct": 1
+          },
+          {
+            "options": [
+              "period",
+              "duration",
+              "course",
+              "series"
+            ],
+            "correct": 2
+          }
+        ]
+      },
+      {
+        "text": "The Amazon rainforest plays a vital role in regulating the Earth's climate. Its trees {{1}} enormous quantities of carbon dioxide from the atmosphere and release oxygen in return. {{2}}, large areas of the forest are cleared every year for agriculture and logging. This deforestation not only destroys the {{3}} of countless species but also {{4}} the region's ability to store carbon.",
+        "blanks": [
+          {
+            "options": [
+              "absorb",
+              "admit",
+              "adopt",
+              "adapt"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "Fortunately",
+              "Moreover",
+              "However",
+              "Similarly"
+            ],
+            "correct": 2
+          },
+          {
+            "options": [
+              "habitat",
+              "custom",
+              "pattern",
+              "territory"
+            ],
+            "correct": 0
+          },
+          {
+            "options": [
+              "strengthens",
+              "weakens",
+              "improves",
+              "maintains"
+            ],
+            "correct": 1
+          }
+        ]
+      }
     ],
     "mcMultiple": [
-      { "passage": "Remote working has become a permanent feature of many industries since the global pandemic. Surveys indicate that employees who work from home report higher job satisfaction and better work-life balance, largely because they save time on commuting. Companies also benefit from reduced office costs and access to a wider talent pool. However, remote work is not without drawbacks. Some employees feel isolated from their colleagues, and managers report that spontaneous collaboration has declined. Additionally, junior staff may receive less mentoring when senior colleagues are not physically present.", "question": "Which of the following are mentioned in the text as effects of remote working?", "options": ["Employees save time by not commuting", "Remote workers are promoted more quickly", "Companies spend less on office space", "Spontaneous collaboration between colleagues has decreased", "Remote workers earn higher salaries than office workers"], "answers": [0, 2, 3] },
-      { "passage": "The Mediterranean diet, rich in olive oil, fish, vegetables, and whole grains, has long been associated with good health. A landmark study published in a leading medical journal followed thousands of participants over several years. Those who closely followed the diet had a significantly lower risk of heart disease and stroke. The researchers also noted improvements in cholesterol levels and blood pressure among participants. Interestingly, the study found that the diet's benefits were greatest when combined with regular physical activity and social meals shared with family or friends, suggesting that lifestyle factors beyond food itself play an important role.", "question": "According to the passage, which findings did the study report?", "options": ["The diet reduced the risk of cardiovascular problems", "The diet cured existing heart disease in some patients", "Cholesterol levels improved in participants following the diet", "The diet's benefits increased when paired with exercise and social eating", "All participants lost significant amounts of weight"], "answers": [0, 2, 3] }
+      {
+        "passage": "Remote working has become a permanent feature of many industries since the global pandemic. Surveys indicate that employees who work from home report higher job satisfaction and better work-life balance, largely because they save time on commuting. Companies also benefit from reduced office costs and access to a wider talent pool. However, remote work is not without drawbacks. Some employees feel isolated from their colleagues, and managers report that spontaneous collaboration has declined. Additionally, junior staff may receive less mentoring when senior colleagues are not physically present.",
+        "question": "Which of the following are mentioned in the text as effects of remote working?",
+        "options": [
+          "Employees save time by not commuting",
+          "Remote workers are promoted more quickly",
+          "Companies spend less on office space",
+          "Spontaneous collaboration between colleagues has decreased",
+          "Remote workers earn higher salaries than office workers"
+        ],
+        "answers": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "passage": "The Mediterranean diet, rich in olive oil, fish, vegetables, and whole grains, has long been associated with good health. A landmark study published in a leading medical journal followed thousands of participants over several years. Those who closely followed the diet had a significantly lower risk of heart disease and stroke. The researchers also noted improvements in cholesterol levels and blood pressure among participants. Interestingly, the study found that the diet's benefits were greatest when combined with regular physical activity and social meals shared with family or friends, suggesting that lifestyle factors beyond food itself play an important role.",
+        "question": "According to the passage, which findings did the study report?",
+        "options": [
+          "The diet reduced the risk of cardiovascular problems",
+          "The diet cured existing heart disease in some patients",
+          "Cholesterol levels improved in participants following the diet",
+          "The diet's benefits increased when paired with exercise and social eating",
+          "All participants lost significant amounts of weight"
+        ],
+        "answers": [
+          0,
+          2,
+          3
+        ]
+      }
     ],
     "reorder": [
-      { "sentences": ["The Wright brothers achieved the first powered flight in 1903, staying airborne for just twelve seconds.", "Their success was the result of years of careful experimentation with gliders on the sand dunes of North Carolina.", "Unlike their rivals, they focused on controlling the aircraft in flight rather than simply building a powerful engine.", "This approach proved decisive, and by 1905 they had built a machine capable of sustained, fully controlled flight."] },
-      { "sentences": ["Photosynthesis is the process by which plants convert sunlight into chemical energy.", "During this process, chlorophyll in the leaves absorbs light energy from the sun.", "This energy is then used to combine carbon dioxide from the air with water from the soil.", "As a result, the plant produces glucose for food and releases oxygen into the atmosphere."] }
+      {
+        "sentences": [
+          "The Wright brothers achieved the first powered flight in 1903, staying airborne for just twelve seconds.",
+          "Their success was the result of years of careful experimentation with gliders on the sand dunes of North Carolina.",
+          "Unlike their rivals, they focused on controlling the aircraft in flight rather than simply building a powerful engine.",
+          "This approach proved decisive, and by 1905 they had built a machine capable of sustained, fully controlled flight."
+        ]
+      },
+      {
+        "sentences": [
+          "Photosynthesis is the process by which plants convert sunlight into chemical energy.",
+          "During this process, chlorophyll in the leaves absorbs light energy from the sun.",
+          "This energy is then used to combine carbon dioxide from the air with water from the soil.",
+          "As a result, the plant produces glucose for food and releases oxygen into the atmosphere."
+        ]
+      }
     ],
     "fibDrag": [
-      { "text": "Libraries have evolved far beyond their traditional role as storehouses of books. Modern libraries offer internet {{1}}, host community events, and provide quiet spaces for study. For many people, they remain the most {{2}} public institution in their neighbourhood.", "answers": ["access", "trusted"], "bank": ["access", "trusted", "expensive", "delivery", "hidden", "rapidly"] },
-      { "text": "Good note-taking is an essential {{1}} for university students. Rather than writing down every word, effective students identify the main {{2}} and record examples briefly in their own words.", "answers": ["skill", "ideas"], "bank": ["skill", "ideas", "habitual", "salary", "profound", "weather"] },
-      { "text": "Volcanic eruptions can have a significant {{1}} on the global climate. The ash and gases they release into the atmosphere can {{2}} sunlight, causing temporary cooling across entire continents.", "answers": ["impact", "block"], "bank": ["impact", "block", "gentle", "absorb", "quickly", "narrow"] },
-      { "text": "Regular medical check-ups allow doctors to {{1}} diseases at an early stage, when treatment is usually more {{2}}. Prevention, as the saying goes, is better than cure.", "answers": ["detect", "effective"], "bank": ["detect", "effective", "ignore", "fragile", "rapidly", "ancient"] }
+      {
+        "text": "Libraries have evolved far beyond their traditional role as storehouses of books. Modern libraries offer internet {{1}}, host community events, and provide quiet spaces for study. For many people, they remain the most {{2}} public institution in their neighbourhood.",
+        "answers": [
+          "access",
+          "trusted"
+        ],
+        "bank": [
+          "access",
+          "trusted",
+          "expensive",
+          "delivery",
+          "hidden",
+          "rapidly"
+        ]
+      },
+      {
+        "text": "Good note-taking is an essential {{1}} for university students. Rather than writing down every word, effective students identify the main {{2}} and record examples briefly in their own words.",
+        "answers": [
+          "skill",
+          "ideas"
+        ],
+        "bank": [
+          "skill",
+          "ideas",
+          "habitual",
+          "salary",
+          "profound",
+          "weather"
+        ]
+      },
+      {
+        "text": "Volcanic eruptions can have a significant {{1}} on the global climate. The ash and gases they release into the atmosphere can {{2}} sunlight, causing temporary cooling across entire continents.",
+        "answers": [
+          "impact",
+          "block"
+        ],
+        "bank": [
+          "impact",
+          "block",
+          "gentle",
+          "absorb",
+          "quickly",
+          "narrow"
+        ]
+      },
+      {
+        "text": "Regular medical check-ups allow doctors to {{1}} diseases at an early stage, when treatment is usually more {{2}}. Prevention, as the saying goes, is better than cure.",
+        "answers": [
+          "detect",
+          "effective"
+        ],
+        "bank": [
+          "detect",
+          "effective",
+          "ignore",
+          "fragile",
+          "rapidly",
+          "ancient"
+        ]
+      }
     ],
     "mcSingle": [
-      { "passage": "The development of vaccines is a lengthy and rigorous process. Before a vaccine reaches the public, it must pass through laboratory research and several phases of clinical trials involving thousands of volunteers. These trials test not only whether the vaccine works but also whether it is safe for different age groups and people with existing health conditions. Even after approval, regulatory agencies continue to monitor vaccines for rare side effects. This thorough process explains why, under normal circumstances, vaccine development takes many years.", "question": "What is the main idea of the passage?", "options": ["Vaccines are dangerous for people with health conditions", "Vaccine development involves extensive testing and monitoring before and after public release", "Clinical trials are unnecessary for modern vaccines", "Most vaccines fail during laboratory research"], "answer": 1 },
-      { "passage": "In the nineteenth century, many cities suffered from frequent outbreaks of cholera. Doctors initially believed the disease was spread through bad air. A London physician named John Snow challenged this theory during an 1854 outbreak. By mapping the locations of victims, Snow showed that cases clustered around a single water pump on Broad Street. When the pump's handle was removed, the outbreak subsided. Snow's work demonstrated that cholera was transmitted through contaminated water and laid the foundations of modern epidemiology.", "question": "According to the passage, how did John Snow identify the source of the cholera outbreak?", "options": ["By testing water samples in a laboratory", "By interviewing patients in hospitals", "By mapping where the victims lived and finding a cluster around one water pump", "By comparing air quality across London districts"], "answer": 2 }
+      {
+        "passage": "The development of vaccines is a lengthy and rigorous process. Before a vaccine reaches the public, it must pass through laboratory research and several phases of clinical trials involving thousands of volunteers. These trials test not only whether the vaccine works but also whether it is safe for different age groups and people with existing health conditions. Even after approval, regulatory agencies continue to monitor vaccines for rare side effects. This thorough process explains why, under normal circumstances, vaccine development takes many years.",
+        "question": "What is the main idea of the passage?",
+        "options": [
+          "Vaccines are dangerous for people with health conditions",
+          "Vaccine development involves extensive testing and monitoring before and after public release",
+          "Clinical trials are unnecessary for modern vaccines",
+          "Most vaccines fail during laboratory research"
+        ],
+        "answer": 1
+      },
+      {
+        "passage": "In the nineteenth century, many cities suffered from frequent outbreaks of cholera. Doctors initially believed the disease was spread through bad air. A London physician named John Snow challenged this theory during an 1854 outbreak. By mapping the locations of victims, Snow showed that cases clustered around a single water pump on Broad Street. When the pump's handle was removed, the outbreak subsided. Snow's work demonstrated that cholera was transmitted through contaminated water and laid the foundations of modern epidemiology.",
+        "question": "According to the passage, how did John Snow identify the source of the cholera outbreak?",
+        "options": [
+          "By testing water samples in a laboratory",
+          "By interviewing patients in hospitals",
+          "By mapping where the victims lived and finding a cluster around one water pump",
+          "By comparing air quality across London districts"
+        ],
+        "answer": 2
+      }
     ]
   },
   "listening": {
     "summarizeSpokenText": [
-      { "title": "The benefits and limits of bilingualism", "sample": "The speaker discussed the advantages of bilingualism, explaining that bilingual children often develop better concentration and problem-solving skills because switching between languages exercises the brain. The speaker also noted that bilingualism may delay the symptoms of dementia in old age. However, the lecture emphasised that these benefits depend on regular use of both languages, and that claims about bilingualism raising general intelligence are exaggerated.", "audio": "For many years, researchers have studied whether speaking two languages benefits the brain, and the evidence is largely positive. Bilingual children constantly switch between their languages, and this mental juggling appears to strengthen the brain's control systems. As a result, bilinguals often perform better on tasks that require concentration and ignoring distractions. Perhaps most strikingly, studies have found that bilingual patients develop the symptoms of dementia an average of four to five years later than patients who speak only one language. However, we should be careful not to exaggerate. There is little evidence that bilingualism raises general intelligence, and the benefits seem to depend heavily on using both languages regularly throughout life. Someone who learned a language at school and never uses it is unlikely to gain these advantages. Bilingualism is best understood as a form of lifelong mental exercise rather than a shortcut to genius." },
-      { "title": "The rise of vertical farming", "sample": "The lecture described vertical farming, where crops are grown indoors in stacked layers under LED lighting. The speaker explained the main advantages: year-round production, much less water use, and no pesticides. However, the high energy cost of artificial lighting makes vertical farming expensive, so it is currently profitable only for high-value crops like salad leaves and herbs, not for staple foods such as wheat and rice.", "audio": "Vertical farming is a method of growing crops indoors, in stacked layers, under carefully controlled conditions. Instead of sunlight, the plants receive light from LED lamps, and instead of soil, their roots sit in nutrient-rich water. This approach offers several remarkable advantages. Crops can be grown all year round, regardless of the weather outside. The systems use up to ninety-five percent less water than conventional agriculture, and because the environment is sealed, no pesticides are needed. Vertical farms can also be built in cities, cutting the distance food travels to consumers. Nevertheless, the industry faces one enormous obstacle: energy. Powering thousands of LED lights is expensive, and this cost makes vertical farming unprofitable for cheap staple crops like wheat, rice, and potatoes. For now, the technology is commercially viable mainly for high-value products such as salad leaves, herbs, and strawberries." }
+      {
+        "title": "The benefits and limits of bilingualism",
+        "sample": "The speaker discussed the advantages of bilingualism, explaining that bilingual children often develop better concentration and problem-solving skills because switching between languages exercises the brain. The speaker also noted that bilingualism may delay the symptoms of dementia in old age. However, the lecture emphasised that these benefits depend on regular use of both languages, and that claims about bilingualism raising general intelligence are exaggerated.",
+        "audio": "For many years, researchers have studied whether speaking two languages benefits the brain, and the evidence is largely positive. Bilingual children constantly switch between their languages, and this mental juggling appears to strengthen the brain's control systems. As a result, bilinguals often perform better on tasks that require concentration and ignoring distractions. Perhaps most strikingly, studies have found that bilingual patients develop the symptoms of dementia an average of four to five years later than patients who speak only one language. However, we should be careful not to exaggerate. There is little evidence that bilingualism raises general intelligence, and the benefits seem to depend heavily on using both languages regularly throughout life. Someone who learned a language at school and never uses it is unlikely to gain these advantages. Bilingualism is best understood as a form of lifelong mental exercise rather than a shortcut to genius."
+      },
+      {
+        "title": "The rise of vertical farming",
+        "sample": "The lecture described vertical farming, where crops are grown indoors in stacked layers under LED lighting. The speaker explained the main advantages: year-round production, much less water use, and no pesticides. However, the high energy cost of artificial lighting makes vertical farming expensive, so it is currently profitable only for high-value crops like salad leaves and herbs, not for staple foods such as wheat and rice.",
+        "audio": "Vertical farming is a method of growing crops indoors, in stacked layers, under carefully controlled conditions. Instead of sunlight, the plants receive light from LED lamps, and instead of soil, their roots sit in nutrient-rich water. This approach offers several remarkable advantages. Crops can be grown all year round, regardless of the weather outside. The systems use up to ninety-five percent less water than conventional agriculture, and because the environment is sealed, no pesticides are needed. Vertical farms can also be built in cities, cutting the distance food travels to consumers. Nevertheless, the industry faces one enormous obstacle: energy. Powering thousands of LED lights is expensive, and this cost makes vertical farming unprofitable for cheap staple crops like wheat, rice, and potatoes. For now, the technology is commercially viable mainly for high-value products such as salad leaves, herbs, and strawberries."
+      }
     ],
     "mcMultiple": [
-      { "audio": "Welcome to the university, everyone. Before we begin, a few important notices. The main library will close two hours earlier than usual this Friday because of essential maintenance to the heating system, so please plan your study time accordingly. Also, a reminder that next Monday is a public holiday, which means there will be no lectures or tutorials, and all administrative offices will be closed. However, the student gym and the cafeteria will remain open on their normal schedule throughout the holiday. Finally, anyone who has not yet registered for their modules should do so by Wednesday at the latest, as the online system closes then.", "question": "According to the announcement, which of the following are true?", "options": ["The library will close early on Friday for maintenance", "No classes will take place on Monday", "The cafeteria will be closed on the public holiday", "Module registration closes on Wednesday", "The gym will operate on reduced hours during the holiday"], "answers": [0, 1, 3] }
+      {
+        "audio": "Welcome to the university, everyone. Before we begin, a few important notices. The main library will close two hours earlier than usual this Friday because of essential maintenance to the heating system, so please plan your study time accordingly. Also, a reminder that next Monday is a public holiday, which means there will be no lectures or tutorials, and all administrative offices will be closed. However, the student gym and the cafeteria will remain open on their normal schedule throughout the holiday. Finally, anyone who has not yet registered for their modules should do so by Wednesday at the latest, as the online system closes then.",
+        "question": "According to the announcement, which of the following are true?",
+        "options": [
+          "The library will close early on Friday for maintenance",
+          "No classes will take place on Monday",
+          "The cafeteria will be closed on the public holiday",
+          "Module registration closes on Wednesday",
+          "The gym will operate on reduced hours during the holiday"
+        ],
+        "answers": [
+          0,
+          1,
+          3
+        ]
+      }
     ],
     "fillBlanks": [
-      { "display": "Good afternoon, everyone. Today's lecture focuses on the {{1}} of the industrial revolution. New machines allowed factories to {{2}} goods much faster than traditional workshops. As a result, many people moved from the {{3}} to cities in search of work.", "answers": ["origins", "produce", "countryside"], "audio": "Good afternoon, everyone. Today's lecture focuses on the origins of the industrial revolution. New machines allowed factories to produce goods much faster than traditional workshops. As a result, many people moved from the countryside to cities in search of work." },
-      { "display": "Before joining the field trip, all students must complete a safety {{1}}. Please wear {{2}} shoes, as the paths may be muddy, and bring enough water for the whole {{3}}.", "answers": ["briefing", "suitable", "journey"], "audio": "Before joining the field trip, all students must complete a safety briefing. Please wear suitable shoes, as the paths may be muddy, and bring enough water for the whole journey." },
-      { "display": "The museum's new exhibition explores how ancient {{1}} traded goods across the Mediterranean. Visitors can see coins, pottery, and jewellery that are over two thousand years {{2}}.", "answers": ["civilisations", "old"], "audio": "The museum's new exhibition explores how ancient civilisations traded goods across the Mediterranean. Visitors can see coins, pottery, and jewellery that are over two thousand years old." }
+      {
+        "display": "Good afternoon, everyone. Today's lecture focuses on the {{1}} of the industrial revolution. New machines allowed factories to {{2}} goods much faster than traditional workshops. As a result, many people moved from the {{3}} to cities in search of work.",
+        "answers": [
+          "origins",
+          "produce",
+          "countryside"
+        ],
+        "audio": "Good afternoon, everyone. Today's lecture focuses on the origins of the industrial revolution. New machines allowed factories to produce goods much faster than traditional workshops. As a result, many people moved from the countryside to cities in search of work."
+      },
+      {
+        "display": "Before joining the field trip, all students must complete a safety {{1}}. Please wear {{2}} shoes, as the paths may be muddy, and bring enough water for the whole {{3}}.",
+        "answers": [
+          "briefing",
+          "suitable",
+          "journey"
+        ],
+        "audio": "Before joining the field trip, all students must complete a safety briefing. Please wear suitable shoes, as the paths may be muddy, and bring enough water for the whole journey."
+      },
+      {
+        "display": "The museum's new exhibition explores how ancient {{1}} traded goods across the Mediterranean. Visitors can see coins, pottery, and jewellery that are over two thousand years {{2}}.",
+        "answers": [
+          "civilisations",
+          "old"
+        ],
+        "audio": "The museum's new exhibition explores how ancient civilisations traded goods across the Mediterranean. Visitors can see coins, pottery, and jewellery that are over two thousand years old."
+      }
     ],
     "highlightCorrectSummary": [
-      { "audio": "Honeybee populations have declined sharply in many parts of the world, and scientists believe there is no single cause. Pesticides certainly play a role, weakening bees' ability to navigate back to their hives. Parasitic mites attach themselves to bees and spread viruses through the colony. Meanwhile, the loss of wildflower meadows has reduced the variety of food available to bees, leaving them malnourished and more vulnerable to disease. Researchers emphasise that it is the combination of these pressures, rather than any one factor alone, that makes the decline so difficult to reverse.", "options": ["Pesticides are the sole cause of the honeybee decline, and banning them would immediately solve the problem.", "Honeybee decline results from several combined pressures — pesticides, parasites and habitat loss — which is why reversing it is so difficult.", "Wildflower meadows are disappearing because honeybees consume too much of their nectar.", "Parasitic mites are beneficial to bees because they strengthen colony immunity over time."], "answer": 1 }
+      {
+        "audio": "Honeybee populations have declined sharply in many parts of the world, and scientists believe there is no single cause. Pesticides certainly play a role, weakening bees' ability to navigate back to their hives. Parasitic mites attach themselves to bees and spread viruses through the colony. Meanwhile, the loss of wildflower meadows has reduced the variety of food available to bees, leaving them malnourished and more vulnerable to disease. Researchers emphasise that it is the combination of these pressures, rather than any one factor alone, that makes the decline so difficult to reverse.",
+        "options": [
+          "Pesticides are the sole cause of the honeybee decline, and banning them would immediately solve the problem.",
+          "Honeybee decline results from several combined pressures — pesticides, parasites and habitat loss — which is why reversing it is so difficult.",
+          "Wildflower meadows are disappearing because honeybees consume too much of their nectar.",
+          "Parasitic mites are beneficial to bees because they strengthen colony immunity over time."
+        ],
+        "answer": 1
+      }
     ],
     "mcSingle": [
-      { "audio": "Hi Professor Hughes, thanks for seeing me. I wanted to ask about the deadline for my history essay. I know it's officially due this Friday, but I've been in hospital all week and I've only just been discharged. I have a medical certificate here. Would it be possible to get a short extension?", "question": "Why did the student visit the professor?", "options": ["To ask for feedback on a submitted essay", "To request an extension because of illness", "To complain about the history course", "To hand in a medical certificate for a missed exam"], "answer": 1 }
+      {
+        "audio": "Hi Professor Hughes, thanks for seeing me. I wanted to ask about the deadline for my history essay. I know it's officially due this Friday, but I've been in hospital all week and I've only just been discharged. I have a medical certificate here. Would it be possible to get a short extension?",
+        "question": "Why did the student visit the professor?",
+        "options": [
+          "To ask for feedback on a submitted essay",
+          "To request an extension because of illness",
+          "To complain about the history course",
+          "To hand in a medical certificate for a missed exam"
+        ],
+        "answer": 1
+      }
     ],
     "selectMissingWord": [
-      { "audio": "Choosing a university is one of the biggest decisions a young person will ever make. Rankings and reputation matter, of course, but students should also think carefully about the location, the cost of living, and whether the teaching style suits them. In the end, the best university is simply the one that fits your", "options": ["pocket", "needs", "friends", "holidays"], "answer": 1, "fullText": "In the end, the best university is simply the one that fits your needs." }
+      {
+        "audio": "Choosing a university is one of the biggest decisions a young person will ever make. Rankings and reputation matter, of course, but students should also think carefully about the location, the cost of living, and whether the teaching style suits them. In the end, the best university is simply the one that fits your",
+        "options": [
+          "pocket",
+          "needs",
+          "friends",
+          "holidays"
+        ],
+        "answer": 1,
+        "fullText": "In the end, the best university is simply the one that fits your needs."
+      }
     ],
     "highlightIncorrectWords": [
-      { "words": [ { "w": "The" }, { "w": "lecture" }, { "w": "theatre" }, { "w": "was" }, { "w": "completely" }, { "w": "full" }, { "w": "yesterday", "wrong": true, "said": "today" }, { "w": "afternoon" }, { "w": "because" }, { "w": "a" }, { "w": "famous" }, { "w": "scientist" }, { "w": "gave" }, { "w": "a" }, { "w": "talk" }, { "w": "about" }, { "w": "space" }, { "w": "travel", "wrong": true, "said": "exploration" }, { "w": "and" }, { "w": "answered" }, { "w": "questions", "wrong": true, "said": "queries" }, { "w": "from" }, { "w": "the" }, { "w": "audience." } ] },
-      { "words": [ { "w": "Regular" }, { "w": "reading" }, { "w": "improves" }, { "w": "vocabulary" }, { "w": "and" }, { "w": "writing" }, { "w": "skills." }, { "w": "Studies" }, { "w": "show" }, { "w": "that" }, { "w": "children" }, { "w": "who" }, { "w": "read" }, { "w": "for" }, { "w": "pleasure" }, { "w": "perform" }, { "w": "badly", "wrong": true, "said": "better" }, { "w": "in" }, { "w": "school" }, { "w": "tests" }, { "w": "and" }, { "w": "develop" }, { "w": "stronger", "wrong": true, "said": "deeper" }, { "w": "concentration." } ] }
+      {
+        "words": [
+          {
+            "w": "The"
+          },
+          {
+            "w": "lecture"
+          },
+          {
+            "w": "theatre"
+          },
+          {
+            "w": "was"
+          },
+          {
+            "w": "completely"
+          },
+          {
+            "w": "full"
+          },
+          {
+            "w": "yesterday",
+            "wrong": true,
+            "said": "today"
+          },
+          {
+            "w": "afternoon"
+          },
+          {
+            "w": "because"
+          },
+          {
+            "w": "a"
+          },
+          {
+            "w": "famous"
+          },
+          {
+            "w": "scientist"
+          },
+          {
+            "w": "gave"
+          },
+          {
+            "w": "a"
+          },
+          {
+            "w": "talk"
+          },
+          {
+            "w": "about"
+          },
+          {
+            "w": "space"
+          },
+          {
+            "w": "travel",
+            "wrong": true,
+            "said": "exploration"
+          },
+          {
+            "w": "and"
+          },
+          {
+            "w": "answered"
+          },
+          {
+            "w": "questions",
+            "wrong": true,
+            "said": "queries"
+          },
+          {
+            "w": "from"
+          },
+          {
+            "w": "the"
+          },
+          {
+            "w": "audience."
+          }
+        ]
+      },
+      {
+        "words": [
+          {
+            "w": "Regular"
+          },
+          {
+            "w": "reading"
+          },
+          {
+            "w": "improves"
+          },
+          {
+            "w": "vocabulary"
+          },
+          {
+            "w": "and"
+          },
+          {
+            "w": "writing"
+          },
+          {
+            "w": "skills."
+          },
+          {
+            "w": "Studies"
+          },
+          {
+            "w": "show"
+          },
+          {
+            "w": "that"
+          },
+          {
+            "w": "children"
+          },
+          {
+            "w": "who"
+          },
+          {
+            "w": "read"
+          },
+          {
+            "w": "for"
+          },
+          {
+            "w": "pleasure"
+          },
+          {
+            "w": "perform"
+          },
+          {
+            "w": "badly",
+            "wrong": true,
+            "said": "better"
+          },
+          {
+            "w": "in"
+          },
+          {
+            "w": "school"
+          },
+          {
+            "w": "tests"
+          },
+          {
+            "w": "and"
+          },
+          {
+            "w": "develop"
+          },
+          {
+            "w": "stronger",
+            "wrong": true,
+            "said": "deeper"
+          },
+          {
+            "w": "concentration."
+          }
+        ]
+      }
     ],
     "writeFromDictation": [
-      { "text": "The psychology seminar takes place every Tuesday afternoon." },
-      { "text": "Students should register before the end of the first week." },
-      { "text": "Modern agriculture depends heavily on a stable climate." }
+      {
+        "text": "The psychology seminar takes place every Tuesday afternoon."
+      },
+      {
+        "text": "Students should register before the end of the first week."
+      },
+      {
+        "text": "Modern agriculture depends heavily on a stable climate."
+      }
     ]
   }
 }

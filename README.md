@@ -7,7 +7,7 @@ Six full-length, self-contained PTE Academic practice exams aligned to the **202
 Open any file in `exams/` directly in a browser (Chrome/Edge recommended — Web Speech API + microphone required):
 
 ```
-exams/pte-mock-exam-1.html  …  exams/pte-mock-exam-6.html
+exams/pte-mock-exam-1.html  …  exams/pte-mock-exam-10.html
 ```
 
 No server, no install — each HTML file is fully self-contained.
@@ -22,7 +22,7 @@ No server, no install — each HTML file is fully self-contained.
 | Samples/keys | Only in final score report | Reveal inline per item |
 | Mic | Recorded responses, auto start/stop with beep | Manual record/stop |
 
-## Exam structure (63 items per exam)
+## Exam structure (63 items per exam, 10 exams, no repeated items)
 
 - **Part 1 – Speaking & Writing:** Read Aloud ×7, Repeat Sentence ×10, Describe Image ×3, Re-tell Lecture ×2, Respond to a Situation ×2, Summarize Group Discussion ×2, Answer Short Question ×5, Summarize Written Text ×2, Write Essay ×1
 - **Part 2 – Reading (30 min clock):** FIB (dropdown) ×5, MC Multiple ×2, Re-order Paragraphs ×2, FIB (drag) ×4, MC Single ×2
