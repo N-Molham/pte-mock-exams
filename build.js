@@ -24,10 +24,16 @@ for (const f of files) {
   if (!id) { console.error(`Missing meta.id in ${f}`); process.exit(1); }
   // JSON is embedded inside a <script>: escape "</script" defensively.
   const safeJson = JSON.stringify(content).replace(/<\//g, "<\\/");
+  // Neural clip index (hash -> duration ms) built by tools/render-audio.mjs.
+  const manifestPath = path.join(ROOT, "audio", `exam${id}`, "manifest.json");
+  const audioJson = fs.existsSync(manifestPath)
+    ? fs.readFileSync(manifestPath, "utf8").trim()
+    : "{}";
   let html = template
     .replace("__TITLE__", content.meta.title.replace(/</g, "&lt;"))
     .replace("/*__CSS__*/", () => css)
     .replace("/*__CONTENT__*/null", () => safeJson)
+    .replace("/*__AUDIO__*/null", () => audioJson)
     .replace("/*__ENGINE__*/", () => engine);
   const out = path.join(outDir, `pte-mock-exam-${id}.html`);
   fs.writeFileSync(out, html);

@@ -1,10 +1,12 @@
-/* PTE Academic Mock Exam Engine (2026 format) — self-contained, no dependencies.
-   Audio via Web Speech API (speechSynthesis). Mic via MediaRecorder. */
+/* PTE Academic Mock Exam Engine (2026 format) — no dependencies.
+   Audio: pre-rendered neural clips (audio/<exam>/<hash>.mp3) when present,
+   Web Speech API (speechSynthesis) as fallback. Mic via MediaRecorder. */
 (function () {
 "use strict";
 
 var app = document.getElementById("app");
 var C = EXAM;
+var AUDIO_INDEX = window.AUDIO_INDEX || {};
 
 /* ================= static text: instructions + guide tips ================= */
 var TYPE_META = {
@@ -89,7 +91,9 @@ var state = {
   readingTick: null,
   mediaStream: null,
   recorder: null,
-  recChunks: []
+  recChunks: [],
+  audioEl: null,         // active <audio> for pre-rendered clips
+  ttsCancel: null        // cancels an in-flight speakTurns() sequence
 };
 
 /* ================= flow construction ================= */
@@ -154,9 +158,60 @@ function beep() {
 function wordCount(t) { t = (t || "").trim(); return t ? t.split(/\s+/).length : 0; }
 
 /* ================= TTS ================= */
-function stopTTS() { try { window.speechSynthesis && speechSynthesis.cancel(); } catch (e) {} state.speaking = false; }
-function speak(text, opts) {
-  opts = opts || {};
+/* Hash of a spoken string; must match tools/render-audio.mjs. */
+function hashText(text, speaker) {
+  var s = String(text == null ? "" : text).replace(/\s+/g, " ").trim();
+  if (speaker) s = speaker + "\u0001" + s;
+  var h = 0x811c9dc5;
+  for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+  return (h >>> 0).toString(36);
+}
+/* Audio lives next to the page on GitHub Pages, one level up when the exam
+   file is opened from a local exams/ checkout. */
+function audioBases() {
+  var dir = "audio/exam" + ((C.meta && C.meta.id) || 1) + "/";
+  return [dir, "../" + dir];
+}
+/* Play a pre-rendered clip. Returns null when no clip exists (caller falls
+   back to speechSynthesis), otherwise a Promise<boolean>. */
+function playClip(text, speaker) {
+  var hash = hashText(text, speaker);
+  if (!AUDIO_INDEX[hash]) return null;
+  return new Promise(function (res) {
+    var bases = audioBases(), attempt = 0, settled = false, el;
+    function finish(ok) {
+      if (settled) return;
+      settled = true;
+      if (state.audioEl === el) state.audioEl = null;
+      state.speaking = false;
+      res(ok);
+    }
+    function start() {
+      el = new Audio(bases[attempt] + hash + ".mp3");
+      el.preload = "auto";
+      state.audioEl = el;
+      state.speaking = true;
+      el.onended = function () { finish(true); };
+      el.onerror = function () {
+        if (el === state.audioEl) state.audioEl = null;
+        attempt++;
+        if (attempt < bases.length) start(); else finish(false);
+      };
+      var p = el.play();
+      if (p && p.catch) p.catch(function () { finish(false); });
+    }
+    start();
+  });
+}
+function stopTTS() {
+  var el = state.audioEl;
+  state.audioEl = null;
+  if (el) { try { el.pause(); el.removeAttribute("src"); el.load(); } catch (e) {} }
+  try { window.speechSynthesis && speechSynthesis.cancel(); } catch (e) {}
+  state.speaking = false;
+  if (state.ttsCancel) { var cancel = state.ttsCancel; state.ttsCancel = null; try { cancel(); } catch (e) {} }
+}
+function speakFallback(text, opts) {
   return new Promise(function (res) {
     if (!("speechSynthesis" in window)) { res(false); return; }
     var u = new SpeechSynthesisUtterance(text);
@@ -167,14 +222,28 @@ function speak(text, opts) {
     speechSynthesis.speak(u);
   });
 }
+function speak(text, opts) {
+  opts = opts || {};
+  var clip = playClip(text, opts.speaker);
+  if (!clip) return speakFallback(text, opts);
+  return clip.then(function (ok) { return ok ? true : speakFallback(text, opts); });
+}
 function speakTurns(turns) {
-  var pitches = { A: 1.0, B: 1.35, C: 0.75, D: 1.15 };
+  /* Pre-rendered clips already use a different voice per speaker; pitch only
+     distinguishes speakers in the speechSynthesis fallback. */
+  var pitches = { A: 1.0, B: 0.75, C: 1.3, D: 0.9 };
   var i = 0, cancelled = false;
-  state.ttsCancel = function () { cancelled = true; };
+  var cancel = function () { cancelled = true; };
+  state.ttsCancel = cancel;
   return new Promise(function (res) {
     (function next() {
-      if (cancelled || i >= turns.length) { res(!cancelled); return; }
-      speak(turns[i].text, { pitch: pitches[turns[i].speaker] || 1, rate: 0.95 }).then(next);
+      if (cancelled || i >= turns.length) {
+        if (state.ttsCancel === cancel) state.ttsCancel = null;
+        res(!cancelled);
+        return;
+      }
+      var turn = turns[i];
+      speak(turn.text, { speaker: turn.speaker, pitch: pitches[turn.speaker] || 1, rate: 0.95 }).then(next);
       i++;
     })();
   });

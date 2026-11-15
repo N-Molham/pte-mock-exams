@@ -30,7 +30,7 @@ No server, no install — each HTML file is fully self-contained.
 - **Part 2 – Reading (30 min clock):** FIB (dropdown) ×5, MC Multiple ×2, Re-order Paragraphs ×2, FIB (drag) ×4, MC Single ×2
 - **Part 3 – Listening:** Summarize Spoken Text ×2, MC Multiple ×1, Fill in the Blanks ×3, Highlight Correct Summary ×1, MC Single ×1, Select Missing Word ×1, Highlight Incorrect Words ×2, Write from Dictation ×3
 
-Audio prompts use the browser's built-in speech synthesis; spoken responses are recorded via the microphone and replayable in the score report. Objective items are auto-scored; speaking/writing tasks are self-reviewed against sample responses. **Scores are indicative only** — this is unofficial practice material, not affiliated with Pearson PLC.
+Audio prompts are pre-rendered with Microsoft Edge neural voices (`en-AU-NatashaNeural`, `en-AU-WilliamNeural`, `en-NZ-MollyNeural`) and served from `audio/<exam>/`; if a clip is unavailable the page falls back to the browser's own speech synthesis. Spoken responses are recorded via the microphone and replayable in the score report. Objective items are auto-scored; speaking/writing tasks are self-reviewed against sample responses. **Scores are indicative only** — this is unofficial practice material, not affiliated with Pearson PLC.
 
 ## Repository layout
 
@@ -38,13 +38,36 @@ Audio prompts use the browser's built-in speech synthesis; spoken responses are 
 src/template.html   HTML shell
 src/styles.css      exam UI styles
 src/engine.js       exam engine (state machine, timers, TTS, MediaRecorder, scoring)
-content/exam1..6.json   item banks (original content)
-build.js            assembles self-contained HTML into exams/
-exams/              the 6 deliverable mock exams
+content/exam1..10.json  item banks (original content)
+tools/render-audio.mjs  renders every spoken prompt to audio/<exam>/<hash>.mp3
+tools/publish-pages.sh  publishes exams + audio to the gh-pages branch
+audio/              pre-rendered neural clips + per-exam manifest.json
+build.js            assembles the exam HTML into exams/
+exams/              the 10 deliverable mock exams
+site/index.html     landing page published to GitHub Pages
+samples/            voice samples + preview page (audio quality check)
 ```
 
 Rebuild after editing content or engine:
 
 ```sh
 node build.js
+```
+
+Re-render audio after editing any spoken prompt (only new/changed clips are synthesised):
+
+```sh
+npm install          # once: msedge-tts
+npm run audio        # all exams; or: node tools/render-audio.mjs exam3
+npm run build        # embeds the clip manifest into each exam
+```
+
+Each exam HTML embeds only the clip manifest (hash → duration); the MP3s stay
+next to the page under `audio/`, so a page opened from `exams/` finds them at
+`../audio/` and the GitHub Pages copy at `audio/`.
+
+Publish the built exams and audio to the live site:
+
+```sh
+./tools/publish-pages.sh
 ```
