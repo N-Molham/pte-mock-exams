@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neural TTS audio samples — PTE Mock Exams</title>
+<style>
+  :root { color-scheme: light dark; --line: #d8d8d8; }
+  body { margin: 0; padding: 2rem 1rem 4rem; font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin: 0 0 .4rem; }
+  .lede { color: #666; margin: 0 0 2rem; }
+  .clip { border-top: 1px solid var(--line); padding: 1.1rem 0; }
+  .clip h2 { font-size: 1rem; margin: 0 0 .15rem; }
+  .meta { color: #666; font-size: .875rem; margin: 0 0 .7rem; }
+  audio { width: 100%; }
+  code { font-size: .875rem; }
+  footer { border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem; color: #666; font-size: .875rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Neural TTS audio samples</h1>
+  <p class="lede">Pre-rendered Microsoft Edge neural voices reading real items from the mock exams. This is the audio the exam would ship instead of browser speech synthesis.</p>
+
+  <section class="clip">
+    <h2>Repeat Sentence — Natasha (en-AU, female)</h2>
+    <p class="meta">Speaking · rate 0.95 · “The library will be closed for renovations during the summer break.”</p>
+    <audio controls preload="none" src="repeat-sentence-natasha.mp3"></audio>
+  </section>
+
+  <section class="clip">
+    <h2>Answer Short Question — William (en-AU, male)</h2>
+    <p class="meta">Speaking · rate 0.95 · “What do you call a person who studies the stars and planets?”</p>
+    <audio controls preload="none" src="answer-short-question-william.mp3"></audio>
+  </section>
+
+  <section class="clip">
+    <h2>Summarize Group Discussion — Speaker A, Natasha</h2>
+    <p class="meta">Speaking · rate 0.95 · turn 1 of 6</p>
+    <audio controls preload="none" src="group-discussion-a-natasha.mp3"></audio>
+  </section>
+
+  <section class="clip">
+    <h2>Summarize Group Discussion — Speaker B, William</h2>
+    <p class="meta">Speaking · rate 0.95 · turn 2 of 6</p>
+    <audio controls preload="none" src="group-discussion-b-william.mp3"></audio>
+  </section>
+
+  <section class="clip">
+    <h2>Re-tell Lecture / Summarize Spoken Text — Natasha</h2>
+    <p class="meta">Listening · rate 0.92 · extract from “The benefits and limits of bilingualism”</p>
+    <audio controls preload="none" src="lecture-excerpt-natasha.mp3"></audio>
+  </section>
+
+  <footer>
+    Generated with <code>msedge-tts</code> · <code>audio-24khz-48kbitrate-mono-mp3</code> · source: <code>content/exam1.json</code>
+  </footer>
+</main>
+</body>
+</html>
