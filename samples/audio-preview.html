@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PTE mock exam audio preview</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px 20px 64px;
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #f7f8fa; color: #1b1f24;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #14171b; color: #e6e9ee; }
+    .card { background: #1c2026; border-color: #2b313a; }
+    .task { color: #9aa6b4; }
+    .note { background: #1c2026; border-color: #2b313a; color: #b3bcc8; }
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 24px; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .sub { margin: 0 0 24px; color: #6b7684; font-size: 14px; }
+  .note {
+    margin: 0 0 24px; padding: 12px 14px; font-size: 14px;
+    background: #fff; border: 1px solid #e3e7ec; border-radius: 10px; color: #4a5561;
+  }
+  .card {
+    background: #fff; border: 1px solid #e3e7ec; border-radius: 12px;
+    padding: 16px 18px 18px; margin-bottom: 14px;
+  }
+  .task {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.07em;
+    text-transform: uppercase; color: #6b7684; margin-bottom: 6px;
+  }
+  .voice { font-size: 14px; color: #6b7684; margin-bottom: 10px; }
+  .prompt { margin: 0 0 14px; font-size: 15px; }
+  .prompt.q::before { content: "“"; }
+  .prompt.q::after { content: "”"; }
+  audio { width: 100%; height: 38px; }
+  footer { margin-top: 28px; font-size: 13px; color: #6b7684; }
+  code { font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>PTE mock exam audio preview</h1>
+  <p class="sub">Microsoft Edge neural TTS · 24 kHz mono · 48 kbps MP3</p>
+
+  <p class="note">
+    These are the actual exam prompts for Exam 1, pre-rendered instead of spoken by the
+    browser. Compare them with what the exam plays today (browser <code>speechSynthesis</code>,
+    which usually falls back to eSpeak).
+  </p>
+
+  <div class="card">
+    <div class="task">Repeat Sentence · Speaking</div>
+    <div class="voice">en-AU-NatashaNeural · rate 0.95 · 4.8 s</div>
+    <p class="prompt q">The library will be closed for renovations during the summer break.</p>
+    <audio controls preload="none" src="repeat-sentence-natasha.mp3"></audio>
+  </div>
+
+  <div class="card">
+    <div class="task">Answer Short Question · Speaking</div>
+    <div class="voice">en-AU-WilliamNeural · rate 0.95 · 3.7 s</div>
+    <p class="prompt q">What do you call a person who studies the stars and planets?</p>
+    <audio controls preload="none" src="answer-short-question-william.mp3"></audio>
+  </div>
+
+  <div class="card">
+    <div class="task">Summarize Group Discussion · Speaker A</div>
+    <div class="voice">en-AU-NatashaNeural · rate 0.95 · 13.6 s</div>
+    <p class="prompt q">I honestly think the library should be open twenty-four hours. A lot of us study best late at night, and students who commute or work part-time jobs can't always come during normal hours.</p>
+    <audio controls preload="none" src="group-discussion-a-natasha.mp3"></audio>
+  </div>
+
+  <div class="card">
+    <div class="task">Summarize Group Discussion · Speaker B</div>
+    <div class="voice">en-AU-WilliamNeural · rate 0.95 · 8.2 s</div>
+    <p class="prompt q">I see your point, but somebody has to pay for it. Overnight staffing, heating, security, that costs a lot of money.</p>
+    <audio controls preload="none" src="group-discussion-b-william.mp3"></audio>
+  </div>
+
+  <div class="card">
+    <div class="task">Summarize Spoken Text · Listening lecture</div>
+    <div class="voice">en-AU-NatashaNeural · rate 0.92 · 18.1 s</div>
+    <p class="prompt q">For many years, researchers have studied whether speaking two languages benefits the brain, and the evidence is largely positive. Bilingual children constantly switch between their languages, and this mental juggling appears to strengthen the brain's control systems.</p>
+    <audio controls preload="none" src="lecture-excerpt-natasha.mp3"></audio>
+  </div>
+
+  <footer>
+    Regenerate with Microsoft Edge Read Aloud (msedge-tts). Exam audio is currently
+    synthesised in the browser, so this page is a quality comparison, not yet wired
+    into the exam engine.
+  </footer>
+</div>
+</body>
+</html>
