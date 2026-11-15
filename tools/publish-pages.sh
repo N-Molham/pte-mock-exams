@@ -16,7 +16,8 @@ WORK=$(mktemp -d "$TMPBASE/pte-pages.XXXXXX")
 cleanup() { git -C "$ROOT" worktree remove --force "$WORK" >/dev/null 2>&1 || true; }
 trap cleanup EXIT INT TERM
 
-node build.js
+NODE=$(command -v node || echo /home/opencode/.local/bin/node)
+"$NODE" build.js
 
 git worktree add --detach "$WORK" gh-pages >/dev/null
 cp exams/pte-mock-exam-*.html "$WORK"/
