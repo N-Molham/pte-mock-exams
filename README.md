@@ -30,7 +30,9 @@ No server, no install — each HTML file is fully self-contained.
 - **Part 2 – Reading (30 min clock):** FIB (dropdown) ×5, MC Multiple ×2, Re-order Paragraphs ×2, FIB (drag) ×4, MC Single ×2
 - **Part 3 – Listening:** Summarize Spoken Text ×2, MC Multiple ×1, Fill in the Blanks ×3, Highlight Correct Summary ×1, MC Single ×1, Select Missing Word ×1, Highlight Incorrect Words ×2, Write from Dictation ×3
 
-Audio prompts are pre-rendered with Microsoft Edge neural voices (`en-AU-NatashaNeural`, `en-AU-WilliamNeural`, `en-NZ-MollyNeural`) and served from `audio/<exam>/`; if a clip is unavailable the page falls back to the browser's own speech synthesis. Spoken responses are recorded via the microphone and replayable in the score report. Objective items are auto-scored; speaking/writing tasks are self-reviewed against sample responses. **Scores are indicative only** — this is unofficial practice material, not affiliated with Pearson PLC.
+Audio prompts are pre-rendered with Microsoft Edge neural voices (`en-AU-NatashaNeural`, `en-AU-WilliamNeural`, `en-NZ-MollyNeural`) and served from `audio/<exam>/`; if a clip is unavailable the page falls back to the browser's own speech synthesis. Spoken responses are recorded via the microphone and replayable in the score report.
+
+Scoring is automatic and per-task: objective items are marked exactly (partial credit for multiple-answer, reorder and dictation items); Summarize Written Text, Essay and Summarize Spoken Text are scored on content coverage against the source text, length target, and paragraph structure for the essay; speaking responses are transcribed by the browser's speech recognition (Chrome/Edge) and scored on word accuracy (Read Aloud, Repeat Sentence, short answers) or key-term coverage (Retell Lecture, Respond to Situation, Summarize Group Discussion). Describe Image has no text reference and stays self-reviewed, as does any speaking item when speech recognition is unavailable. **Scores are indicative only** — this is unofficial practice material, not affiliated with Pearson PLC.
 
 ## Repository layout
 

@@ -19,7 +19,8 @@ trap cleanup EXIT INT TERM
 NODE=$(command -v node || echo /home/opencode/.local/bin/node)
 "$NODE" build.js
 
-git worktree add --detach "$WORK" gh-pages >/dev/null
+git fetch --quiet origin gh-pages
+git worktree add --detach "$WORK" FETCH_HEAD >/dev/null
 cp exams/pte-mock-exam-*.html "$WORK"/
 rm -rf "$WORK/audio"
 cp -R audio "$WORK/audio"

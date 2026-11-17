@@ -93,7 +93,11 @@ var state = {
   recorder: null,
   recChunks: [],
   audioEl: null,         // active <audio> for pre-rendered clips
-  ttsCancel: null        // cancels an in-flight speakTurns() sequence
+  ttsCancel: null,       // cancels an in-flight speakTurns() sequence
+  transcripts: {},       // key -> what speech recognition heard
+  sr: null,              // active SpeechRecognition instance
+  srKey: null,
+  srActive: false
 };
 
 /* ================= flow construction ================= */
@@ -275,10 +279,43 @@ function startRecording(k) {
     state.recordings[k] = URL.createObjectURL(b);
   };
   state.recorder.start();
+  startTranscription(k);
   return true;
 }
 function stopRecording() {
+  stopTranscription();
   if (state.recorder && state.recorder.state !== "inactive") { try { state.recorder.stop(); } catch (e) {} }
+}
+
+/* Speech recognition turns a spoken response into text so it can be scored.
+   Chrome/Edge only; absent API simply leaves the item self-reviewed. */
+function srCtor() { return window.SpeechRecognition || window.webkitSpeechRecognition || null; }
+function startTranscription(k) {
+  var SR = srCtor();
+  if (!SR) return;
+  stopTranscription();
+  try {
+    var r = new SR();
+    r.lang = "en-AU"; r.continuous = true; r.interimResults = false; r.maxAlternatives = 1;
+    state.srKey = k; state.srActive = true;
+    if (!state.transcripts[k]) state.transcripts[k] = "";
+    r.onresult = function (e) {
+      var out = "";
+      for (var i = e.resultIndex; i < e.results.length; i++) {
+        if (e.results[i].isFinal) out += e.results[i][0].transcript + " ";
+      }
+      if (out) state.transcripts[k] = (state.transcripts[k] + " " + out).replace(/\s+/g, " ").trim();
+    };
+    r.onerror = function () {};
+    /* Chrome ends the session on a pause; resume while the mic is still open. */
+    r.onend = function () { if (state.srActive && state.srKey === k) { try { r.start(); } catch (e) {} } };
+    r.start();
+    state.sr = r;
+  } catch (e) { state.sr = null; }
+}
+function stopTranscription() {
+  state.srActive = false;
+  if (state.sr) { try { state.sr.stop(); } catch (e) {} state.sr = null; }
 }
 
 /* ================= chrome (header / progress) ================= */
@@ -335,6 +372,7 @@ function renderMicCheck() {
     '<div class="main"><div class="card">' +
     "<h2>Microphone check</h2>" +
     '<div class="instructions">The real PTE Academic records your spoken responses. Allow microphone access, then speak a few words and check the indicator. You may skip this; speaking tasks will still run, but recordings will not be captured.</div>' +
+    '<div class="instructions">Speaking responses are also transcribed by your browser\'s speech recognition (Chrome/Edge) so they can be scored. That audio goes to the browser\'s speech service, not to this site. Without it, speaking items stay self-reviewed.</div>' +
     '<div class="statusbar"><span class="recdot" id="micdot"></span><span id="micstatus" class="statusline">Not tested yet</span></div>' +
     '<div class="statusbar"><button class="btn sec" id="micbtn">Enable microphone</button>' +
     '<button class="btn" id="micnext">Continue</button></div>' +
@@ -983,28 +1021,151 @@ function correctSummary(type, d) {
   return "";
 }
 
-/* ================= review / score report ================= */
+/* ---- open-response scoring: keyword coverage + length + accuracy ---- */
+var STOPW = {};
+("a an the and or but if then than that this these those of in on at to for from with without by as is are was were be been being it its their there they them he she his her you your we our i my me not no so do does did has have had can could would should will shall may might must more most much many some any such only own same too very just don now also into about over under between across after before while during because although though which who whom whose what when where why how both each other another one two three").split(" ").forEach(function (w) { STOPW[w] = 1; });
+function words(t) { return String(t || "").toLowerCase().replace(/[^a-z0-9'\s]/g, " ").split(/\s+/).filter(Boolean); }
+function stemW(w) { return w.replace(/'(s|t|re|ve|ll|d|m)$/, "").replace(/ies$/, "y").replace(/(ing|ed|es|s)$/, ""); }
+function contentWords(t) { return words(t).filter(function (w) { return w.length > 2 && !STOPW[w]; }).map(stemW); }
+function keyTerms(ref, n) {
+  var freq = {}, order = [];
+  contentWords(ref).forEach(function (w) {
+    if (freq[w] == null) { freq[w] = 0; order.push(w); }
+    freq[w]++;
+  });
+  order.sort(function (a, b) { return freq[b] - freq[a] || b.length - a.length; });
+  return order.slice(0, n || 14);
+}
+function coverageOf(ansText, keys) {
+  if (!keys.length) return 0;
+  var set = {}, hit = 0;
+  contentWords(ansText).forEach(function (w) { set[w] = 1; });
+  keys.forEach(function (k) { if (set[k]) hit++; });
+  return hit / keys.length;
+}
+/* Share of the answer's content words that also occur in the reference.
+   Keeps copies of unrelated text from scoring on length alone. */
+function precisionOf(ansText, refText) {
+  var ref = {}, ans = contentWords(ansText), hit = 0;
+  contentWords(refText).forEach(function (w) { ref[w] = 1; });
+  if (!ans.length) return 0;
+  ans.forEach(function (w) { if (ref[w]) hit++; });
+  return hit / ans.length;
+}
+/* Longest common subsequence over words, as a share of the reference. */
+function matchRatio(ref, ans) {
+  var a = words(ref), b = words(ans);
+  if (!a.length || !b.length) return 0;
+  var dp = [];
+  for (var j = 0; j <= b.length; j++) dp[j] = 0;
+  for (var i = 1; i <= a.length; i++) {
+    var prev = 0;
+    for (var j2 = 1; j2 <= b.length; j2++) {
+      var tmp = dp[j2];
+      dp[j2] = a[i - 1] === b[j2 - 1] ? prev + 1 : Math.max(dp[j2], dp[j2 - 1]);
+      prev = tmp;
+    }
+  }
+  return dp[b.length] / a.length;
+}
+function clamp01(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+function round1(x) { return Math.round(x * 10) / 10; }
+
+/* Writing / listening summaries: content coverage + length, plus structure
+   for the essay. Reference text is the passage, transcript or prompt. */
+function scoreTextResponse(refText, ans, o) {
+  var n = wordCount(ans);
+  if (!n) return null;
+  var keys = keyTerms(refText, 14);
+  var recall = coverageOf(ans, keys), precision = precisionOf(ans, refText);
+  var cov = 0.65 * recall + 0.35 * precision;
+  var lenFit = n < o.min ? clamp01(n / o.min) : n > o.target * 1.6 ? 0.6 : 1;
+  var frac, extra = "";
+  if (o.paragraphs) {
+    var paras = String(ans).split(/\n+/).filter(function (p) { return wordCount(p) >= 25; }).length;
+    var struct = paras >= 3 ? 1 : paras === 2 ? 0.75 : 0.45;
+    frac = 0.45 * cov + 0.25 * lenFit + 0.3 * struct;
+    extra = " · " + paras + " paragraph" + (paras === 1 ? "" : "s");
+  } else {
+    frac = 0.7 * cov + 0.3 * lenFit;
+  }
+  return {
+    got: round1(o.max * frac),
+    max: o.max,
+    detail: "Content " + Math.round(cov * 100) + "% (coverage " + Math.round(recall * 100) +
+      "%, relevance " + Math.round(precision * 100) + "%) · " + n + " words (target " + o.min + "–" + o.target + ")" + extra
+  };
+}
+
+/* Speaking tasks: transcript against the reference text. */
+function scoreSpokenResponse(type, d, transcript) {
+  var tr = (transcript || "").trim();
+  if (!tr) return null;
+  var n = wordCount(tr), keys, cov, ratio;
+  if (type === "answerShortQuestion") {
+    var expected = norm(d.answer || ""), said = norm(tr);
+    var ok = !!expected && (said.indexOf(expected) >= 0 || matchRatio(expected, said) >= 0.6);
+    return { got: ok ? 1 : 0, max: 1, detail: 'Expected "' + (d.answer || "") + '" · heard "' + tr.slice(0, 80) + '"' };
+  }
+  if (type === "readAloud" || type === "repeatSentence") {
+    ratio = matchRatio(d.text || d.question || "", tr);
+    return {
+      got: round1(3 * ratio),
+      max: 3,
+      detail: "Word accuracy " + Math.round(ratio * 100) + "% vs prompt · " + n + " words spoken"
+    };
+  }
+  var ref = type === "retellLecture" ? d.text
+    : type === "respondToSituation" ? (d.audio || d.prompt)
+    : type === "summarizeGroupDiscussion" ? (d.turns || []).map(function (t) { return t.text; }).join(" ")
+    : "";
+  if (!ref) return null;
+  keys = keyTerms(ref, 16);
+  cov = 0.65 * coverageOf(tr, keys) + 0.35 * precisionOf(tr, ref);
+  var lenFit = clamp01(n / (type === "summarizeGroupDiscussion" ? 60 : 45));
+  return {
+    got: round1(3 * (0.7 * cov + 0.3 * lenFit)),
+    max: type === "summarizeGroupDiscussion" ? 4 : 3,
+    detail: "Content coverage " + Math.round(cov * 100) + "% · " + n + " words spoken"
+  };
+}
+/* Auto-score any open-response item; null when it cannot be scored. */
+function scoreOpen(type, d, ans, transcript) {
+  if (type === "summarizeWrittenText") return scoreTextResponse(d.passage, ans, { min: 5, target: 75, max: 6 });
+  if (type === "essay") return scoreTextResponse(d.prompt + " " + (d.sample || ""), ans, { min: 200, target: 300, max: 10, paragraphs: true });
+  if (type === "sst") return scoreTextResponse(d.audio, ans, { min: 50, target: 70, max: 6 });
+  if (SPEAK_CFG[type]) return scoreSpokenResponse(type, d, transcript);
+  return null;
+}
+
+
 function renderReview() {
   clearTimers(); stopRecording();
   if (state.readingTick) { clearInterval(state.readingTick); state.readingTick = null; }
   var totGot = 0, totMax = 0, rows = "";
+  var byPart = { 1: { got: 0, max: 0 }, 2: { got: 0, max: 0 }, 3: { got: 0, max: 0 } };
   flow.forEach(function (f, i) {
     if (f.kind !== "item") return;
     var k = "s" + i, ans = state.answers[k], meta = TYPE_META[f.type];
-    var sc = scoreItem(f.type, f.data, ans);
-    if (sc) { totGot += sc.got; totMax += sc.max; }
+    var heard = state.transcripts[k];
+    var sc = scoreItem(f.type, f.data, ans) || scoreOpen(f.type, f.data, ans, heard);
+    if (sc) { totGot += sc.got; totMax += sc.max; var bp = byPart[f.part]; if (bp) { bp.got += sc.got; bp.max += sc.max; } }
     var badge = sc ? (sc.got >= sc.max ? '<span class="badge ok">' + sc.got + "/" + sc.max + "</span>" : '<span class="badge no">' + sc.got + "/" + sc.max + "</span>") : '<span class="badge na">self-review</span>';
     var body = "";
     if (SPEAK_CFG[f.type]) {
       body += state.recordings[k]
         ? '<audio controls src="' + state.recordings[k] + '"></audio>'
         : '<div class="kv"><i>No recording captured (mic not enabled).</i></div>';
+      if (heard) body += '<div class="ua"><b>Transcription:</b> ' + esc(heard) + "</div>";
+      else if (state.recordings[k]) body += '<div class="kv"><i>No transcription — speech recognition unavailable or heard nothing.</i></div>';
+      if (sc && sc.detail) body += '<div class="kv">' + esc(sc.detail) + "</div>";
       var samp = f.data.sample || f.data.text || f.data.question || null;
       if (samp) body += sampleHtml(f.type === "answerShortQuestion" ? "Expected answer" : "Reference / sample", samp);
     } else {
       body += '<div class="ua"><b>Your answer:</b> ' + answerSummary(f.type, f.data, ans) + "</div>";
       var cs = correctSummary(f.type, f.data);
       if (cs) body += '<div class="ua" style="background:#eafaf0"><b>Correct:</b> ' + cs + "</div>";
+      if (sc && sc.detail) body += '<div class="kv">' + esc(sc.detail) + "</div>";
       if (f.data.sample) body += sampleHtml("Sample response", f.data.sample);
       if (f.type === "summarizeWrittenText" || f.type === "essay" || f.type === "sst") {
         var n = wordCount(ans), lim = f.type === "summarizeWrittenText" ? [5, 75] : f.type === "sst" ? [50, 70] : [200, 300];
@@ -1013,13 +1174,32 @@ function renderReview() {
     }
     rows += '<div class="revitem"><h4>' + meta.title + " " + (f.idx + 1) + badge + "</h4>" + body + "</div>";
   });
+  /* Reading items live outside `flow`, so score them separately. */
+  readingItems().forEach(function (it) {
+    var rk = rkey(it.type, it.idx), ans = collectReadingAnswer(it), meta = TYPE_META[it.type];
+    var sc = scoreItem(it.type, it.data, ans);
+    if (sc) { totGot += sc.got; totMax += sc.max; byPart[2].got += sc.got; byPart[2].max += sc.max; }
+    var badge = sc ? (sc.got >= sc.max ? '<span class="badge ok">' + sc.got + "/" + sc.max + "</span>" : '<span class="badge no">' + sc.got + "/" + sc.max + "</span>") : '<span class="badge na">self-review</span>';
+    var body = '<div class="ua"><b>Your answer:</b> ' + answerSummary(it.type, it.data, ans) + "</div>";
+    var cs = correctSummary(it.type, it.data);
+    if (cs) body += '<div class="ua" style="background:#eafaf0"><b>Correct:</b> ' + cs + "</div>";
+    rows += '<div class="revitem"><h4>Part 2 · ' + meta.title + " " + (it.idx + 1) + badge + "</h4>" + body + "</div>";
+  });
   var pct = totMax ? Math.round(totGot / totMax * 100) : 0;
+  var breakdown = "";
+  ["1:Speaking &amp; Writing", "2:Reading", "3:Listening"].forEach(function (row) {
+    var bits = row.split(":"), bp = byPart[bits[0]];
+    if (!bp || !bp.max) return;
+    breakdown += '<div class="kv">Part ' + bits[0] + " · " + bits[1] + ": <b>" +
+      round1(bp.got) + " / " + round1(bp.max) + "</b> (" + Math.round(bp.got / bp.max * 100) + "%)</div>";
+  });
   render(chrome("Score report", "") +
     '<div class="main"><div class="card" style="text-align:center">' +
     "<h1>Score Report</h1>" +
     '<div class="scorebig">' + pct + "%</div>" +
-    '<div class="kv">Auto-scored objective items: ' + totGot + " / " + totMax + " points</div>" +
-    '<div class="kv">Speaking &amp; open writing tasks are self-reviewed against the sample responses below. This is an indicative practice score, not a Pearson score.</div>' +
+    '<div class="kv">Auto-scored: ' + round1(totGot) + " / " + round1(totMax) + " points</div>" +
+    breakdown +
+    '<div class="kv">Speaking responses are transcribed by the browser (Chrome/Edge) and scored on word accuracy or key-term coverage; Summarize Written Text, Essay and Summarize Spoken Text are scored on content coverage, length and (for the essay) paragraph structure. Describe Image has no text reference, so it stays self-reviewed. Indicative practice score, not a Pearson score.</div>' +
     '<div class="navrow"><button class="btn sec" onclick="PTE.restart()">← Restart exam</button><button class="btn sec" onclick="PTE.toggleMode()">Switch to ' + (state.mode === "real" ? "Guide" : "Real") + " mode</button></div>" +
     "</div>" + rows + "</div>");
 }
@@ -1035,9 +1215,14 @@ window.PTE = {
     var w = document.getElementById("sampleWrap");
     if (w && window._pteSample) w.innerHTML = sampleHtml("Sample answer", window._pteSample);
   },
+  /* Debug/verification hook: score any item without running the exam. */
+  _score: function (type, data, ans, transcript) {
+    return scoreItem(type, data, ans) || scoreOpen(type, data, ans, transcript);
+  },
   restart: function () {
     clearTimers();
     state.step = -1; state.answers = {}; state.recordings = {}; state.audioPlayed = {}; state.readingLeft = 30 * 60;
+    state.transcripts = {};
     renderHome();
   },
   toggleMode: function () {
