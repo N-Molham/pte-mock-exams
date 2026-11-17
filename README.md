@@ -1,6 +1,6 @@
 # PTE Academic Mock Exams (2026 Format)
 
-Six full-length, self-contained PTE Academic practice exams aligned to the **2026 test format** (post-August-2025: 22 task types, ~2 hours, including the newer **Respond to a Situation** and **Summarize Group Discussion** speaking tasks).
+Full-length, self-contained PTE Academic practice exams aligned to the **2026 test format** (post-August-2025: 22 task types, ~2 h 10 – 2 h 35 total, including the newer **Respond to a Situation** and **Summarize Group Discussion** speaking tasks).
 
 ## Use
 

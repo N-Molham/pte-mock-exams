@@ -455,7 +455,7 @@ function renderHome() {
   render(chrome(null, "") +
     '<div class="main"><div class="card">' +
     "<h1>" + esc(C.meta.title) + "</h1>" +
-    '<div class="instructions">Full-length PTE Academic mock exam · 2026 test format (22 task types, ~2 hours). ' +
+    '<div class="instructions">Full-length PTE Academic mock exam · 2026 test format (22 task types, ~2 h 10 – 2 h 35). ' +
     "This simulation follows the official test-day workflow: three parts (Speaking &amp; Writing, Reading, Listening), " +
     "per-item timers, one-play audio, microphone recording, and auto-advance.</div>" +
     '<div class="modewrap">' +
@@ -504,9 +504,9 @@ function renderMicCheck() {
 
 /* ================= section intros ================= */
 var SECTION_INFO = {
-  1: { t: "Part 1: Speaking & Writing", d: "This part tests your speaking and writing skills. Speaking tasks record your voice; you will hear a short tone before each recording starts. Writing tasks are typed. Timers run per item.", time: "approx. 60–70 min" },
-  2: { t: "Part 2: Reading", d: "This part tests your reading skills. A single clock governs the whole part — manage your time across all items. You may move between questions with the navigation panel.", time: "approx. 30 min" },
-  3: { t: "Part 3: Listening", d: "This part tests your listening skills. Each recording plays automatically and only ONCE. Answer as you listen; the test advances automatically after each item.", time: "approx. 30 min" }
+  1: { t: "Part 1: Speaking & Writing", d: "This part tests your speaking and writing skills. Speaking tasks record your voice; you will hear a short tone before each recording starts. Writing tasks are typed. Timers run per item.", time: "approx. 76–84 min" },
+  2: { t: "Part 2: Reading", d: "This part tests your reading skills. A single clock governs the whole part — manage your time across all items. You may move between questions with the navigation panel.", time: "approx. 23–30 min" },
+  3: { t: "Part 3: Listening", d: "This part tests your listening skills. It opens with Summarize Spoken Text. Each recording plays automatically and only ONCE. Answer as you listen; the test advances automatically after each item.", time: "approx. 31–39 min" }
 };
 function renderSectionIntro(part) {
   clearTimers(); stopRecording();
