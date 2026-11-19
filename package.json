@@ -6,9 +6,13 @@
   "scripts": {
     "build": "node build.js",
     "audio": "node tools/render-audio.mjs",
-    "acl": "node tools/parse-collocations.mjs"
+    "acl": "node tools/parse-collocations.mjs",
+    "test": "node tools/test-scoring.mjs",
+    "check:audio": "node tools/check-audio.mjs",
+    "verify": "npm run build && npm test && npm run check:audio"
   },
   "devDependencies": {
+    "jsdom": "^31.0.1",
     "msedge-tts": "^2.1.1"
   }
 }

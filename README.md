@@ -32,7 +32,7 @@ No server, no install — each HTML file is fully self-contained.
 
 Audio prompts are pre-rendered with Microsoft Edge neural voices (`en-AU-NatashaNeural`, `en-AU-WilliamNeural`, `en-NZ-MollyNeural`) and served from `audio/<exam>/`; if a clip is unavailable the page falls back to the browser's own speech synthesis. Spoken responses are recorded via the microphone and replayable in the score report.
 
-Scoring is automatic and per-task: objective items are marked exactly (partial credit for multiple-answer, reorder and dictation items), and the reading percentage is weighted by real task value (Fill in the Blanks 25%, Fill in the Blanks drag 20%, Re-order 9.5%, MC multiple 6.5%, MC single 3%). Summarize Written Text and the Essay are scored on key-point coverage, word limits (5–75 and 200–380 hard limits from the writing guide), paragraph structure, connective variety and academic collocations drawn from the Pearson Academic Collocation List; Summarize Spoken Text on coverage and 50–70 word length. Speaking responses are transcribed by the browser's speech recognition (Chrome/Edge) and scored on word accuracy (Read Aloud, Repeat Sentence, short answers) or key-term coverage (Retell Lecture, Respond to Situation, Summarize Group Discussion). Describe Image has no text reference and stays self-reviewed, as does any speaking item when speech recognition is unavailable. **Scores are indicative only** — this is unofficial practice material, not affiliated with Pearson PLC.
+Scoring is automatic and per-task: objective items are marked exactly (partial credit for multiple-answer, reorder and dictation items), and the reading percentage is weighted by real task value (Fill in the Blanks 25%, Fill in the Blanks drag 20%, Re-order 9.5%, MC multiple 6.5%, MC single 3%). Summarize Written Text and the Essay are scored on key-point coverage, word limits (5–75 and 200–380 hard limits from the writing guide), paragraph structure, connective variety and academic collocations drawn from the Pearson Academic Collocation List, with a penalty for copied prompt or model-answer text; Summarize Spoken Text on coverage and 50–70 word length. Speaking responses are transcribed by the browser's speech recognition (Chrome/Edge) and scored on word accuracy (Read Aloud, Repeat Sentence, short answers), key-term coverage (Retell Lecture, Respond to Situation, Summarize Group Discussion), or — for Describe Image — coverage of the figure's title and labels plus chart-type and trend language. The report shows a per-skill breakdown and an indicative 10–90 band; any speaking item without a transcript stays self-reviewed. **Scores are indicative only** — this is unofficial practice material, not affiliated with Pearson PLC.
 
 ## Repository layout
 
@@ -58,7 +58,11 @@ The `reference/` handouts drive the scoring rules and guide-mode panels — see
 Rebuild after editing content or engine:
 
 ```sh
-node build.js
+npm install          # once: build + test dependencies
+npm run build        # assembles exams/
+npm test             # scoring regression tests (jsdom)
+npm run check:audio  # every spoken prompt has a clip + manifest entry
+npm run verify       # all three in order (CI runs the same)
 ```
 
 Re-render audio after editing any spoken prompt (only new/changed clips are synthesised):

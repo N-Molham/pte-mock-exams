@@ -1126,10 +1126,44 @@ function scoreTextResponse(refText, ans, o) {
   };
 }
 
+/* Chart labels and axis captions carried by the inline SVG figure. */
+function svgLabels(svg) {
+  var out = [], m, re = /<text[^>]*>([^<]*)<\/text>/g;
+  while ((m = re.exec(String(svg || "")))) {
+    var t = m[1].replace(/\s+/g, " ").trim();
+    if (!t) continue;
+    if (/^[\d.,%+\-–—]+$/.test(t)) continue; /* axis tick numbers */
+    out.push(t);
+  }
+  return out;
+}
+/* Describe Image has no transcript reference, but the figure does carry a
+   title, category labels and axis text, so the spoken answer can be checked
+   against what the chart actually shows. */
+function scoreDescribeImage(d, transcript) {
+  var tr = (transcript || "").trim();
+  if (!tr) return null;
+  var n = wordCount(tr), low = tr.toLowerCase();
+  var labels = svgLabels(d.svg).join(" ");
+  var ref = labels + " " + (d.title || "");
+  var keys = keyTerms(ref, 12);
+  var cov = 0.6 * coverageOf(tr, keys) + 0.4 * precisionOf(tr, ref);
+  var named = /chart|graph|bar|column|pie|line|figure|diagram|table|chart/.test(low) ? 1 : 0;
+  var trend = /increase|increas|rise|rose|rising|grow|decrease|declin|fell|fall|drop|highest|lowest|peak|compare|whereas|while|most|least/.test(low) ? 1 : 0;
+  var lenFit = clamp01(n / 45);
+  var frac = 0.5 * cov + 0.2 * named + 0.15 * trend + 0.15 * lenFit;
+  return {
+    got: round1(3 * frac),
+    max: 3,
+    detail: "Chart labels covered " + Math.round(cov * 100) + "% · " + n + " words spoken · " +
+      (named ? "chart named" : "chart type not named") + " · " + (trend ? "trend/values described" : "no trend or comparison")
+  };
+}
 /* Speaking tasks: transcript against the reference text. */
 function scoreSpokenResponse(type, d, transcript) {
   var tr = (transcript || "").trim();
   if (!tr) return null;
+  if (type === "describeImage") return scoreDescribeImage(d, tr);
   var n = wordCount(tr), keys, cov, ratio;
   if (type === "answerShortQuestion") {
     var expected = norm(d.answer || ""), said = norm(tr);
@@ -1224,6 +1258,39 @@ function cohesion(text) {
 function sentenceCount(text) {
   return String(text || "").split(/[.!?]+/).filter(function (s) { return s.trim().length > 1; }).length;
 }
+/* Share of the answer's n-word chunks that also appear in the reference. */
+function ngramOverlap(text, ref, n) {
+  var w = words(text), r = words(ref), set = {}, hits = 0, total = 0;
+  if (w.length < n || r.length < n) return 0;
+  for (var i = 0; i <= r.length - n; i++) set[r.slice(i, i + n).join(" ")] = 1;
+  for (var j = 0; j <= w.length - n; j++) {
+    total++;
+    if (set[w.slice(j, j + n).join(" ")]) hits++;
+  }
+  return total ? hits / total : 0;
+}
+function repeatedOpeners(text) {
+  var seen = {}, worst = 0;
+  String(text || "").split(/[.!?]+/).forEach(function (s) {
+    var k = words(s).slice(0, 2).join(" ");
+    if (!k) return;
+    seen[k] = (seen[k] || 0) + 1;
+    if (seen[k] > worst) worst = seen[k];
+  });
+  return worst;
+}
+/* The writing guide warns that copied prompts and memorised templates are
+   penalised, so those patterns now reduce the response score. */
+function copyPenalty(text, prompt, sample) {
+  var p = prompt ? ngramOverlap(text, prompt, 4) : 0;
+  var s = sample ? ngramOverlap(text, sample, 4) : 0;
+  var rep = repeatedOpeners(text);
+  var mult = 1, notes = [];
+  if (p >= 0.2) { mult *= 0.85; notes.push("repeats prompt wording " + Math.round(p * 100) + "%"); }
+  if (s >= 0.2) { mult *= 0.75; notes.push("copies the model answer " + Math.round(s * 100) + "%"); }
+  if (rep >= 3) { mult *= 0.9; notes.push("same sentence opener ×" + rep); }
+  return { mult: mult, notes: notes };
+}
 function paragraphList(text) {
   return String(text || "").split(/\n+/).map(function (p) { return p.trim(); }).filter(function (p) { return p; });
 }
@@ -1241,12 +1308,15 @@ function scoreEssay(d, ans) {
   var con = cohesion(ans), hits = collocationHits(ans);
   var coh = Math.min(1, con.groups / 4), lex = Math.min(1, hits.length / 3);
   var frac = 0.3 * cov + 0.15 * lenFit + 0.25 * struct + 0.15 * coh + 0.15 * lex;
+  var pen = copyPenalty(ans, d.prompt, d.sample);
+  frac *= pen.mult;
   return {
     got: round1(10 * frac),
     max: 10,
     detail: "Content " + Math.round(cov * 100) + "% · " + n + " words · " + paras.length + " paragraphs · " +
       con.groups + " connective groups" + (con.list.length ? " (" + con.list.slice(0, 4).join(", ") + ")" : "") +
-      " · " + hits.length + " academic collocations" + (hits.length ? " (" + hits.slice(0, 3).join(", ") + ")" : "")
+      " · " + hits.length + " academic collocations" + (hits.length ? " (" + hits.slice(0, 3).join(", ") + ")" : "") +
+      (pen.notes.length ? " · penalty: " + pen.notes.join(", ") : "")
   };
 }
 /* Summarize Written Text: one sentence, 5–75 words, key-point coverage. */
@@ -1261,12 +1331,15 @@ function scoreSwt(d, ans) {
   var lenFit = n >= 25 && n <= 60 ? 1 : n < 25 ? Math.max(0.5, n / 25) : 0.8;
   var single = sents <= 1 ? 1 : sents === 2 ? 0.65 : 0.4;
   var frac = 0.6 * cov + 0.2 * lenFit + 0.2 * single;
+  var pen = copyPenalty(ans, "", d.sample);
+  frac *= pen.mult;
   return {
     got: round1(6 * frac),
     max: 6,
     detail: "Content " + Math.round(cov * 100) + "% · " + n + " words (target 5–75, aim 35–55) · " +
       sents + " sentence" + (sents === 1 ? "" : "s") + (sents === 1 ? "" : " — one sentence required") +
-      " · " + collocationHits(ans).length + " academic collocations"
+      " · " + collocationHits(ans).length + " academic collocations" +
+      (pen.notes.length ? " · penalty: " + pen.notes.join(", ") : "")
   };
 }
 /* Auto-score any open-response item; null when it cannot be scored. */
@@ -1284,12 +1357,17 @@ function renderReview() {
   if (state.readingTick) { clearInterval(state.readingTick); state.readingTick = null; }
   var totGot = 0, totMax = 0, rows = "";
   var byPart = { 1: { got: 0, max: 0 }, 2: { got: 0, max: 0 }, 3: { got: 0, max: 0 } };
+  var bySkill = { speaking: { got: 0, max: 0 }, writing: { got: 0, max: 0 }, reading: { got: 0, max: 0 }, listening: { got: 0, max: 0 } };
   flow.forEach(function (f, i) {
     if (f.kind !== "item") return;
     var k = "s" + i, ans = state.answers[k], meta = TYPE_META[f.type];
     var heard = state.transcripts[k];
     var sc = scoreItem(f.type, f.data, ans) || scoreOpen(f.type, f.data, ans, heard);
-    if (sc) { totGot += sc.got; totMax += sc.max; var bp = byPart[f.part]; if (bp) { bp.got += sc.got; bp.max += sc.max; } }
+    if (sc) {
+      totGot += sc.got; totMax += sc.max; var bp = byPart[f.part]; if (bp) { bp.got += sc.got; bp.max += sc.max; }
+      var sk = SPEAK_CFG[f.type] ? "speaking" : f.part === 1 ? "writing" : "listening";
+      bySkill[sk].got += sc.got; bySkill[sk].max += sc.max;
+    }
     var badge = sc ? (sc.got >= sc.max ? '<span class="badge ok">' + sc.got + "/" + sc.max + "</span>" : '<span class="badge no">' + sc.got + "/" + sc.max + "</span>") : '<span class="badge na">self-review</span>';
     var body = "";
     if (SPEAK_CFG[f.type]) {
@@ -1326,6 +1404,7 @@ function renderReview() {
     var sc = scoreItem(it.type, it.data, ans);
     if (sc) {
       totGot += sc.got; totMax += sc.max; byPart[2].got += sc.got; byPart[2].max += sc.max;
+      bySkill.reading.got += sc.got; bySkill.reading.max += sc.max;
       var w = (readWeight[it.type] || 3) / (readCount[it.type] || 1);
       readW += w; readGotW += w * (sc.max ? sc.got / sc.max : 0);
     }
@@ -1335,7 +1414,20 @@ function renderReview() {
     if (cs) body += '<div class="ua" style="background:#eafaf0"><b>Correct:</b> ' + cs + "</div>";
     rows += '<div class="revitem"><h4>Part 2 · ' + meta.title + " " + (it.idx + 1) + badge + "</h4>" + body + "</div>";
   });
-  var pct = totMax ? Math.round(totGot / totMax * 100) : 0;
+  /* Weighted blend across the four PTE skills, then map 0–100% to the 10–90
+     band scale. Weighting keeps one long listening section from dominating. */
+  var SKILL_W = { speaking: 30, writing: 20, reading: 25, listening: 25 };
+  var wSum = 0, wGot = 0, skillRows = "";
+  Object.keys(SKILL_W).forEach(function (sk) {
+    var b = bySkill[sk];
+    if (!b.max) return;
+    wSum += SKILL_W[sk];
+    wGot += SKILL_W[sk] * (b.got / b.max);
+    skillRows += '<div class="kv">' + sk.charAt(0).toUpperCase() + sk.slice(1) + ": <b>" +
+      Math.round(b.got / b.max * 100) + "%</b> (" + round1(b.got) + "/" + round1(b.max) + ")</div>";
+  });
+  var weightedPct = wSum ? Math.round(wGot / wSum * 100) : 0;
+  var band = Math.round(10 + weightedPct * 0.8);
   var breakdown = "";
   ["1:Speaking &amp; Writing", "2:Reading", "3:Listening"].forEach(function (row) {
     var bits = row.split(":"), bp = byPart[bits[0]];
@@ -1347,10 +1439,12 @@ function renderReview() {
   render(chrome("Score report", "") +
     '<div class="main"><div class="card" style="text-align:center">' +
     "<h1>Score Report</h1>" +
-    '<div class="scorebig">' + pct + "%</div>" +
-    '<div class="kv">Auto-scored: ' + round1(totGot) + " / " + round1(totMax) + " points</div>" +
+    '<div class="scorebig">' + band + "</div>" +
+    '<div class="kv"><b>Estimated band ' + band + " / 90</b> — indicative practice score, not a Pearson score.</div>" +
+    '<div class="kv">Weighted score: ' + weightedPct + "% · raw points: " + round1(totGot) + " / " + round1(totMax) + "</div>" +
+    skillRows +
     breakdown +
-    '<div class="kv">Speaking responses are transcribed by the browser (Chrome/Edge) and scored on word accuracy or key-term coverage. Summarize Written Text and the Essay are scored on key-point coverage, word limits, paragraph structure, connectives and academic collocations; Summarize Spoken Text on coverage and length. The reading percentage is weighted by task value (Fill in the Blanks dominates). Describe Image has no text reference, so it stays self-reviewed. Indicative practice score, not a Pearson score.</div>' +
+    '<div class="kv">Speaking responses are transcribed by the browser (Chrome/Edge) and scored on word accuracy or key-term coverage; Describe Image is scored against the figure\'s title and labels. Summarize Written Text and the Essay are scored on key-point coverage, word limits, paragraph structure, connectives and academic collocations, with a penalty for copied prompt or model-answer text. The reading percentage is weighted by task value. Indicative practice score, not a Pearson score.</div>' +
     '<div class="navrow"><button class="btn sec" onclick="PTE.restart()">← Restart exam</button><button class="btn sec" onclick="PTE.toggleMode()">Switch to ' + (state.mode === "real" ? "Guide" : "Real") + " mode</button></div>" +
     "</div>" + rows + "</div>");
 }
