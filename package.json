@@ -5,7 +5,8 @@
   "description": "PTE Academic mock exams (2026 format) — build scripts and neural audio rendering",
   "scripts": {
     "build": "node build.js",
-    "audio": "node tools/render-audio.mjs"
+    "audio": "node tools/render-audio.mjs",
+    "acl": "node tools/parse-collocations.mjs"
   },
   "devDependencies": {
     "msedge-tts": "^2.1.1"

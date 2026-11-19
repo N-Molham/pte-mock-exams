@@ -33,25 +33,25 @@ var TYPE_META = {
     tips: ["Answer with one or a few words — never a full sentence.", "Listen for the wh-word (who/where/what) to predict answer type.", "Tests general knowledge + vocabulary; don't overthink."] },
   summarizeWrittenText: { title: "Summarize Written Text", part: 1,
     ins: "Read the passage below and summarize it using ONE sentence. Type your response in the box at the bottom of the screen. You have 10 minutes. Your response will be judged on how well it presents the key points and on grammar, vocabulary and spelling. Your summary must be between 5 and 75 words.",
-    tips: ["ONE sentence only — full stops inside the answer are fatal.", "Find the main claim, then attach 1–2 key supports with connectors (while, because, which, although).", "Aim 35–55 words.", "Save 1 minute to check subject-verb agreement and spelling."] },
+    tips: ["ONE sentence only — a full stop inside the answer breaks the task.", "Fix the main claim first, then attach 1–2 supports with connectors (while, because, which, although).", "Aim 35–55 words — inside the 5–75 limit, comfortably under the ceiling.", "Save 1 minute to check subject-verb agreement and spelling."] },
   essay: { title: "Write Essay", part: 1,
     ins: "You will have 20 minutes to plan, write and revise an essay about the topic below. Your response will be judged on how well you develop a position, organize your ideas, present supporting details, and control the elements of standard written English. You should write 200–300 words.",
-    tips: ["2–3 min plan: position + 2 arguments + examples.", "Structure: introduction (paraphrase + thesis) → body 1 → body 2 → conclusion.", "Start each body paragraph with a clear topic sentence; add an example.", "Save 2 minutes to proofread articles, plurals, verb endings."] },
-  fibDropdown: { title: "Reading & Writing: Fill in the Blanks", part: 2,
+    tips: ["4 paragraphs: intro (40–50 words, paraphrase + thesis) → body 1 → body 2 (60–70 each) → conclusion (30–40).", "Aim 220–270 words. Below 200 or above 380 scores zero on test day.", "Plan 2–3 min, write 5–17 min, proofread 17–20 min — do not skip proofreading.", "Use one example per body paragraph and vary connectives; rigid memorised templates are penalised."] },
+  fibDropdown: { title: "Reading & Writing: Fill in the Blanks", part: 2, time: "~2 min each",
     ins: "Below is a text with blanks. Click on each blank, and a drop-down list will appear. Select the appropriate answer choice for each blank.",
-    tips: ["Read the whole sentence first for meaning, then use grammar (word form, collocation) to confirm.", "Verb tense/agreement and fixed collocations solve most blanks.", "These supply BOTH reading and writing marks — prioritise them."] },
-  mcMultiple: { title: "Multiple Choice, Multiple Answers", part: 2,
+    tips: ["Read the full sentence for meaning, then confirm with word form and collocation.", "Highest-value reading task (~25% of the section) — give it the time you save elsewhere.", "Fixed collocations decide most blanks: 'make a decision', 'conduct research'.", "No negative marking — never leave a blank empty."] },
+  mcMultiple: { title: "Multiple Choice, Multiple Answers", part: 2, time: "~1.5–2 min each",
     ins: "Read the text and answer the question by selecting all the correct responses. More than one response is correct. If you select a wrong option, one point is deducted, so do not guess.",
-    tips: ["Skim the passage's main idea before reading options.", "Each correct option is usually a paraphrase of a passage detail.", "Avoid options that exaggerate ('always', 'never') beyond the text.", "Negative marking: skip an option if unsure."] },
-  reorder: { title: "Re-order Paragraphs", part: 2,
+    tips: ["Read the question first, then scan for the keywords it names.", "Each correct option paraphrases a passage detail; distractors copy words but twist meaning.", "Absolute wording ('all', 'every', 'never', 'only', 'proved') usually marks a wrong option.", "Negative marking: only select options you are certain about."] },
+  reorder: { title: "Re-order Paragraphs", part: 2, time: "~1–2 min each",
     ins: "The text boxes in the left panel have been placed in a random order. Restore the original order by moving the text boxes.",
-    tips: ["Find the opening sentence first: it has no pronouns, no 'this/these', no connectors like 'however'.", "Chain pronouns to nouns ('he' → the man; 'this method' → a method named earlier).", "Look for time sequence and lexical repetition links.", "Scoring counts adjacent pairs — even a partially correct chain earns points."] },
-  fibDrag: { title: "Reading: Fill in the Blanks", part: 2,
+    tips: ["Find the opener: no pronouns, no 'this/these', no connectors, often introduces a noun with 'a/an' before 'the' appears.", "Reject sentences starting with 'however', 'therefore', 'furthermore' as openings.", "Chain pronouns to nouns, then apply general → specific and chronological order.", "Adjacent pairs score — a partial correct chain still earns points, so never leave it blank."] },
+  fibDrag: { title: "Reading: Fill in the Blanks", part: 2, time: "~1.5–2 min each",
     ins: "Below is a text with blanks. Drag words from the box below to fill the blanks.",
-    tips: ["Sort the word bank by part of speech before dragging.", "Collocation is king: 'make a decision', 'heavy rain', 'conduct research'.", "Fill easiest blanks first; options shrink.", "Re-read completed text — it must flow grammatically."] },
-  mcSingle: { title: "Multiple Choice, Single Answer", part: 2,
+    tips: ["Read the whole passage first (30–45 s): later sentences clarify earlier blanks.", "Decide the part of speech each blank needs, then discard every word of the wrong class.", "Use collocations to choose between grammatically possible options.", "No negative marking — place a word in every blank."] },
+  mcSingle: { title: "Multiple Choice, Single Answer", part: 2, time: "~1–1.5 min each",
     ins: "Read the text and answer the multiple choice question by selecting the correct response. Only one response is correct.",
-    tips: ["Read the question BEFORE the passage.", "Eliminate options contradicted or not mentioned in the text.", "Correct answer paraphrases; distractors copy words but twist meaning."] },
+    tips: ["Read the question before the passage, then skim and scan rather than read every word.", "Eliminate options that contradict the passage, add unmentioned ideas, or distort a key detail.", "Beware absolute quantifiers ('proved', 'all', 'always') — typical wrong-option markers.", "Worth little (~3% of reading): answer fast and move on to the blanks."] },
   sst: { title: "Summarize Spoken Text", part: 3,
     ins: "You will hear a short lecture. Write a summary for a fellow student who was not present. You should write 50–70 words. You have 10 minutes to finish this task.",
     tips: ["Note keywords, not sentences, while listening.", "Template: 'The speaker discussed X. He/She explained that… and highlighted… Finally, …'", "Stay within 50–70 words.", "Check spelling — it is scored."] },
@@ -341,8 +341,35 @@ function sampleHtml(label, text) {
   return '<div class="samplebox"><h4>' + esc(label || "Sample answer") + '</h4><div>' + esc(text) + "</div></div>";
 }
 function guideExtra(type, data) {
-  if (state.mode !== "guide" || !data.sample) return "";
-  return '<div id="sampleWrap"><button class="btn sec small" onclick="PTE.showSample()">Show sample answer</button></div>';
+  if (state.mode !== "guide") return "";
+  var out = "";
+  if (type === "essay" || type === "summarizeWrittenText") out += writingPanel(type, data);
+  if (data.sample) out += '<div id="sampleWrap"><button class="btn sec small" onclick="PTE.showSample()">Show sample answer</button></div>';
+  return out;
+}
+/* Plan panel built from the writing handout: structure, timing, connectives
+   and collocations that fit this prompt. */
+var LINK_BANK = "firstly · secondly · furthermore · moreover · in addition · however · although · on the other hand · " +
+  "therefore · as a result · consequently · for example · for instance · such as · clearly · in conclusion · to sum up";
+function writingPanel(type, d) {
+  var cols = collocationsFor(type === "essay" ? d.prompt : d.passage, 8);
+  var h = '<div class="tipsbox"><h4>' + (type === "essay" ? "Essay plan — 20 minutes" : "Summary plan — 10 minutes") + "</h4><ul>";
+  if (type === "essay") {
+    h += "<li><b>0–2 min</b> read the prompt, pick agree/disagree, advantages or problem/solution.</li>" +
+      "<li><b>2–5 min</b> two main points, one example each.</li>" +
+      "<li><b>5–17 min</b> intro 40–50 words · body 1 60–70 · body 2 60–70 · conclusion 30–40 → aim 220–270.</li>" +
+      "<li><b>17–20 min</b> proofread. Below 200 or above 380 words scores zero.</li>" +
+      "<li>The sample answer is a skeleton: expand each point to reach 220–270 words.</li>" +
+      "<li>Vary the structure from the sample — rigid memorised templates lose marks.</li>";
+  } else {
+    h += "<li>One sentence only, 5–75 words (aim 35–55).</li>" +
+      "<li>Frame: <i>The passage highlights X, emphasising that …; furthermore, it is clear that …</i></li>" +
+      "<li>Cover the main claim plus one or two supports; do not copy whole sentences.</li>" +
+      "<li>Save a minute to check the full stop and subject–verb agreement.</li>";
+  }
+  h += "</ul><div class=\"kv\"><b>Connectives:</b> " + LINK_BANK + "</div>";
+  if (cols.length) h += '<div class="kv"><b>Academic collocations for this prompt:</b> ' + cols.join(" · ") + "</div>";
+  return h + "</div>";
 }
 
 /* ================= home ================= */
@@ -601,7 +628,9 @@ var WRITE_RENDER = {};
     var saved = state.answers[k]; if (saved) ta.value = saved;
     function upd() {
       var n = wordCount(ta.value);
-      wc.textContent = "Word Count: " + n + " (target " + min + "–" + max + ")";
+      var hard = isSWT ? (n < 5 || n > 75) : (n < 200 || n > 380);
+      wc.textContent = "Word Count: " + n + " (target " + min + "–" + max + ")" +
+        (hard ? " — outside the hard limit, scores zero" : "");
       wc.className = "wordcount" + ((n > 0 && (n < min || n > max)) ? " bad" : "");
       state.answers[k] = ta.value;
     }
@@ -633,7 +662,7 @@ function startReadingPart() {
       var done = state.answers[rkey(x.type, x.idx)] != null;
       return '<button class="' + (i === cur ? "cur " : "") + (done ? "done" : "") + '" data-i="' + i + '">' + meta2short(x.type) + " " + (x.idx + 1) + "</button>";
     }).join("");
-    var h = chrome("Part 2: Reading · " + meta.title + " " + (it.idx + 1) + " of " + it.total, timerHtml) +
+    var h = chrome("Part 2: Reading · " + meta.title + " " + (it.idx + 1) + " of " + it.total + (meta.time ? " · " + meta.time : ""), timerHtml) +
       '<div class="main"><div class="readwrap"><div class="readnav">' + nav + "</div>" +
       '<div class="readmain"><div class="card">' +
       '<div class="qtype-head"><span class="qpos">' + (cur + 1) + " / " + items.length + '</span><span class="qtitle">' + meta.title + "</span></div>" +
@@ -1079,7 +1108,7 @@ function scoreTextResponse(refText, ans, o) {
   var keys = keyTerms(refText, 14);
   var recall = coverageOf(ans, keys), precision = precisionOf(ans, refText);
   var cov = 0.65 * recall + 0.35 * precision;
-  var lenFit = n < o.min ? clamp01(n / o.min) : n > o.target * 1.6 ? 0.6 : 1;
+  var lenFit = n < o.min ? clamp01(n / o.min) : n > o.target * 1.3 ? 0.45 : 1;
   var frac, extra = "";
   if (o.paragraphs) {
     var paras = String(ans).split(/\n+/).filter(function (p) { return wordCount(p) >= 25; }).length;
@@ -1129,10 +1158,121 @@ function scoreSpokenResponse(type, d, transcript) {
     detail: "Content coverage " + Math.round(cov * 100) + "% · " + n + " words spoken"
   };
 }
+/* Collocations and connectives come from the Pearson Academic Collocation
+   List and the writing-guide handouts under reference/. Both are embedded at
+   build time, so scoring works offline. */
+var ACL = window.ACL || [];
+var ACL_SET = null;
+function aclKeys() {
+  if (ACL_SET) return ACL_SET;
+  ACL_SET = [];
+  for (var i = 0; i < ACL.length; i++) {
+    var a = stemW(String(ACL[i][0]).toLowerCase()), b = stemW(String(ACL[i][1]).toLowerCase());
+    if (a && b) ACL_SET.push([a, b, ACL[i][0] + " " + ACL[i][1]]);
+  }
+  return ACL_SET;
+}
+/* Collocations that appear as adjacent word pairs in the answer. */
+function collocationHits(text) {
+  var w = words(text), pairs = aclKeys(), hits = [], seen = {};
+  if (!w.length || !pairs.length) return hits;
+  var bigrams = {};
+  for (var i = 0; i < w.length - 1; i++) bigrams[stemW(w[i]) + "|" + stemW(w[i + 1])] = 1;
+  for (var j = 0; j < pairs.length; j++) {
+    if (!bigrams[pairs[j][0] + "|" + pairs[j][1]]) continue;
+    if (seen[pairs[j][2]]) continue;
+    seen[pairs[j][2]] = 1;
+    hits.push(pairs[j][2]);
+  }
+  return hits;
+}
+/* Collocations worth borrowing in a response to this prompt. */
+function collocationsFor(text, n) {
+  var w = words(text), set = {}, picks = [], seen = {}, pairs = aclKeys();
+  if (!w.length) return picks;
+  for (var i = 0; i < w.length; i++) set[stemW(w[i])] = 1;
+  for (var j = 0; j < pairs.length && picks.length < (n || 10); j++) {
+    if (!set[pairs[j][0]] && !set[pairs[j][1]]) continue;
+    if (seen[pairs[j][2]]) continue;
+    seen[pairs[j][2]] = 1;
+    picks.push(pairs[j][2]);
+  }
+  return picks;
+}
+var CONNECTIVE_GROUPS = {
+  contrast: ["even though", "although", "despite", "in spite of", "on the other hand", "in comparison", "nevertheless", "conversely", "however"],
+  addition: ["furthermore", "moreover", "in addition", "additionally", "apart from", "besides", "as well as"],
+  result: ["consequently", "therefore", "as a result", "hence", "for this reason", "thus"],
+  emphasis: ["clearly", "obviously", "of course", "particularly", "especially"],
+  example: ["for example", "for instance", "such as", "to illustrate"],
+  opinion: ["in my opinion", "in my view", "i believe", "i think", "i disagree", "i do not agree"],
+  conclusion: ["in conclusion", "to conclude", "to sum up"],
+  listing: ["firstly", "secondly", "thirdly", "lastly", "finally", "to begin with"]
+};
+function cohesion(text) {
+  var t = " " + words(text).join(" ") + " ";
+  var groups = [], used = [];
+  Object.keys(CONNECTIVE_GROUPS).forEach(function (g) {
+    var found = null;
+    CONNECTIVE_GROUPS[g].forEach(function (c) {
+      if (!found && t.indexOf(" " + words(c).join(" ") + " ") >= 0) found = c;
+    });
+    if (found) { groups.push(g); used.push(found); }
+  });
+  return { groups: groups.length, list: used };
+}
+function sentenceCount(text) {
+  return String(text || "").split(/[.!?]+/).filter(function (s) { return s.trim().length > 1; }).length;
+}
+function paragraphList(text) {
+  return String(text || "").split(/\n+/).map(function (p) { return p.trim(); }).filter(function (p) { return p; });
+}
+/* Write Essay: hard word limits, 3–5 paragraphs, connectives, collocations. */
+function scoreEssay(d, ans) {
+  var n = wordCount(ans);
+  if (!n) return null;
+  if (n < 200 || n > 380) {
+    return { got: 0, max: 10, detail: "Word count " + n + " — outside 200–380, which scores zero on test day." };
+  }
+  var paras = paragraphList(ans), keys = keyTerms(d.prompt, 10);
+  var cov = coverageOf(ans, keys);
+  var lenFit = n <= 300 ? 1 : 0.8;
+  var struct = paras.length >= 3 && paras.length <= 5 ? 1 : paras.length === 2 ? 0.7 : 0.35;
+  var con = cohesion(ans), hits = collocationHits(ans);
+  var coh = Math.min(1, con.groups / 4), lex = Math.min(1, hits.length / 3);
+  var frac = 0.3 * cov + 0.15 * lenFit + 0.25 * struct + 0.15 * coh + 0.15 * lex;
+  return {
+    got: round1(10 * frac),
+    max: 10,
+    detail: "Content " + Math.round(cov * 100) + "% · " + n + " words · " + paras.length + " paragraphs · " +
+      con.groups + " connective groups" + (con.list.length ? " (" + con.list.slice(0, 4).join(", ") + ")" : "") +
+      " · " + hits.length + " academic collocations" + (hits.length ? " (" + hits.slice(0, 3).join(", ") + ")" : "")
+  };
+}
+/* Summarize Written Text: one sentence, 5–75 words, key-point coverage. */
+function scoreSwt(d, ans) {
+  var n = wordCount(ans);
+  if (!n) return null;
+  if (n < 5 || n > 75) {
+    return { got: 0, max: 6, detail: "Word count " + n + " — outside 5–75, which scores zero on test day." };
+  }
+  var sents = sentenceCount(ans), keys = keyTerms(d.passage, 14);
+  var cov = 0.7 * coverageOf(ans, keys) + 0.3 * precisionOf(ans, d.passage);
+  var lenFit = n >= 25 && n <= 60 ? 1 : n < 25 ? Math.max(0.5, n / 25) : 0.8;
+  var single = sents <= 1 ? 1 : sents === 2 ? 0.65 : 0.4;
+  var frac = 0.6 * cov + 0.2 * lenFit + 0.2 * single;
+  return {
+    got: round1(6 * frac),
+    max: 6,
+    detail: "Content " + Math.round(cov * 100) + "% · " + n + " words (target 5–75, aim 35–55) · " +
+      sents + " sentence" + (sents === 1 ? "" : "s") + (sents === 1 ? "" : " — one sentence required") +
+      " · " + collocationHits(ans).length + " academic collocations"
+  };
+}
 /* Auto-score any open-response item; null when it cannot be scored. */
 function scoreOpen(type, d, ans, transcript) {
-  if (type === "summarizeWrittenText") return scoreTextResponse(d.passage, ans, { min: 5, target: 75, max: 6 });
-  if (type === "essay") return scoreTextResponse(d.prompt + " " + (d.sample || ""), ans, { min: 200, target: 300, max: 10, paragraphs: true });
+  if (type === "summarizeWrittenText") return scoreSwt(d, ans);
+  if (type === "essay") return scoreEssay(d, ans);
   if (type === "sst") return scoreTextResponse(d.audio, ans, { min: 50, target: 70, max: 6 });
   if (SPEAK_CFG[type]) return scoreSpokenResponse(type, d, transcript);
   return null;
@@ -1174,11 +1314,21 @@ function renderReview() {
     }
     rows += '<div class="revitem"><h4>' + meta.title + " " + (f.idx + 1) + badge + "</h4>" + body + "</div>";
   });
-  /* Reading items live outside `flow`, so score them separately. */
-  readingItems().forEach(function (it) {
+  /* Reading items live outside `flow`, so score them separately. PTE weights
+     these tasks unevenly (Fill in the Blanks carries ~25% of the section), so
+     the type weight is split evenly across that type's questions. */
+  var readWeight = { fibDropdown: 25, fibDrag: 20, reorder: 9.5, mcMultiple: 6.5, mcSingle: 3 };
+  var readItems = readingItems(), readCount = {};
+  readItems.forEach(function (it) { readCount[it.type] = (readCount[it.type] || 0) + 1; });
+  var readW = 0, readGotW = 0;
+  readItems.forEach(function (it) {
     var rk = rkey(it.type, it.idx), ans = collectReadingAnswer(it), meta = TYPE_META[it.type];
     var sc = scoreItem(it.type, it.data, ans);
-    if (sc) { totGot += sc.got; totMax += sc.max; byPart[2].got += sc.got; byPart[2].max += sc.max; }
+    if (sc) {
+      totGot += sc.got; totMax += sc.max; byPart[2].got += sc.got; byPart[2].max += sc.max;
+      var w = (readWeight[it.type] || 3) / (readCount[it.type] || 1);
+      readW += w; readGotW += w * (sc.max ? sc.got / sc.max : 0);
+    }
     var badge = sc ? (sc.got >= sc.max ? '<span class="badge ok">' + sc.got + "/" + sc.max + "</span>" : '<span class="badge no">' + sc.got + "/" + sc.max + "</span>") : '<span class="badge na">self-review</span>';
     var body = '<div class="ua"><b>Your answer:</b> ' + answerSummary(it.type, it.data, ans) + "</div>";
     var cs = correctSummary(it.type, it.data);
@@ -1190,8 +1340,9 @@ function renderReview() {
   ["1:Speaking &amp; Writing", "2:Reading", "3:Listening"].forEach(function (row) {
     var bits = row.split(":"), bp = byPart[bits[0]];
     if (!bp || !bp.max) return;
-    breakdown += '<div class="kv">Part ' + bits[0] + " · " + bits[1] + ": <b>" +
-      round1(bp.got) + " / " + round1(bp.max) + "</b> (" + Math.round(bp.got / bp.max * 100) + "%)</div>";
+    var line = "Part " + bits[0] + " · " + bits[1] + ": <b>" + round1(bp.got) + " / " + round1(bp.max) + "</b> (" + Math.round(bp.got / bp.max * 100) + "%)";
+    if (bits[0] === "2" && readW) line += " · test-weighted <b>" + Math.round(readGotW / readW * 100) + "%</b>";
+    breakdown += '<div class="kv">' + line + "</div>";
   });
   render(chrome("Score report", "") +
     '<div class="main"><div class="card" style="text-align:center">' +
@@ -1199,7 +1350,7 @@ function renderReview() {
     '<div class="scorebig">' + pct + "%</div>" +
     '<div class="kv">Auto-scored: ' + round1(totGot) + " / " + round1(totMax) + " points</div>" +
     breakdown +
-    '<div class="kv">Speaking responses are transcribed by the browser (Chrome/Edge) and scored on word accuracy or key-term coverage; Summarize Written Text, Essay and Summarize Spoken Text are scored on content coverage, length and (for the essay) paragraph structure. Describe Image has no text reference, so it stays self-reviewed. Indicative practice score, not a Pearson score.</div>' +
+    '<div class="kv">Speaking responses are transcribed by the browser (Chrome/Edge) and scored on word accuracy or key-term coverage. Summarize Written Text and the Essay are scored on key-point coverage, word limits, paragraph structure, connectives and academic collocations; Summarize Spoken Text on coverage and length. The reading percentage is weighted by task value (Fill in the Blanks dominates). Describe Image has no text reference, so it stays self-reviewed. Indicative practice score, not a Pearson score.</div>' +
     '<div class="navrow"><button class="btn sec" onclick="PTE.restart()">← Restart exam</button><button class="btn sec" onclick="PTE.toggleMode()">Switch to ' + (state.mode === "real" ? "Guide" : "Real") + " mode</button></div>" +
     "</div>" + rows + "</div>");
 }

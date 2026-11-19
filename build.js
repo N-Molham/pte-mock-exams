@@ -10,6 +10,31 @@ const template = read("src/template.html");
 const css = read("src/styles.css");
 const engine = read("src/engine.js");
 
+/* Academic Collocation List: pairs embedded so writing feedback can grade
+   lexical range and offer prompt-specific collocation hints offline. */
+function collocationPairs() {
+  const p = path.join(ROOT, "reference", "academic-collocations.json");
+  if (!fs.existsSync(p)) return [];
+  const data = JSON.parse(fs.readFileSync(p, "utf8"));
+  const strip = (s) => s.replace(/\s*\([^)]*\)/g, "").trim();
+  const seen = new Set();
+  const pairs = [];
+  for (const entry of data.entries || []) {
+    const head = strip(entry.head);
+    if (!head) continue;
+    for (const c of entry.collocates || []) {
+      const word = strip(c.word);
+      if (!word) continue;
+      const key = head + "|" + word;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      pairs.push([head, word]);
+    }
+  }
+  return pairs;
+}
+const aclJson = JSON.stringify(collocationPairs());
+
 const outDir = path.join(ROOT, "exams");
 fs.mkdirSync(outDir, { recursive: true });
 
@@ -34,6 +59,7 @@ for (const f of files) {
     .replace("/*__CSS__*/", () => css)
     .replace("/*__CONTENT__*/null", () => safeJson)
     .replace("/*__AUDIO__*/null", () => audioJson)
+    .replace("/*__ACL__*/null", () => aclJson)
     .replace("/*__ENGINE__*/", () => engine);
   const out = path.join(outDir, `pte-mock-exam-${id}.html`);
   fs.writeFileSync(out, html);
